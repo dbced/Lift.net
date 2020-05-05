@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://srvedoc/images.asmx?wsdl" docRef="http://srvedoc/images.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://srvedoc/images.asmx" xmlns:q1="http://edoc.elmisoftware.com/images/" binding="q1:ImagesSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://srvedoc/images.asmx" xmlns:q2="http://edoc.elmisoftware.com/images/" binding="q2:ImagesSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

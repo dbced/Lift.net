@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>LiftCore</RootNamespace>
+    <AssemblyName>LiftCore</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LiftCore.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LiftCore.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EDOC.Service.Wrapper">
+      <HintPath>..\..\..\Users\utgt156.DBNET\Desktop\TEMP\EDOC.Service.Wrapper\EDOC.Service.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Progress\Telerik Reporting R3 2019\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.WinControls, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.RadMap, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
+    <Reference Include="TelerikCommon, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2019.3.917.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSI\clMain.vb" />
+    <Compile Include="CLASSI\elenco.vb" />
+    <Compile Include="CLASSI\elencoAmministratori.vb" />
+    <Compile Include="CLASSI\elencoAssetsImpianto.vb" />
+    <Compile Include="CLASSI\elencoClienti.vb" />
+    <Compile Include="CLASSI\elencoDocumenti.vb" />
+    <Compile Include="CLASSI\elencoManutDefault.vb" />
+    <Compile Include="CLASSI\elencoManutenzioni.vb" />
+    <Compile Include="CLASSI\elencoReperibilita.vb" />
+    <Compile Include="CLASSI\elencoTasksVisita.vb" />
+    <Compile Include="CLASSI\elencoTecnici.vb" />
+    <Compile Include="CLASSI\parmComuni.vb" />
+    <Compile Include="CLASSI\parmGetManutenzioniDefault.vb" />
+    <Compile Include="CLASSI\parmGetSchedaImpianto.vb" />
+    <Compile Include="CLASSI\parmImpianti.vb" />
+    <Compile Include="CLASSI\parmPostAssets.vb" />
+    <Compile Include="CLASSI\parmPostParVisAsset.vb" />
+    <Compile Include="CLASSI\parmRelTabelle.vb" />
+    <Compile Include="CLASSI\parmTabelle.vb" />
+    <Compile Include="CLASSI\liftGanttViewDataItem.vb" />
+    <Compile Include="CLASSI\statBuoniImpianto.vb" />
+    <Compile Include="CLASSI\statCanoniImpianto.vb" />
+    <Compile Include="CLASSI\statChiamateImpianto.vb" />
+    <Compile Include="CLASSI\statFatturatoImpianto.vb" />
+    <Compile Include="CLASSI\statManutenzioni.vb" />
+    <Compile Include="CLASSI\tecnico.vb" />
+    <Compile Include="CLASSI\webServices.vb" />
+    <Compile Include="CLASSI\wsEdoc.vb" />
+    <Compile Include="FORMS\frmAmministratore.Designer.vb">
+      <DependentUpon>frmAmministratore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmAmministratore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmAmministratoriElenco.Designer.vb">
+      <DependentUpon>frmAmministratoriElenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmAmministratoriElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmContrattiElenco.Designer.vb">
+      <DependentUpon>frmContrattiElenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmContrattiElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmContratto.Designer.vb">
+      <DependentUpon>frmContratto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmContratto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmImpiantiElenco.Designer.vb">
+      <DependentUpon>frmImpiantiElenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmImpiantiElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmImpianto.Designer.vb">
+      <DependentUpon>frmImpianto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmImpianto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmImpiantoAssets.Designer.vb">
+      <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmImpiantoAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmTabelle.Designer.vb">
+      <DependentUpon>frmTabelle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmTabelle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmTecniciElenco.designer.vb">
+      <DependentUpon>frmTecniciElenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmTecniciElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmTecnico.Designer.vb">
+      <DependentUpon>frmTecnico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmTecnico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\EdocImages\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EdocService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORMS\frmAmministratore.resx">
+      <DependentUpon>frmAmministratore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmAmministratoriElenco.resx">
+      <DependentUpon>frmAmministratoriElenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmContrattiElenco.resx">
+      <DependentUpon>frmContrattiElenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmContratto.resx">
+      <DependentUpon>frmContratto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmImpiantiElenco.resx">
+      <DependentUpon>frmImpiantiElenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmImpianto.resx">
+      <DependentUpon>frmImpianto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmImpiantoAssets.resx">
+      <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmTabelle.resx">
+      <DependentUpon>frmTabelle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmTecniciElenco.resx">
+      <DependentUpon>frmTecniciElenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmTecnico.resx">
+      <DependentUpon>frmTecnico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Web References\EdocImages\Documento1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocImages\images.wsdl" />
+    <None Include="Web References\EdocImages\KeyValuePairOfStringString1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocImages\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\EdocService\BancaDati.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Documento.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Post_IT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\EdocService\Revisione.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Rubrica.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Service.wsdl" />
+    <None Include="Web References\EdocService\TabellaLookup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\TipoDocumento.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Titolario.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\Todo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EdocService\UtenteMail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://srvedoc/images.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EdocImages\</RelPath>
+      <UpdateFromURL>http://srvedoc/images.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LiftCore_srvedoc_Images</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://srvedoc/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EdocService\</RelPath>
+      <UpdateFromURL>http://srvedoc/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LiftCore_EdocService_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\EdocImages\images.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\EdocService\Service.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

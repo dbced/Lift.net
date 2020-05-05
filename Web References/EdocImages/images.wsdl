@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://edoc.elmisoftware.com/images/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://edoc.elmisoftware.com/images/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://edoc.elmisoftware.com/images/">
+      <s:element name="Download">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Doc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OnlyHash" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Image" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Image" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignHashResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Image" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SignResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HackSign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Image" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HackSignResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HackSignResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogonResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOnUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOnUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogOnUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Create">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Save">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Abort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbortResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UploadGDD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GddData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadGDDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadGDDResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDocumentoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastImageDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastImageDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastImageDocumentoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Documento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Immagini" type="tns:ArrayOfRevisione" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoContenutoLookup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumentoLookup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusLookup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtProtocollo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtArchiviazione" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtScadenza" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtPresaInCarico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tags" type="tns:ArrayOfDocumentTag" />
+          <s:element minOccurs="0" maxOccurs="1" name="ToUser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Opened" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Closed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Riservato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HavePreview" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsIndexed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtocolloUfficiale" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StatusType" type="tns:StatusType" />
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Revisione" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDRevisione" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BancaDati" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descrizione" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OggettoProtocollo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoTrasporto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodiceTipoTrasporto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direzione" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Proprietario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SessioneEmergenza" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Raccoglitore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ElencoRaccoglitore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DecodificaTipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Protocollo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AnnoProtocollo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroPratica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnnoPratica" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDocumento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataArchiviazione" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataSpedizione" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataRicezione" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataScadenza" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataRevisione" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataFirma" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataMasterizzazione" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataProtocollo" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataModifica" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DaCompletare" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Approvato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rifiutato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Firmato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Marcato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Masterizzato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DaMasterizzare" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DaFirmare" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Criptato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Modificato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanView" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanAuthorize" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanApprove" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanEdit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanPrint" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCreate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanAddImage" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UtenteApprovatore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UtenteRevisore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UtenteFirma" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UtenteMarca" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UtenteMasterizzatore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Permessi" type="tns:Permessi" />
+          <s:element minOccurs="0" maxOccurs="1" name="Computer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialeCD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Impronta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kbyte" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroImmagini" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoChiave" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeChiave" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValoreChiave" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="LookupValoreChiave" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="RubricaMittente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mittente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariInterni" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariEsterni" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariInterniUtenti" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariInterniPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariEsterniPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinatariInterniUtentiPC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtocolloEsterno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataProtocolloEsterno" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Filename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Workflow" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassoWorkflow" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Distribuzione" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Registro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoContenuto" type="tns:ContentType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firmatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoggettoFirmatario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRevisione">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Revisione" type="tns:Revisione" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Revisione">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Data" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Computer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Utente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialeCD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cryptato" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="KByte" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Impronta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Filename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spedito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firmato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conservato" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentTag">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentTag" type="tns:DocumentTag" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentTag">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TagType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagLookupValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagDefaultValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagInputMask" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Required" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Editable" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalData" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="StatusType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Active" />
+          <s:enumeration value="Suspended" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="Aborted" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="Draft" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Permessi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsGroup" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PermissionType" type="tns:PermissionType" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanRead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanEdit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCreate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanApprove" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanAuthorize" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanAddImage" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanCreateFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanEditFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanDeleteFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanReceiveMail" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanShare" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanProtocolIn" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanProtocolOut" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanProtocolInternal" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanViewUp" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanViewDown" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanViewBrothers" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanSend" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanViewLog" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CanRemoveImage" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotRead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotEdit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotCreate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotDelete" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotApprove" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotAuthorize" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotAddImage" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotCreateFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotEditFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotDeleteFolder" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotReceiveMail" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotShare" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotProtocolIn" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotProtocolOut" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotProtocolInternal" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotViewUp" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotViewDown" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotViewBrothers" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotSend" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotViewLog" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CannotRemoveImage" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PermissionType">
+        <s:restriction base="s:string">
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+          <s:enumeration value="Contact" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ContentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Document" />
+          <s:enumeration value="Folder" />
+          <s:enumeration value="Dossier" />
+          <s:enumeration value="Template" />
+          <s:enumeration value="Any" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TempFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTemplateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TempFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Queue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDocumentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateTempfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTempfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTempfileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHashFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceAzienda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NRLotto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHashFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHashFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceAzienda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NRLotto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseHashFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceAzienda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NRLotto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseHashFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CloseHashFileResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceAzienda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Anno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NRLotto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CloseFileResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSignerInfoResult" type="tns:ArrayOfKeyValuePairOfStringString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKeyValuePairOfStringString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KeyValuePairOfStringString" type="tns:KeyValuePairOfStringString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KeyValuePairOfStringString" />
+      <s:element name="MoveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VecchioPercorso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NuovoPercorso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveDocumentResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:Download" />
+  </wsdl:message>
+  <wsdl:message name="DownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignHashSoapIn">
+    <wsdl:part name="parameters" element="tns:SignHash" />
+  </wsdl:message>
+  <wsdl:message name="SignHashSoapOut">
+    <wsdl:part name="parameters" element="tns:SignHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignSoapIn">
+    <wsdl:part name="parameters" element="tns:Sign" />
+  </wsdl:message>
+  <wsdl:message name="SignSoapOut">
+    <wsdl:part name="parameters" element="tns:SignResponse" />
+  </wsdl:message>
+  <wsdl:message name="HackSignSoapIn">
+    <wsdl:part name="parameters" element="tns:HackSign" />
+  </wsdl:message>
+  <wsdl:message name="HackSignSoapOut">
+    <wsdl:part name="parameters" element="tns:HackSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogonSoapIn">
+    <wsdl:part name="parameters" element="tns:Logon" />
+  </wsdl:message>
+  <wsdl:message name="LogonSoapOut">
+    <wsdl:part name="parameters" element="tns:LogonResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOnUserSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOnUser" />
+  </wsdl:message>
+  <wsdl:message name="LogOnUserSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOnUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload" />
+  </wsdl:message>
+  <wsdl:message name="UploadSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSoapIn">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="SaveSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbortSoapIn">
+    <wsdl:part name="parameters" element="tns:Abort" />
+  </wsdl:message>
+  <wsdl:message name="AbortSoapOut">
+    <wsdl:part name="parameters" element="tns:AbortResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadGDDSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadGDD" />
+  </wsdl:message>
+  <wsdl:message name="UploadGDDSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadGDDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDocumento" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastImageDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastImageDocumento" />
+  </wsdl:message>
+  <wsdl:message name="GetLastImageDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastImageDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumento" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTemplate" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessDocument" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTempfileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTempfile" />
+  </wsdl:message>
+  <wsdl:message name="CreateTempfileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTempfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHashFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHashFile" />
+  </wsdl:message>
+  <wsdl:message name="GetHashFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHashFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseHashFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseHashFile" />
+  </wsdl:message>
+  <wsdl:message name="CloseHashFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseHashFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseFile" />
+  </wsdl:message>
+  <wsdl:message name="CloseFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSignerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSignerInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSignerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSignerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveDocument" />
+  </wsdl:message>
+  <wsdl:message name="MoveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ImagesSoap">
+    <wsdl:operation name="Download">
+      <wsdl:input message="tns:DownloadSoapIn" />
+      <wsdl:output message="tns:DownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignHash">
+      <wsdl:input message="tns:SignHashSoapIn" />
+      <wsdl:output message="tns:SignHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sign">
+      <wsdl:input message="tns:SignSoapIn" />
+      <wsdl:output message="tns:SignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HackSign">
+      <wsdl:input message="tns:HackSignSoapIn" />
+      <wsdl:output message="tns:HackSignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logon">
+      <wsdl:input message="tns:LogonSoapIn" />
+      <wsdl:output message="tns:LogonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOnUser">
+      <wsdl:input message="tns:LogOnUserSoapIn" />
+      <wsdl:output message="tns:LogOnUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <wsdl:input message="tns:CreateSoapIn" />
+      <wsdl:output message="tns:CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <wsdl:input message="tns:UploadSoapIn" />
+      <wsdl:output message="tns:UploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input message="tns:SaveSoapIn" />
+      <wsdl:output message="tns:SaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <wsdl:input message="tns:AbortSoapIn" />
+      <wsdl:output message="tns:AbortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadGDD">
+      <wsdl:input message="tns:UploadGDDSoapIn" />
+      <wsdl:output message="tns:UploadGDDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumento">
+      <wsdl:input message="tns:DeleteDocumentoSoapIn" />
+      <wsdl:output message="tns:DeleteDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastImageDocumento">
+      <wsdl:input message="tns:GetLastImageDocumentoSoapIn" />
+      <wsdl:output message="tns:GetLastImageDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumento">
+      <wsdl:input message="tns:GetDocumentoSoapIn" />
+      <wsdl:output message="tns:GetDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplate">
+      <wsdl:input message="tns:GetTemplateSoapIn" />
+      <wsdl:output message="tns:GetTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDocument">
+      <wsdl:input message="tns:ProcessDocumentSoapIn" />
+      <wsdl:output message="tns:ProcessDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTempfile">
+      <wsdl:input message="tns:CreateTempfileSoapIn" />
+      <wsdl:output message="tns:CreateTempfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHashFile">
+      <wsdl:input message="tns:GetHashFileSoapIn" />
+      <wsdl:output message="tns:GetHashFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input message="tns:GetFileSoapIn" />
+      <wsdl:output message="tns:GetFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseHashFile">
+      <wsdl:input message="tns:CloseHashFileSoapIn" />
+      <wsdl:output message="tns:CloseHashFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseFile">
+      <wsdl:input message="tns:CloseFileSoapIn" />
+      <wsdl:output message="tns:CloseFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerInfo">
+      <wsdl:input message="tns:GetSignerInfoSoapIn" />
+      <wsdl:output message="tns:GetSignerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveDocument">
+      <wsdl:input message="tns:MoveDocumentSoapIn" />
+      <wsdl:output message="tns:MoveDocumentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ImagesSoap" type="tns:ImagesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Download">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Download" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignHash">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/SignHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sign">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Sign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HackSign">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/HackSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logon">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Logon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOnUser">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/LogOnUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Upload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/Abort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadGDD">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/UploadGDD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumento">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/DeleteDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastImageDocumento">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetLastImageDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumento">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplate">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDocument">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/ProcessDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTempfile">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/CreateTempfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHashFile">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetHashFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseHashFile">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/CloseHashFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseFile">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/CloseFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerInfo">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/GetSignerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveDocument">
+      <soap:operation soapAction="http://edoc.elmisoftware.com/images/MoveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ImagesSoap12" type="tns:ImagesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Download">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Download" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignHash">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/SignHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sign">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Sign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HackSign">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/HackSign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logon">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Logon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOnUser">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/LogOnUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Upload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Save" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Abort">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/Abort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadGDD">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/UploadGDD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumento">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/DeleteDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastImageDocumento">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetLastImageDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumento">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplate">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDocument">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/ProcessDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTempfile">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/CreateTempfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHashFile">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetHashFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseHashFile">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/CloseHashFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseFile">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/CloseFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerInfo">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/GetSignerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveDocument">
+      <soap12:operation soapAction="http://edoc.elmisoftware.com/images/MoveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Images">
+    <wsdl:port name="ImagesSoap" binding="tns:ImagesSoap">
+      <soap:address location="http://srvedoc/images.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ImagesSoap12" binding="tns:ImagesSoap12">
+      <soap12:address location="http://srvedoc/images.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

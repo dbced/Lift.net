@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LiftCore", "LiftCore.vbproj", "{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "test_lift", "..\test_lift\test_lift.vbproj", "{D3DDD0F6-036B-4D14-832B-DDEF8A491ED7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43AD637F-0FC5-4674-B8E5-40AB16AAD15D} = {43AD637F-0FC5-4674-B8E5-40AB16AAD15D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AD637F-0FC5-4674-B8E5-40AB16AAD15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DDD0F6-036B-4D14-832B-DDEF8A491ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DDD0F6-036B-4D14-832B-DDEF8A491ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DDD0F6-036B-4D14-832B-DDEF8A491ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DDD0F6-036B-4D14-832B-DDEF8A491ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EEDF5A4-92EC-446F-99EC-EBAC3B74C115}
+	EndGlobalSection
+EndGlobal
