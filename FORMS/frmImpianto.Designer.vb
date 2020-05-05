@@ -1787,10 +1787,10 @@ Partial Class FrmImpianto
         Me.ToolWinTipiVis.Controls.Add(Me.txtVisFrequenza)
         Me.ToolWinTipiVis.Controls.Add(Me.gridTpVis)
         Me.ToolWinTipiVis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinTipiVis.Name = "ToolWinTipiVis"
         Me.ToolWinTipiVis.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 279)
+        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 332)
         Me.ToolWinTipiVis.Text = "PROGRAMMAZIONE VISITE"
         Me.ToolWinTipiVis.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2046,7 +2046,7 @@ Partial Class FrmImpianto
         Me.gridTpVis.Name = "gridTpVis"
         Me.gridTpVis.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTpVis.ShowGroupPanel = False
-        Me.gridTpVis.Size = New System.Drawing.Size(469, 279)
+        Me.gridTpVis.Size = New System.Drawing.Size(469, 332)
         Me.gridTpVis.TabIndex = 188
         Me.gridTpVis.ThemeName = "Fluent"
         '
@@ -2155,10 +2155,10 @@ Partial Class FrmImpianto
         Me.ToolWinGrafico.Caption = Nothing
         Me.ToolWinGrafico.Controls.Add(Me.chartVis)
         Me.ToolWinGrafico.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinGrafico.Name = "ToolWinGrafico"
         Me.ToolWinGrafico.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 302)
+        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 332)
         Me.ToolWinGrafico.Text = "GRAFICO STATO MANUTENZIONI"
         Me.ToolWinGrafico.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2170,7 +2170,7 @@ Partial Class FrmImpianto
         Me.chartVis.Name = "chartVis"
         Me.chartVis.ShowDrillNavigation = True
         Me.chartVis.ShowGrid = False
-        Me.chartVis.Size = New System.Drawing.Size(638, 302)
+        Me.chartVis.Size = New System.Drawing.Size(638, 332)
         Me.chartVis.TabIndex = 0
         Me.chartVis.ThemeName = "Fluent"
         '
@@ -2179,6 +2179,7 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.CausesValidation = False
         Me.DocumentContainer1.Controls.Add(Me.DocumentTabStrip1)
         Me.DocumentContainer1.Name = "DocumentContainer1"
+        Me.DocumentContainer1.Padding = New System.Windows.Forms.Padding(0)
         '
         '
         '
@@ -2188,7 +2189,6 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-142, -162)
         Me.DocumentContainer1.SplitterWidth = 8
         Me.DocumentContainer1.TabIndex = 2
-        Me.DocumentContainer1.ThemeName = "Fluent"
         '
         'DocumentTabStrip1
         '
@@ -2213,10 +2213,10 @@ Partial Class FrmImpianto
         Me.DocWinVisiteSched.Controls.Add(Me.track)
         Me.DocWinVisiteSched.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
         Me.DocWinVisiteSched.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.DocWinVisiteSched.Location = New System.Drawing.Point(5, 35)
+        Me.DocWinVisiteSched.Location = New System.Drawing.Point(4, 4)
         Me.DocWinVisiteSched.Name = "DocWinVisiteSched"
         Me.DocWinVisiteSched.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1608, 342)
+        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1612, 376)
         Me.DocWinVisiteSched.Text = "VISITE PROGRAMMATE"
         '
         'gant
@@ -2228,7 +2228,7 @@ Partial Class FrmImpianto
         Me.gant.ReadOnly = True
         Me.gant.ShowTimelineTodayIndicator = False
         Me.gant.ShowTodayIndicator = False
-        Me.gant.Size = New System.Drawing.Size(1562, 342)
+        Me.gant.Size = New System.Drawing.Size(1612, 376)
         Me.gant.SplitterWidth = 8
         Me.gant.TabIndex = 0
         Me.gant.ThemeName = "Fluent"
@@ -2236,7 +2236,7 @@ Partial Class FrmImpianto
         'track
         '
         Me.track.Dock = System.Windows.Forms.DockStyle.Right
-        Me.track.Location = New System.Drawing.Point(1562, 0)
+        Me.track.Location = New System.Drawing.Point(1612, 0)
         Me.track.Name = "track"
         Me.track.Orientation = System.Windows.Forms.Orientation.Vertical
         '
@@ -2244,7 +2244,7 @@ Partial Class FrmImpianto
         '
         Me.track.RootElement.StretchHorizontally = False
         Me.track.RootElement.StretchVertically = True
-        Me.track.Size = New System.Drawing.Size(46, 342)
+        Me.track.Size = New System.Drawing.Size(0, 376)
         Me.track.TabIndex = 1
         Me.track.ThemeName = "MaterialBlueGrey"
         Me.track.ThumbSize = New System.Drawing.Size(15, 15)
@@ -2289,10 +2289,10 @@ Partial Class FrmImpianto
         Me.ToolWinAssets.Controls.Add(Me.pnlAsset)
         Me.ToolWinAssets.Controls.Add(Me.cmdBarAssets)
         Me.ToolWinAssets.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinAssets.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinAssets.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinAssets.Name = "ToolWinAssets"
         Me.ToolWinAssets.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinAssets.Size = New System.Drawing.Size(511, 694)
+        Me.ToolWinAssets.Size = New System.Drawing.Size(511, 724)
         Me.ToolWinAssets.Text = "ASSETS COLLEGATI"
         Me.ToolWinAssets.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2303,7 +2303,7 @@ Partial Class FrmImpianto
         Me.gridAsset.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.gridAsset.ForeColor = System.Drawing.Color.Black
         Me.gridAsset.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.gridAsset.Location = New System.Drawing.Point(0, 30)
+        Me.gridAsset.Location = New System.Drawing.Point(0, 0)
         '
         '
         '
@@ -2316,16 +2316,15 @@ Partial Class FrmImpianto
         Me.gridAsset.Name = "gridAsset"
         Me.gridAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridAsset.ShowGroupPanel = False
-        Me.gridAsset.Size = New System.Drawing.Size(511, 476)
+        Me.gridAsset.Size = New System.Drawing.Size(511, 536)
         Me.gridAsset.TabIndex = 34
         Me.gridAsset.ThemeName = "Fluent"
         '
         'pnlAsset
         '
         Me.pnlAsset.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlAsset.Location = New System.Drawing.Point(0, 506)
+        Me.pnlAsset.Location = New System.Drawing.Point(0, 536)
         Me.pnlAsset.Name = "pnlAsset"
-        Me.pnlAsset.Padding = New System.Windows.Forms.Padding(0)
         '
         'pnlAsset.PanelContainer
         '
@@ -2335,8 +2334,7 @@ Partial Class FrmImpianto
         Me.pnlAsset.PanelContainer.Controls.Add(Me.cmdConfermaAss)
         Me.pnlAsset.PanelContainer.Controls.Add(Me.RadLabel35)
         Me.pnlAsset.PanelContainer.Controls.Add(Me.RadLabel37)
-        Me.pnlAsset.PanelContainer.Location = New System.Drawing.Point(0, 0)
-        Me.pnlAsset.PanelContainer.Size = New System.Drawing.Size(511, 188)
+        Me.pnlAsset.PanelContainer.Size = New System.Drawing.Size(509, 186)
         Me.pnlAsset.Size = New System.Drawing.Size(511, 188)
         Me.pnlAsset.TabIndex = 189
         Me.pnlAsset.ThemeName = "MaterialTeal"
@@ -2442,7 +2440,7 @@ Partial Class FrmImpianto
         Me.cmdBarAssets.Location = New System.Drawing.Point(0, 0)
         Me.cmdBarAssets.Name = "cmdBarAssets"
         Me.cmdBarAssets.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.cmdBarDettE1})
-        Me.cmdBarAssets.Size = New System.Drawing.Size(511, 30)
+        Me.cmdBarAssets.Size = New System.Drawing.Size(511, 0)
         Me.cmdBarAssets.TabIndex = 33
         Me.cmdBarAssets.TabStop = False
         Me.cmdBarAssets.ThemeName = "VisualStudio2012Light"
@@ -2550,10 +2548,10 @@ Partial Class FrmImpianto
         Me.ToolWinSchedaAsset.Controls.Add(Me.gridTecAsset)
         Me.ToolWinSchedaAsset.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
         Me.ToolWinSchedaAsset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinSchedaAsset.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinSchedaAsset.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinSchedaAsset.Name = "ToolWinSchedaAsset"
         Me.ToolWinSchedaAsset.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinSchedaAsset.Size = New System.Drawing.Size(500, 694)
+        Me.ToolWinSchedaAsset.Size = New System.Drawing.Size(500, 724)
         Me.ToolWinSchedaAsset.Text = "SCHEDA TECNICA ASSET"
         Me.ToolWinSchedaAsset.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2577,7 +2575,7 @@ Partial Class FrmImpianto
         Me.gridTecAsset.Name = "gridTecAsset"
         Me.gridTecAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTecAsset.ShowGroupPanel = False
-        Me.gridTecAsset.Size = New System.Drawing.Size(500, 694)
+        Me.gridTecAsset.Size = New System.Drawing.Size(500, 724)
         Me.gridTecAsset.TabIndex = 1
         Me.gridTecAsset.ThemeName = "VisualStudio2012Light"
         '
@@ -2585,6 +2583,7 @@ Partial Class FrmImpianto
         '
         Me.DocumentContainer3.Controls.Add(Me.DocumentTabStrip3)
         Me.DocumentContainer3.Name = "DocumentContainer3"
+        Me.DocumentContainer3.Padding = New System.Windows.Forms.Padding(0)
         '
         '
         '
@@ -2594,7 +2593,6 @@ Partial Class FrmImpianto
         Me.DocumentContainer3.SizeInfo.SplitterCorrection = New System.Drawing.Size(-627, 0)
         Me.DocumentContainer3.SplitterWidth = 8
         Me.DocumentContainer3.TabIndex = 3
-        Me.DocumentContainer3.ThemeName = "Fluent"
         '
         'DocumentTabStrip3
         '
@@ -2619,10 +2617,10 @@ Partial Class FrmImpianto
         Me.DocWinAssetManut.Controls.Add(Me.pnlDati)
         Me.DocWinAssetManut.Controls.Add(Me.cmdBarPianAsset)
         Me.DocWinAssetManut.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.DocWinAssetManut.Location = New System.Drawing.Point(5, 35)
+        Me.DocWinAssetManut.Location = New System.Drawing.Point(4, 4)
         Me.DocWinAssetManut.Name = "DocWinAssetManut"
         Me.DocWinAssetManut.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinAssetManut.Size = New System.Drawing.Size(565, 690)
+        Me.DocWinAssetManut.Size = New System.Drawing.Size(569, 724)
         Me.DocWinAssetManut.Text = "Pianificazione Manutenzione Asset"
         Me.DocWinAssetManut.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
         '
@@ -2633,7 +2631,7 @@ Partial Class FrmImpianto
         Me.gridPianAsset.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.gridPianAsset.ForeColor = System.Drawing.Color.Black
         Me.gridPianAsset.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.gridPianAsset.Location = New System.Drawing.Point(0, 30)
+        Me.gridPianAsset.Location = New System.Drawing.Point(0, 0)
         '
         '
         '
@@ -2646,16 +2644,15 @@ Partial Class FrmImpianto
         Me.gridPianAsset.Name = "gridPianAsset"
         Me.gridPianAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridPianAsset.ShowGroupPanel = False
-        Me.gridPianAsset.Size = New System.Drawing.Size(565, 428)
+        Me.gridPianAsset.Size = New System.Drawing.Size(569, 492)
         Me.gridPianAsset.TabIndex = 35
         Me.gridPianAsset.ThemeName = "Fluent"
         '
         'pnlDati
         '
         Me.pnlDati.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlDati.Location = New System.Drawing.Point(0, 458)
+        Me.pnlDati.Location = New System.Drawing.Point(0, 492)
         Me.pnlDati.Name = "pnlDati"
-        Me.pnlDati.Padding = New System.Windows.Forms.Padding(0)
         '
         'pnlDati.PanelContainer
         '
@@ -2672,9 +2669,8 @@ Partial Class FrmImpianto
         Me.pnlDati.PanelContainer.Controls.Add(Me.chkUltVisA)
         Me.pnlDati.PanelContainer.Controls.Add(Me.txtFreqA)
         Me.pnlDati.PanelContainer.Controls.Add(Me.txtGGstartupA)
-        Me.pnlDati.PanelContainer.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDati.PanelContainer.Size = New System.Drawing.Size(565, 232)
-        Me.pnlDati.Size = New System.Drawing.Size(565, 232)
+        Me.pnlDati.PanelContainer.Size = New System.Drawing.Size(567, 230)
+        Me.pnlDati.Size = New System.Drawing.Size(569, 232)
         Me.pnlDati.TabIndex = 188
         Me.pnlDati.ThemeName = "MaterialTeal"
         Me.pnlDati.Visible = False
@@ -2861,7 +2857,7 @@ Partial Class FrmImpianto
         Me.cmdBarPianAsset.Location = New System.Drawing.Point(0, 0)
         Me.cmdBarPianAsset.Name = "cmdBarPianAsset"
         Me.cmdBarPianAsset.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBarPianAsset.Size = New System.Drawing.Size(565, 30)
+        Me.cmdBarPianAsset.Size = New System.Drawing.Size(569, 0)
         Me.cmdBarPianAsset.TabIndex = 34
         Me.cmdBarPianAsset.TabStop = False
         Me.cmdBarPianAsset.ThemeName = "VisualStudio2012Light"
