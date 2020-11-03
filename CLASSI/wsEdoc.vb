@@ -40,6 +40,12 @@ Public Class wsEdoc
             Else
                 Return ""
             End If
+            'Dim EE As New EDOC.Service.Wrapper.EDOCWrapper("http://srvedoc/", "rm400", "servizio")
+            'Dim EE As New EDOC.Service.Wrapper.EDOCWrapper
+            'EE.Upload()
+            'EE.ImageService.Create()
+            'EE.ImageService.Upload()
+            'EE.ImageService.UploadGDD()
 
         Catch ex As Exception
             Return ""

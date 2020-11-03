@@ -23,11 +23,11 @@ Partial Class FrmImpianto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition27 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition25 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmImpianto))
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition26 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition28 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim ListViewDetailColumn1 As Telerik.WinControls.UI.ListViewDetailColumn = New Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Mese apertura")
         Dim ListViewDataItemGroup1 As Telerik.WinControls.UI.ListViewDataItemGroup = New Telerik.WinControls.UI.ListViewDataItemGroup("ListViewGroup 1")
         Dim ListViewDataItem1 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Gennaio")
@@ -42,18 +42,18 @@ Partial Class FrmImpianto
         Dim ListViewDataItem10 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Ottobre")
         Dim ListViewDataItem11 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Novembre")
         Dim ListViewDataItem12 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Dicembre")
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim CartesianArea1 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
-        Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition8 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim CartesianArea2 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
-        Dim CartesianArea3 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
+        Dim TableViewDefinition29 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition30 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim CartesianArea4 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
-        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition31 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition32 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition33 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition34 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition35 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim CartesianArea5 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
+        Dim CartesianArea1 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
+        Dim CartesianArea2 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
+        Dim TableViewDefinition36 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.FluentTheme1 = New Telerik.WinControls.Themes.FluentTheme()
@@ -637,6 +637,7 @@ Partial Class FrmImpianto
         Me.txtlocalita.Size = New System.Drawing.Size(301, 36)
         Me.txtlocalita.TabIndex = 5
         Me.txtlocalita.ThemeName = "Fluent"
+        CType(Me.txtlocalita.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         '
         'wb
         '
@@ -784,7 +785,7 @@ Partial Class FrmImpianto
         Me.cmbReperib.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbReperib.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbReperib.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbReperib.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.cmbReperib.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition27
         Me.cmbReperib.EditorControl.Name = "NestedRadGridView"
         Me.cmbReperib.EditorControl.ReadOnly = True
         Me.cmbReperib.EditorControl.ShowGroupPanel = False
@@ -1162,7 +1163,7 @@ Partial Class FrmImpianto
         Me.cmbLoc.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbLoc.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbLoc.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbLoc.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.cmbLoc.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition25
         Me.cmbLoc.EditorControl.Name = "NestedRadGridView"
         Me.cmbLoc.EditorControl.ReadOnly = True
         Me.cmbLoc.EditorControl.ShowGroupPanel = False
@@ -1565,7 +1566,7 @@ Partial Class FrmImpianto
         Me.cmbClienti.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbClienti.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbClienti.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition26
         Me.cmbClienti.EditorControl.Name = "NestedRadGridView"
         Me.cmbClienti.EditorControl.ReadOnly = True
         Me.cmbClienti.EditorControl.ShowGroupPanel = False
@@ -1679,7 +1680,7 @@ Partial Class FrmImpianto
         Me.grid.MasterTemplate.AllowDeleteRow = False
         Me.grid.MasterTemplate.AllowDragToGroup = False
         Me.grid.MasterTemplate.AllowRowResize = False
-        Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition28
         Me.grid.Name = "grid"
         Me.grid.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.grid.ShowGroupPanel = False
@@ -1787,10 +1788,10 @@ Partial Class FrmImpianto
         Me.ToolWinTipiVis.Controls.Add(Me.txtVisFrequenza)
         Me.ToolWinTipiVis.Controls.Add(Me.gridTpVis)
         Me.ToolWinTipiVis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 4)
+        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 34)
         Me.ToolWinTipiVis.Name = "ToolWinTipiVis"
         Me.ToolWinTipiVis.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 332)
+        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 279)
         Me.ToolWinTipiVis.Text = "PROGRAMMAZIONE VISITE"
         Me.ToolWinTipiVis.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2042,11 +2043,11 @@ Partial Class FrmImpianto
         Me.gridTpVis.MasterTemplate.AllowDeleteRow = False
         Me.gridTpVis.MasterTemplate.AllowDragToGroup = False
         Me.gridTpVis.MasterTemplate.AllowRowResize = False
-        Me.gridTpVis.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.gridTpVis.MasterTemplate.ViewDefinition = TableViewDefinition29
         Me.gridTpVis.Name = "gridTpVis"
         Me.gridTpVis.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTpVis.ShowGroupPanel = False
-        Me.gridTpVis.Size = New System.Drawing.Size(469, 332)
+        Me.gridTpVis.Size = New System.Drawing.Size(469, 279)
         Me.gridTpVis.TabIndex = 188
         Me.gridTpVis.ThemeName = "Fluent"
         '
@@ -2123,7 +2124,7 @@ Partial Class FrmImpianto
         Me.GridTask.MasterTemplate.AllowDragToGroup = False
         Me.GridTask.MasterTemplate.AllowRowResize = False
         Me.GridTask.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        Me.GridTask.MasterTemplate.ViewDefinition = TableViewDefinition6
+        Me.GridTask.MasterTemplate.ViewDefinition = TableViewDefinition30
         Me.GridTask.Name = "GridTask"
         Me.GridTask.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.GridTask.ShowGroupPanel = False
@@ -2155,22 +2156,22 @@ Partial Class FrmImpianto
         Me.ToolWinGrafico.Caption = Nothing
         Me.ToolWinGrafico.Controls.Add(Me.chartVis)
         Me.ToolWinGrafico.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 4)
+        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 34)
         Me.ToolWinGrafico.Name = "ToolWinGrafico"
         Me.ToolWinGrafico.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 332)
+        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 302)
         Me.ToolWinGrafico.Text = "GRAFICO STATO MANUTENZIONI"
         Me.ToolWinGrafico.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
         'chartVis
         '
-        Me.chartVis.AreaDesign = CartesianArea1
+        Me.chartVis.AreaDesign = CartesianArea4
         Me.chartVis.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartVis.Location = New System.Drawing.Point(0, 0)
         Me.chartVis.Name = "chartVis"
         Me.chartVis.ShowDrillNavigation = True
         Me.chartVis.ShowGrid = False
-        Me.chartVis.Size = New System.Drawing.Size(638, 332)
+        Me.chartVis.Size = New System.Drawing.Size(638, 302)
         Me.chartVis.TabIndex = 0
         Me.chartVis.ThemeName = "Fluent"
         '
@@ -2179,7 +2180,6 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.CausesValidation = False
         Me.DocumentContainer1.Controls.Add(Me.DocumentTabStrip1)
         Me.DocumentContainer1.Name = "DocumentContainer1"
-        Me.DocumentContainer1.Padding = New System.Windows.Forms.Padding(0)
         '
         '
         '
@@ -2189,6 +2189,7 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-142, -162)
         Me.DocumentContainer1.SplitterWidth = 8
         Me.DocumentContainer1.TabIndex = 2
+        Me.DocumentContainer1.ThemeName = "Fluent"
         '
         'DocumentTabStrip1
         '
@@ -2213,10 +2214,10 @@ Partial Class FrmImpianto
         Me.DocWinVisiteSched.Controls.Add(Me.track)
         Me.DocWinVisiteSched.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
         Me.DocWinVisiteSched.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.DocWinVisiteSched.Location = New System.Drawing.Point(4, 4)
+        Me.DocWinVisiteSched.Location = New System.Drawing.Point(5, 35)
         Me.DocWinVisiteSched.Name = "DocWinVisiteSched"
         Me.DocWinVisiteSched.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1612, 376)
+        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1608, 342)
         Me.DocWinVisiteSched.Text = "VISITE PROGRAMMATE"
         '
         'gant
@@ -2228,7 +2229,7 @@ Partial Class FrmImpianto
         Me.gant.ReadOnly = True
         Me.gant.ShowTimelineTodayIndicator = False
         Me.gant.ShowTodayIndicator = False
-        Me.gant.Size = New System.Drawing.Size(1612, 376)
+        Me.gant.Size = New System.Drawing.Size(1562, 342)
         Me.gant.SplitterWidth = 8
         Me.gant.TabIndex = 0
         Me.gant.ThemeName = "Fluent"
@@ -2236,7 +2237,7 @@ Partial Class FrmImpianto
         'track
         '
         Me.track.Dock = System.Windows.Forms.DockStyle.Right
-        Me.track.Location = New System.Drawing.Point(1612, 0)
+        Me.track.Location = New System.Drawing.Point(1562, 0)
         Me.track.Name = "track"
         Me.track.Orientation = System.Windows.Forms.Orientation.Vertical
         '
@@ -2244,7 +2245,7 @@ Partial Class FrmImpianto
         '
         Me.track.RootElement.StretchHorizontally = False
         Me.track.RootElement.StretchVertically = True
-        Me.track.Size = New System.Drawing.Size(0, 376)
+        Me.track.Size = New System.Drawing.Size(46, 342)
         Me.track.TabIndex = 1
         Me.track.ThemeName = "MaterialBlueGrey"
         Me.track.ThumbSize = New System.Drawing.Size(15, 15)
@@ -2312,7 +2313,7 @@ Partial Class FrmImpianto
         Me.gridAsset.MasterTemplate.AllowDeleteRow = False
         Me.gridAsset.MasterTemplate.AllowDragToGroup = False
         Me.gridAsset.MasterTemplate.AllowRowResize = False
-        Me.gridAsset.MasterTemplate.ViewDefinition = TableViewDefinition7
+        Me.gridAsset.MasterTemplate.ViewDefinition = TableViewDefinition31
         Me.gridAsset.Name = "gridAsset"
         Me.gridAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridAsset.ShowGroupPanel = False
@@ -2375,7 +2376,7 @@ Partial Class FrmImpianto
         Me.cmbAssets.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbAssets.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbAssets.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbAssets.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition8
+        Me.cmbAssets.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition32
         Me.cmbAssets.EditorControl.Name = "NestedRadGridView"
         Me.cmbAssets.EditorControl.ReadOnly = True
         Me.cmbAssets.EditorControl.ShowGroupPanel = False
@@ -2571,7 +2572,7 @@ Partial Class FrmImpianto
         Me.gridTecAsset.MasterTemplate.AllowDeleteRow = False
         Me.gridTecAsset.MasterTemplate.AllowDragToGroup = False
         Me.gridTecAsset.MasterTemplate.AllowRowResize = False
-        Me.gridTecAsset.MasterTemplate.ViewDefinition = TableViewDefinition9
+        Me.gridTecAsset.MasterTemplate.ViewDefinition = TableViewDefinition33
         Me.gridTecAsset.Name = "gridTecAsset"
         Me.gridTecAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTecAsset.ShowGroupPanel = False
@@ -2640,7 +2641,7 @@ Partial Class FrmImpianto
         Me.gridPianAsset.MasterTemplate.AllowDeleteRow = False
         Me.gridPianAsset.MasterTemplate.AllowDragToGroup = False
         Me.gridPianAsset.MasterTemplate.AllowRowResize = False
-        Me.gridPianAsset.MasterTemplate.ViewDefinition = TableViewDefinition10
+        Me.gridPianAsset.MasterTemplate.ViewDefinition = TableViewDefinition34
         Me.gridPianAsset.Name = "gridPianAsset"
         Me.gridPianAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridPianAsset.ShowGroupPanel = False
@@ -2693,7 +2694,7 @@ Partial Class FrmImpianto
         Me.cmbTipiVis.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbTipiVis.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbTipiVis.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbTipiVis.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition11
+        Me.cmbTipiVis.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition35
         Me.cmbTipiVis.EditorControl.Name = "NestedRadGridView"
         Me.cmbTipiVis.EditorControl.ReadOnly = True
         Me.cmbTipiVis.EditorControl.ShowGroupPanel = False
@@ -3011,7 +3012,7 @@ Partial Class FrmImpianto
         '
         'chartChiamate
         '
-        Me.chartChiamate.AreaDesign = CartesianArea2
+        Me.chartChiamate.AreaDesign = CartesianArea5
         Me.chartChiamate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartChiamate.Location = New System.Drawing.Point(0, 0)
         Me.chartChiamate.Name = "chartChiamate"
@@ -3064,7 +3065,7 @@ Partial Class FrmImpianto
         '
         'chartBuoni
         '
-        Me.chartBuoni.AreaDesign = CartesianArea3
+        Me.chartBuoni.AreaDesign = CartesianArea1
         Me.chartBuoni.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartBuoni.Location = New System.Drawing.Point(0, 0)
         Me.chartBuoni.Name = "chartBuoni"
@@ -3090,7 +3091,7 @@ Partial Class FrmImpianto
         '
         'chartCanoni
         '
-        Me.chartCanoni.AreaDesign = CartesianArea4
+        Me.chartCanoni.AreaDesign = CartesianArea2
         Me.chartCanoni.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartCanoni.Location = New System.Drawing.Point(0, 0)
         Me.chartCanoni.Name = "chartCanoni"
@@ -3133,7 +3134,7 @@ Partial Class FrmImpianto
         Me.gridDoc.MasterTemplate.AllowDragToGroup = False
         Me.gridDoc.MasterTemplate.AllowRowResize = False
         Me.gridDoc.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        Me.gridDoc.MasterTemplate.ViewDefinition = TableViewDefinition12
+        Me.gridDoc.MasterTemplate.ViewDefinition = TableViewDefinition36
         Me.gridDoc.Name = "gridDoc"
         Me.gridDoc.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridDoc.ShowGroupPanel = False

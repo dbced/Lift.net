@@ -377,6 +377,9 @@ Partial Class FrmImpiantiElenco
         Me.cmdFiltro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.cmdFiltro.ThemeName = "ThemeCmdRecubeYEL"
         '
+        't1
+        '
+        '
         'FrmImpiantiElenco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

@@ -49,8 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EDOC.Service.Wrapper">
-      <HintPath>..\..\..\Users\utgt156.DBNET\Desktop\TEMP\EDOC.Service.Wrapper\EDOC.Service.Wrapper.dll</HintPath>
+    <Reference Include="EDOC.Service.Wrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Librerie\EDOC.Service.Wrapper\EDOC.Service.Wrapper.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -89,6 +90,7 @@
     <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -99,8 +101,30 @@
       <HintPath>lib\RCWF\2019.3.917.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
-    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.3.903.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2018.3.1010.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCWF\2019.3.917.40\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="TelerikCommon, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>lib\RCWF\2019.3.917.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
@@ -108,6 +132,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="LiftCore" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -121,6 +146,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLASSI\clMain.vb" />
+    <Compile Include="CLASSI\CustomGanttView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CLASSI\CustomGanttViewElement.vb" />
+    <Compile Include="CLASSI\CustomGanttViewGraphicalViewElement.vb" />
     <Compile Include="CLASSI\elenco.vb" />
     <Compile Include="CLASSI\elencoAmministratori.vb" />
     <Compile Include="CLASSI\elencoAssetsImpianto.vb" />
@@ -172,6 +202,12 @@
     <Compile Include="FORMS\frmContratto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMS\frmGestVisitaBeta.Designer.vb">
+      <DependentUpon>frmGestVisitaBeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmGestVisitaBeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmImpiantiElenco.Designer.vb">
       <DependentUpon>frmImpiantiElenco.vb</DependentUpon>
     </Compile>
@@ -188,6 +224,12 @@
       <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmImpiantoAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmSchedulerManBeta.Designer.vb">
+      <DependentUpon>frmSchedulerManBeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmSchedulerManBeta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\frmTabelle.Designer.vb">
@@ -247,6 +289,9 @@
     <EmbeddedResource Include="FORMS\frmContratto.resx">
       <DependentUpon>frmContratto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmGestVisitaBeta.resx">
+      <DependentUpon>frmGestVisitaBeta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmImpiantiElenco.resx">
       <DependentUpon>frmImpiantiElenco.vb</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmImpiantoAssets.resx">
       <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmSchedulerManBeta.resx">
+      <DependentUpon>frmSchedulerManBeta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmTabelle.resx">
       <DependentUpon>frmTabelle.vb</DependentUpon>

@@ -266,7 +266,7 @@ Public Class FrmImpianto
             async_carica_grafico_fatturato(dati.AICIM, "")
             async_carica_grafico_chiamate(dati.AICIM)
             'MAPPA
-            SetupProviders()
+            '''SetupProviders()
 
         Catch ex As Exception
 
@@ -1169,7 +1169,7 @@ Public Class FrmImpianto
         Try
 
             Dim elementi As Threading.Tasks.Task(Of List(Of elencoManutenzioni))
-            elementi = ws.getManutenzioniElenco(codImp)
+            elementi = ws.getManutenzioniElenco(codImp, "", "", "")
             Await elementi
 
             Me.carica_gantt_visite(elementi.Result)
@@ -3594,7 +3594,7 @@ Public Class FrmImpianto
 
     Private Sub cmdContratto_Click(sender As Object, e As EventArgs) Handles cmdContratto.Click
         Try
-            Dim frm As New FrmContratto
+            Dim frm As New FrmContratto("", "NUOVO")
             frm.ShowDialog()
 
         Catch ex As Exception

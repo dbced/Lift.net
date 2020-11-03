@@ -11,7 +11,7 @@ Imports Telerik.WinControls.Data
 Imports System.ComponentModel
 Imports Telerik.WinControls.UI.Map.Bing
 Imports Telerik.WinControls.UI.Map
-
+Imports System.Net.Http
 
 Public Class webServices
     Public Async Function getDatiTabellaComuniIT(codTab As String, Optional codElem As String = "") As Threading.Tasks.Task(Of parmComuni())
@@ -174,8 +174,11 @@ Public Class webServices
         Try
             Dim test As String
             Dim RestURL As String = My.Settings.urlWS & "api/tabelle/GetValoriTabelleList/GetValoriTabelle"
-            Dim client As New Http.HttpClient
 
+            'Dim authtHandler As HttpClientHandler = New HttpClientHandler() With {.Credentials = CredentialCache.DefaultNetworkCredentials}
+            'Dim client As New Http.HttpClient(authtHandler)
+
+            Dim client As New Http.HttpClient()
             Dim cl As New elenco
 
             Dim paramList As ArrayList = New ArrayList()
@@ -482,7 +485,10 @@ Public Class webServices
 
     End Function
 
-    Public Async Function getManutenzioniElenco(CodImp As String) As Threading.Tasks.Task(Of List(Of elencoManutenzioni))
+    Public Async Function getManutenzioniElenco(CodImp As String, cdSoc As String, cdcen As String, cdcli As String,
+                                                      Optional Matricola As String = "", Optional DataIni As String = "",
+                                                      Optional DataFine As String = "", Optional Descr As String = "",
+                                                      Optional IdVisita As Integer = 0, Optional IdSquadra As Integer = 0) As Threading.Tasks.Task(Of List(Of elencoManutenzioni))
         Dim elenco As New List(Of elencoManutenzioni)
         Dim lista() As elencoManutenzioni
         Try
@@ -497,6 +503,15 @@ Public Class webServices
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
             client.DefaultRequestHeaders.Add("parmCodImp", CodImp)
+            client.DefaultRequestHeaders.Add("parmCodSoc", cdSoc)
+            client.DefaultRequestHeaders.Add("parmCodCen", cdcen)
+            client.DefaultRequestHeaders.Add("parmCodCli", cdcli)
+            client.DefaultRequestHeaders.Add("parmMatricola", Matricola)
+            client.DefaultRequestHeaders.Add("parmDataIni", DataIni)
+            client.DefaultRequestHeaders.Add("parmDataFine", DataFine)
+            client.DefaultRequestHeaders.Add("parmDescr", Descr)
+            client.DefaultRequestHeaders.Add("parmIdVisita", IdVisita.ToString)
+            client.DefaultRequestHeaders.Add("parmIdSquadra", IdSquadra.ToString)
 
             Dim parmImp As parmGetManutenzioniDefault = New parmGetManutenzioniDefault
 

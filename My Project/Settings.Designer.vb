@@ -66,7 +66,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://localhost:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://srvweb-av:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
         Public ReadOnly Property urlWSImpianti() As String
             Get
                 Return CType(Me("urlWSImpianti"),String)
