@@ -28,6 +28,11 @@
     Dim r_CdCen As String
     Dim r_DesCCI As String
     Dim r_DesTIM As String
+    Dim r_IDSQU As Integer
+    Dim r_AIMAT As String
+    Dim r_FLDIN As String
+    Dim r_AIMAT2 As String
+    Dim r_INFO As String
 
     Public Property ATX13() As String
         Get
@@ -317,6 +322,56 @@
 
         Set(ByVal Value As String)
             r_DesTIM = Value
+        End Set
+    End Property
+
+    Public Property AIMAT() As String
+        Get
+            Return r_AIMAT
+        End Get
+
+        Set(ByVal Value As String)
+            r_AIMAT = Value
+        End Set
+    End Property
+
+    Public Property FLDIURNO() As String
+        Get
+            Return r_FLDIN
+        End Get
+
+        Set(ByVal Value As String)
+            r_FLDIN = Value
+        End Set
+    End Property
+
+    Public Property IDSQUADRA() As Integer
+        Get
+            Return r_IDSQU
+        End Get
+
+        Set(ByVal Value As Integer)
+            r_IDSQU = Value
+        End Set
+    End Property
+
+    Public Property AIMAT2() As String
+        Get
+            Return r_AIMAT2
+        End Get
+
+        Set(ByVal Value As String)
+            r_AIMAT2 = Value
+        End Set
+    End Property
+
+    Public Property INFO() As String
+        Get
+            Return r_INFO
+        End Get
+
+        Set(ByVal Value As String)
+            r_INFO = Value
         End Set
     End Property
 

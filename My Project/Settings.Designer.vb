@@ -66,7 +66,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://srvweb-av:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://srvlift:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
         Public ReadOnly Property urlWSImpianti() As String
             Get
                 Return CType(Me("urlWSImpianti"),String)
@@ -75,7 +75,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:44322/")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://srvlift:44322/")>  _
         Public ReadOnly Property urlWS() As String
             Get
                 Return CType(Me("urlWS"),String)
@@ -100,6 +100,18 @@ Namespace My
             Get
                 Return CType(Me("LiftCore_EdocService_Service"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("LIFT_NET")>  _
+        Public Property LibLift() As String
+            Get
+                Return CType(Me("LibLift"),String)
+            End Get
+            Set
+                Me("LibLift") = value
+            End Set
         End Property
     End Class
 End Namespace

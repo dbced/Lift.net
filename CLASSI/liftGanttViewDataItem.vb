@@ -17,6 +17,8 @@ Public Class liftGanttViewDataItem
     Private _IDSQUADRA As String
     Private _FLSTA As String
     Private _DESST As String
+    Private _ORAST As String
+    Private _ORAFI As String
 
     Public Sub New()
     End Sub
@@ -171,5 +173,24 @@ Public Class liftGanttViewDataItem
         End Set
     End Property
 
+    Public Property Ora As String
+        Get
+            Return Me._ORAST
+        End Get
+
+        Set(ByVal value As String)
+            Me._ORAST = value
+        End Set
+    End Property
+
+    Public Property OraFine As String
+        Get
+            Return Me._ORAFI
+        End Get
+
+        Set(ByVal value As String)
+            Me._ORAFI = value
+        End Set
+    End Property
 
 End Class

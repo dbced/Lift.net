@@ -74,6 +74,8 @@ Partial Class FrmImpianto
         Me.DotsRingWaitingBarIndicatorElement2 = New Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement()
         Me.pageDett = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.cmbSquadra = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
         Me.cmbTecnico = New Telerik.WinControls.UI.RadDropDownList()
         Me.cmbZonaCentro = New Telerik.WinControls.UI.RadDropDownList()
         Me.chkTag = New Telerik.WinControls.UI.RadCheckBox()
@@ -151,6 +153,8 @@ Partial Class FrmImpianto
         Me.rpPageScadenze = New Telerik.WinControls.UI.RadPageViewPage()
         Me.dockVisite = New Telerik.WinControls.UI.Docking.RadDock()
         Me.ToolWinTipiVis = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.txtEsecMin = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.RadLabel40 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckedListBox1 = New Telerik.WinControls.UI.RadCheckedListBox()
         Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
@@ -249,6 +253,10 @@ Partial Class FrmImpianto
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.t1 = New System.Windows.Forms.Timer(Me.components)
         Me.ImageList24 = New System.Windows.Forms.ImageList(Me.components)
+        Me.txtMatricola2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel41 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbInfo = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel42 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RPcontainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPcontainer.SuspendLayout()
         Me.rpPageGen.SuspendLayout()
@@ -264,6 +272,8 @@ Partial Class FrmImpianto
         CType(Me.pageDett, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pageDett.SuspendLayout()
         Me.RadPageViewPage1.SuspendLayout()
+        CType(Me.cmbSquadra, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbTecnico, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbZonaCentro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkTag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -351,6 +361,8 @@ Partial Class FrmImpianto
         CType(Me.dockVisite, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dockVisite.SuspendLayout()
         Me.ToolWinTipiVis.SuspendLayout()
+        CType(Me.txtEsecMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckedListBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -466,6 +478,10 @@ Partial Class FrmImpianto
         Me.RadPanel1.SuspendLayout()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtMatricola2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel42, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -480,7 +496,7 @@ Partial Class FrmImpianto
         Me.RPcontainer.Location = New System.Drawing.Point(0, 0)
         Me.RPcontainer.Name = "RPcontainer"
         Me.RPcontainer.SelectedPage = Me.rpPageGen
-        Me.RPcontainer.Size = New System.Drawing.Size(1676, 782)
+        Me.RPcontainer.Size = New System.Drawing.Size(1676, 841)
         Me.RPcontainer.TabIndex = 186
         Me.RPcontainer.ThemeName = "MaterialBlueGrey"
         Me.RPcontainer.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
@@ -492,7 +508,7 @@ Partial Class FrmImpianto
         Me.rpPageGen.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
         Me.rpPageGen.Location = New System.Drawing.Point(55, 49)
         Me.rpPageGen.Name = "rpPageGen"
-        Me.rpPageGen.Size = New System.Drawing.Size(1620, 732)
+        Me.rpPageGen.Size = New System.Drawing.Size(1620, 791)
         Me.rpPageGen.Text = "GESTIONE ANAGRAFICA IMPIANTO"
         '
         'dockGen
@@ -511,7 +527,7 @@ Partial Class FrmImpianto
         '
         '
         Me.dockGen.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.dockGen.Size = New System.Drawing.Size(1620, 732)
+        Me.dockGen.Size = New System.Drawing.Size(1620, 791)
         Me.dockGen.SplitterWidth = 8
         Me.dockGen.TabIndex = 193
         Me.dockGen.TabStop = False
@@ -519,6 +535,10 @@ Partial Class FrmImpianto
         '
         'DocWinImpianto
         '
+        Me.DocWinImpianto.Controls.Add(Me.cmbInfo)
+        Me.DocWinImpianto.Controls.Add(Me.RadLabel42)
+        Me.DocWinImpianto.Controls.Add(Me.RadLabel41)
+        Me.DocWinImpianto.Controls.Add(Me.txtMatricola2)
         Me.DocWinImpianto.Controls.Add(Me.cmdContratto)
         Me.DocWinImpianto.Controls.Add(Me.RadLabel38)
         Me.DocWinImpianto.Controls.Add(Me.txtCentro)
@@ -577,7 +597,7 @@ Partial Class FrmImpianto
         Me.DocWinImpianto.Location = New System.Drawing.Point(5, 35)
         Me.DocWinImpianto.Name = "DocWinImpianto"
         Me.DocWinImpianto.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinImpianto.Size = New System.Drawing.Size(1063, 690)
+        Me.DocWinImpianto.Size = New System.Drawing.Size(1063, 749)
         Me.DocWinImpianto.Text = "Dati Generali Impianto"
         '
         'cmdContratto
@@ -630,8 +650,9 @@ Partial Class FrmImpianto
         'txtlocalita
         '
         Me.txtlocalita.AutoSize = False
+        Me.txtlocalita.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
         Me.txtlocalita.ForeColor = System.Drawing.Color.Black
-        Me.txtlocalita.Location = New System.Drawing.Point(164, 160)
+        Me.txtlocalita.Location = New System.Drawing.Point(164, 203)
         Me.txtlocalita.MaxLength = 35
         Me.txtlocalita.Name = "txtlocalita"
         Me.txtlocalita.Size = New System.Drawing.Size(301, 36)
@@ -642,7 +663,7 @@ Partial Class FrmImpianto
         'wb
         '
         Me.wb.AccessibleName = "d"
-        Me.wb.Location = New System.Drawing.Point(941, 154)
+        Me.wb.Location = New System.Drawing.Point(941, 197)
         Me.wb.Name = "wb"
         Me.wb.Size = New System.Drawing.Size(70, 70)
         Me.wb.TabIndex = 207
@@ -672,7 +693,7 @@ Partial Class FrmImpianto
         Me.pageDett.Controls.Add(Me.RadPageViewPage3)
         Me.pageDett.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pageDett.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pageDett.Location = New System.Drawing.Point(0, 489)
+        Me.pageDett.Location = New System.Drawing.Point(0, 548)
         Me.pageDett.Name = "pageDett"
         Me.pageDett.SelectedPage = Me.RadPageViewPage1
         Me.pageDett.Size = New System.Drawing.Size(1063, 201)
@@ -681,6 +702,8 @@ Partial Class FrmImpianto
         '
         'RadPageViewPage1
         '
+        Me.RadPageViewPage1.Controls.Add(Me.cmbSquadra)
+        Me.RadPageViewPage1.Controls.Add(Me.RadLabel39)
         Me.RadPageViewPage1.Controls.Add(Me.cmbTecnico)
         Me.RadPageViewPage1.Controls.Add(Me.cmbZonaCentro)
         Me.RadPageViewPage1.Controls.Add(Me.chkTag)
@@ -692,13 +715,39 @@ Partial Class FrmImpianto
         Me.RadPageViewPage1.Size = New System.Drawing.Size(1051, 155)
         Me.RadPageViewPage1.Text = "Dati aggiuntivi"
         '
+        'cmbSquadra
+        '
+        Me.cmbSquadra.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSquadra.AutoSize = False
+        Me.cmbSquadra.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbSquadra.ForeColor = System.Drawing.Color.Black
+        Me.cmbSquadra.Location = New System.Drawing.Point(100, 102)
+        Me.cmbSquadra.Name = "cmbSquadra"
+        Me.cmbSquadra.NullText = "Seleziona un valore"
+        Me.cmbSquadra.Size = New System.Drawing.Size(266, 36)
+        Me.cmbSquadra.TabIndex = 22
+        Me.cmbSquadra.ThemeName = "Fluent"
+        CType(Me.cmbSquadra.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        CType(Me.cmbSquadra.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
+        CType(Me.cmbSquadra.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
+        'RadLabel39
+        '
+        Me.RadLabel39.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel39.Location = New System.Drawing.Point(9, 112)
+        Me.RadLabel39.Name = "RadLabel39"
+        Me.RadLabel39.Size = New System.Drawing.Size(61, 21)
+        Me.RadLabel39.TabIndex = 183
+        Me.RadLabel39.Text = "Squadra"
+        Me.RadLabel39.ThemeName = "MaterialTeal"
+        '
         'cmbTecnico
         '
         Me.cmbTecnico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTecnico.AutoSize = False
         Me.cmbTecnico.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbTecnico.ForeColor = System.Drawing.Color.Black
-        Me.cmbTecnico.Location = New System.Drawing.Point(100, 88)
+        Me.cmbTecnico.Location = New System.Drawing.Point(100, 60)
         Me.cmbTecnico.Name = "cmbTecnico"
         Me.cmbTecnico.NullText = "Seleziona un valore"
         Me.cmbTecnico.Size = New System.Drawing.Size(266, 36)
@@ -714,7 +763,7 @@ Partial Class FrmImpianto
         Me.cmbZonaCentro.AutoSize = False
         Me.cmbZonaCentro.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbZonaCentro.ForeColor = System.Drawing.Color.Black
-        Me.cmbZonaCentro.Location = New System.Drawing.Point(100, 25)
+        Me.cmbZonaCentro.Location = New System.Drawing.Point(100, 18)
         Me.cmbZonaCentro.Name = "cmbZonaCentro"
         Me.cmbZonaCentro.NullText = "Seleziona un valore"
         Me.cmbZonaCentro.Size = New System.Drawing.Size(266, 36)
@@ -737,7 +786,7 @@ Partial Class FrmImpianto
         'RadLabel20
         '
         Me.RadLabel20.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel20.Location = New System.Drawing.Point(7, 33)
+        Me.RadLabel20.Location = New System.Drawing.Point(7, 26)
         Me.RadLabel20.Name = "RadLabel20"
         Me.RadLabel20.Size = New System.Drawing.Size(87, 21)
         Me.RadLabel20.TabIndex = 181
@@ -747,7 +796,7 @@ Partial Class FrmImpianto
         'RadLabel19
         '
         Me.RadLabel19.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel19.Location = New System.Drawing.Point(9, 98)
+        Me.RadLabel19.Location = New System.Drawing.Point(9, 67)
         Me.RadLabel19.Name = "RadLabel19"
         Me.RadLabel19.Size = New System.Drawing.Size(59, 21)
         Me.RadLabel19.TabIndex = 179
@@ -922,7 +971,7 @@ Partial Class FrmImpianto
         '
         'wbG
         '
-        Me.wbG.Location = New System.Drawing.Point(473, 351)
+        Me.wbG.Location = New System.Drawing.Point(473, 394)
         Me.wbG.Name = "wbG"
         Me.wbG.Size = New System.Drawing.Size(70, 70)
         Me.wbG.TabIndex = 206
@@ -959,7 +1008,7 @@ Partial Class FrmImpianto
         Me.txtEdificio.AutoSize = False
         Me.txtEdificio.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.txtEdificio.ForeColor = System.Drawing.Color.Black
-        Me.txtEdificio.Location = New System.Drawing.Point(492, 204)
+        Me.txtEdificio.Location = New System.Drawing.Point(492, 247)
         Me.txtEdificio.MaxLength = 20
         Me.txtEdificio.Name = "txtEdificio"
         Me.txtEdificio.Size = New System.Drawing.Size(191, 36)
@@ -973,7 +1022,7 @@ Partial Class FrmImpianto
         Me.txtInterno.AutoSize = False
         Me.txtInterno.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.txtInterno.ForeColor = System.Drawing.Color.Black
-        Me.txtInterno.Location = New System.Drawing.Point(319, 204)
+        Me.txtInterno.Location = New System.Drawing.Point(319, 247)
         Me.txtInterno.MaxLength = 2
         Me.txtInterno.Name = "txtInterno"
         Me.txtInterno.Size = New System.Drawing.Size(75, 36)
@@ -986,7 +1035,7 @@ Partial Class FrmImpianto
         'RadLabel6
         '
         Me.RadLabel6.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel6.Location = New System.Drawing.Point(22, 390)
+        Me.RadLabel6.Location = New System.Drawing.Point(22, 433)
         Me.RadLabel6.Name = "RadLabel6"
         Me.RadLabel6.Size = New System.Drawing.Size(67, 21)
         Me.RadLabel6.TabIndex = 175
@@ -996,7 +1045,7 @@ Partial Class FrmImpianto
         'RadLabel24
         '
         Me.RadLabel24.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel24.Location = New System.Drawing.Point(433, 212)
+        Me.RadLabel24.Location = New System.Drawing.Point(433, 255)
         Me.RadLabel24.Name = "RadLabel24"
         Me.RadLabel24.Size = New System.Drawing.Size(55, 21)
         Me.RadLabel24.TabIndex = 205
@@ -1007,7 +1056,7 @@ Partial Class FrmImpianto
         '
         Me.txtProv.AutoSize = False
         Me.txtProv.ForeColor = System.Drawing.Color.Black
-        Me.txtProv.Location = New System.Drawing.Point(640, 161)
+        Me.txtProv.Location = New System.Drawing.Point(640, 204)
         Me.txtProv.MaxLength = 2
         Me.txtProv.Name = "txtProv"
         Me.txtProv.NullText = "PRV"
@@ -1022,7 +1071,7 @@ Partial Class FrmImpianto
         'RadLabel23
         '
         Me.RadLabel23.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel23.Location = New System.Drawing.Point(260, 212)
+        Me.RadLabel23.Location = New System.Drawing.Point(260, 255)
         Me.RadLabel23.Name = "RadLabel23"
         Me.RadLabel23.Size = New System.Drawing.Size(53, 21)
         Me.RadLabel23.TabIndex = 203
@@ -1035,11 +1084,11 @@ Partial Class FrmImpianto
         Me.cmbStrada.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbStrada.AutoSize = False
         Me.cmbStrada.ForeColor = System.Drawing.Color.Black
-        Me.cmbStrada.Location = New System.Drawing.Point(164, 116)
+        Me.cmbStrada.Location = New System.Drawing.Point(164, 159)
         Me.cmbStrada.Name = "cmbStrada"
         Me.cmbStrada.NullText = "Seleziona un valore"
-        Me.cmbStrada.Size = New System.Drawing.Size(200, 36)
-        Me.cmbStrada.TabIndex = 3
+        Me.cmbStrada.Size = New System.Drawing.Size(266, 36)
+        Me.cmbStrada.TabIndex = 4
         Me.cmbStrada.ThemeName = "Fluent"
         CType(Me.cmbStrada.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
         CType(Me.cmbStrada.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
@@ -1050,7 +1099,7 @@ Partial Class FrmImpianto
         Me.txtScala.AutoSize = False
         Me.txtScala.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtScala.ForeColor = System.Drawing.Color.Black
-        Me.txtScala.Location = New System.Drawing.Point(164, 204)
+        Me.txtScala.Location = New System.Drawing.Point(164, 247)
         Me.txtScala.MaxLength = 2
         Me.txtScala.Name = "txtScala"
         Me.txtScala.Size = New System.Drawing.Size(53, 36)
@@ -1062,7 +1111,7 @@ Partial Class FrmImpianto
         'RadLabel7
         '
         Me.RadLabel7.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel7.Location = New System.Drawing.Point(25, 439)
+        Me.RadLabel7.Location = New System.Drawing.Point(25, 482)
         Me.RadLabel7.Name = "RadLabel7"
         Me.RadLabel7.Size = New System.Drawing.Size(40, 21)
         Me.RadLabel7.TabIndex = 177
@@ -1072,7 +1121,7 @@ Partial Class FrmImpianto
         'RadLabel22
         '
         Me.RadLabel22.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel22.Location = New System.Drawing.Point(26, 212)
+        Me.RadLabel22.Location = New System.Drawing.Point(26, 255)
         Me.RadLabel22.Name = "RadLabel22"
         Me.RadLabel22.Size = New System.Drawing.Size(43, 21)
         Me.RadLabel22.TabIndex = 201
@@ -1085,7 +1134,7 @@ Partial Class FrmImpianto
         Me.cmbZona.AutoSize = False
         Me.cmbZona.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbZona.ForeColor = System.Drawing.Color.Black
-        Me.cmbZona.Location = New System.Drawing.Point(164, 430)
+        Me.cmbZona.Location = New System.Drawing.Point(164, 473)
         Me.cmbZona.Name = "cmbZona"
         Me.cmbZona.NullText = "Seleziona un valore"
         Me.cmbZona.Size = New System.Drawing.Size(266, 36)
@@ -1097,7 +1146,7 @@ Partial Class FrmImpianto
         '
         'wbAT
         '
-        Me.wbAT.Location = New System.Drawing.Point(982, 384)
+        Me.wbAT.Location = New System.Drawing.Point(982, 427)
         Me.wbAT.Name = "wbAT"
         Me.wbAT.Size = New System.Drawing.Size(70, 70)
         Me.wbAT.TabIndex = 200
@@ -1122,7 +1171,7 @@ Partial Class FrmImpianto
         'RadLabel2
         '
         Me.RadLabel2.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel2.Location = New System.Drawing.Point(22, 255)
+        Me.RadLabel2.Location = New System.Drawing.Point(22, 298)
         Me.RadLabel2.Name = "RadLabel2"
         Me.RadLabel2.Size = New System.Drawing.Size(52, 21)
         Me.RadLabel2.TabIndex = 3
@@ -1135,7 +1184,7 @@ Partial Class FrmImpianto
         Me.cmbCostruttore.AutoSize = False
         Me.cmbCostruttore.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbCostruttore.ForeColor = System.Drawing.Color.Black
-        Me.cmbCostruttore.Location = New System.Drawing.Point(707, 433)
+        Me.cmbCostruttore.Location = New System.Drawing.Point(707, 476)
         Me.cmbCostruttore.Name = "cmbCostruttore"
         Me.cmbCostruttore.NullText = "Seleziona un valore"
         Me.cmbCostruttore.Size = New System.Drawing.Size(266, 36)
@@ -1171,7 +1220,7 @@ Partial Class FrmImpianto
         Me.cmbLoc.EditorControl.TabIndex = 0
         Me.cmbLoc.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cmbLoc.ForeColor = System.Drawing.Color.Black
-        Me.cmbLoc.Location = New System.Drawing.Point(163, 160)
+        Me.cmbLoc.Location = New System.Drawing.Point(163, 203)
         Me.cmbLoc.Name = "cmbLoc"
         Me.cmbLoc.Size = New System.Drawing.Size(301, 35)
         Me.cmbLoc.TabIndex = 180
@@ -1181,7 +1230,7 @@ Partial Class FrmImpianto
         'RadLabel21
         '
         Me.RadLabel21.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel21.Location = New System.Drawing.Point(564, 439)
+        Me.RadLabel21.Location = New System.Drawing.Point(564, 482)
         Me.RadLabel21.Name = "RadLabel21"
         Me.RadLabel21.Size = New System.Drawing.Size(81, 21)
         Me.RadLabel21.TabIndex = 196
@@ -1191,7 +1240,7 @@ Partial Class FrmImpianto
         'RadLabel5
         '
         Me.RadLabel5.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel5.Location = New System.Drawing.Point(22, 344)
+        Me.RadLabel5.Location = New System.Drawing.Point(22, 387)
         Me.RadLabel5.Name = "RadLabel5"
         Me.RadLabel5.Size = New System.Drawing.Size(131, 21)
         Me.RadLabel5.TabIndex = 4
@@ -1200,7 +1249,7 @@ Partial Class FrmImpianto
         '
         'wbA
         '
-        Me.wbA.Location = New System.Drawing.Point(976, 281)
+        Me.wbA.Location = New System.Drawing.Point(976, 324)
         Me.wbA.Name = "wbA"
         Me.wbA.Size = New System.Drawing.Size(70, 70)
         Me.wbA.TabIndex = 199
@@ -1227,7 +1276,7 @@ Partial Class FrmImpianto
         '
         Me.txtCodCliente.AutoSize = False
         Me.txtCodCliente.ForeColor = System.Drawing.Color.Black
-        Me.txtCodCliente.Location = New System.Drawing.Point(164, 248)
+        Me.txtCodCliente.Location = New System.Drawing.Point(164, 291)
         Me.txtCodCliente.MaxLength = 6
         Me.txtCodCliente.Name = "txtCodCliente"
         Me.txtCodCliente.Size = New System.Drawing.Size(100, 36)
@@ -1240,11 +1289,11 @@ Partial Class FrmImpianto
         'RadLabel18
         '
         Me.RadLabel18.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel18.Location = New System.Drawing.Point(26, 81)
+        Me.RadLabel18.Location = New System.Drawing.Point(26, 83)
         Me.RadLabel18.Name = "RadLabel18"
-        Me.RadLabel18.Size = New System.Drawing.Size(68, 21)
+        Me.RadLabel18.Size = New System.Drawing.Size(93, 21)
         Me.RadLabel18.TabIndex = 197
-        Me.RadLabel18.Text = "Matricola"
+        Me.RadLabel18.Text = "Matricola Lift"
         Me.RadLabel18.ThemeName = "MaterialTeal"
         '
         'cmbTipoImpianto
@@ -1253,7 +1302,7 @@ Partial Class FrmImpianto
         Me.cmbTipoImpianto.AutoSize = False
         Me.cmbTipoImpianto.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbTipoImpianto.ForeColor = System.Drawing.Color.Black
-        Me.cmbTipoImpianto.Location = New System.Drawing.Point(164, 384)
+        Me.cmbTipoImpianto.Location = New System.Drawing.Point(164, 427)
         Me.cmbTipoImpianto.Name = "cmbTipoImpianto"
         Me.cmbTipoImpianto.NullText = "Seleziona un valore"
         Me.cmbTipoImpianto.Size = New System.Drawing.Size(266, 36)
@@ -1267,18 +1316,20 @@ Partial Class FrmImpianto
         '
         Me.txtMatricola.AutoSize = False
         Me.txtMatricola.ForeColor = System.Drawing.Color.Black
-        Me.txtMatricola.Location = New System.Drawing.Point(163, 72)
-        Me.txtMatricola.MaxLength = 6
+        Me.txtMatricola.Location = New System.Drawing.Point(163, 74)
+        Me.txtMatricola.MaxLength = 15
         Me.txtMatricola.Name = "txtMatricola"
-        Me.txtMatricola.Size = New System.Drawing.Size(201, 36)
+        Me.txtMatricola.Size = New System.Drawing.Size(266, 36)
         Me.txtMatricola.TabIndex = 1
         Me.txtMatricola.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtMatricola.ThemeName = "Fluent"
+        CType(Me.txtMatricola.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtMatricola.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         '
         'RadLabel3
         '
         Me.RadLabel3.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel3.Location = New System.Drawing.Point(26, 123)
+        Me.RadLabel3.Location = New System.Drawing.Point(26, 166)
         Me.RadLabel3.Name = "RadLabel3"
         Me.RadLabel3.Size = New System.Drawing.Size(63, 21)
         Me.RadLabel3.TabIndex = 4
@@ -1291,11 +1342,11 @@ Partial Class FrmImpianto
         Me.cmbTipoImp.AutoSize = False
         Me.cmbTipoImp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTipoImp.ForeColor = System.Drawing.Color.Black
-        Me.cmbTipoImp.Location = New System.Drawing.Point(709, 72)
+        Me.cmbTipoImp.Location = New System.Drawing.Point(709, 117)
         Me.cmbTipoImp.Name = "cmbTipoImp"
         Me.cmbTipoImp.NullText = "Seleziona un valore"
         Me.cmbTipoImp.Size = New System.Drawing.Size(266, 36)
-        Me.cmbTipoImp.TabIndex = 2
+        Me.cmbTipoImp.TabIndex = 4
         Me.cmbTipoImp.ThemeName = "Fluent"
         CType(Me.cmbTipoImp.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         CType(Me.cmbTipoImp.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadDropDownTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -1325,7 +1376,7 @@ Partial Class FrmImpianto
         Me.cmbEnteIsp.AutoSize = False
         Me.cmbEnteIsp.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbEnteIsp.ForeColor = System.Drawing.Color.Black
-        Me.cmbEnteIsp.Location = New System.Drawing.Point(707, 388)
+        Me.cmbEnteIsp.Location = New System.Drawing.Point(707, 431)
         Me.cmbEnteIsp.Name = "cmbEnteIsp"
         Me.cmbEnteIsp.NullText = "Seleziona un valore"
         Me.cmbEnteIsp.Size = New System.Drawing.Size(266, 36)
@@ -1340,7 +1391,7 @@ Partial Class FrmImpianto
         Me.cmbCategoriaImp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbCategoriaImp.AutoSize = False
         Me.cmbCategoriaImp.ForeColor = System.Drawing.Color.Black
-        Me.cmbCategoriaImp.Location = New System.Drawing.Point(164, 338)
+        Me.cmbCategoriaImp.Location = New System.Drawing.Point(164, 381)
         Me.cmbCategoriaImp.Name = "cmbCategoriaImp"
         Me.cmbCategoriaImp.NullText = "Seleziona un valore"
         Me.cmbCategoriaImp.Size = New System.Drawing.Size(266, 36)
@@ -1351,7 +1402,7 @@ Partial Class FrmImpianto
         'RadLabel17
         '
         Me.RadLabel17.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel17.Location = New System.Drawing.Point(597, 81)
+        Me.RadLabel17.Location = New System.Drawing.Point(593, 126)
         Me.RadLabel17.Name = "RadLabel17"
         Me.RadLabel17.Size = New System.Drawing.Size(97, 21)
         Me.RadLabel17.TabIndex = 187
@@ -1362,7 +1413,7 @@ Partial Class FrmImpianto
         'RadLabel8
         '
         Me.RadLabel8.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel8.Location = New System.Drawing.Point(772, 303)
+        Me.RadLabel8.Location = New System.Drawing.Point(772, 346)
         Me.RadLabel8.Name = "RadLabel8"
         Me.RadLabel8.Size = New System.Drawing.Size(89, 21)
         Me.RadLabel8.TabIndex = 6
@@ -1372,7 +1423,7 @@ Partial Class FrmImpianto
         'RadLabel16
         '
         Me.RadLabel16.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel16.Location = New System.Drawing.Point(562, 394)
+        Me.RadLabel16.Location = New System.Drawing.Point(562, 437)
         Me.RadLabel16.Name = "RadLabel16"
         Me.RadLabel16.Size = New System.Drawing.Size(95, 21)
         Me.RadLabel16.TabIndex = 194
@@ -1384,7 +1435,7 @@ Partial Class FrmImpianto
         Me.txtDesCli.AutoSize = False
         Me.txtDesCli.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDesCli.ForeColor = System.Drawing.Color.Black
-        Me.txtDesCli.Location = New System.Drawing.Point(271, 248)
+        Me.txtDesCli.Location = New System.Drawing.Point(271, 291)
         Me.txtDesCli.MaxLength = 6
         Me.txtDesCli.Name = "txtDesCli"
         Me.txtDesCli.ReadOnly = True
@@ -1402,7 +1453,7 @@ Partial Class FrmImpianto
         Me.cmbEnteColl.AutoSize = False
         Me.cmbEnteColl.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbEnteColl.ForeColor = System.Drawing.Color.Black
-        Me.cmbEnteColl.Location = New System.Drawing.Point(707, 342)
+        Me.cmbEnteColl.Location = New System.Drawing.Point(707, 385)
         Me.cmbEnteColl.Name = "cmbEnteColl"
         Me.cmbEnteColl.NullText = "Seleziona un valore"
         Me.cmbEnteColl.Size = New System.Drawing.Size(266, 36)
@@ -1417,10 +1468,10 @@ Partial Class FrmImpianto
         Me.txtIndirizzo.AutoSize = False
         Me.txtIndirizzo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtIndirizzo.ForeColor = System.Drawing.Color.Black
-        Me.txtIndirizzo.Location = New System.Drawing.Point(387, 116)
+        Me.txtIndirizzo.Location = New System.Drawing.Point(433, 159)
         Me.txtIndirizzo.MaxLength = 35
         Me.txtIndirizzo.Name = "txtIndirizzo"
-        Me.txtIndirizzo.Size = New System.Drawing.Size(588, 36)
+        Me.txtIndirizzo.Size = New System.Drawing.Size(542, 36)
         Me.txtIndirizzo.TabIndex = 4
         Me.txtIndirizzo.ThemeName = "Fluent"
         CType(Me.txtIndirizzo.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -1428,7 +1479,7 @@ Partial Class FrmImpianto
         'RadLabel15
         '
         Me.RadLabel15.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel15.Location = New System.Drawing.Point(560, 348)
+        Me.RadLabel15.Location = New System.Drawing.Point(560, 391)
         Me.RadLabel15.Name = "RadLabel15"
         Me.RadLabel15.Size = New System.Drawing.Size(122, 21)
         Me.RadLabel15.TabIndex = 192
@@ -1440,7 +1491,7 @@ Partial Class FrmImpianto
         Me.txtDesAmm.AutoSize = False
         Me.txtDesAmm.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDesAmm.ForeColor = System.Drawing.Color.Black
-        Me.txtDesAmm.Location = New System.Drawing.Point(271, 292)
+        Me.txtDesAmm.Location = New System.Drawing.Point(271, 335)
         Me.txtDesAmm.MaxLength = 6
         Me.txtDesAmm.Name = "txtDesAmm"
         Me.txtDesAmm.ReadOnly = True
@@ -1457,7 +1508,7 @@ Partial Class FrmImpianto
         Me.txtDataNomina.AutoSize = False
         Me.txtDataNomina.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.txtDataNomina.ForeColor = System.Drawing.Color.Black
-        Me.txtDataNomina.Location = New System.Drawing.Point(869, 294)
+        Me.txtDataNomina.Location = New System.Drawing.Point(869, 337)
         Me.txtDataNomina.Mask = "00/00/0000"
         Me.txtDataNomina.MaskType = Telerik.WinControls.UI.MaskType.Standard
         Me.txtDataNomina.MinimumSize = New System.Drawing.Size(0, 24)
@@ -1476,7 +1527,7 @@ Partial Class FrmImpianto
         'RadLabel14
         '
         Me.RadLabel14.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel14.Location = New System.Drawing.Point(26, 167)
+        Me.RadLabel14.Location = New System.Drawing.Point(26, 210)
         Me.RadLabel14.Name = "RadLabel14"
         Me.RadLabel14.Size = New System.Drawing.Size(58, 21)
         Me.RadLabel14.TabIndex = 5
@@ -1487,7 +1538,7 @@ Partial Class FrmImpianto
         '
         Me.cmdOkSearchCli.Image = CType(resources.GetObject("cmdOkSearchCli.Image"), System.Drawing.Image)
         Me.cmdOkSearchCli.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchCli.Location = New System.Drawing.Point(688, 253)
+        Me.cmdOkSearchCli.Location = New System.Drawing.Point(688, 296)
         Me.cmdOkSearchCli.Name = "cmdOkSearchCli"
         Me.cmdOkSearchCli.Size = New System.Drawing.Size(25, 26)
         Me.cmdOkSearchCli.TabIndex = 187
@@ -1497,7 +1548,7 @@ Partial Class FrmImpianto
         'RadLabel4
         '
         Me.RadLabel4.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel4.Location = New System.Drawing.Point(24, 300)
+        Me.RadLabel4.Location = New System.Drawing.Point(24, 343)
         Me.RadLabel4.Name = "RadLabel4"
         Me.RadLabel4.Size = New System.Drawing.Size(108, 21)
         Me.RadLabel4.TabIndex = 5
@@ -1508,7 +1559,7 @@ Partial Class FrmImpianto
         '
         Me.txtCodAmm.AutoSize = False
         Me.txtCodAmm.ForeColor = System.Drawing.Color.Black
-        Me.txtCodAmm.Location = New System.Drawing.Point(164, 292)
+        Me.txtCodAmm.Location = New System.Drawing.Point(164, 335)
         Me.txtCodAmm.MaxLength = 4
         Me.txtCodAmm.Name = "txtCodAmm"
         Me.txtCodAmm.ReadOnly = True
@@ -1523,7 +1574,7 @@ Partial Class FrmImpianto
         '
         Me.cmdOkSearchLoc.Image = CType(resources.GetObject("cmdOkSearchLoc.Image"), System.Drawing.Image)
         Me.cmdOkSearchLoc.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchLoc.Location = New System.Drawing.Point(470, 164)
+        Me.cmdOkSearchLoc.Location = New System.Drawing.Point(470, 207)
         Me.cmdOkSearchLoc.Name = "cmdOkSearchLoc"
         Me.cmdOkSearchLoc.Size = New System.Drawing.Size(25, 26)
         Me.cmdOkSearchLoc.TabIndex = 190
@@ -1535,7 +1586,7 @@ Partial Class FrmImpianto
         Me.txtCap.AutoSize = False
         Me.txtCap.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCap.ForeColor = System.Drawing.Color.Black
-        Me.txtCap.Location = New System.Drawing.Point(530, 161)
+        Me.txtCap.Location = New System.Drawing.Point(530, 204)
         Me.txtCap.Mask = "00000"
         Me.txtCap.Name = "txtCap"
         Me.txtCap.NullText = "CAP"
@@ -1574,7 +1625,7 @@ Partial Class FrmImpianto
         Me.cmbClienti.EditorControl.TabIndex = 0
         Me.cmbClienti.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
         Me.cmbClienti.ForeColor = System.Drawing.Color.Black
-        Me.cmbClienti.Location = New System.Drawing.Point(165, 249)
+        Me.cmbClienti.Location = New System.Drawing.Point(165, 292)
         Me.cmbClienti.Name = "cmbClienti"
         Me.cmbClienti.Size = New System.Drawing.Size(100, 35)
         Me.cmbClienti.TabIndex = 189
@@ -1606,7 +1657,7 @@ Partial Class FrmImpianto
         '
         Me.DocumentTabStrip2.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.DocumentTabStrip2.SelectedIndex = 0
-        Me.DocumentTabStrip2.Size = New System.Drawing.Size(1075, 732)
+        Me.DocumentTabStrip2.Size = New System.Drawing.Size(1075, 791)
         Me.DocumentTabStrip2.TabIndex = 0
         Me.DocumentTabStrip2.TabStop = False
         Me.DocumentTabStrip2.ThemeName = "Fluent"
@@ -1625,7 +1676,7 @@ Partial Class FrmImpianto
         '
         '
         Me.RadSplitContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainer1.Size = New System.Drawing.Size(537, 732)
+        Me.RadSplitContainer1.Size = New System.Drawing.Size(537, 791)
         Me.RadSplitContainer1.SizeInfo.AbsoluteSize = New System.Drawing.Size(537, 200)
         Me.RadSplitContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(337, 0)
         Me.RadSplitContainer1.SplitterWidth = 8
@@ -1644,7 +1695,7 @@ Partial Class FrmImpianto
         '
         Me.ToolTabStrip7.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip7.SelectedIndex = 0
-        Me.ToolTabStrip7.Size = New System.Drawing.Size(537, 425)
+        Me.ToolTabStrip7.Size = New System.Drawing.Size(537, 460)
         Me.ToolTabStrip7.SizeInfo.AbsoluteSize = New System.Drawing.Size(537, 200)
         Me.ToolTabStrip7.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0!, 0.08701658!)
         Me.ToolTabStrip7.SizeInfo.SplitterCorrection = New System.Drawing.Size(337, 76)
@@ -1660,7 +1711,7 @@ Partial Class FrmImpianto
         Me.ToolWinSchedaTec.Location = New System.Drawing.Point(4, 34)
         Me.ToolWinSchedaTec.Name = "ToolWinSchedaTec"
         Me.ToolWinSchedaTec.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinSchedaTec.Size = New System.Drawing.Size(529, 387)
+        Me.ToolWinSchedaTec.Size = New System.Drawing.Size(529, 422)
         Me.ToolWinSchedaTec.Text = "SCHEDA TECNICA IMPIANTO"
         Me.ToolWinSchedaTec.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -1684,7 +1735,7 @@ Partial Class FrmImpianto
         Me.grid.Name = "grid"
         Me.grid.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.grid.ShowGroupPanel = False
-        Me.grid.Size = New System.Drawing.Size(529, 387)
+        Me.grid.Size = New System.Drawing.Size(529, 422)
         Me.grid.TabIndex = 0
         Me.grid.ThemeName = "VisualStudio2012Light"
         '
@@ -1693,14 +1744,14 @@ Partial Class FrmImpianto
         Me.ToolTabStrip8.CanUpdateChildIndex = True
         Me.ToolTabStrip8.CausesValidation = False
         Me.ToolTabStrip8.Controls.Add(Me.ToolWinMap)
-        Me.ToolTabStrip8.Location = New System.Drawing.Point(0, 433)
+        Me.ToolTabStrip8.Location = New System.Drawing.Point(0, 468)
         Me.ToolTabStrip8.Name = "ToolTabStrip8"
         '
         '
         '
         Me.ToolTabStrip8.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip8.SelectedIndex = 0
-        Me.ToolTabStrip8.Size = New System.Drawing.Size(537, 299)
+        Me.ToolTabStrip8.Size = New System.Drawing.Size(537, 323)
         Me.ToolTabStrip8.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0!, -0.08701658!)
         Me.ToolTabStrip8.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, -76)
         Me.ToolTabStrip8.TabIndex = 2
@@ -1716,7 +1767,7 @@ Partial Class FrmImpianto
         Me.ToolWinMap.Location = New System.Drawing.Point(4, 34)
         Me.ToolWinMap.Name = "ToolWinMap"
         Me.ToolWinMap.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinMap.Size = New System.Drawing.Size(529, 261)
+        Me.ToolWinMap.Size = New System.Drawing.Size(529, 285)
         Me.ToolWinMap.Text = "MAPPA"
         Me.ToolWinMap.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
         '
@@ -1729,7 +1780,7 @@ Partial Class FrmImpianto
         Me.map.ShowMiniMap = False
         Me.map.ShowScaleIndicator = False
         Me.map.ShowSearchBar = False
-        Me.map.Size = New System.Drawing.Size(529, 261)
+        Me.map.Size = New System.Drawing.Size(529, 285)
         Me.map.TabIndex = 1
         Me.map.ThemeName = "Fluent"
         '
@@ -1769,6 +1820,8 @@ Partial Class FrmImpianto
         'ToolWinTipiVis
         '
         Me.ToolWinTipiVis.Caption = Nothing
+        Me.ToolWinTipiVis.Controls.Add(Me.txtEsecMin)
+        Me.ToolWinTipiVis.Controls.Add(Me.RadLabel40)
         Me.ToolWinTipiVis.Controls.Add(Me.RadLabel36)
         Me.ToolWinTipiVis.Controls.Add(Me.RadCheckedListBox1)
         Me.ToolWinTipiVis.Controls.Add(Me.RadLabel34)
@@ -1788,12 +1841,39 @@ Partial Class FrmImpianto
         Me.ToolWinTipiVis.Controls.Add(Me.txtVisFrequenza)
         Me.ToolWinTipiVis.Controls.Add(Me.gridTpVis)
         Me.ToolWinTipiVis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinTipiVis.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinTipiVis.Name = "ToolWinTipiVis"
         Me.ToolWinTipiVis.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 279)
+        Me.ToolWinTipiVis.Size = New System.Drawing.Size(958, 332)
         Me.ToolWinTipiVis.Text = "PROGRAMMAZIONE VISITE"
         Me.ToolWinTipiVis.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
+        '
+        'txtEsecMin
+        '
+        Me.txtEsecMin.AutoSize = False
+        Me.txtEsecMin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEsecMin.Location = New System.Drawing.Point(659, 160)
+        Me.txtEsecMin.MaskType = Telerik.WinControls.UI.MaskType.Numeric
+        Me.txtEsecMin.Name = "txtEsecMin"
+        Me.txtEsecMin.Size = New System.Drawing.Size(88, 31)
+        Me.txtEsecMin.TabIndex = 199
+        Me.txtEsecMin.TabStop = False
+        Me.txtEsecMin.Text = "0"
+        Me.txtEsecMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtEsecMin.ThemeName = "Fluent"
+        CType(Me.txtEsecMin.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Text = "0"
+        CType(Me.txtEsecMin.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        CType(Me.txtEsecMin.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).ForeColor = System.Drawing.Color.Black
+        '
+        'RadLabel40
+        '
+        Me.RadLabel40.ForeColor = System.Drawing.Color.Black
+        Me.RadLabel40.Location = New System.Drawing.Point(502, 166)
+        Me.RadLabel40.Name = "RadLabel40"
+        Me.RadLabel40.Size = New System.Drawing.Size(148, 21)
+        Me.RadLabel40.TabIndex = 202
+        Me.RadLabel40.Text = "Tempo esecuz. (min.)"
+        Me.RadLabel40.ThemeName = "MaterialTeal"
         '
         'RadLabel36
         '
@@ -1900,7 +1980,7 @@ Partial Class FrmImpianto
         '
         Me.txtVisPeriodoFin.AutoSize = False
         Me.txtVisPeriodoFin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtVisPeriodoFin.Location = New System.Drawing.Point(659, 145)
+        Me.txtVisPeriodoFin.Location = New System.Drawing.Point(659, 127)
         Me.txtVisPeriodoFin.Name = "txtVisPeriodoFin"
         Me.txtVisPeriodoFin.Size = New System.Drawing.Size(88, 31)
         Me.txtVisPeriodoFin.TabIndex = 198
@@ -1932,7 +2012,7 @@ Partial Class FrmImpianto
         'RadLabel27
         '
         Me.RadLabel27.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel27.Location = New System.Drawing.Point(502, 151)
+        Me.RadLabel27.Location = New System.Drawing.Point(502, 133)
         Me.RadLabel27.Name = "RadLabel27"
         Me.RadLabel27.Size = New System.Drawing.Size(135, 21)
         Me.RadLabel27.TabIndex = 194
@@ -1942,7 +2022,7 @@ Partial Class FrmImpianto
         'RadLabel26
         '
         Me.RadLabel26.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel26.Location = New System.Drawing.Point(500, 113)
+        Me.RadLabel26.Location = New System.Drawing.Point(500, 100)
         Me.RadLabel26.Name = "RadLabel26"
         Me.RadLabel26.Size = New System.Drawing.Size(145, 21)
         Me.RadLabel26.TabIndex = 192
@@ -1953,7 +2033,7 @@ Partial Class FrmImpianto
         '
         Me.txtVisPeriodoIni.AutoSize = False
         Me.txtVisPeriodoIni.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtVisPeriodoIni.Location = New System.Drawing.Point(659, 107)
+        Me.txtVisPeriodoIni.Location = New System.Drawing.Point(659, 94)
         Me.txtVisPeriodoIni.Name = "txtVisPeriodoIni"
         Me.txtVisPeriodoIni.Size = New System.Drawing.Size(88, 31)
         Me.txtVisPeriodoIni.TabIndex = 193
@@ -1966,7 +2046,7 @@ Partial Class FrmImpianto
         'RadLabel25
         '
         Me.RadLabel25.ForeColor = System.Drawing.Color.Black
-        Me.RadLabel25.Location = New System.Drawing.Point(500, 74)
+        Me.RadLabel25.Location = New System.Drawing.Point(500, 67)
         Me.RadLabel25.Name = "RadLabel25"
         Me.RadLabel25.Size = New System.Drawing.Size(135, 21)
         Me.RadLabel25.TabIndex = 190
@@ -1976,7 +2056,7 @@ Partial Class FrmImpianto
         'chkUltimaVisEff
         '
         Me.chkUltimaVisEff.ForeColor = System.Drawing.Color.Black
-        Me.chkUltimaVisEff.Location = New System.Drawing.Point(502, 194)
+        Me.chkUltimaVisEff.Location = New System.Drawing.Point(502, 203)
         Me.chkUltimaVisEff.Name = "chkUltimaVisEff"
         Me.chkUltimaVisEff.Size = New System.Drawing.Size(240, 19)
         Me.chkUltimaVisEff.TabIndex = 190
@@ -1987,7 +2067,7 @@ Partial Class FrmImpianto
         '
         Me.txtVisGGstartup.AutoSize = False
         Me.txtVisGGstartup.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtVisGGstartup.Location = New System.Drawing.Point(659, 68)
+        Me.txtVisGGstartup.Location = New System.Drawing.Point(659, 61)
         Me.txtVisGGstartup.MaskType = Telerik.WinControls.UI.MaskType.Numeric
         Me.txtVisGGstartup.Name = "txtVisGGstartup"
         Me.txtVisGGstartup.Size = New System.Drawing.Size(88, 31)
@@ -2047,7 +2127,7 @@ Partial Class FrmImpianto
         Me.gridTpVis.Name = "gridTpVis"
         Me.gridTpVis.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTpVis.ShowGroupPanel = False
-        Me.gridTpVis.Size = New System.Drawing.Size(469, 279)
+        Me.gridTpVis.Size = New System.Drawing.Size(469, 332)
         Me.gridTpVis.TabIndex = 188
         Me.gridTpVis.ThemeName = "Fluent"
         '
@@ -2156,10 +2236,10 @@ Partial Class FrmImpianto
         Me.ToolWinGrafico.Caption = Nothing
         Me.ToolWinGrafico.Controls.Add(Me.chartVis)
         Me.ToolWinGrafico.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinGrafico.Location = New System.Drawing.Point(4, 4)
         Me.ToolWinGrafico.Name = "ToolWinGrafico"
         Me.ToolWinGrafico.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 302)
+        Me.ToolWinGrafico.Size = New System.Drawing.Size(638, 332)
         Me.ToolWinGrafico.Text = "GRAFICO STATO MANUTENZIONI"
         Me.ToolWinGrafico.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.AutoHide
         '
@@ -2171,7 +2251,7 @@ Partial Class FrmImpianto
         Me.chartVis.Name = "chartVis"
         Me.chartVis.ShowDrillNavigation = True
         Me.chartVis.ShowGrid = False
-        Me.chartVis.Size = New System.Drawing.Size(638, 302)
+        Me.chartVis.Size = New System.Drawing.Size(638, 332)
         Me.chartVis.TabIndex = 0
         Me.chartVis.ThemeName = "Fluent"
         '
@@ -2180,6 +2260,7 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.CausesValidation = False
         Me.DocumentContainer1.Controls.Add(Me.DocumentTabStrip1)
         Me.DocumentContainer1.Name = "DocumentContainer1"
+        Me.DocumentContainer1.Padding = New System.Windows.Forms.Padding(0)
         '
         '
         '
@@ -2189,7 +2270,6 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-142, -162)
         Me.DocumentContainer1.SplitterWidth = 8
         Me.DocumentContainer1.TabIndex = 2
-        Me.DocumentContainer1.ThemeName = "Fluent"
         '
         'DocumentTabStrip1
         '
@@ -2214,10 +2294,10 @@ Partial Class FrmImpianto
         Me.DocWinVisiteSched.Controls.Add(Me.track)
         Me.DocWinVisiteSched.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
         Me.DocWinVisiteSched.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.DocWinVisiteSched.Location = New System.Drawing.Point(5, 35)
+        Me.DocWinVisiteSched.Location = New System.Drawing.Point(4, 4)
         Me.DocWinVisiteSched.Name = "DocWinVisiteSched"
         Me.DocWinVisiteSched.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1608, 342)
+        Me.DocWinVisiteSched.Size = New System.Drawing.Size(1612, 376)
         Me.DocWinVisiteSched.Text = "VISITE PROGRAMMATE"
         '
         'gant
@@ -2229,7 +2309,7 @@ Partial Class FrmImpianto
         Me.gant.ReadOnly = True
         Me.gant.ShowTimelineTodayIndicator = False
         Me.gant.ShowTodayIndicator = False
-        Me.gant.Size = New System.Drawing.Size(1562, 342)
+        Me.gant.Size = New System.Drawing.Size(1612, 376)
         Me.gant.SplitterWidth = 8
         Me.gant.TabIndex = 0
         Me.gant.ThemeName = "Fluent"
@@ -2237,7 +2317,7 @@ Partial Class FrmImpianto
         'track
         '
         Me.track.Dock = System.Windows.Forms.DockStyle.Right
-        Me.track.Location = New System.Drawing.Point(1562, 0)
+        Me.track.Location = New System.Drawing.Point(1612, 0)
         Me.track.Name = "track"
         Me.track.Orientation = System.Windows.Forms.Orientation.Vertical
         '
@@ -2245,7 +2325,7 @@ Partial Class FrmImpianto
         '
         Me.track.RootElement.StretchHorizontally = False
         Me.track.RootElement.StretchVertically = True
-        Me.track.Size = New System.Drawing.Size(46, 342)
+        Me.track.Size = New System.Drawing.Size(0, 376)
         Me.track.TabIndex = 1
         Me.track.ThemeName = "MaterialBlueGrey"
         Me.track.ThumbSize = New System.Drawing.Size(15, 15)
@@ -3156,7 +3236,7 @@ Partial Class FrmImpianto
         Me.RadPanel1.Controls.Add(Me.cmdAnnulla)
         Me.RadPanel1.Controls.Add(Me.cmdConferma)
         Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPanel1.Location = New System.Drawing.Point(0, 782)
+        Me.RadPanel1.Location = New System.Drawing.Point(0, 841)
         Me.RadPanel1.Name = "RadPanel1"
         Me.RadPanel1.Size = New System.Drawing.Size(1676, 47)
         Me.RadPanel1.TabIndex = 187
@@ -3194,11 +3274,61 @@ Partial Class FrmImpianto
         Me.ImageList24.Images.SetKeyName(4, "finance_black.png")
         Me.ImageList24.Images.SetKeyName(5, "map-legend_black.png")
         '
+        'txtMatricola2
+        '
+        Me.txtMatricola2.AutoSize = False
+        Me.txtMatricola2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtMatricola2.ForeColor = System.Drawing.Color.Black
+        Me.txtMatricola2.Location = New System.Drawing.Point(164, 117)
+        Me.txtMatricola2.MaxLength = 50
+        Me.txtMatricola2.Name = "txtMatricola2"
+        Me.txtMatricola2.Size = New System.Drawing.Size(266, 36)
+        Me.txtMatricola2.TabIndex = 2
+        Me.txtMatricola2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtMatricola2.ThemeName = "Fluent"
+        CType(Me.txtMatricola2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'RadLabel41
+        '
+        Me.RadLabel41.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel41.Location = New System.Drawing.Point(26, 126)
+        Me.RadLabel41.Name = "RadLabel41"
+        Me.RadLabel41.Size = New System.Drawing.Size(108, 21)
+        Me.RadLabel41.TabIndex = 211
+        Me.RadLabel41.Text = "Matricola Reale"
+        Me.RadLabel41.ThemeName = "MaterialTeal"
+        '
+        'cmbInfo
+        '
+        Me.cmbInfo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbInfo.AutoSize = False
+        Me.cmbInfo.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbInfo.ForeColor = System.Drawing.Color.Black
+        Me.cmbInfo.Location = New System.Drawing.Point(709, 74)
+        Me.cmbInfo.Name = "cmbInfo"
+        Me.cmbInfo.NullText = "Seleziona un valore"
+        Me.cmbInfo.Size = New System.Drawing.Size(266, 36)
+        Me.cmbInfo.TabIndex = 3
+        Me.cmbInfo.ThemeName = "Fluent"
+        CType(Me.cmbInfo.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        CType(Me.cmbInfo.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
+        CType(Me.cmbInfo.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
+        'RadLabel42
+        '
+        Me.RadLabel42.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel42.Location = New System.Drawing.Point(592, 82)
+        Me.RadLabel42.Name = "RadLabel42"
+        Me.RadLabel42.Size = New System.Drawing.Size(103, 21)
+        Me.RadLabel42.TabIndex = 194
+        Me.RadLabel42.Text = "Info aggiuntive"
+        Me.RadLabel42.ThemeName = "MaterialTeal"
+        '
         'FrmImpianto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1676, 829)
+        Me.ClientSize = New System.Drawing.Size(1676, 888)
         Me.Controls.Add(Me.RPcontainer)
         Me.Controls.Add(Me.RadPanel1)
         Me.Location = New System.Drawing.Point(1002, 354)
@@ -3227,6 +3357,8 @@ Partial Class FrmImpianto
         Me.pageDett.ResumeLayout(False)
         Me.RadPageViewPage1.ResumeLayout(False)
         Me.RadPageViewPage1.PerformLayout()
+        CType(Me.cmbSquadra, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbTecnico, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbZonaCentro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkTag, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3317,6 +3449,8 @@ Partial Class FrmImpianto
         Me.dockVisite.ResumeLayout(False)
         Me.ToolWinTipiVis.ResumeLayout(False)
         Me.ToolWinTipiVis.PerformLayout()
+        CType(Me.txtEsecMin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckedListBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3437,6 +3571,10 @@ Partial Class FrmImpianto
         Me.RadPanel1.ResumeLayout(False)
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtMatricola2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel42, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -3637,5 +3775,13 @@ Partial Class FrmImpianto
     Friend WithEvents cmbTecnico As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cmbZonaCentro As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents RadLabel36 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents cmbSquadra As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents RadLabel39 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents txtEsecMin As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents RadLabel40 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadLabel41 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents txtMatricola2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents cmbInfo As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents RadLabel42 As Telerik.WinControls.UI.RadLabel
 End Class
 

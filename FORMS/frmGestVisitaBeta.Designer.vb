@@ -24,7 +24,7 @@ Partial Class FrmGestVisitaBeta
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGestVisitaBeta))
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.FluentDarkTheme1 = New Telerik.WinControls.Themes.FluentDarkTheme()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
         Me.VisualStudio2012DarkTheme1 = New Telerik.WinControls.Themes.VisualStudio2012DarkTheme()
@@ -61,8 +61,9 @@ Partial Class FrmGestVisitaBeta
         Me.cmdOkSearch = New Telerik.WinControls.UI.RadButton()
         Me.cmdOkSearchImp = New Telerik.WinControls.UI.RadButton()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmbClienti = New Telerik.WinControls.UI.RadMultiColumnComboBox()
+        Me.cmbImpianti = New Telerik.WinControls.UI.RadMultiColumnComboBox()
         Me.txtDescr = New Telerik.WinControls.UI.RadTextBox()
+        Me.lblChiusa = New Telerik.WinControls.UI.RadLabel()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,10 +91,11 @@ Partial Class FrmGestVisitaBeta
         CType(Me.cmdOkSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdOkSearchImp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbImpianti, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbImpianti.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbImpianti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDescr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblChiusa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -102,7 +104,7 @@ Partial Class FrmGestVisitaBeta
         Me.cmdAnnulla.Location = New System.Drawing.Point(140, 562)
         Me.cmdAnnulla.Name = "cmdAnnulla"
         Me.cmdAnnulla.Size = New System.Drawing.Size(117, 29)
-        Me.cmdAnnulla.TabIndex = 9
+        Me.cmdAnnulla.TabIndex = 10
         Me.cmdAnnulla.Text = "Annulla"
         Me.cmdAnnulla.ThemeName = "VisualStudio2012Light"
         '
@@ -111,7 +113,7 @@ Partial Class FrmGestVisitaBeta
         Me.cmdConferma.Location = New System.Drawing.Point(286, 562)
         Me.cmdConferma.Name = "cmdConferma"
         Me.cmdConferma.Size = New System.Drawing.Size(117, 29)
-        Me.cmdConferma.TabIndex = 10
+        Me.cmdConferma.TabIndex = 11
         Me.cmdConferma.Text = "Salva"
         Me.cmdConferma.ThemeName = "VisualStudio2012Light"
         '
@@ -145,7 +147,7 @@ Partial Class FrmGestVisitaBeta
         Me.cmbTipoVisita.Name = "cmbTipoVisita"
         Me.cmbTipoVisita.NullText = "Seleziona un valore"
         Me.cmbTipoVisita.Size = New System.Drawing.Size(266, 36)
-        Me.cmbTipoVisita.TabIndex = 1
+        Me.cmbTipoVisita.TabIndex = 2
         Me.cmbTipoVisita.ThemeName = "Fluent"
         CType(Me.cmbTipoVisita.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
         CType(Me.cmbTipoVisita.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
@@ -160,7 +162,7 @@ Partial Class FrmGestVisitaBeta
         Me.txtData.Location = New System.Drawing.Point(140, 203)
         Me.txtData.Name = "txtData"
         Me.txtData.Size = New System.Drawing.Size(266, 38)
-        Me.txtData.TabIndex = 2
+        Me.txtData.TabIndex = 3
         Me.txtData.TabStop = False
         Me.txtData.Text = "19/08/2020 14:59"
         Me.txtData.ThemeName = "Fluent"
@@ -221,9 +223,8 @@ Partial Class FrmGestVisitaBeta
         Me.txtDataFine.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtDataFine.Location = New System.Drawing.Point(140, 252)
         Me.txtDataFine.Name = "txtDataFine"
-        Me.txtDataFine.ReadOnly = True
         Me.txtDataFine.Size = New System.Drawing.Size(266, 38)
-        Me.txtDataFine.TabIndex = 3
+        Me.txtDataFine.TabIndex = 4
         Me.txtDataFine.TabStop = False
         Me.txtDataFine.Text = "19/08/2020 14:59"
         Me.txtDataFine.ThemeName = "Fluent"
@@ -248,7 +249,7 @@ Partial Class FrmGestVisitaBeta
         Me.txtDataEffett.Location = New System.Drawing.Point(140, 301)
         Me.txtDataEffett.Name = "txtDataEffett"
         Me.txtDataEffett.Size = New System.Drawing.Size(266, 38)
-        Me.txtDataEffett.TabIndex = 4
+        Me.txtDataEffett.TabIndex = 5
         Me.txtDataEffett.TabStop = False
         Me.txtDataEffett.Text = "19/08/2020 14:59"
         Me.txtDataEffett.ThemeName = "Fluent"
@@ -360,7 +361,7 @@ Partial Class FrmGestVisitaBeta
         Me.txtNote.Name = "txtNote"
         Me.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtNote.Size = New System.Drawing.Size(266, 80)
-        Me.txtNote.TabIndex = 6
+        Me.txtNote.TabIndex = 7
         Me.txtNote.ThemeName = "Fluent"
         CType(Me.txtNote.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).StretchVertically = True
         CType(Me.txtNote.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -373,7 +374,7 @@ Partial Class FrmGestVisitaBeta
         Me.chkDiurno.Location = New System.Drawing.Point(140, 483)
         Me.chkDiurno.Name = "chkDiurno"
         Me.chkDiurno.Size = New System.Drawing.Size(148, 21)
-        Me.chkDiurno.TabIndex = 7
+        Me.chkDiurno.TabIndex = 8
         Me.chkDiurno.Text = "Manutenzione diurna"
         Me.chkDiurno.ThemeName = "Fluent"
         Me.chkDiurno.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
@@ -384,7 +385,7 @@ Partial Class FrmGestVisitaBeta
         Me.chkNotturno.Location = New System.Drawing.Point(140, 513)
         Me.chkNotturno.Name = "chkNotturno"
         Me.chkNotturno.Size = New System.Drawing.Size(161, 21)
-        Me.chkNotturno.TabIndex = 8
+        Me.chkNotturno.TabIndex = 9
         Me.chkNotturno.TabStop = False
         Me.chkNotturno.Text = "Manutenzione notturna"
         Me.chkNotturno.ThemeName = "Fluent"
@@ -409,7 +410,7 @@ Partial Class FrmGestVisitaBeta
         Me.cmbSquadre.Name = "cmbSquadre"
         Me.cmbSquadre.NullText = "Seleziona un valore"
         Me.cmbSquadre.Size = New System.Drawing.Size(266, 36)
-        Me.cmbSquadre.TabIndex = 5
+        Me.cmbSquadre.TabIndex = 6
         Me.cmbSquadre.ThemeName = "Fluent"
         CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
         CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
@@ -430,7 +431,7 @@ Partial Class FrmGestVisitaBeta
         '
         Me.cmdOkSearchImp.Image = CType(resources.GetObject("cmdOkSearchImp.Image"), System.Drawing.Image)
         Me.cmdOkSearchImp.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchImp.Location = New System.Drawing.Point(372, 113)
+        Me.cmdOkSearchImp.Location = New System.Drawing.Point(411, 113)
         Me.cmdOkSearchImp.Name = "cmdOkSearchImp"
         Me.cmdOkSearchImp.Size = New System.Drawing.Size(34, 31)
         Me.cmdOkSearchImp.TabIndex = 222
@@ -447,59 +448,73 @@ Partial Class FrmGestVisitaBeta
         Me.RadLabel8.Text = "Descr. Impianto"
         Me.RadLabel8.ThemeName = "MaterialTeal"
         '
-        'cmbClienti
+        'cmbImpianti
         '
-        Me.cmbClienti.AutoSize = False
+        Me.cmbImpianti.AutoSize = False
         '
-        'cmbClienti.NestedRadGridView
+        'cmbImpianti.NestedRadGridView
         '
-        Me.cmbClienti.EditorControl.BackColor = System.Drawing.SystemColors.Window
-        Me.cmbClienti.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbClienti.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmbClienti.EditorControl.Location = New System.Drawing.Point(0, 0)
+        Me.cmbImpianti.EditorControl.BackColor = System.Drawing.SystemColors.Window
+        Me.cmbImpianti.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbImpianti.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmbImpianti.EditorControl.Location = New System.Drawing.Point(0, 0)
         '
         '
         '
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowAddNewRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowCellContextMenu = False
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cmbClienti.EditorControl.MasterTemplate.EnableGrouping = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
-        Me.cmbClienti.EditorControl.Name = "NestedRadGridView"
-        Me.cmbClienti.EditorControl.ReadOnly = True
-        Me.cmbClienti.EditorControl.ShowGroupPanel = False
-        Me.cmbClienti.EditorControl.Size = New System.Drawing.Size(240, 150)
-        Me.cmbClienti.EditorControl.TabIndex = 0
-        Me.cmbClienti.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cmbClienti.ForeColor = System.Drawing.Color.Black
-        Me.cmbClienti.Location = New System.Drawing.Point(139, 113)
-        Me.cmbClienti.Name = "cmbClienti"
-        Me.cmbClienti.Size = New System.Drawing.Size(228, 35)
-        Me.cmbClienti.TabIndex = 225
-        Me.cmbClienti.TabStop = False
-        Me.cmbClienti.ThemeName = "Fluent"
+        Me.cmbImpianti.EditorControl.MasterTemplate.AllowAddNewRow = False
+        Me.cmbImpianti.EditorControl.MasterTemplate.AllowCellContextMenu = False
+        Me.cmbImpianti.EditorControl.MasterTemplate.AllowColumnChooser = False
+        Me.cmbImpianti.EditorControl.MasterTemplate.EnableGrouping = False
+        Me.cmbImpianti.EditorControl.MasterTemplate.ShowFilteringRow = False
+        Me.cmbImpianti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.cmbImpianti.EditorControl.Name = "NestedRadGridView"
+        Me.cmbImpianti.EditorControl.ReadOnly = True
+        Me.cmbImpianti.EditorControl.ShowGroupPanel = False
+        Me.cmbImpianti.EditorControl.Size = New System.Drawing.Size(240, 150)
+        Me.cmbImpianti.EditorControl.TabIndex = 0
+        Me.cmbImpianti.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.cmbImpianti.ForeColor = System.Drawing.Color.Black
+        Me.cmbImpianti.Location = New System.Drawing.Point(139, 113)
+        Me.cmbImpianti.Name = "cmbImpianti"
+        Me.cmbImpianti.Size = New System.Drawing.Size(228, 35)
+        Me.cmbImpianti.TabIndex = 225
+        Me.cmbImpianti.TabStop = False
+        Me.cmbImpianti.ThemeName = "Fluent"
         '
         'txtDescr
         '
         Me.txtDescr.AutoSize = False
         Me.txtDescr.ForeColor = System.Drawing.Color.Black
-        Me.txtDescr.Location = New System.Drawing.Point(139, 112)
+        Me.txtDescr.Location = New System.Drawing.Point(139, 111)
         Me.txtDescr.MaxLength = 0
         Me.txtDescr.Name = "txtDescr"
-        Me.txtDescr.Size = New System.Drawing.Size(227, 36)
-        Me.txtDescr.TabIndex = 226
+        Me.txtDescr.Size = New System.Drawing.Size(266, 36)
+        Me.txtDescr.TabIndex = 1
         Me.txtDescr.ThemeName = "Fluent"
         CType(Me.txtDescr.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
         CType(Me.txtDescr.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'lblChiusa
+        '
+        Me.lblChiusa.AutoSize = False
+        Me.lblChiusa.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.lblChiusa.ForeColor = System.Drawing.Color.White
+        Me.lblChiusa.Location = New System.Drawing.Point(141, 290)
+        Me.lblChiusa.Name = "lblChiusa"
+        Me.lblChiusa.Size = New System.Drawing.Size(264, 13)
+        Me.lblChiusa.TabIndex = 228
+        Me.lblChiusa.Text = "VISITA CHIUSA"
+        Me.lblChiusa.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblChiusa.Visible = False
         '
         'FrmGestVisitaBeta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(460, 615)
+        Me.Controls.Add(Me.lblChiusa)
         Me.Controls.Add(Me.txtDescr)
-        Me.Controls.Add(Me.cmbClienti)
+        Me.Controls.Add(Me.cmbImpianti)
         Me.Controls.Add(Me.RadLabel8)
         Me.Controls.Add(Me.cmdOkSearchImp)
         Me.Controls.Add(Me.cmdOkSearch)
@@ -564,10 +579,11 @@ Partial Class FrmGestVisitaBeta
         CType(Me.cmdOkSearch, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdOkSearchImp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbImpianti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbImpianti.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbImpianti, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDescr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblChiusa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -610,7 +626,8 @@ Partial Class FrmGestVisitaBeta
     Friend WithEvents cmdOkSearch As Telerik.WinControls.UI.RadButton
     Friend WithEvents cmdOkSearchImp As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents cmbClienti As Telerik.WinControls.UI.RadMultiColumnComboBox
+    Friend WithEvents cmbImpianti As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents txtDescr As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents lblChiusa As Telerik.WinControls.UI.RadLabel
 End Class
 

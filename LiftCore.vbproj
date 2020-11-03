@@ -94,6 +94,7 @@
     <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -129,6 +130,8 @@
       <HintPath>lib\RCWF\2019.3.917.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="TelerikData, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikExport, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -154,14 +157,17 @@
     <Compile Include="CLASSI\elenco.vb" />
     <Compile Include="CLASSI\elencoAmministratori.vb" />
     <Compile Include="CLASSI\elencoAssetsImpianto.vb" />
+    <Compile Include="CLASSI\elencoChiusureVis.vb" />
     <Compile Include="CLASSI\elencoClienti.vb" />
     <Compile Include="CLASSI\elencoDocumenti.vb" />
+    <Compile Include="CLASSI\elencoLogs.vb" />
     <Compile Include="CLASSI\elencoManutDefault.vb" />
     <Compile Include="CLASSI\elencoManutenzioni.vb" />
     <Compile Include="CLASSI\elencoReperibilita.vb" />
     <Compile Include="CLASSI\elencoTasksVisita.vb" />
     <Compile Include="CLASSI\elencoTecnici.vb" />
     <Compile Include="CLASSI\parmComuni.vb" />
+    <Compile Include="CLASSI\parmGetLogs.vb" />
     <Compile Include="CLASSI\parmGetManutenzioniDefault.vb" />
     <Compile Include="CLASSI\parmGetSchedaImpianto.vb" />
     <Compile Include="CLASSI\parmImpianti.vb" />
@@ -176,6 +182,7 @@
     <Compile Include="CLASSI\statFatturatoImpianto.vb" />
     <Compile Include="CLASSI\statManutenzioni.vb" />
     <Compile Include="CLASSI\tecnico.vb" />
+    <Compile Include="CLASSI\utility.vb" />
     <Compile Include="CLASSI\webServices.vb" />
     <Compile Include="CLASSI\wsEdoc.vb" />
     <Compile Include="FORMS\frmAmministratore.Designer.vb">
@@ -190,6 +197,12 @@
     <Compile Include="FORMS\frmAmministratoriElenco.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMS\frmChiusuraVisite.Designer.vb">
+      <DependentUpon>frmChiusuraVisite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmChiusuraVisite.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmContrattiElenco.Designer.vb">
       <DependentUpon>frmContrattiElenco.vb</DependentUpon>
     </Compile>
@@ -200,6 +213,12 @@
       <DependentUpon>frmContratto.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmContratto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmExpGantt.Designer.vb">
+      <DependentUpon>frmExpGantt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmExpGantt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\frmGestVisitaBeta.Designer.vb">
@@ -283,11 +302,17 @@
     <EmbeddedResource Include="FORMS\frmAmministratoriElenco.resx">
       <DependentUpon>frmAmministratoriElenco.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmChiusuraVisite.resx">
+      <DependentUpon>frmChiusuraVisite.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmContrattiElenco.resx">
       <DependentUpon>frmContrattiElenco.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmContratto.resx">
       <DependentUpon>frmContratto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmExpGantt.resx">
+      <DependentUpon>frmExpGantt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmGestVisitaBeta.resx">
       <DependentUpon>frmGestVisitaBeta.vb</DependentUpon>
@@ -418,6 +443,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\EdocService\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_comment2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_warning_y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010_x-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

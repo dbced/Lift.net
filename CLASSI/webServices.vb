@@ -132,6 +132,46 @@ Public Class webServices
 
     End Function
 
+    Public Async Function getDatiTabellaComboImpianti(codTab As String, Optional codElem As String = "") As Threading.Tasks.Task(Of elenco())
+        Dim varses() As elenco
+
+        Try
+            Dim test As String
+            Dim RestURL As String = My.Settings.urlWS & "api/anagrafiche/GetElencoImpiantiComboList/GetElencoImpiantiComboList"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("parmCodTab", codTab)
+            client.DefaultRequestHeaders.Add("parmCodEle", codElem)
+
+            Dim parmImp As parmGetTabella = New parmGetTabella
+
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            'Dim myContent = jss.Serialize(parmImp)
+            'RestURL = RestURL & "?paramList=" & myContent
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                test = Await RestResponse.Content.ReadAsStringAsync()
+                varses = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elenco())(test)
+            End If
+
+            test = RestResponse.StatusCode.ToString
+            Return varses
+
+
+        Catch EX As Exception
+            Return varses
+        End Try
+
+
+    End Function
+
     Public Async Function getTabellaReperibilita(codCen As String, codZona As String) As Threading.Tasks.Task(Of elencoReperibilita())
         Dim varses() As elencoReperibilita
 
@@ -488,7 +528,9 @@ Public Class webServices
     Public Async Function getManutenzioniElenco(CodImp As String, cdSoc As String, cdcen As String, cdcli As String,
                                                       Optional Matricola As String = "", Optional DataIni As String = "",
                                                       Optional DataFine As String = "", Optional Descr As String = "",
-                                                      Optional IdVisita As Integer = 0, Optional IdSquadra As Integer = 0) As Threading.Tasks.Task(Of List(Of elencoManutenzioni))
+                                                      Optional IdVisita As Integer = 0, Optional IdSquadra As Integer = 0,
+                                                      Optional DataChiDal As String = "", Optional DataChiAl As String = "",
+                                                      Optional flErrate As String = "", Optional flChiuse As String = "") As Threading.Tasks.Task(Of List(Of elencoManutenzioni))
         Dim elenco As New List(Of elencoManutenzioni)
         Dim lista() As elencoManutenzioni
         Try
@@ -512,7 +554,11 @@ Public Class webServices
             client.DefaultRequestHeaders.Add("parmDescr", Descr)
             client.DefaultRequestHeaders.Add("parmIdVisita", IdVisita.ToString)
             client.DefaultRequestHeaders.Add("parmIdSquadra", IdSquadra.ToString)
-
+            client.DefaultRequestHeaders.Add("parmDataChiusuraDal", DataChiDal)
+            client.DefaultRequestHeaders.Add("parmDataChiusuraAl", DataChiAl)
+            client.DefaultRequestHeaders.Add("parmErrate", flErrate)
+            client.DefaultRequestHeaders.Add("parmChiuse", flChiuse)
+            'parmChiuse
             Dim parmImp As parmGetManutenzioniDefault = New parmGetManutenzioniDefault
 
             Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
@@ -905,4 +951,42 @@ Public Class webServices
 
     End Function
 
+    Public Async Function getElencoLogVisite(utente As String, tipo As String, Optional dataDa As String = "", Optional dataA As String = "") As Threading.Tasks.Task(Of List(Of elencoLogs))
+        Dim elenco As New List(Of elencoLogs)
+        Dim lista() As elencoLogs
+        Try
+
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/visite/getLogsVisiteList/getLogsVisiteList"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+
+            client.DefaultRequestHeaders.Add("parmUtente", utente)
+            client.DefaultRequestHeaders.Add("parmTipoLog", tipo)
+            client.DefaultRequestHeaders.Add("parmDataInizio", dataDa)
+            client.DefaultRequestHeaders.Add("parmDataFine", dataA)
+
+            Dim parmLog As parmGetLogs = New parmGetLogs
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoLogs())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            Return elenco
+
+        Catch EX As Exception
+            Return elenco
+        End Try
+    End Function
 End Class

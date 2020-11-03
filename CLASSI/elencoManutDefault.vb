@@ -15,6 +15,7 @@
     Dim r_GGMMI As String
     Dim r_GGMMF As String
     Dim r_ID As Integer
+    Dim r_esec As Integer
 
     Public Property ID() As Integer
         Get
@@ -175,6 +176,17 @@
 
         Set(ByVal Value As String)
             r_GGMMF = Value
+        End Set
+
+    End Property
+
+    Public Property TempoEsec() As Integer
+        Get
+            Return r_esec
+        End Get
+
+        Set(ByVal Value As Integer)
+            r_esec = Value
         End Set
 
     End Property

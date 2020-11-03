@@ -366,7 +366,7 @@ Public Class FrmImpiantoAssets
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/impianti/saveAsset/postAsset" & "?paramList=1234"
+            Dim postUrl = My.Settings.urlWS & "api/impianti/saveAsset/postAsset" & "?paramList=1234"
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("parmEntry", postContent)
 

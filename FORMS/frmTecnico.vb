@@ -199,7 +199,7 @@ Public Class FrmTecnico
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/anagrafiche/saveTecnico/postSaveTecnico"
+            Dim postUrl = My.Settings.urlWS & "api/anagrafiche/saveTecnico/postSaveTecnico"
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("parmTecnico", postContent)
             client.DefaultRequestHeaders.Add("parmAzione", azione)

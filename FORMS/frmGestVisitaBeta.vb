@@ -2,6 +2,7 @@
 Imports System.Text
 Imports System.Web.Script.Serialization
 Imports Telerik.WinControls
+Imports Telerik.WinControls.Data
 Imports Telerik.WinControls.UI
 
 Public Class FrmGestVisitaBeta
@@ -65,11 +66,11 @@ Public Class FrmGestVisitaBeta
                         txtCentro.Text = iniCentro
                         txtCodice.ReadOnly = False
                         txtData.Value = New DateTime(Now.Year, Now.Month, Now.Day, 8, 0, 0)
-                        txtDataFine.Value = New DateTime(Now.Year, Now.Month, Now.Day, 23, 0, 0)
+                        txtDataFine.Value = New DateTime(Now.Year, Now.Month, Now.Day, 19, 0, 0)
                         txtDataEffett.Value = Nothing
 
                     Case "MODIFICA"
-                        carica_gantt_visite(datiVisita)
+                        carica_visita(datiVisita)
 
                 End Select
 
@@ -230,7 +231,7 @@ Public Class FrmGestVisitaBeta
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/visite/saveVisitaBeta1/postSaveVisitaBeta1"
+            Dim postUrl = My.Settings.urlWS & "api/visite/saveVisitaBeta1/postSaveVisitaBeta1"
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("parmVisita", postContent)
             client.DefaultRequestHeaders.Add("parmAzione", azione)
@@ -249,6 +250,7 @@ Public Class FrmGestVisitaBeta
                 Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio non effettuato. " & vbCrLf & "Causa: " & msg, "Gestione visita", MessageBoxButtons.OK, RadMessageIcon.Error)
             Else
                 Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio effettuato", "Gestione visita", MessageBoxButtons.OK, RadMessageIcon.Info)
+                Me.Close()
             End If
 
         Catch EX As Exception
@@ -372,7 +374,7 @@ Public Class FrmGestVisitaBeta
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/visite/controlloVisitaLiv1/controlloVisitaLiv1"
+            Dim postUrl = My.Settings.urlWS & "api/visite/controlloVisitaLiv1/controlloVisitaLiv1"
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("parmVisita", postContent)
             client.DefaultRequestHeaders.Add("parmAzione", azione)
@@ -422,9 +424,9 @@ Public Class FrmGestVisitaBeta
 
     Private Sub txtData_LostFocus(sender As Object, e As EventArgs) Handles txtData.LostFocus
         Try
-            If IsDate(txtData.Value) Then
-                txtDataFine.Value = Format(txtData.Value, "dd/MM/yyyy") & " 23:00:00"
-            End If
+            'If IsDate(txtData.Value) Then
+            '    txtDataFine.Value = Format(txtData.Value, "dd/MM/yyyy") & " 23:00:00"
+            'End If
         Catch ex As Exception
 
         End Try
@@ -481,7 +483,7 @@ Public Class FrmGestVisitaBeta
 
     End Sub
 
-    Private Sub carica_gantt_visite(dati As List(Of elencoManutenzioni))
+    Private Sub carica_visita(dati As List(Of elencoManutenzioni))
         Try
             txtSoc.Text = dati(0).codSocieta
             txtCentro.Text = dati(0).CodCentro
@@ -501,11 +503,183 @@ Public Class FrmGestVisitaBeta
                 chkNotturno.CheckState = CheckState.Checked
             End If
 
+            If IsDate(CDate(dati(0).dataEffettTS)) Then
+                If Not dati(0).dataEffettTS.Contains("01/01/0001") Then
+                    cmdConferma.Enabled = False
+                    lblChiusa.Visible = True
+                End If
+            End If
+
             txtCodice.ReadOnly = True
+            txtDescr.ReadOnly = True
+            cmdOkSearchImp.Enabled = False
 
         Catch EX As Exception
             MsgBox(EX.Message, vbCritical)
         End Try
+
+    End Sub
+
+    Private Sub cmdOkSearchImp_Click(sender As Object, e As EventArgs) Handles cmdOkSearchImp.Click
+        Telerik.WinControls.RadMessageBox.SetThemeName("MaterialBlueGrey")
+
+        Try
+            If txtDescr.Text.Trim.Length >= 6 Then
+                Me.carica_combo_impianti()
+            Else
+                Telerik.WinControls.RadMessageBox.Show(Me, "Inserire almeno 6 caratteri ", "Gestione visita", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Async Sub carica_combo_impianti()
+        Try
+            Dim elementi As Threading.Tasks.Task(Of elenco())
+            elementi = ws.getDatiTabellaComboImpianti("", txtDescr.Text)
+            Await elementi
+
+            Me.cmbImpianti.Columns.Clear()
+            cmbImpianti.MultiColumnComboBoxElement.DropDownAnimationEnabled = False
+
+            Me.cmbImpianti.AutoSizeDropDownToBestFit = True
+            Dim multiColumnComboElement As RadMultiColumnComboBoxElement = Me.cmbImpianti.MultiColumnComboBoxElement
+            multiColumnComboElement.DropDownSizingMode = SizingMode.UpDownAndRightBottom
+            multiColumnComboElement.DropDownMinSize = New Size(420, 300)
+            multiColumnComboElement.EditorControl.MasterTemplate.AutoGenerateColumns = False
+
+            Dim column = New GridViewTextBoxColumn("AICIM")
+            column.HeaderText = "Cd. Impianto"
+            multiColumnComboElement.Columns.Add(column)
+
+            column = New GridViewTextBoxColumn("AIIND")
+            column.HeaderText = "Indirizzo"
+            multiColumnComboElement.Columns.Add(column)
+
+            column = New GridViewTextBoxColumn("AIMAT")
+            column.HeaderText = "Matricola"
+            multiColumnComboElement.Columns.Add(column)
+
+            column = New GridViewTextBoxColumn("FLDIURNO")
+            column.HeaderText = "D/N"
+            multiColumnComboElement.Columns.Add(column)
+
+            column = New GridViewTextBoxColumn("IDSQUADRA")
+            column.HeaderText = "ID SQUADRA"
+            multiColumnComboElement.Columns.Add(column)
+
+            Me.cmbImpianti.DisplayMember = "AIIND"
+            Me.cmbImpianti.ValueMember = "AICIM"
+            Me.cmbImpianti.DataSource = elementi.Result
+
+            Me.cmbImpianti.AutoFilter = True
+            Dim compositeFilter As New CompositeFilterDescriptor()
+            Dim aicim As New FilterDescriptor("AICIM", FilterOperator.Contains, "")
+            Dim aiind As New FilterDescriptor("AIIND", FilterOperator.Contains, "")
+            Dim aimat As New FilterDescriptor("AIMAT", FilterOperator.Contains, "")
+            Dim fldiurno As New FilterDescriptor("FLDIURNO", FilterOperator.Contains, "")
+            Dim idsquadra As New FilterDescriptor("IDSQUADRA", FilterOperator.Contains, "")
+
+            compositeFilter.FilterDescriptors.Add(aicim)
+            compositeFilter.FilterDescriptors.Add(aiind)
+            compositeFilter.FilterDescriptors.Add(aimat)
+            compositeFilter.FilterDescriptors.Add(fldiurno)
+            compositeFilter.FilterDescriptors.Add(idsquadra)
+
+            compositeFilter.LogicalOperator = FilterLogicalOperator.[Or]
+            Me.cmbImpianti.EditorControl.FilterDescriptors.Add(compositeFilter)
+
+            Me.cmbImpianti.SelectedIndex = -1
+
+            cmbImpianti.Visible = True
+            txtDescr.Visible = False
+            cmbImpianti.Focus()
+            cmbImpianti.MultiColumnComboBoxElement.ShowPopup()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        End Try
+
+    End Sub
+
+    Private Sub seleziona_impianto()
+        Try
+            If cmbImpianti.Visible = False Then
+                Exit Sub
+            End If
+
+            If cmbImpianti.SelectedIndex >= 0 Then
+                Dim value As Object = cmbImpianti.EditorControl.Rows(cmbImpianti.SelectedIndex).Cells("AIIND").Value
+                Dim fldin As Object = cmbImpianti.EditorControl.Rows(cmbImpianti.SelectedIndex).Cells("FLDIURNO").Value
+                Dim idSquadra As Object = cmbImpianti.EditorControl.Rows(cmbImpianti.SelectedIndex).Cells("IDSQUADRA").Value
+
+                txtCodice.Text = cmbImpianti.SelectedValue.ToString
+                txtDescr.Text = value.ToString
+                If fldin = "N" Then
+                    chkNotturno.IsChecked = True
+                Else
+                    chkDiurno.IsChecked = True
+                End If
+
+                cmbSquadre.SelectedValue = idSquadra.ToString
+            Else
+                txtCodice.Text = ""
+                txtDescr.Text = ""
+            End If
+
+            cmbImpianti.Visible = False
+            txtDescr.Visible = True
+
+        Catch ex As Exception
+            txtCodice.Text = ""
+            txtDescr.Text = ""
+            cmbImpianti.Visible = False
+            txtDescr.Visible = True
+
+        End Try
+    End Sub
+
+    Private Sub cmbImpianti_LostFocus(sender As Object, e As EventArgs) Handles cmbImpianti.LostFocus
+        seleziona_impianto()
+    End Sub
+
+    Private Sub chkNotturno_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles chkNotturno.ToggleStateChanged
+        Try
+            If iniAzione = "INSERISCI" Then
+                If IsDate(txtData.Value) Then
+                    txtData.Value = New DateTime(Year(txtData.Value), Month(txtData.Value), DateTime.Parse(txtData.Value).Day, 19, 0, 0)
+                    txtDataFine.Value = New DateTime(Year(txtData.Value), Month(txtData.Value), DateTime.Parse(txtData.Value).Day, 23, 0, 0)
+                Else
+                    txtData.Value = New DateTime(Now.Year, Now.Month, Now.Day, 19, 0, 0)
+                    txtDataFine.Value = New DateTime(Now.Year, Now.Month, Now.Day, 23, 0, 0)
+                End If
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub chkDiurno_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles chkDiurno.ToggleStateChanged
+        Try
+            If iniAzione = "INSERISCI" Then
+                If IsDate(txtData.Value) Then
+                    txtData.Value = New DateTime(Year(txtData.Value), Month(txtData.Value), DateTime.Parse(txtData.Value).Day, 8, 0, 0)
+                    txtDataFine.Value = New DateTime(Year(txtData.Value), Month(txtData.Value), DateTime.Parse(txtData.Value).Day, 19, 0, 0)
+                Else
+                    txtData.Value = New DateTime(Now.Year, Now.Month, Now.Day, 8, 0, 0)
+                    txtDataFine.Value = New DateTime(Now.Year, Now.Month, Now.Day, 19, 0, 0)
+                End If
+
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub txtData_ValueChanged(sender As Object, e As EventArgs) Handles txtData.ValueChanged
 
     End Sub
 End Class

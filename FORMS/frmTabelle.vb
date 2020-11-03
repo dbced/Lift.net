@@ -249,7 +249,7 @@ Public Class FrmTabelle
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/tabelle/saveTabelle/postSaveTabelle"
+            Dim postUrl = My.Settings.urlWS & "api/tabelle/saveTabelle/postSaveTabelle"
 
             client.DefaultRequestHeaders.Add("parmEntry", postContent)
 

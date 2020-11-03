@@ -23,11 +23,11 @@ Partial Class FrmContratto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContratto))
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.FluentTheme1 = New Telerik.WinControls.Themes.FluentTheme()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
@@ -84,8 +84,6 @@ Partial Class FrmContratto
         Me.cmbSocieta = New Telerik.WinControls.UI.RadDropDownList()
         Me.cmbClienti = New Telerik.WinControls.UI.RadMultiColumnComboBox()
         Me.cmbGestore = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.cmdOkSearchCliGes = New Telerik.WinControls.UI.RadButton()
-        Me.cmdOkSearchCli = New Telerik.WinControls.UI.RadButton()
         Me.rpPageServizi = New Telerik.WinControls.UI.RadPageViewPage()
         Me.gridAsset = New Telerik.WinControls.UI.RadGridView()
         Me.pnlDati = New Telerik.WinControls.UI.RadScrollablePanel()
@@ -109,7 +107,6 @@ Partial Class FrmContratto
         Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
         Me.RadDropDownList14 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
         Me.RadDropDownList13 = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBox4 = New Telerik.WinControls.UI.RadTextBox()
@@ -127,6 +124,9 @@ Partial Class FrmContratto
         Me.cmdAnnulla = New Telerik.WinControls.UI.RadButton()
         Me.cmdConferma = New Telerik.WinControls.UI.RadButton()
         Me.t1 = New System.Windows.Forms.Timer(Me.components)
+        Me.cmdOkSearchCliGes = New Telerik.WinControls.UI.RadButton()
+        Me.cmdOkSearchCli = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RPcontainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPcontainer.SuspendLayout()
         Me.rpPageContratto.SuspendLayout()
@@ -180,8 +180,6 @@ Partial Class FrmContratto
         CType(Me.cmbGestore, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbGestore.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbGestore.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.rpPageServizi.SuspendLayout()
         CType(Me.gridAsset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridAsset.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,7 +209,6 @@ Partial Class FrmContratto
         CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownList14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownList13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -228,6 +225,9 @@ Partial Class FrmContratto
         Me.RadPanel1.SuspendLayout()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -910,7 +910,7 @@ Partial Class FrmContratto
         Me.cmbClienti.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbClienti.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbClienti.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition11
         Me.cmbClienti.EditorControl.Name = "NestedRadGridView"
         Me.cmbClienti.EditorControl.ReadOnly = True
         Me.cmbClienti.EditorControl.ShowGroupPanel = False
@@ -943,7 +943,7 @@ Partial Class FrmContratto
         Me.cmbGestore.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbGestore.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbGestore.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbGestore.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.cmbGestore.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition12
         Me.cmbGestore.EditorControl.Name = "NestedRadGridView"
         Me.cmbGestore.EditorControl.ReadOnly = True
         Me.cmbGestore.EditorControl.ShowGroupPanel = False
@@ -957,28 +957,6 @@ Partial Class FrmContratto
         Me.cmbGestore.TabIndex = 224
         Me.cmbGestore.TabStop = False
         Me.cmbGestore.ThemeName = "Fluent"
-        '
-        'cmdOkSearchCliGes
-        '
-        Me.cmdOkSearchCliGes.Image = CType(resources.GetObject("cmdOkSearchCliGes.Image"), System.Drawing.Image)
-        Me.cmdOkSearchCliGes.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchCliGes.Location = New System.Drawing.Point(761, 184)
-        Me.cmdOkSearchCliGes.Name = "cmdOkSearchCliGes"
-        Me.cmdOkSearchCliGes.Size = New System.Drawing.Size(34, 34)
-        Me.cmdOkSearchCliGes.TabIndex = 195
-        Me.cmdOkSearchCliGes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdOkSearchCliGes.ThemeName = "ThemeCmdRecubeYEL"
-        '
-        'cmdOkSearchCli
-        '
-        Me.cmdOkSearchCli.Image = CType(resources.GetObject("cmdOkSearchCli.Image"), System.Drawing.Image)
-        Me.cmdOkSearchCli.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchCli.Location = New System.Drawing.Point(761, 132)
-        Me.cmdOkSearchCli.Name = "cmdOkSearchCli"
-        Me.cmdOkSearchCli.Size = New System.Drawing.Size(34, 34)
-        Me.cmdOkSearchCli.TabIndex = 191
-        Me.cmdOkSearchCli.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdOkSearchCli.ThemeName = "ThemeCmdRecubeYEL"
         '
         'rpPageServizi
         '
@@ -1007,7 +985,7 @@ Partial Class FrmContratto
         Me.gridAsset.MasterTemplate.AllowDeleteRow = False
         Me.gridAsset.MasterTemplate.AllowDragToGroup = False
         Me.gridAsset.MasterTemplate.AllowRowResize = False
-        Me.gridAsset.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.gridAsset.MasterTemplate.ViewDefinition = TableViewDefinition9
         Me.gridAsset.Name = "gridAsset"
         Me.gridAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridAsset.ShowGroupPanel = False
@@ -1020,6 +998,7 @@ Partial Class FrmContratto
         Me.pnlDati.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnlDati.Location = New System.Drawing.Point(0, 392)
         Me.pnlDati.Name = "pnlDati"
+        Me.pnlDati.Padding = New System.Windows.Forms.Padding(0)
         '
         'pnlDati.PanelContainer
         '
@@ -1037,7 +1016,8 @@ Partial Class FrmContratto
         Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel21)
         Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel22)
         Me.pnlDati.PanelContainer.Controls.Add(Me.cmbMacroCat)
-        Me.pnlDati.PanelContainer.Size = New System.Drawing.Size(1111, 261)
+        Me.pnlDati.PanelContainer.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDati.PanelContainer.Size = New System.Drawing.Size(1113, 263)
         Me.pnlDati.Size = New System.Drawing.Size(1113, 263)
         Me.pnlDati.TabIndex = 37
         Me.pnlDati.ThemeName = "MaterialTeal"
@@ -1222,7 +1202,7 @@ Partial Class FrmContratto
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowDragToGroup = False
         Me.RadGridView1.MasterTemplate.AllowRowResize = False
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition10
         Me.RadGridView1.Name = "RadGridView1"
         Me.RadGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.RadGridView1.ShowGroupPanel = False
@@ -1235,6 +1215,7 @@ Partial Class FrmContratto
         Me.RadScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.RadScrollablePanel1.Location = New System.Drawing.Point(0, 392)
         Me.RadScrollablePanel1.Name = "RadScrollablePanel1"
+        Me.RadScrollablePanel1.Padding = New System.Windows.Forms.Padding(0)
         '
         'RadScrollablePanel1.PanelContainer
         '
@@ -1254,7 +1235,8 @@ Partial Class FrmContratto
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel29)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel30)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadDropDownList17)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(1111, 261)
+        Me.RadScrollablePanel1.PanelContainer.Location = New System.Drawing.Point(0, 0)
+        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(1113, 263)
         Me.RadScrollablePanel1.Size = New System.Drawing.Size(1113, 263)
         Me.RadScrollablePanel1.TabIndex = 38
         Me.RadScrollablePanel1.ThemeName = "MaterialTeal"
@@ -1289,17 +1271,6 @@ Partial Class FrmContratto
         Me.RadDropDownList14.Size = New System.Drawing.Size(215, 36)
         Me.RadDropDownList14.TabIndex = 176
         Me.RadDropDownList14.ThemeName = "MaterialTeal"
-        '
-        'RadButton5
-        '
-        Me.RadButton5.Image = CType(resources.GetObject("RadButton5.Image"), System.Drawing.Image)
-        Me.RadButton5.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton5.Location = New System.Drawing.Point(302, 28)
-        Me.RadButton5.Name = "RadButton5"
-        Me.RadButton5.Size = New System.Drawing.Size(25, 26)
-        Me.RadButton5.TabIndex = 224
-        Me.RadButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton5.ThemeName = "ThemeCmdRecubeYEL"
         '
         'RadDropDownList13
         '
@@ -1475,6 +1446,39 @@ Partial Class FrmContratto
         't1
         '
         '
+        'cmdOkSearchCliGes
+        '
+        Me.cmdOkSearchCliGes.Image = CType(resources.GetObject("cmdOkSearchCliGes.Image"), System.Drawing.Image)
+        Me.cmdOkSearchCliGes.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdOkSearchCliGes.Location = New System.Drawing.Point(761, 184)
+        Me.cmdOkSearchCliGes.Name = "cmdOkSearchCliGes"
+        Me.cmdOkSearchCliGes.Size = New System.Drawing.Size(34, 34)
+        Me.cmdOkSearchCliGes.TabIndex = 195
+        Me.cmdOkSearchCliGes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdOkSearchCliGes.ThemeName = "ThemeCmdRecubeYEL"
+        '
+        'cmdOkSearchCli
+        '
+        Me.cmdOkSearchCli.Image = CType(resources.GetObject("cmdOkSearchCli.Image"), System.Drawing.Image)
+        Me.cmdOkSearchCli.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdOkSearchCli.Location = New System.Drawing.Point(761, 132)
+        Me.cmdOkSearchCli.Name = "cmdOkSearchCli"
+        Me.cmdOkSearchCli.Size = New System.Drawing.Size(34, 34)
+        Me.cmdOkSearchCli.TabIndex = 191
+        Me.cmdOkSearchCli.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdOkSearchCli.ThemeName = "ThemeCmdRecubeYEL"
+        '
+        'RadButton5
+        '
+        Me.RadButton5.Image = CType(resources.GetObject("RadButton5.Image"), System.Drawing.Image)
+        Me.RadButton5.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton5.Location = New System.Drawing.Point(302, 28)
+        Me.RadButton5.Name = "RadButton5"
+        Me.RadButton5.Size = New System.Drawing.Size(25, 26)
+        Me.RadButton5.TabIndex = 224
+        Me.RadButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton5.ThemeName = "ThemeCmdRecubeYEL"
+        '
         'FrmContratto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1543,8 +1547,6 @@ Partial Class FrmContratto
         CType(Me.cmbGestore.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbGestore.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbGestore, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.rpPageServizi.ResumeLayout(False)
         CType(Me.gridAsset.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridAsset, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1576,7 +1578,6 @@ Partial Class FrmContratto
         CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownList14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownList13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1593,6 +1594,9 @@ Partial Class FrmContratto
         Me.RadPanel1.ResumeLayout(False)
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

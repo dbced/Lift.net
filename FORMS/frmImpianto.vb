@@ -37,7 +37,9 @@ Public Class FrmImpianto
     Dim statoCaricaTipoImp As Boolean
     Dim statoCaricaReperib As Boolean
     Dim statoCaricaCallCenter As Boolean
+    Dim statoCaricaSquadre As Boolean
     Dim formInCaricamento As Boolean
+    Dim statoCaricaInfo As Boolean
 
     Private smartLabelsController As SmartLabelsController
 
@@ -234,7 +236,9 @@ Public Class FrmImpianto
             carica_combo_TipoImp()
             carica_combo_reperibilita()
             carica_combo_callCenter()
+            carica_combo_squadre()
             carica_liste_elementi_dati_tecnici()
+            carica_combo_Info()
 
         Catch ex As Exception
 
@@ -256,6 +260,9 @@ Public Class FrmImpianto
             txtDesCli.Text = dati.DESCLI
             txtDesAmm.Text = dati.DESAMM
             txtlocalita.Text = dati.AILOC
+            txtMatricola.Text = dati.AIMAT
+            txtMatricola2.Text = dati.AIMAT2
+
             'carica_griglia_dati_Tecnici(dati.datiTecnici)
             async_carica_griglia_asset_impianto()
             async_carica_griglia_documenti(dati.AICIM, "", dati.AICLI)
@@ -266,7 +273,7 @@ Public Class FrmImpianto
             async_carica_grafico_fatturato(dati.AICIM, "")
             async_carica_grafico_chiamate(dati.AICIM)
             'MAPPA
-            '''SetupProviders()
+            SetupProviders()
 
         Catch ex As Exception
 
@@ -290,6 +297,8 @@ Public Class FrmImpianto
             txtScala.Text = ""
             txtEdificio.Text = ""
             txtInterno.Text = ""
+            txtMatricola2.Text = ""
+
             txtDataNomina.Text = Nothing
 
             cmbTecnico.SelectedIndex = -1
@@ -300,10 +309,12 @@ Public Class FrmImpianto
             cmbTipoImp.SelectedIndex = -1
             cmbReperib.SelectedIndex = -1
             cmbCallCenter.SelectedIndex = -1
+            cmbSquadra.SelectedIndex = -1
             cmbEnteColl.SelectedIndex = -1
             cmbEnteIsp.SelectedIndex = -1
             cmbCostruttore.SelectedIndex = -1
             cmbZona.SelectedIndex = -1
+            cmbInfo.SelectedIndex = -1
 
             chkLineaNsCarico.Checked = CheckState.Unchecked
             chkTag.Checked = CheckState.Unchecked
@@ -438,6 +449,29 @@ Public Class FrmImpianto
         End Try
     End Sub
 
+    Private Async Sub carica_combo_Info()
+        Try
+            Dim elementi As Threading.Tasks.Task(Of parmTabelle())
+            elementi = ws.getDatiTabella("INF", "")
+            Await elementi
+
+            Me.cmbInfo.DataSource = elementi.Result
+            Me.cmbInfo.DisplayMember = "desElem"
+            Me.cmbInfo.ValueMember = "codElem"
+            Me.cmbInfo.SelectedIndex = -1
+
+            If azione = "MODIFICA" Then
+                cmbInfo.SelectedValue = schedaImpianto.Result.INFO
+            End If
+
+            statoCaricaInfo = True
+
+        Catch ex As Exception
+            statoCaricaInfo = True
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
+
     Private Async Sub carica_combo_TipoImp()
         Try
             Dim elementi As Threading.Tasks.Task(Of parmTabelle())
@@ -479,6 +513,31 @@ Public Class FrmImpianto
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+
+    Private Async Sub carica_combo_squadre()
+        Try
+            Dim elementi As Threading.Tasks.Task(Of parmTabelle())
+            elementi = ws.getDatiTabella("SQUADRE", "")
+            Await elementi
+
+            Me.cmbSquadra.DataSource = elementi.Result
+            Me.cmbSquadra.DisplayMember = "desElem"
+            Me.cmbSquadra.ValueMember = "codElem"
+            Me.cmbSquadra.SelectedIndex = -1
+
+            If azione = "MODIFICA" Then
+                cmbSquadra.SelectedValue = schedaImpianto.Result.IDSQUADRA.ToString
+            End If
+
+            statoCaricaSquadre = True
+
+        Catch ex As Exception
+            statoCaricaSquadre = True
+            MsgBox(ex.Message, vbCritical)
+        End Try
+
+    End Sub
+
     Private Async Sub carica_combo_comuniIT()
         Try
             Dim elementi As Threading.Tasks.Task(Of parmComuni())
@@ -1143,7 +1202,6 @@ Public Class FrmImpianto
 
             Me.carica_griglia_tipi_visiteAsset(elementi.Result)
 
-
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical)
         End Try
@@ -1496,17 +1554,21 @@ Public Class FrmImpianto
             gridTpVis.Columns("CodiceVisita").HeaderText = "Codice"
             gridTpVis.Columns("DescrVisita").HeaderText = "Descrizione"
             gridTpVis.Columns("Frequenza").HeaderText = "GG Freq."
+            gridTpVis.Columns("TempoEsec").HeaderText = "Esec."
 
             gridTpVis.Columns("CodiceVisita").TextAlignment = ContentAlignment.MiddleCenter
             gridTpVis.Columns("Frequenza").TextAlignment = ContentAlignment.MiddleCenter
+            gridTpVis.Columns("TempoEsec").TextAlignment = ContentAlignment.MiddleCenter
 
             gridTpVis.Columns("CodiceVisita").IsVisible = True
             gridTpVis.Columns("DescrVisita").IsVisible = True
             gridTpVis.Columns("Frequenza").IsVisible = True
+            gridTpVis.Columns("TempoEsec").IsVisible = True
 
             gridTpVis.Columns("CodiceVisita").ReadOnly = True
             gridTpVis.Columns("DescrVisita").ReadOnly = True
             gridTpVis.Columns("Frequenza").ReadOnly = True
+            gridTpVis.Columns("TempoEsec").ReadOnly = True
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "RECUBE")
@@ -1518,6 +1580,7 @@ Public Class FrmImpianto
             gridTpVis.Columns("CodiceVisita").Width = 90
             gridTpVis.Columns("DescrVisita").Width = 150
             gridTpVis.Columns("Frequenza").Width = 100
+            gridTpVis.Columns("TempoEsec").Width = 80
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "RECUBE")
@@ -2039,7 +2102,7 @@ Public Class FrmImpianto
 
             Dim httpContent = New System.Net.Http.StringContent(postContent, Encoding.UTF8, "text/json")
 
-            Dim postUrl = "https://localhost:44323/api/impianti/saveAsset/postAsset" & "?paramList=1234"
+            Dim postUrl = My.Settings.urlWS & "api/impianti/saveAsset/postAsset" & "?paramList=1234"
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("parmEntry", postContent)
 
@@ -2093,6 +2156,15 @@ Public Class FrmImpianto
             sc.AINTS = txtTelesoccorso.Text.Trim
             sc.AIGES = txtGestore.Text.Trim
 
+            sc.AIMAT = txtMatricola.Text.Trim
+            sc.AIMAT2 = txtMatricola2.Text.Trim
+
+            If cmbInfo.SelectedIndex >= 0 Then
+                sc.INFO = cmbInfo.SelectedValue
+            Else
+                sc.INFO = ""
+            End If
+
             If cmbReperib.SelectedIndex >= 0 Then
                 sc.AICCER = cmbReperib.SelectedValue
                 sc.AIZONR = txtZonaRep.Text
@@ -2105,6 +2177,12 @@ Public Class FrmImpianto
                 sc.AICLLC = cmbCallCenter.SelectedValue
             Else
                 sc.AICLLC = ""
+            End If
+
+            If cmbSquadra.SelectedIndex >= 0 Then
+                sc.IDSQUADRA = cmbSquadra.SelectedValue
+            Else
+                sc.IDSQUADRA = ""
             End If
 
             If cmbZona.SelectedIndex >= 0 Then
@@ -2165,6 +2243,7 @@ Public Class FrmImpianto
             sc.ggSturtup = txtVisGGstartup.Value
             sc.PeriodoIniz = txtVisPeriodoIni.Value
             sc.PeriodoFin = txtVisPeriodoFin.Value
+            sc.TempoEsec = txtEsecMin.Value
             If chkUltimaVisEff.Checked = True Then
                 sc.flagUltimaDataVisita = "S"
             Else
@@ -2497,7 +2576,7 @@ Public Class FrmImpianto
              statoCaricaEntiIspettivi = True And statoCaricaCostruttori = True And
              statoCaricaStrade = True And statoCaricaTipoImpianto = True And
              statoCaricaTipoImp = True And
-             statoCaricaCallCenter = True Then
+             statoCaricaCallCenter = True And statoCaricaSquadre And statoCaricaInfo Then
 
                 wbG.AssociatedControl = Nothing
                 wbG.StopWaiting()
@@ -2557,6 +2636,7 @@ Public Class FrmImpianto
                     txtVisFrequenza.Value = e.CurrentRow.Cells("frequenza").Value
                 End If
 
+                txtEsecMin.Value = e.CurrentRow.Cells("TempoEsec").Value
                 Me.async_carica_griglia_tasks(e.CurrentRow.Cells("CodiceVisita").Value, "0010")
             End If
 

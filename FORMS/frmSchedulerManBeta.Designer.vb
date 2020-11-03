@@ -24,6 +24,7 @@ Partial Class frmSchedulerManBeta
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSchedulerManBeta))
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.FluentTheme1 = New Telerik.WinControls.Themes.FluentTheme()
@@ -45,9 +46,21 @@ Partial Class frmSchedulerManBeta
         Me.cmdInserisci = New Telerik.WinControls.UI.CommandBarButton()
         Me.cmdBModifica = New Telerik.WinControls.UI.CommandBarButton()
         Me.cmdBAnnulla = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdBStampaElenco = New Telerik.WinControls.UI.CommandBarButton()
+        Me.CommandBarSeparator1 = New Telerik.WinControls.UI.CommandBarSeparator()
+        Me.cmdChiudiVisite = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdGeneraVisite = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdControlla = New Telerik.WinControls.UI.CommandBarButton()
+        Me.CommandBarSeparator2 = New Telerik.WinControls.UI.CommandBarSeparator()
         Me.xmdExportExcel = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdBStampaElenco = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdAnagrafica = New Telerik.WinControls.UI.CommandBarButton()
         Me.grpBox = New Telerik.WinControls.UI.RadGroupBox()
+        Me.lblRecords = New Telerik.WinControls.UI.RadLabel()
+        Me.chkEffett = New Telerik.WinControls.UI.RadCheckBox()
+        Me.chkErrate = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbSquadre = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
         Me.txtDataAl = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
@@ -69,14 +82,23 @@ Partial Class frmSchedulerManBeta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
         Me.track = New Telerik.WinControls.UI.RadTrackBar()
-        Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmbSquadre = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
+        Me.pnlLog = New Telerik.WinControls.UI.RadCollapsiblePanel()
+        Me.gridLog = New Telerik.WinControls.UI.RadGridView()
+        Me.RadCommandBar1 = New Telerik.WinControls.UI.RadCommandBar()
+        Me.CommandBarRowElement2 = New Telerik.WinControls.UI.CommandBarRowElement()
+        Me.CmdBarStripLog1 = New Telerik.WinControls.UI.CommandBarStripElement()
+        Me.cmdExpLog = New Telerik.WinControls.UI.CommandBarButton()
         CType(Me.gant, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.wbG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBox.SuspendLayout()
+        CType(Me.lblRecords, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkEffett, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkErrate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDataAl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,9 +116,11 @@ Partial Class frmSchedulerManBeta
         CType(Me.cmdFiltro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.track, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pnlLog, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlLog.PanelContainer.SuspendLayout()
+        CType(Me.gridLog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridLog.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -124,12 +148,12 @@ Partial Class frmSchedulerManBeta
         '
         Me.gant.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gant.ItemHeight = 28
-        Me.gant.Location = New System.Drawing.Point(0, 319)
+        Me.gant.Location = New System.Drawing.Point(0, 295)
         Me.gant.Name = "gant"
         Me.gant.ReadOnly = True
         Me.gant.ShowTimelineTodayIndicator = False
         Me.gant.ShowTodayIndicator = False
-        Me.gant.Size = New System.Drawing.Size(1394, 392)
+        Me.gant.Size = New System.Drawing.Size(1394, 393)
         Me.gant.SplitterWidth = 8
         Me.gant.TabIndex = 1
         Me.gant.ThemeName = "Fluent"
@@ -171,7 +195,7 @@ Partial Class frmSchedulerManBeta
         Me.cmdBar.Location = New System.Drawing.Point(0, 0)
         Me.cmdBar.Name = "cmdBar"
         Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBar.Size = New System.Drawing.Size(1440, 92)
+        Me.cmdBar.Size = New System.Drawing.Size(1440, 68)
         Me.cmdBar.TabIndex = 208
         Me.cmdBar.ThemeName = "Windows8"
         '
@@ -189,7 +213,7 @@ Partial Class frmSchedulerManBeta
         '
         Me.CommandBarStripE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.CommandBarStripE1.DisplayName = "CommandBarStripElement1"
-        Me.CommandBarStripE1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInserisci, Me.cmdBModifica, Me.cmdBAnnulla, Me.cmdBStampaElenco, Me.xmdExportExcel})
+        Me.CommandBarStripE1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInserisci, Me.cmdBModifica, Me.cmdBAnnulla, Me.CommandBarSeparator1, Me.cmdChiudiVisite, Me.cmdGeneraVisite, Me.cmdControlla, Me.CommandBarSeparator2, Me.xmdExportExcel, Me.cmdBStampaElenco, Me.cmdAnagrafica})
         Me.CommandBarStripE1.Name = "CommandBarStripE1"
         Me.CommandBarStripE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.CommandBarStripE1.UseCompatibleTextRendering = False
@@ -199,6 +223,7 @@ Partial Class frmSchedulerManBeta
         Me.cmdInserisci.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.cmdInserisci.DisplayName = "CommandBarButton1"
         Me.cmdInserisci.DrawText = True
+        Me.cmdInserisci.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdInserisci.Image = CType(resources.GetObject("cmdInserisci.Image"), System.Drawing.Image)
         Me.cmdInserisci.Name = "cmdInserisci"
         Me.cmdInserisci.Text = "Inserisci visita"
@@ -211,6 +236,7 @@ Partial Class frmSchedulerManBeta
         Me.cmdBModifica.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.cmdBModifica.DisplayName = "CommandBarButton5"
         Me.cmdBModifica.DrawText = True
+        Me.cmdBModifica.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdBModifica.Image = CType(resources.GetObject("cmdBModifica.Image"), System.Drawing.Image)
         Me.cmdBModifica.Name = "cmdBModifica"
         Me.cmdBModifica.Text = "Modifica visita"
@@ -223,6 +249,7 @@ Partial Class frmSchedulerManBeta
         Me.cmdBAnnulla.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.cmdBAnnulla.DisplayName = "CommandBarButton4"
         Me.cmdBAnnulla.DrawText = True
+        Me.cmdBAnnulla.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdBAnnulla.Image = CType(resources.GetObject("cmdBAnnulla.Image"), System.Drawing.Image)
         Me.cmdBAnnulla.Name = "cmdBAnnulla"
         Me.cmdBAnnulla.Text = "Elimina visita"
@@ -230,25 +257,54 @@ Partial Class frmSchedulerManBeta
         Me.cmdBAnnulla.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.cmdBAnnulla.UseCompatibleTextRendering = False
         '
-        'cmdBStampaElenco
+        'CommandBarSeparator1
         '
-        Me.cmdBStampaElenco.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBStampaElenco.DisplayName = "CommandBarButton1"
-        Me.cmdBStampaElenco.DrawText = True
-        Me.cmdBStampaElenco.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdBStampaElenco.Image = CType(resources.GetObject("cmdBStampaElenco.Image"), System.Drawing.Image)
-        Me.cmdBStampaElenco.Name = "cmdBStampaElenco"
-        Me.cmdBStampaElenco.Text = "Stampa Elenco"
-        Me.cmdBStampaElenco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.cmdBStampaElenco.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBStampaElenco.UseCompatibleTextRendering = False
+        Me.CommandBarSeparator1.DisplayName = "CommandBarSeparator1"
+        Me.CommandBarSeparator1.Name = "CommandBarSeparator1"
+        Me.CommandBarSeparator1.VisibleInOverflowMenu = False
+        '
+        'cmdChiudiVisite
+        '
+        Me.cmdChiudiVisite.DisplayName = "CommandBarButton1"
+        Me.cmdChiudiVisite.DrawText = True
+        Me.cmdChiudiVisite.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdChiudiVisite.Image = CType(resources.GetObject("cmdChiudiVisite.Image"), System.Drawing.Image)
+        Me.cmdChiudiVisite.Name = "cmdChiudiVisite"
+        Me.cmdChiudiVisite.Text = "Chiusura visite"
+        Me.cmdChiudiVisite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdGeneraVisite
+        '
+        Me.cmdGeneraVisite.DisplayName = "CommandBarButton1"
+        Me.cmdGeneraVisite.DrawText = True
+        Me.cmdGeneraVisite.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdGeneraVisite.Image = CType(resources.GetObject("cmdGeneraVisite.Image"), System.Drawing.Image)
+        Me.cmdGeneraVisite.Name = "cmdGeneraVisite"
+        Me.cmdGeneraVisite.Text = "Genera Visite"
+        Me.cmdGeneraVisite.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdControlla
+        '
+        Me.cmdControlla.DisplayName = "CommandBarButton2"
+        Me.cmdControlla.DrawText = True
+        Me.cmdControlla.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdControlla.Image = CType(resources.GetObject("cmdControlla.Image"), System.Drawing.Image)
+        Me.cmdControlla.Name = "cmdControlla"
+        Me.cmdControlla.Text = "Controlla"
+        Me.cmdControlla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'CommandBarSeparator2
+        '
+        Me.CommandBarSeparator2.DisplayName = "CommandBarSeparator2"
+        Me.CommandBarSeparator2.Name = "CommandBarSeparator2"
+        Me.CommandBarSeparator2.VisibleInOverflowMenu = False
         '
         'xmdExportExcel
         '
         Me.xmdExportExcel.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.xmdExportExcel.DisplayName = "CommandBarButton1"
         Me.xmdExportExcel.DrawText = True
-        Me.xmdExportExcel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.xmdExportExcel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.xmdExportExcel.Image = CType(resources.GetObject("xmdExportExcel.Image"), System.Drawing.Image)
         Me.xmdExportExcel.Name = "xmdExportExcel"
         Me.xmdExportExcel.Text = "Esporta Excel"
@@ -256,9 +312,36 @@ Partial Class frmSchedulerManBeta
         Me.xmdExportExcel.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.xmdExportExcel.UseCompatibleTextRendering = False
         '
+        'cmdBStampaElenco
+        '
+        Me.cmdBStampaElenco.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBStampaElenco.DisplayName = "CommandBarButton1"
+        Me.cmdBStampaElenco.DrawText = True
+        Me.cmdBStampaElenco.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdBStampaElenco.Image = CType(resources.GetObject("cmdBStampaElenco.Image"), System.Drawing.Image)
+        Me.cmdBStampaElenco.Name = "cmdBStampaElenco"
+        Me.cmdBStampaElenco.Text = "Stampa Elenco"
+        Me.cmdBStampaElenco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.cmdBStampaElenco.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBStampaElenco.UseCompatibleTextRendering = False
+        Me.cmdBStampaElenco.Visibility = Telerik.WinControls.ElementVisibility.Collapsed
+        '
+        'cmdAnagrafica
+        '
+        Me.cmdAnagrafica.DisplayName = "CommandBarButton1"
+        Me.cmdAnagrafica.DrawText = True
+        Me.cmdAnagrafica.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdAnagrafica.Image = CType(resources.GetObject("cmdAnagrafica.Image"), System.Drawing.Image)
+        Me.cmdAnagrafica.Name = "cmdAnagrafica"
+        Me.cmdAnagrafica.Text = "Anagrafica Impianto"
+        Me.cmdAnagrafica.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'grpBox
         '
         Me.grpBox.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.grpBox.Controls.Add(Me.lblRecords)
+        Me.grpBox.Controls.Add(Me.chkEffett)
+        Me.grpBox.Controls.Add(Me.chkErrate)
         Me.grpBox.Controls.Add(Me.RadLabel9)
         Me.grpBox.Controls.Add(Me.cmbSquadre)
         Me.grpBox.Controls.Add(Me.RadLabel8)
@@ -283,11 +366,77 @@ Partial Class frmSchedulerManBeta
         Me.grpBox.Controls.Add(Me.Label1)
         Me.grpBox.Dock = System.Windows.Forms.DockStyle.Top
         Me.grpBox.HeaderText = ""
-        Me.grpBox.Location = New System.Drawing.Point(0, 92)
+        Me.grpBox.Location = New System.Drawing.Point(0, 68)
         Me.grpBox.Name = "grpBox"
         Me.grpBox.Size = New System.Drawing.Size(1440, 227)
         Me.grpBox.TabIndex = 209
-        Me.grpBox.ThemeName = "MaterialTeal"
+        Me.grpBox.ThemeName = "Office2013Dark"
+        '
+        'lblRecords
+        '
+        Me.lblRecords.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRecords.Location = New System.Drawing.Point(1097, 148)
+        Me.lblRecords.Name = "lblRecords"
+        Me.lblRecords.Size = New System.Drawing.Size(132, 30)
+        Me.lblRecords.TabIndex = 204
+        Me.lblRecords.Text = "Visite trovate: "
+        '
+        'chkEffett
+        '
+        Me.chkEffett.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkEffett.Location = New System.Drawing.Point(1100, 93)
+        Me.chkEffett.Name = "chkEffett"
+        Me.chkEffett.Size = New System.Drawing.Size(121, 24)
+        Me.chkEffett.TabIndex = 203
+        Me.chkEffett.Text = "Visite effettute"
+        '
+        'chkErrate
+        '
+        Me.chkErrate.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkErrate.Location = New System.Drawing.Point(1100, 63)
+        Me.chkErrate.Name = "chkErrate"
+        Me.chkErrate.Size = New System.Drawing.Size(129, 24)
+        Me.chkErrate.TabIndex = 202
+        Me.chkErrate.Text = "Visite con errori"
+        '
+        'RadLabel9
+        '
+        Me.RadLabel9.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel9.Location = New System.Drawing.Point(619, 155)
+        Me.RadLabel9.Name = "RadLabel9"
+        Me.RadLabel9.Size = New System.Drawing.Size(107, 21)
+        Me.RadLabel9.TabIndex = 201
+        Me.RadLabel9.Text = "Squadra tecnici"
+        Me.RadLabel9.ThemeName = "MaterialTeal"
+        '
+        'cmbSquadre
+        '
+        Me.cmbSquadre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSquadre.AutoSize = False
+        Me.cmbSquadre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbSquadre.ForeColor = System.Drawing.Color.Black
+        Me.cmbSquadre.Location = New System.Drawing.Point(730, 148)
+        Me.cmbSquadre.Name = "cmbSquadre"
+        Me.cmbSquadre.NullText = "Seleziona un valore"
+        Me.cmbSquadre.Size = New System.Drawing.Size(344, 36)
+        Me.cmbSquadre.TabIndex = 200
+        Me.cmbSquadre.ThemeName = "Fluent"
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
+        'RadLabel8
+        '
+        Me.RadLabel8.AutoSize = False
+        Me.RadLabel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.RadLabel8.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadLabel8.ForeColor = System.Drawing.Color.White
+        Me.RadLabel8.Location = New System.Drawing.Point(2, 206)
+        Me.RadLabel8.Name = "RadLabel8"
+        Me.RadLabel8.Size = New System.Drawing.Size(1436, 19)
+        Me.RadLabel8.TabIndex = 199
+        Me.RadLabel8.Text = "GANTT MANUTENZIONI PROGRAMMATE"
         '
         'RadLabel7
         '
@@ -490,7 +639,7 @@ Partial Class frmSchedulerManBeta
         'cmdFiltro
         '
         Me.cmdFiltro.Image = CType(resources.GetObject("cmdFiltro.Image"), System.Drawing.Image)
-        Me.cmdFiltro.Location = New System.Drawing.Point(1130, 65)
+        Me.cmdFiltro.Location = New System.Drawing.Point(1286, 62)
         Me.cmdFiltro.Name = "cmdFiltro"
         Me.cmdFiltro.Size = New System.Drawing.Size(81, 31)
         Me.cmdFiltro.TabIndex = 8
@@ -546,7 +695,7 @@ Partial Class frmSchedulerManBeta
         'track
         '
         Me.track.Dock = System.Windows.Forms.DockStyle.Right
-        Me.track.Location = New System.Drawing.Point(1394, 319)
+        Me.track.Location = New System.Drawing.Point(1394, 295)
         Me.track.Name = "track"
         Me.track.Orientation = System.Windows.Forms.Orientation.Vertical
         '
@@ -554,50 +703,77 @@ Partial Class frmSchedulerManBeta
         '
         Me.track.RootElement.StretchHorizontally = False
         Me.track.RootElement.StretchVertically = True
-        Me.track.Size = New System.Drawing.Size(46, 392)
+        Me.track.Size = New System.Drawing.Size(46, 393)
         Me.track.TabIndex = 210
         Me.track.ThemeName = "MaterialBlueGrey"
         Me.track.ThumbSize = New System.Drawing.Size(15, 15)
         Me.track.Visible = False
         '
-        'RadLabel8
+        'pnlLog
         '
-        Me.RadLabel8.AutoSize = False
-        Me.RadLabel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(188, Byte), Integer))
-        Me.RadLabel8.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadLabel8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel8.ForeColor = System.Drawing.Color.White
-        Me.RadLabel8.Location = New System.Drawing.Point(2, 206)
-        Me.RadLabel8.Name = "RadLabel8"
-        Me.RadLabel8.Size = New System.Drawing.Size(1436, 19)
-        Me.RadLabel8.TabIndex = 199
-        Me.RadLabel8.Text = "GANTT MANUTENZIONI PROGRAMMATE"
+        Me.pnlLog.AnimationFrames = 10
+        Me.pnlLog.AnimationInterval = 15
+        Me.pnlLog.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlLog.EnableAnimation = False
+        Me.pnlLog.HeaderText = "ELENCO ANOMALIE PIANIFICAZIONE"
+        Me.pnlLog.IsExpanded = False
+        Me.pnlLog.Location = New System.Drawing.Point(0, 688)
+        Me.pnlLog.Name = "pnlLog"
+        Me.pnlLog.OwnerBoundsCache = New System.Drawing.Rectangle(0, 688, 1440, 405)
         '
-        'cmbSquadre
+        'pnlLog.PanelContainer
         '
-        Me.cmbSquadre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbSquadre.AutoSize = False
-        Me.cmbSquadre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.cmbSquadre.ForeColor = System.Drawing.Color.Black
-        Me.cmbSquadre.Location = New System.Drawing.Point(730, 148)
-        Me.cmbSquadre.Name = "cmbSquadre"
-        Me.cmbSquadre.NullText = "Seleziona un valore"
-        Me.cmbSquadre.Size = New System.Drawing.Size(344, 36)
-        Me.cmbSquadre.TabIndex = 200
-        Me.cmbSquadre.ThemeName = "Fluent"
-        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
-        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.pnlLog.PanelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlLog.PanelContainer.Controls.Add(Me.gridLog)
+        Me.pnlLog.PanelContainer.Controls.Add(Me.RadCommandBar1)
+        Me.pnlLog.PanelContainer.Size = New System.Drawing.Size(0, 0)
+        Me.pnlLog.Size = New System.Drawing.Size(1440, 23)
+        Me.pnlLog.TabIndex = 211
+        Me.pnlLog.ThemeName = "Crystal"
         '
-        'RadLabel9
+        'gridLog
         '
-        Me.RadLabel9.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel9.Location = New System.Drawing.Point(619, 155)
-        Me.RadLabel9.Name = "RadLabel9"
-        Me.RadLabel9.Size = New System.Drawing.Size(107, 21)
-        Me.RadLabel9.TabIndex = 201
-        Me.RadLabel9.Text = "Squadra tecnici"
-        Me.RadLabel9.ThemeName = "MaterialTeal"
+        Me.gridLog.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gridLog.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gridLog.Location = New System.Drawing.Point(0, 48)
+        '
+        '
+        '
+        Me.gridLog.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        Me.gridLog.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.gridLog.Name = "gridLog"
+        Me.gridLog.Size = New System.Drawing.Size(0, 0)
+        Me.gridLog.TabIndex = 99
+        Me.gridLog.ThemeName = "Office2013Dark"
+        '
+        'RadCommandBar1
+        '
+        Me.RadCommandBar1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadCommandBar1.Location = New System.Drawing.Point(0, 0)
+        Me.RadCommandBar1.Name = "RadCommandBar1"
+        Me.RadCommandBar1.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement2})
+        Me.RadCommandBar1.Size = New System.Drawing.Size(0, 48)
+        Me.RadCommandBar1.TabIndex = 100
+        Me.RadCommandBar1.ThemeName = "MaterialBlueGrey"
+        '
+        'CommandBarRowElement2
+        '
+        Me.CommandBarRowElement2.MinSize = New System.Drawing.Size(25, 25)
+        Me.CommandBarRowElement2.Name = "CommandBarRowElement2"
+        Me.CommandBarRowElement2.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.CmdBarStripLog1})
+        '
+        'CmdBarStripLog1
+        '
+        Me.CmdBarStripLog1.DisplayName = "CommandBarStripElement1"
+        Me.CmdBarStripLog1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdExpLog})
+        Me.CmdBarStripLog1.Name = "CmdBarStripLog1"
+        '
+        'cmdExpLog
+        '
+        Me.cmdExpLog.DisplayName = "CommandBarButton1"
+        Me.cmdExpLog.Image = CType(resources.GetObject("cmdExpLog.Image"), System.Drawing.Image)
+        Me.cmdExpLog.Name = "cmdExpLog"
+        Me.cmdExpLog.Text = "Esporta"
         '
         'frmSchedulerManBeta
         '
@@ -609,6 +785,7 @@ Partial Class frmSchedulerManBeta
         Me.Controls.Add(Me.wbG)
         Me.Controls.Add(Me.grpBox)
         Me.Controls.Add(Me.cmdBar)
+        Me.Controls.Add(Me.pnlLog)
         Me.Name = "frmSchedulerManBeta"
         '
         '
@@ -623,6 +800,12 @@ Partial Class frmSchedulerManBeta
         CType(Me.grpBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpBox.ResumeLayout(False)
         Me.grpBox.PerformLayout()
+        CType(Me.lblRecords, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkEffett, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkErrate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDataAl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -640,9 +823,12 @@ Partial Class frmSchedulerManBeta
         CType(Me.cmdFiltro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.track, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlLog.PanelContainer.ResumeLayout(False)
+        Me.pnlLog.PanelContainer.PerformLayout()
+        CType(Me.pnlLog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridLog.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridLog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -697,5 +883,20 @@ Partial Class frmSchedulerManBeta
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents cmbSquadre As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents cmdGeneraVisite As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents cmdControlla As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents pnlLog As Telerik.WinControls.UI.RadCollapsiblePanel
+    Friend WithEvents gridLog As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents CommandBarSeparator1 As Telerik.WinControls.UI.CommandBarSeparator
+    Friend WithEvents cmdChiudiVisite As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents CommandBarSeparator2 As Telerik.WinControls.UI.CommandBarSeparator
+    Friend WithEvents cmdAnagrafica As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents RadCommandBar1 As Telerik.WinControls.UI.RadCommandBar
+    Friend WithEvents CommandBarRowElement2 As Telerik.WinControls.UI.CommandBarRowElement
+    Friend WithEvents CmdBarStripLog1 As Telerik.WinControls.UI.CommandBarStripElement
+    Friend WithEvents cmdExpLog As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents chkEffett As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents chkErrate As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents lblRecords As Telerik.WinControls.UI.RadLabel
 End Class
 

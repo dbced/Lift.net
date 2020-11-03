@@ -17,6 +17,7 @@
     Dim r_GGMMF As String
     Dim r_azione As String
     Dim r_id As Integer
+    Dim r_esec As Integer
 
     Public Property id() As Integer
         Get
@@ -119,4 +120,15 @@
         End Set
 
     End Property
+
+    Public Property TempoEsec() As Integer
+        Get
+            Return R_esec
+        End Get
+
+        Set(ByVal Value As Integer)
+            R_esec = Value
+        End Set
+    End Property
+
 End Class
