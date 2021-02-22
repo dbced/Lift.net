@@ -12,6 +12,8 @@
     Dim r_Indirizzo As String
     Dim r_centro As String
     Dim r_edocdb As String
+    Dim r_dtnrc As String
+    Dim r_cig As String
 
     Public Property CodiceCLiente() As String
         Get
@@ -120,6 +122,28 @@
 
         Set(ByVal Value As String)
             r_edocdb = Value
+        End Set
+
+    End Property
+
+    Public Property dtnrc() As String
+        Get
+            Return r_dtnrc
+        End Get
+
+        Set(ByVal Value As String)
+            r_dtnrc = Value
+        End Set
+
+    End Property
+
+    Public Property cig() As String
+        Get
+            Return r_cig
+        End Get
+
+        Set(ByVal Value As String)
+            r_cig = Value
         End Set
 
     End Property

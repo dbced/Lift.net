@@ -163,7 +163,7 @@ Public Class FrmImpiantoAssets
             colCHID.DataType = GetType(Integer)
             colCHID.FieldName = "CHID"
 
-            Dim colCHDESCR As New GridViewDecimalColumn
+            Dim colCHDESCR As New GridViewTextBoxColumn
             colCHDESCR.Name = "CHDESCR"
             colCHDESCR.DataType = GetType(String)
             colCHDESCR.FieldName = "CHDESCR"
@@ -183,17 +183,17 @@ Public Class FrmImpiantoAssets
             colCDIMP.DataType = GetType(Integer)
             colCDIMP.FieldName = "CDIMP"
 
-            Dim colDESCRCAT As New GridViewDecimalColumn
+            Dim colDESCRCAT As New GridViewTextBoxColumn
             colDESCRCAT.Name = "DESCRCAT"
             colDESCRCAT.DataType = GetType(String)
             colDESCRCAT.FieldName = "DESCRCAT"
 
-            Dim colDESCRMCAT As New GridViewDecimalColumn
+            Dim colDESCRMCAT As New GridViewTextBoxColumn
             colDESCRMCAT.Name = "DESCRMACROCAT"
             colDESCRMCAT.DataType = GetType(String)
             colDESCRMCAT.FieldName = "DESCRMACROCAT"
 
-            Dim colCODCATASSET As New GridViewDecimalColumn
+            Dim colCODCATASSET As New GridViewTextBoxColumn
             colCODCATASSET.Name = "CODCATASSET"
             colCODCATASSET.DataType = GetType(String)
             colCODCATASSET.FieldName = "CODCATASSET"

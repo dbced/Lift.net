@@ -230,6 +230,10 @@ Public Class FrmChiusuraVisite
             colDesTipo.DataType = GetType(String)
             colDesTipo.FieldName = "DescrMan"
 
+            Dim colDesSquadra As New GridViewTextBoxColumn
+            colDesSquadra.Name = "DescrSquadra"
+            colDesSquadra.DataType = GetType(String)
+            colDesSquadra.FieldName = "des_squadra"
 
             'grid.MasterTemplate.Columns.Add(commandColumn)
 
@@ -241,6 +245,7 @@ Public Class FrmChiusuraVisite
             grid.MasterTemplate.Columns.Add(colDesTipo)
             grid.MasterTemplate.Columns.Add(colDataini)
             grid.MasterTemplate.Columns.Add(colDataEff)
+            grid.MasterTemplate.Columns.Add(colDesSquadra)
 
             grid.TableElement.SearchHighlightColor = Color.LimeGreen
 
@@ -269,6 +274,7 @@ Public Class FrmChiusuraVisite
             Me.grid.Columns("DataEffett").Width = 110
             Me.grid.Columns("DescrMan").Width = 120
             Me.grid.Columns("DEscrImpianto").Width = 350
+            Me.grid.Columns("DescrSquadra").Width = 350
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "RECUBE")
@@ -295,9 +301,11 @@ Public Class FrmChiusuraVisite
             griglia.Columns("DescrMan").HeaderText = "tipo visita"
             griglia.Columns("DataInizio").HeaderText = "Data visita"
             griglia.Columns("DataEffett").HeaderText = "Data chiusura"
+            griglia.Columns("DescrSquadra").HeaderText = "Squadra"
 
             griglia.Columns("DataInizio").TextAlignment = ContentAlignment.MiddleCenter
             griglia.Columns("DataEffett").TextAlignment = ContentAlignment.MiddleCenter
+            griglia.Columns("DescrSquadra").TextAlignment = ContentAlignment.MiddleCenter
 
             For i = 0 To griglia.Columns.Count - 1
                 griglia.Columns(i).ReadOnly = True
@@ -308,6 +316,7 @@ Public Class FrmChiusuraVisite
             griglia.Columns("DataEffett").IsVisible = True
             griglia.Columns("DescrMan").IsVisible = True
             griglia.Columns("DescrImpianto").IsVisible = True
+            griglia.Columns("DescrSquadra").IsVisible = True
             griglia.Columns("check").IsVisible = True
             griglia.Columns("check").ReadOnly = False
 
@@ -426,11 +435,6 @@ Public Class FrmChiusuraVisite
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Chiusura visite")
         End Try
-    End Sub
-
-
-    Private Sub grid_Click(sender As Object, e As EventArgs) Handles grid.Click
-
     End Sub
 
     Private Sub grid_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles grid.CellDoubleClick

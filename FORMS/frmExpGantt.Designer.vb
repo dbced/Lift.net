@@ -22,10 +22,10 @@ Partial Class FrmExpGantt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.MaterialTheme1 = New Telerik.WinControls.Themes.MaterialTheme()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
@@ -66,14 +66,14 @@ Partial Class FrmExpGantt
         Me.cmbAnno.AutoSize = False
         Me.cmbAnno.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbAnno.ForeColor = System.Drawing.Color.Black
-        RadListDataItem5.Text = "2020"
-        RadListDataItem6.Text = "2021"
-        RadListDataItem7.Text = "2022"
-        RadListDataItem8.Text = "2023"
-        Me.cmbAnno.Items.Add(RadListDataItem5)
-        Me.cmbAnno.Items.Add(RadListDataItem6)
-        Me.cmbAnno.Items.Add(RadListDataItem7)
-        Me.cmbAnno.Items.Add(RadListDataItem8)
+        RadListDataItem1.Text = "2020"
+        RadListDataItem2.Text = "2021"
+        RadListDataItem3.Text = "2022"
+        RadListDataItem4.Text = "2023"
+        Me.cmbAnno.Items.Add(RadListDataItem1)
+        Me.cmbAnno.Items.Add(RadListDataItem2)
+        Me.cmbAnno.Items.Add(RadListDataItem3)
+        Me.cmbAnno.Items.Add(RadListDataItem4)
         Me.cmbAnno.Location = New System.Drawing.Point(95, 38)
         Me.cmbAnno.Name = "cmbAnno"
         Me.cmbAnno.NullText = "Seleziona un valore"
@@ -167,7 +167,7 @@ Partial Class FrmExpGantt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(390, 261)
+        Me.ClientSize = New System.Drawing.Size(388, 259)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblSett)
         Me.Controls.Add(Me.cmbSettimana)

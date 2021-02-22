@@ -23,11 +23,10 @@ Partial Class FrmContratto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim TableViewDefinition11 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition12 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition9 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition10 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContratto))
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.FluentTheme1 = New Telerik.WinControls.Themes.FluentTheme()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
@@ -37,6 +36,43 @@ Partial Class FrmContratto
         Me.Windows8Theme1 = New Telerik.WinControls.Themes.Windows8Theme()
         Me.RPcontainer = New Telerik.WinControls.UI.RadPageView()
         Me.rpPageContratto = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.txtMM = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtAA = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadLabel35 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbTipologiaCliente = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadGroupBox4 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.txtCommessa = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
+        Me.chkFattPostecipata = New Telerik.WinControls.UI.RadRadioButton()
+        Me.chkFatAnticipata = New Telerik.WinControls.UI.RadRadioButton()
+        Me.txtDesIva = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtIva = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmdOkSearchIva = New Telerik.WinControls.UI.RadButton()
+        Me.cmbFreqFatt = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbModPag = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbTipoFatt = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmb9516 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.chkRagrImpianti = New Telerik.WinControls.UI.RadCheckBox()
+        Me.chkRagrServizi = New Telerik.WinControls.UI.RadCheckBox()
+        Me.chkRateAtipico = New Telerik.WinControls.UI.RadCheckBox()
+        Me.chkRinnovoTacito = New Telerik.WinControls.UI.RadCheckBox()
+        Me.chkReperib = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadLabel32 = New Telerik.WinControls.UI.RadLabel()
+        Me.txtModelloCtr = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.chkTipico = New Telerik.WinControls.UI.RadRadioButton()
+        Me.chkAtipico = New Telerik.WinControls.UI.RadRadioButton()
+        Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtK3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
         Me.wb = New Telerik.WinControls.UI.RadWaitingBar()
         Me.DotsRingWaitingBarIndicatorElement2 = New Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement()
         Me.txtDataConvalida = New Telerik.WinControls.UI.RadMaskedEditBox()
@@ -51,20 +87,9 @@ Partial Class FrmContratto
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
         Me.cmbPrestazioni = New Telerik.WinControls.UI.RadDropDownList()
         Me.cmbPianoManut = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmb9516 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.cmbRivalut = New Telerik.WinControls.UI.RadDropDownList()
-        Me.cmbModPag = New Telerik.WinControls.UI.RadDropDownList()
-        Me.chkRinnovoTacito = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmbTipoFatt = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
-        Me.chkRagrServizi = New Telerik.WinControls.UI.RadCheckBox()
-        Me.cmbFreqFatt = New Telerik.WinControls.UI.RadDropDownList()
-        Me.chkRagrImpianti = New Telerik.WinControls.UI.RadCheckBox()
-        Me.txtDtFinPrestaz = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.txtDtIniFatt = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
         Me.txtDtIniPrestaz = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
@@ -82,54 +107,68 @@ Partial Class FrmContratto
         Me.txtCodice = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.cmbSocieta = New Telerik.WinControls.UI.RadDropDownList()
-        Me.cmbClienti = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.cmbGestore = New Telerik.WinControls.UI.RadMultiColumnComboBox()
+        Me.cmdOkSearchCliGes = New Telerik.WinControls.UI.RadButton()
+        Me.cmdOkSearchCli = New Telerik.WinControls.UI.RadButton()
         Me.rpPageServizi = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.gridAsset = New Telerik.WinControls.UI.RadGridView()
-        Me.pnlDati = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList11 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList12 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadDropDownList10 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadMaskedEditBox5 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
-        Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmbCategoria = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmbMacroCat = New Telerik.WinControls.UI.RadDropDownList()
+        Me.gridServizi = New Telerik.WinControls.UI.RadGridView()
+        Me.cmdBar = New Telerik.WinControls.UI.RadCommandBar()
+        Me.CommandBarRowElement1 = New Telerik.WinControls.UI.CommandBarRowElement()
+        Me.CommandBarStripE1 = New Telerik.WinControls.UI.CommandBarStripElement()
+        Me.cmdInserisci = New Telerik.WinControls.UI.CommandBarButton()
         Me.rpPageImpianti = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
-        Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList14 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadDropDownList13 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBox4 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadLabel25 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList15 = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadMaskedEditBox6 = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
-        Me.RadLabel29 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList17 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.GridImpianti = New Telerik.WinControls.UI.RadGridView()
         Me.rpPageRate = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.gridRate = New Telerik.WinControls.UI.RadGridView()
+        Me.RadScrollablePanel2 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.rpPageNote = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
         Me.cmdAnnulla = New Telerik.WinControls.UI.RadButton()
         Me.cmdConferma = New Telerik.WinControls.UI.RadButton()
         Me.t1 = New System.Windows.Forms.Timer(Me.components)
-        Me.cmdOkSearchCliGes = New Telerik.WinControls.UI.RadButton()
-        Me.cmdOkSearchCli = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
+        Me.CrystalTheme1 = New Telerik.WinControls.Themes.CrystalTheme()
         CType(Me.RPcontainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPcontainer.SuspendLayout()
         Me.rpPageContratto.SuspendLayout()
+        CType(Me.txtMM, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtAA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbTipologiaCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox4.SuspendLayout()
+        CType(Me.txtCommessa, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkFattPostecipata, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkFatAnticipata, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDesIva, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtIva, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchIva, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbFreqFatt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbModPag, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbTipoFatt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmb9516, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox3.SuspendLayout()
+        CType(Me.chkRagrImpianti, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkRagrServizi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkRateAtipico, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkRinnovoTacito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkReperib, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtModelloCtr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox2.SuspendLayout()
+        CType(Me.chkTipico, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkAtipico, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtK3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.wb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDataConvalida, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDtIniDecor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,20 +182,9 @@ Partial Class FrmContratto
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbPrestazioni, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbPianoManut, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmb9516, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbRivalut, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbModPag, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkRinnovoTacito, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbTipoFatt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkRagrServizi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbFreqFatt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkRagrImpianti, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDtFinPrestaz, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDtIniFatt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDtIniPrestaz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,60 +202,24 @@ Partial Class FrmContratto
         CType(Me.txtCodice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbSocieta, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbClienti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbGestore, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbGestore.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbGestore.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.rpPageServizi.SuspendLayout()
-        CType(Me.gridAsset, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gridAsset.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pnlDati, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlDati.PanelContainer.SuspendLayout()
-        Me.pnlDati.SuspendLayout()
-        CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbMacroCat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridServizi, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridServizi.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.rpPageImpianti.SuspendLayout()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
-        Me.RadScrollablePanel1.SuspendLayout()
-        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadMaskedEditBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridImpianti, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridImpianti.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.rpPageRate.SuspendLayout()
+        CType(Me.gridRate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gridRate.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadScrollablePanel2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadScrollablePanel2.SuspendLayout()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -237,18 +229,34 @@ Partial Class FrmContratto
         Me.RPcontainer.Controls.Add(Me.rpPageServizi)
         Me.RPcontainer.Controls.Add(Me.rpPageImpianti)
         Me.RPcontainer.Controls.Add(Me.rpPageRate)
+        Me.RPcontainer.Controls.Add(Me.rpPageNote)
         Me.RPcontainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RPcontainer.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RPcontainer.Location = New System.Drawing.Point(0, 0)
         Me.RPcontainer.Name = "RPcontainer"
         Me.RPcontainer.SelectedPage = Me.rpPageContratto
-        Me.RPcontainer.Size = New System.Drawing.Size(1161, 738)
+        Me.RPcontainer.Size = New System.Drawing.Size(1362, 745)
         Me.RPcontainer.TabIndex = 0
-        Me.RPcontainer.ThemeName = "Fluent"
-        CType(Me.RPcontainer.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
+        Me.RPcontainer.ThemeName = "MaterialBlueGrey"
+        CType(Me.RPcontainer.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripAlignment = Telerik.WinControls.UI.StripViewAlignment.Left
+        CType(Me.RPcontainer.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ItemContentOrientation = Telerik.WinControls.UI.PageViewContentOrientation.Horizontal
         '
         'rpPageContratto
         '
+        Me.rpPageContratto.Controls.Add(Me.txtMM)
+        Me.rpPageContratto.Controls.Add(Me.txtAA)
+        Me.rpPageContratto.Controls.Add(Me.RadLabel36)
+        Me.rpPageContratto.Controls.Add(Me.RadLabel35)
+        Me.rpPageContratto.Controls.Add(Me.cmbTipologiaCliente)
+        Me.rpPageContratto.Controls.Add(Me.RadGroupBox4)
+        Me.rpPageContratto.Controls.Add(Me.RadGroupBox3)
+        Me.rpPageContratto.Controls.Add(Me.RadLabel32)
+        Me.rpPageContratto.Controls.Add(Me.txtModelloCtr)
+        Me.rpPageContratto.Controls.Add(Me.RadGroupBox2)
+        Me.rpPageContratto.Controls.Add(Me.RadTextBox1)
+        Me.rpPageContratto.Controls.Add(Me.txtK3)
+        Me.rpPageContratto.Controls.Add(Me.RadLabel31)
+        Me.rpPageContratto.Controls.Add(Me.RadButton6)
         Me.rpPageContratto.Controls.Add(Me.wb)
         Me.rpPageContratto.Controls.Add(Me.txtDataConvalida)
         Me.rpPageContratto.Controls.Add(Me.txtDtIniDecor)
@@ -262,20 +270,9 @@ Partial Class FrmContratto
         Me.rpPageContratto.Controls.Add(Me.RadLabel15)
         Me.rpPageContratto.Controls.Add(Me.cmbPrestazioni)
         Me.rpPageContratto.Controls.Add(Me.cmbPianoManut)
-        Me.rpPageContratto.Controls.Add(Me.RadLabel14)
         Me.rpPageContratto.Controls.Add(Me.RadLabel13)
-        Me.rpPageContratto.Controls.Add(Me.cmb9516)
-        Me.rpPageContratto.Controls.Add(Me.RadLabel12)
         Me.rpPageContratto.Controls.Add(Me.cmbRivalut)
-        Me.rpPageContratto.Controls.Add(Me.cmbModPag)
-        Me.rpPageContratto.Controls.Add(Me.chkRinnovoTacito)
-        Me.rpPageContratto.Controls.Add(Me.RadLabel11)
-        Me.rpPageContratto.Controls.Add(Me.cmbTipoFatt)
-        Me.rpPageContratto.Controls.Add(Me.RadLabel10)
-        Me.rpPageContratto.Controls.Add(Me.chkRagrServizi)
-        Me.rpPageContratto.Controls.Add(Me.cmbFreqFatt)
-        Me.rpPageContratto.Controls.Add(Me.chkRagrImpianti)
-        Me.rpPageContratto.Controls.Add(Me.txtDtFinPrestaz)
+        Me.rpPageContratto.Controls.Add(Me.txtDtIniFatt)
         Me.rpPageContratto.Controls.Add(Me.RadLabel9)
         Me.rpPageContratto.Controls.Add(Me.txtDtIniPrestaz)
         Me.rpPageContratto.Controls.Add(Me.RadLabel7)
@@ -293,20 +290,465 @@ Partial Class FrmContratto
         Me.rpPageContratto.Controls.Add(Me.txtCodice)
         Me.rpPageContratto.Controls.Add(Me.RadLabel3)
         Me.rpPageContratto.Controls.Add(Me.cmbSocieta)
-        Me.rpPageContratto.Controls.Add(Me.cmbClienti)
-        Me.rpPageContratto.Controls.Add(Me.cmbGestore)
         Me.rpPageContratto.Controls.Add(Me.cmdOkSearchCliGes)
         Me.rpPageContratto.Controls.Add(Me.cmdOkSearchCli)
-        Me.rpPageContratto.ItemSize = New System.Drawing.SizeF(138.0!, 34.0!)
-        Me.rpPageContratto.Location = New System.Drawing.Point(6, 40)
+        Me.rpPageContratto.Image = CType(resources.GetObject("rpPageContratto.Image"), System.Drawing.Image)
+        Me.rpPageContratto.ItemSize = New System.Drawing.SizeF(157.0!, 54.0!)
+        Me.rpPageContratto.Location = New System.Drawing.Point(163, 6)
         Me.rpPageContratto.Name = "rpPageContratto"
-        Me.rpPageContratto.Size = New System.Drawing.Size(1149, 692)
-        Me.rpPageContratto.Text = "Dati del Contratto"
+        Me.rpPageContratto.Size = New System.Drawing.Size(1193, 733)
+        Me.rpPageContratto.Text = "Dati Generali"
+        '
+        'txtMM
+        '
+        Me.txtMM.AutoSize = False
+        Me.txtMM.ForeColor = System.Drawing.Color.Black
+        Me.txtMM.Location = New System.Drawing.Point(717, 227)
+        Me.txtMM.MaxLength = 6
+        Me.txtMM.Name = "txtMM"
+        Me.txtMM.ReadOnly = True
+        Me.txtMM.Size = New System.Drawing.Size(38, 36)
+        Me.txtMM.TabIndex = 238
+        Me.txtMM.ThemeName = "Fluent"
+        CType(Me.txtMM.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtMM.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'txtAA
+        '
+        Me.txtAA.AutoSize = False
+        Me.txtAA.ForeColor = System.Drawing.Color.Black
+        Me.txtAA.Location = New System.Drawing.Point(664, 227)
+        Me.txtAA.MaxLength = 6
+        Me.txtAA.Name = "txtAA"
+        Me.txtAA.ReadOnly = True
+        Me.txtAA.Size = New System.Drawing.Size(38, 36)
+        Me.txtAA.TabIndex = 237
+        Me.txtAA.ThemeName = "Fluent"
+        CType(Me.txtAA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtAA.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'RadLabel36
+        '
+        Me.RadLabel36.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel36.Location = New System.Drawing.Point(548, 235)
+        Me.RadLabel36.Name = "RadLabel36"
+        Me.RadLabel36.Size = New System.Drawing.Size(110, 21)
+        Me.RadLabel36.TabIndex = 238
+        Me.RadLabel36.Text = "Durata (aa/mm)"
+        Me.RadLabel36.ThemeName = "MaterialTeal"
+        '
+        'RadLabel35
+        '
+        Me.RadLabel35.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel35.Location = New System.Drawing.Point(24, 515)
+        Me.RadLabel35.Name = "RadLabel35"
+        Me.RadLabel35.Size = New System.Drawing.Size(116, 21)
+        Me.RadLabel35.TabIndex = 235
+        Me.RadLabel35.Text = "Tipologia Cliente"
+        Me.RadLabel35.ThemeName = "MaterialTeal"
+        '
+        'cmbTipologiaCliente
+        '
+        Me.cmbTipologiaCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTipologiaCliente.AutoSize = False
+        Me.cmbTipologiaCliente.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbTipologiaCliente.ForeColor = System.Drawing.Color.Black
+        Me.cmbTipologiaCliente.Location = New System.Drawing.Point(155, 507)
+        Me.cmbTipologiaCliente.Name = "cmbTipologiaCliente"
+        Me.cmbTipologiaCliente.NullText = "Seleziona un valore"
+        Me.cmbTipologiaCliente.Size = New System.Drawing.Size(643, 36)
+        Me.cmbTipologiaCliente.TabIndex = 236
+        Me.cmbTipologiaCliente.ThemeName = "Fluent"
+        CType(Me.cmbTipologiaCliente.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
+        'RadGroupBox4
+        '
+        Me.RadGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox4.Controls.Add(Me.txtCommessa)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel34)
+        Me.RadGroupBox4.Controls.Add(Me.chkFattPostecipata)
+        Me.RadGroupBox4.Controls.Add(Me.chkFatAnticipata)
+        Me.RadGroupBox4.Controls.Add(Me.txtDesIva)
+        Me.RadGroupBox4.Controls.Add(Me.txtIva)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel33)
+        Me.RadGroupBox4.Controls.Add(Me.cmdOkSearchIva)
+        Me.RadGroupBox4.Controls.Add(Me.cmbFreqFatt)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel10)
+        Me.RadGroupBox4.Controls.Add(Me.cmbModPag)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel12)
+        Me.RadGroupBox4.Controls.Add(Me.cmbTipoFatt)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel11)
+        Me.RadGroupBox4.Controls.Add(Me.cmb9516)
+        Me.RadGroupBox4.Controls.Add(Me.RadLabel14)
+        Me.RadGroupBox4.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.RadGroupBox4.HeaderText = "Dati per fatturazione"
+        Me.RadGroupBox4.Location = New System.Drawing.Point(25, 310)
+        Me.RadGroupBox4.Name = "RadGroupBox4"
+        Me.RadGroupBox4.Size = New System.Drawing.Size(773, 189)
+        Me.RadGroupBox4.TabIndex = 234
+        Me.RadGroupBox4.Text = "Dati per fatturazione"
+        Me.RadGroupBox4.ThemeName = "Crystal"
+        '
+        'txtCommessa
+        '
+        Me.txtCommessa.AutoSize = False
+        Me.txtCommessa.ForeColor = System.Drawing.Color.Black
+        Me.txtCommessa.Location = New System.Drawing.Point(516, 113)
+        Me.txtCommessa.MaxLength = 6
+        Me.txtCommessa.Name = "txtCommessa"
+        Me.txtCommessa.ReadOnly = True
+        Me.txtCommessa.Size = New System.Drawing.Size(247, 36)
+        Me.txtCommessa.TabIndex = 194
+        Me.txtCommessa.ThemeName = "Fluent"
+        CType(Me.txtCommessa.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtCommessa.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'RadLabel34
+        '
+        Me.RadLabel34.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel34.Location = New System.Drawing.Point(431, 120)
+        Me.RadLabel34.Name = "RadLabel34"
+        Me.RadLabel34.Size = New System.Drawing.Size(80, 21)
+        Me.RadLabel34.TabIndex = 195
+        Me.RadLabel34.Text = "Commessa"
+        Me.RadLabel34.ThemeName = "MaterialTeal"
+        '
+        'chkFattPostecipata
+        '
+        Me.chkFattPostecipata.Location = New System.Drawing.Point(344, 159)
+        Me.chkFattPostecipata.Name = "chkFattPostecipata"
+        Me.chkFattPostecipata.Size = New System.Drawing.Size(188, 22)
+        Me.chkFattPostecipata.TabIndex = 226
+        Me.chkFattPostecipata.Text = "Fatturazione Postecipata"
+        Me.chkFattPostecipata.ThemeName = "MaterialTeal"
+        '
+        'chkFatAnticipata
+        '
+        Me.chkFatAnticipata.Location = New System.Drawing.Point(136, 159)
+        Me.chkFatAnticipata.Name = "chkFatAnticipata"
+        Me.chkFatAnticipata.Size = New System.Drawing.Size(177, 22)
+        Me.chkFatAnticipata.TabIndex = 225
+        Me.chkFatAnticipata.Text = "Fatturazione Anticipata"
+        Me.chkFatAnticipata.ThemeName = "MaterialTeal"
+        '
+        'txtDesIva
+        '
+        Me.txtDesIva.AutoSize = False
+        Me.txtDesIva.ForeColor = System.Drawing.Color.Black
+        Me.txtDesIva.Location = New System.Drawing.Point(178, 113)
+        Me.txtDesIva.MaxLength = 6
+        Me.txtDesIva.Name = "txtDesIva"
+        Me.txtDesIva.ReadOnly = True
+        Me.txtDesIva.Size = New System.Drawing.Size(161, 36)
+        Me.txtDesIva.TabIndex = 233
+        Me.txtDesIva.TabStop = False
+        Me.txtDesIva.ThemeName = "Fluent"
+        CType(Me.txtDesIva.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtDesIva.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'txtIva
+        '
+        Me.txtIva.AutoSize = False
+        Me.txtIva.ForeColor = System.Drawing.Color.Black
+        Me.txtIva.Location = New System.Drawing.Point(136, 113)
+        Me.txtIva.MaxLength = 6
+        Me.txtIva.Name = "txtIva"
+        Me.txtIva.ReadOnly = True
+        Me.txtIva.Size = New System.Drawing.Size(40, 36)
+        Me.txtIva.TabIndex = 231
+        Me.txtIva.ThemeName = "Fluent"
+        CType(Me.txtIva.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtIva.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'RadLabel33
+        '
+        Me.RadLabel33.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel33.Location = New System.Drawing.Point(5, 120)
+        Me.RadLabel33.Name = "RadLabel33"
+        Me.RadLabel33.Size = New System.Drawing.Size(74, 21)
+        Me.RadLabel33.TabIndex = 232
+        Me.RadLabel33.Text = "Codice Iva"
+        Me.RadLabel33.ThemeName = "MaterialTeal"
+        '
+        'cmdOkSearchIva
+        '
+        Me.cmdOkSearchIva.Image = CType(resources.GetObject("cmdOkSearchIva.Image"), System.Drawing.Image)
+        Me.cmdOkSearchIva.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdOkSearchIva.Location = New System.Drawing.Point(344, 114)
+        Me.cmdOkSearchIva.Name = "cmdOkSearchIva"
+        Me.cmdOkSearchIva.Size = New System.Drawing.Size(34, 34)
+        Me.cmdOkSearchIva.TabIndex = 234
+        Me.cmdOkSearchIva.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdOkSearchIva.ThemeName = "ThemeCmdRecubeYEL"
+        '
+        'cmbFreqFatt
+        '
+        Me.cmbFreqFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbFreqFatt.AutoSize = False
+        Me.cmbFreqFatt.ForeColor = System.Drawing.Color.Black
+        Me.cmbFreqFatt.Location = New System.Drawing.Point(136, 35)
+        Me.cmbFreqFatt.Name = "cmbFreqFatt"
+        Me.cmbFreqFatt.NullText = "Seleziona un valore"
+        Me.cmbFreqFatt.Size = New System.Drawing.Size(203, 36)
+        Me.cmbFreqFatt.TabIndex = 179
+        Me.cmbFreqFatt.ThemeName = "Fluent"
+        CType(Me.cmbFreqFatt.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'RadLabel10
+        '
+        Me.RadLabel10.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel10.Location = New System.Drawing.Point(5, 43)
+        Me.RadLabel10.Name = "RadLabel10"
+        Me.RadLabel10.Size = New System.Drawing.Size(105, 21)
+        Me.RadLabel10.TabIndex = 178
+        Me.RadLabel10.Text = "Frequenza fatt."
+        Me.RadLabel10.ThemeName = "MaterialTeal"
+        '
+        'cmbModPag
+        '
+        Me.cmbModPag.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbModPag.AutoSize = False
+        Me.cmbModPag.ForeColor = System.Drawing.Color.Black
+        Me.cmbModPag.Location = New System.Drawing.Point(136, 74)
+        Me.cmbModPag.Name = "cmbModPag"
+        Me.cmbModPag.NullText = "Seleziona un valore"
+        Me.cmbModPag.Size = New System.Drawing.Size(203, 36)
+        Me.cmbModPag.TabIndex = 209
+        Me.cmbModPag.ThemeName = "Fluent"
+        CType(Me.cmbModPag.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'RadLabel12
+        '
+        Me.RadLabel12.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel12.Location = New System.Drawing.Point(5, 82)
+        Me.RadLabel12.Name = "RadLabel12"
+        Me.RadLabel12.Size = New System.Drawing.Size(116, 21)
+        Me.RadLabel12.TabIndex = 208
+        Me.RadLabel12.Text = "Modalità pagam."
+        Me.RadLabel12.ThemeName = "MaterialTeal"
+        '
+        'cmbTipoFatt
+        '
+        Me.cmbTipoFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTipoFatt.AutoSize = False
+        Me.cmbTipoFatt.ForeColor = System.Drawing.Color.Black
+        Me.cmbTipoFatt.Location = New System.Drawing.Point(516, 33)
+        Me.cmbTipoFatt.Name = "cmbTipoFatt"
+        Me.cmbTipoFatt.NullText = "Seleziona un valore"
+        Me.cmbTipoFatt.Size = New System.Drawing.Size(247, 36)
+        Me.cmbTipoFatt.TabIndex = 207
+        Me.cmbTipoFatt.ThemeName = "Fluent"
+        CType(Me.cmbTipoFatt.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'RadLabel11
+        '
+        Me.RadLabel11.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel11.Location = New System.Drawing.Point(392, 41)
+        Me.RadLabel11.Name = "RadLabel11"
+        Me.RadLabel11.Size = New System.Drawing.Size(118, 21)
+        Me.RadLabel11.TabIndex = 206
+        Me.RadLabel11.Text = "Tipo fatturazione"
+        Me.RadLabel11.ThemeName = "MaterialTeal"
+        '
+        'cmb9516
+        '
+        Me.cmb9516.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmb9516.AutoSize = False
+        Me.cmb9516.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmb9516.ForeColor = System.Drawing.Color.Black
+        Me.cmb9516.Location = New System.Drawing.Point(516, 74)
+        Me.cmb9516.Name = "cmb9516"
+        Me.cmb9516.NullText = "Seleziona un valore"
+        Me.cmb9516.Size = New System.Drawing.Size(247, 36)
+        Me.cmb9516.TabIndex = 211
+        Me.cmb9516.ThemeName = "Fluent"
+        CType(Me.cmb9516.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
+        'RadLabel14
+        '
+        Me.RadLabel14.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel14.Location = New System.Drawing.Point(352, 82)
+        Me.RadLabel14.Name = "RadLabel14"
+        Me.RadLabel14.Size = New System.Drawing.Size(161, 21)
+        Me.RadLabel14.TabIndex = 210
+        Me.RadLabel14.Text = "Posizione Cliente 95/16"
+        Me.RadLabel14.ThemeName = "MaterialTeal"
+        '
+        'RadGroupBox3
+        '
+        Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox3.Controls.Add(Me.chkRagrImpianti)
+        Me.RadGroupBox3.Controls.Add(Me.chkRagrServizi)
+        Me.RadGroupBox3.Controls.Add(Me.chkRateAtipico)
+        Me.RadGroupBox3.Controls.Add(Me.chkRinnovoTacito)
+        Me.RadGroupBox3.Controls.Add(Me.chkReperib)
+        Me.RadGroupBox3.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.RadGroupBox3.HeaderText = "Opzioni contratto"
+        Me.RadGroupBox3.Location = New System.Drawing.Point(860, 22)
+        Me.RadGroupBox3.Name = "RadGroupBox3"
+        Me.RadGroupBox3.Size = New System.Drawing.Size(270, 200)
+        Me.RadGroupBox3.TabIndex = 233
+        Me.RadGroupBox3.Text = "Opzioni contratto"
+        Me.RadGroupBox3.ThemeName = "Crystal"
+        '
+        'chkRagrImpianti
+        '
+        Me.chkRagrImpianti.ForeColor = System.Drawing.Color.DimGray
+        Me.chkRagrImpianti.Location = New System.Drawing.Point(17, 48)
+        Me.chkRagrImpianti.Name = "chkRagrImpianti"
+        Me.chkRagrImpianti.Size = New System.Drawing.Size(193, 19)
+        Me.chkRagrImpianti.TabIndex = 204
+        Me.chkRagrImpianti.Text = "Raggruppamento impianti"
+        Me.chkRagrImpianti.ThemeName = "MaterialTeal"
+        '
+        'chkRagrServizi
+        '
+        Me.chkRagrServizi.ForeColor = System.Drawing.Color.DimGray
+        Me.chkRagrServizi.Location = New System.Drawing.Point(17, 76)
+        Me.chkRagrServizi.Name = "chkRagrServizi"
+        Me.chkRagrServizi.Size = New System.Drawing.Size(182, 19)
+        Me.chkRagrServizi.TabIndex = 205
+        Me.chkRagrServizi.Text = "Raggruppamento servizi"
+        Me.chkRagrServizi.ThemeName = "MaterialTeal"
+        '
+        'chkRateAtipico
+        '
+        Me.chkRateAtipico.ForeColor = System.Drawing.Color.DimGray
+        Me.chkRateAtipico.Location = New System.Drawing.Point(17, 158)
+        Me.chkRateAtipico.Name = "chkRateAtipico"
+        Me.chkRateAtipico.Size = New System.Drawing.Size(235, 19)
+        Me.chkRateAtipico.TabIndex = 208
+        Me.chkRateAtipico.Text = "Genera rate per contratto atipico"
+        Me.chkRateAtipico.ThemeName = "MaterialTeal"
+        '
+        'chkRinnovoTacito
+        '
+        Me.chkRinnovoTacito.ForeColor = System.Drawing.Color.DimGray
+        Me.chkRinnovoTacito.Location = New System.Drawing.Point(17, 103)
+        Me.chkRinnovoTacito.Name = "chkRinnovoTacito"
+        Me.chkRinnovoTacito.Size = New System.Drawing.Size(118, 19)
+        Me.chkRinnovoTacito.TabIndex = 206
+        Me.chkRinnovoTacito.Text = "Rinnovo tacito"
+        Me.chkRinnovoTacito.ThemeName = "MaterialTeal"
+        '
+        'chkReperib
+        '
+        Me.chkReperib.ForeColor = System.Drawing.Color.DimGray
+        Me.chkReperib.Location = New System.Drawing.Point(17, 131)
+        Me.chkReperib.Name = "chkReperib"
+        Me.chkReperib.Size = New System.Drawing.Size(98, 19)
+        Me.chkReperib.TabIndex = 207
+        Me.chkReperib.Text = "Reperibilità"
+        Me.chkReperib.ThemeName = "MaterialTeal"
+        '
+        'RadLabel32
+        '
+        Me.RadLabel32.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel32.Location = New System.Drawing.Point(548, 110)
+        Me.RadLabel32.Name = "RadLabel32"
+        Me.RadLabel32.Size = New System.Drawing.Size(122, 21)
+        Me.RadLabel32.TabIndex = 175
+        Me.RadLabel32.Text = "Modello contratto"
+        Me.RadLabel32.ThemeName = "MaterialTeal"
+        '
+        'txtModelloCtr
+        '
+        Me.txtModelloCtr.AutoSize = False
+        Me.txtModelloCtr.ForeColor = System.Drawing.Color.Black
+        Me.txtModelloCtr.Location = New System.Drawing.Point(674, 101)
+        Me.txtModelloCtr.MaxLength = 6
+        Me.txtModelloCtr.Name = "txtModelloCtr"
+        Me.txtModelloCtr.Size = New System.Drawing.Size(122, 36)
+        Me.txtModelloCtr.TabIndex = 174
+        Me.txtModelloCtr.ThemeName = "Fluent"
+        CType(Me.txtModelloCtr.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        '
+        'RadGroupBox2
+        '
+        Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox2.Controls.Add(Me.chkTipico)
+        Me.RadGroupBox2.Controls.Add(Me.chkAtipico)
+        Me.RadGroupBox2.HeaderText = ""
+        Me.RadGroupBox2.Location = New System.Drawing.Point(157, 103)
+        Me.RadGroupBox2.Name = "RadGroupBox2"
+        Me.RadGroupBox2.Size = New System.Drawing.Size(334, 39)
+        Me.RadGroupBox2.TabIndex = 232
+        Me.RadGroupBox2.ThemeName = "MaterialBlueGrey"
+        '
+        'chkTipico
+        '
+        Me.chkTipico.Location = New System.Drawing.Point(16, 9)
+        Me.chkTipico.Name = "chkTipico"
+        Me.chkTipico.Size = New System.Drawing.Size(127, 22)
+        Me.chkTipico.TabIndex = 227
+        Me.chkTipico.Text = "Contratto tipico"
+        Me.chkTipico.ThemeName = "MaterialTeal"
+        '
+        'chkAtipico
+        '
+        Me.chkAtipico.Location = New System.Drawing.Point(173, 9)
+        Me.chkAtipico.Name = "chkAtipico"
+        Me.chkAtipico.Size = New System.Drawing.Size(135, 22)
+        Me.chkAtipico.TabIndex = 228
+        Me.chkAtipico.Text = "Contratto atipico"
+        Me.chkAtipico.ThemeName = "MaterialTeal"
+        '
+        'RadTextBox1
+        '
+        Me.RadTextBox1.AutoSize = False
+        Me.RadTextBox1.ForeColor = System.Drawing.Color.Black
+        Me.RadTextBox1.Location = New System.Drawing.Point(989, 440)
+        Me.RadTextBox1.MaxLength = 6
+        Me.RadTextBox1.Name = "RadTextBox1"
+        Me.RadTextBox1.ReadOnly = True
+        Me.RadTextBox1.Size = New System.Drawing.Size(110, 36)
+        Me.RadTextBox1.TabIndex = 229
+        Me.RadTextBox1.TabStop = False
+        Me.RadTextBox1.ThemeName = "Fluent"
+        Me.RadTextBox1.Visible = False
+        CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.RadTextBox1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'txtK3
+        '
+        Me.txtK3.AutoSize = False
+        Me.txtK3.ForeColor = System.Drawing.Color.Black
+        Me.txtK3.Location = New System.Drawing.Point(860, 367)
+        Me.txtK3.MaxLength = 6
+        Me.txtK3.Name = "txtK3"
+        Me.txtK3.ReadOnly = True
+        Me.txtK3.Size = New System.Drawing.Size(82, 36)
+        Me.txtK3.TabIndex = 227
+        Me.txtK3.ThemeName = "Fluent"
+        CType(Me.txtK3.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtK3.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.FitToAvailableSize
+        '
+        'RadLabel31
+        '
+        Me.RadLabel31.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel31.Location = New System.Drawing.Point(830, 375)
+        Me.RadLabel31.Name = "RadLabel31"
+        Me.RadLabel31.Size = New System.Drawing.Size(24, 21)
+        Me.RadLabel31.TabIndex = 228
+        Me.RadLabel31.Text = "K3"
+        Me.RadLabel31.ThemeName = "MaterialTeal"
+        '
+        'RadButton6
+        '
+        Me.RadButton6.Image = CType(resources.GetObject("RadButton6.Image"), System.Drawing.Image)
+        Me.RadButton6.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadButton6.Location = New System.Drawing.Point(1105, 442)
+        Me.RadButton6.Name = "RadButton6"
+        Me.RadButton6.Size = New System.Drawing.Size(34, 34)
+        Me.RadButton6.TabIndex = 230
+        Me.RadButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RadButton6.ThemeName = "ThemeCmdRecubeYEL"
+        Me.RadButton6.Visible = False
         '
         'wb
         '
         Me.wb.AccessibleName = "d"
-        Me.wb.Location = New System.Drawing.Point(927, 301)
+        Me.wb.Location = New System.Drawing.Point(972, 524)
         Me.wb.Name = "wb"
         Me.wb.Size = New System.Drawing.Size(70, 70)
         Me.wb.TabIndex = 222
@@ -337,7 +779,7 @@ Partial Class FrmContratto
         Me.txtDataConvalida.AutoSize = False
         Me.txtDataConvalida.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDataConvalida.ForeColor = System.Drawing.Color.Black
-        Me.txtDataConvalida.Location = New System.Drawing.Point(1013, 150)
+        Me.txtDataConvalida.Location = New System.Drawing.Point(694, 663)
         Me.txtDataConvalida.Mask = "00/00/0000"
         Me.txtDataConvalida.MaskType = Telerik.WinControls.UI.MaskType.Standard
         Me.txtDataConvalida.MinimumSize = New System.Drawing.Size(0, 24)
@@ -360,7 +802,7 @@ Partial Class FrmContratto
         Me.txtDtIniDecor.AutoSize = False
         Me.txtDtIniDecor.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDtIniDecor.ForeColor = System.Drawing.Color.Black
-        Me.txtDtIniDecor.Location = New System.Drawing.Point(158, 231)
+        Me.txtDtIniDecor.Location = New System.Drawing.Point(156, 227)
         Me.txtDtIniDecor.Mask = "00/00/0000"
         Me.txtDtIniDecor.MaskType = Telerik.WinControls.UI.MaskType.Standard
         Me.txtDtIniDecor.MinimumSize = New System.Drawing.Size(0, 24)
@@ -381,7 +823,7 @@ Partial Class FrmContratto
         'RadLabel18
         '
         Me.RadLabel18.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel18.Location = New System.Drawing.Point(23, 237)
+        Me.RadLabel18.Location = New System.Drawing.Point(23, 233)
         Me.RadLabel18.Name = "RadLabel18"
         Me.RadLabel18.Size = New System.Drawing.Size(113, 21)
         Me.RadLabel18.TabIndex = 200
@@ -391,11 +833,11 @@ Partial Class FrmContratto
         'RadLabel17
         '
         Me.RadLabel17.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel17.Location = New System.Drawing.Point(476, 88)
+        Me.RadLabel17.Location = New System.Drawing.Point(860, 298)
         Me.RadLabel17.Name = "RadLabel17"
-        Me.RadLabel17.Size = New System.Drawing.Size(53, 21)
+        Me.RadLabel17.Size = New System.Drawing.Size(201, 21)
         Me.RadLabel17.TabIndex = 218
-        Me.RadLabel17.Text = "Agente"
+        Me.RadLabel17.Text = "Agente acquisizione contratto"
         Me.RadLabel17.ThemeName = "MaterialTeal"
         '
         'cmbAgente
@@ -403,7 +845,7 @@ Partial Class FrmContratto
         Me.cmbAgente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbAgente.AutoSize = False
         Me.cmbAgente.ForeColor = System.Drawing.Color.Black
-        Me.cmbAgente.Location = New System.Drawing.Point(551, 80)
+        Me.cmbAgente.Location = New System.Drawing.Point(860, 321)
         Me.cmbAgente.Name = "cmbAgente"
         Me.cmbAgente.NullText = "Seleziona un valore"
         Me.cmbAgente.Size = New System.Drawing.Size(244, 36)
@@ -414,7 +856,7 @@ Partial Class FrmContratto
         'RadLabel8
         '
         Me.RadLabel8.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel8.Location = New System.Drawing.Point(24, 575)
+        Me.RadLabel8.Location = New System.Drawing.Point(24, 675)
         Me.RadLabel8.Name = "RadLabel8"
         Me.RadLabel8.Size = New System.Drawing.Size(100, 21)
         Me.RadLabel8.TabIndex = 215
@@ -426,7 +868,7 @@ Partial Class FrmContratto
         Me.txtCanone.AutoSize = False
         Me.txtCanone.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCanone.ForeColor = System.Drawing.Color.Black
-        Me.txtCanone.Location = New System.Drawing.Point(155, 563)
+        Me.txtCanone.Location = New System.Drawing.Point(155, 663)
         Me.txtCanone.Mask = "C"
         Me.txtCanone.MaskType = Telerik.WinControls.UI.MaskType.Numeric
         Me.txtCanone.MinimumSize = New System.Drawing.Size(0, 24)
@@ -447,7 +889,7 @@ Partial Class FrmContratto
         'chkConvalida
         '
         Me.chkConvalida.ForeColor = System.Drawing.Color.DimGray
-        Me.chkConvalida.Location = New System.Drawing.Point(839, 159)
+        Me.chkConvalida.Location = New System.Drawing.Point(519, 672)
         Me.chkConvalida.Name = "chkConvalida"
         Me.chkConvalida.Size = New System.Drawing.Size(152, 19)
         Me.chkConvalida.TabIndex = 216
@@ -457,7 +899,7 @@ Partial Class FrmContratto
         'RadLabel16
         '
         Me.RadLabel16.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel16.Location = New System.Drawing.Point(24, 525)
+        Me.RadLabel16.Location = New System.Drawing.Point(24, 634)
         Me.RadLabel16.Name = "RadLabel16"
         Me.RadLabel16.Size = New System.Drawing.Size(80, 21)
         Me.RadLabel16.TabIndex = 214
@@ -467,7 +909,7 @@ Partial Class FrmContratto
         'RadLabel15
         '
         Me.RadLabel15.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel15.Location = New System.Drawing.Point(24, 477)
+        Me.RadLabel15.Location = New System.Drawing.Point(24, 595)
         Me.RadLabel15.Name = "RadLabel15"
         Me.RadLabel15.Size = New System.Drawing.Size(116, 21)
         Me.RadLabel15.TabIndex = 212
@@ -479,7 +921,7 @@ Partial Class FrmContratto
         Me.cmbPrestazioni.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbPrestazioni.AutoSize = False
         Me.cmbPrestazioni.ForeColor = System.Drawing.Color.Black
-        Me.cmbPrestazioni.Location = New System.Drawing.Point(155, 515)
+        Me.cmbPrestazioni.Location = New System.Drawing.Point(155, 624)
         Me.cmbPrestazioni.Name = "cmbPrestazioni"
         Me.cmbPrestazioni.NullText = "Seleziona un valore"
         Me.cmbPrestazioni.Size = New System.Drawing.Size(643, 36)
@@ -492,7 +934,7 @@ Partial Class FrmContratto
         Me.cmbPianoManut.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbPianoManut.AutoSize = False
         Me.cmbPianoManut.ForeColor = System.Drawing.Color.Black
-        Me.cmbPianoManut.Location = New System.Drawing.Point(155, 467)
+        Me.cmbPianoManut.Location = New System.Drawing.Point(155, 585)
         Me.cmbPianoManut.Name = "cmbPianoManut"
         Me.cmbPianoManut.NullText = "Seleziona un valore"
         Me.cmbPianoManut.Size = New System.Drawing.Size(643, 36)
@@ -500,49 +942,15 @@ Partial Class FrmContratto
         Me.cmbPianoManut.ThemeName = "Fluent"
         CType(Me.cmbPianoManut.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         '
-        'RadLabel14
-        '
-        Me.RadLabel14.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel14.Location = New System.Drawing.Point(387, 384)
-        Me.RadLabel14.Name = "RadLabel14"
-        Me.RadLabel14.Size = New System.Drawing.Size(161, 21)
-        Me.RadLabel14.TabIndex = 210
-        Me.RadLabel14.Text = "Posizione Cliente 95/16"
-        Me.RadLabel14.ThemeName = "MaterialTeal"
-        '
         'RadLabel13
         '
         Me.RadLabel13.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel13.Location = New System.Drawing.Point(24, 429)
+        Me.RadLabel13.Location = New System.Drawing.Point(24, 555)
         Me.RadLabel13.Name = "RadLabel13"
         Me.RadLabel13.Size = New System.Drawing.Size(127, 21)
         Me.RadLabel13.TabIndex = 210
         Me.RadLabel13.Text = "Cod. Rivalutazione"
         Me.RadLabel13.ThemeName = "MaterialTeal"
-        '
-        'cmb9516
-        '
-        Me.cmb9516.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmb9516.AutoSize = False
-        Me.cmb9516.Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        Me.cmb9516.ForeColor = System.Drawing.Color.Black
-        Me.cmb9516.Location = New System.Drawing.Point(551, 375)
-        Me.cmb9516.Name = "cmb9516"
-        Me.cmb9516.NullText = "Seleziona un valore"
-        Me.cmb9516.Size = New System.Drawing.Size(247, 36)
-        Me.cmb9516.TabIndex = 211
-        Me.cmb9516.ThemeName = "Fluent"
-        CType(Me.cmb9516.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
-        '
-        'RadLabel12
-        '
-        Me.RadLabel12.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel12.Location = New System.Drawing.Point(24, 385)
-        Me.RadLabel12.Name = "RadLabel12"
-        Me.RadLabel12.Size = New System.Drawing.Size(116, 21)
-        Me.RadLabel12.TabIndex = 208
-        Me.RadLabel12.Text = "Modalità pagam."
-        Me.RadLabel12.ThemeName = "MaterialTeal"
         '
         'cmbRivalut
         '
@@ -550,7 +958,7 @@ Partial Class FrmContratto
         Me.cmbRivalut.AutoSize = False
         Me.cmbRivalut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbRivalut.ForeColor = System.Drawing.Color.Black
-        Me.cmbRivalut.Location = New System.Drawing.Point(155, 421)
+        Me.cmbRivalut.Location = New System.Drawing.Point(155, 547)
         Me.cmbRivalut.Name = "cmbRivalut"
         Me.cmbRivalut.NullText = "Seleziona un valore"
         Me.cmbRivalut.Size = New System.Drawing.Size(643, 36)
@@ -558,122 +966,33 @@ Partial Class FrmContratto
         Me.cmbRivalut.ThemeName = "Fluent"
         CType(Me.cmbRivalut.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
         '
-        'cmbModPag
+        'txtDtIniFatt
         '
-        Me.cmbModPag.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbModPag.AutoSize = False
-        Me.cmbModPag.ForeColor = System.Drawing.Color.Black
-        Me.cmbModPag.Location = New System.Drawing.Point(155, 375)
-        Me.cmbModPag.Name = "cmbModPag"
-        Me.cmbModPag.NullText = "Seleziona un valore"
-        Me.cmbModPag.Size = New System.Drawing.Size(203, 36)
-        Me.cmbModPag.TabIndex = 209
-        Me.cmbModPag.ThemeName = "Fluent"
-        CType(Me.cmbModPag.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
-        'chkRinnovoTacito
-        '
-        Me.chkRinnovoTacito.ForeColor = System.Drawing.Color.DimGray
-        Me.chkRinnovoTacito.Location = New System.Drawing.Point(839, 118)
-        Me.chkRinnovoTacito.Name = "chkRinnovoTacito"
-        Me.chkRinnovoTacito.Size = New System.Drawing.Size(118, 19)
-        Me.chkRinnovoTacito.TabIndex = 206
-        Me.chkRinnovoTacito.Text = "Rinnovo tacito"
-        Me.chkRinnovoTacito.ThemeName = "MaterialTeal"
-        '
-        'RadLabel11
-        '
-        Me.RadLabel11.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel11.Location = New System.Drawing.Point(427, 336)
-        Me.RadLabel11.Name = "RadLabel11"
-        Me.RadLabel11.Size = New System.Drawing.Size(118, 21)
-        Me.RadLabel11.TabIndex = 206
-        Me.RadLabel11.Text = "Tipo fatturazione"
-        Me.RadLabel11.ThemeName = "MaterialTeal"
-        '
-        'cmbTipoFatt
-        '
-        Me.cmbTipoFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbTipoFatt.AutoSize = False
-        Me.cmbTipoFatt.ForeColor = System.Drawing.Color.Black
-        Me.cmbTipoFatt.Location = New System.Drawing.Point(551, 328)
-        Me.cmbTipoFatt.Name = "cmbTipoFatt"
-        Me.cmbTipoFatt.NullText = "Seleziona un valore"
-        Me.cmbTipoFatt.Size = New System.Drawing.Size(247, 36)
-        Me.cmbTipoFatt.TabIndex = 207
-        Me.cmbTipoFatt.ThemeName = "Fluent"
-        CType(Me.cmbTipoFatt.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
-        'RadLabel10
-        '
-        Me.RadLabel10.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel10.Location = New System.Drawing.Point(24, 336)
-        Me.RadLabel10.Name = "RadLabel10"
-        Me.RadLabel10.Size = New System.Drawing.Size(105, 21)
-        Me.RadLabel10.TabIndex = 178
-        Me.RadLabel10.Text = "Frequenza fatt."
-        Me.RadLabel10.ThemeName = "MaterialTeal"
-        '
-        'chkRagrServizi
-        '
-        Me.chkRagrServizi.ForeColor = System.Drawing.Color.DimGray
-        Me.chkRagrServizi.Location = New System.Drawing.Point(839, 78)
-        Me.chkRagrServizi.Name = "chkRagrServizi"
-        Me.chkRagrServizi.Size = New System.Drawing.Size(182, 19)
-        Me.chkRagrServizi.TabIndex = 205
-        Me.chkRagrServizi.Text = "Raggruppamento servizi"
-        Me.chkRagrServizi.ThemeName = "MaterialTeal"
-        '
-        'cmbFreqFatt
-        '
-        Me.cmbFreqFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbFreqFatt.AutoSize = False
-        Me.cmbFreqFatt.ForeColor = System.Drawing.Color.Black
-        Me.cmbFreqFatt.Location = New System.Drawing.Point(155, 328)
-        Me.cmbFreqFatt.Name = "cmbFreqFatt"
-        Me.cmbFreqFatt.NullText = "Seleziona un valore"
-        Me.cmbFreqFatt.Size = New System.Drawing.Size(203, 36)
-        Me.cmbFreqFatt.TabIndex = 179
-        Me.cmbFreqFatt.ThemeName = "Fluent"
-        CType(Me.cmbFreqFatt.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
-        'chkRagrImpianti
-        '
-        Me.chkRagrImpianti.ForeColor = System.Drawing.Color.DimGray
-        Me.chkRagrImpianti.Location = New System.Drawing.Point(839, 39)
-        Me.chkRagrImpianti.Name = "chkRagrImpianti"
-        Me.chkRagrImpianti.Size = New System.Drawing.Size(193, 19)
-        Me.chkRagrImpianti.TabIndex = 204
-        Me.chkRagrImpianti.Text = "Raggruppamento impianti"
-        Me.chkRagrImpianti.ThemeName = "MaterialTeal"
-        '
-        'txtDtFinPrestaz
-        '
-        Me.txtDtFinPrestaz.AutoSize = False
-        Me.txtDtFinPrestaz.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.txtDtFinPrestaz.ForeColor = System.Drawing.Color.Black
-        Me.txtDtFinPrestaz.Location = New System.Drawing.Point(434, 279)
-        Me.txtDtFinPrestaz.Mask = "00/00/0000"
-        Me.txtDtFinPrestaz.MaskType = Telerik.WinControls.UI.MaskType.Standard
-        Me.txtDtFinPrestaz.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtDtFinPrestaz.Name = "txtDtFinPrestaz"
+        Me.txtDtIniFatt.AutoSize = False
+        Me.txtDtIniFatt.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.txtDtIniFatt.ForeColor = System.Drawing.Color.Black
+        Me.txtDtIniFatt.Location = New System.Drawing.Point(432, 268)
+        Me.txtDtIniFatt.Mask = "00/00/0000"
+        Me.txtDtIniFatt.MaskType = Telerik.WinControls.UI.MaskType.Standard
+        Me.txtDtIniFatt.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.txtDtIniFatt.Name = "txtDtIniFatt"
         '
         '
         '
-        Me.txtDtFinPrestaz.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtDtFinPrestaz.Size = New System.Drawing.Size(104, 36)
-        Me.txtDtFinPrestaz.TabIndex = 203
-        Me.txtDtFinPrestaz.TabStop = False
-        Me.txtDtFinPrestaz.Text = "__/__/____"
-        Me.txtDtFinPrestaz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtDtFinPrestaz.ThemeName = "Fluent"
-        CType(Me.txtDtFinPrestaz.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Text = "__/__/____"
-        CType(Me.txtDtFinPrestaz.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtDtIniFatt.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.txtDtIniFatt.Size = New System.Drawing.Size(104, 36)
+        Me.txtDtIniFatt.TabIndex = 203
+        Me.txtDtIniFatt.TabStop = False
+        Me.txtDtIniFatt.Text = "__/__/____"
+        Me.txtDtIniFatt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtDtIniFatt.ThemeName = "Fluent"
+        CType(Me.txtDtIniFatt.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Text = "__/__/____"
+        CType(Me.txtDtIniFatt.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         '
         'RadLabel9
         '
         Me.RadLabel9.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel9.Location = New System.Drawing.Point(299, 288)
+        Me.RadLabel9.Location = New System.Drawing.Point(297, 277)
         Me.RadLabel9.Name = "RadLabel9"
         Me.RadLabel9.Size = New System.Drawing.Size(124, 21)
         Me.RadLabel9.TabIndex = 202
@@ -685,7 +1004,7 @@ Partial Class FrmContratto
         Me.txtDtIniPrestaz.AutoSize = False
         Me.txtDtIniPrestaz.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDtIniPrestaz.ForeColor = System.Drawing.Color.Black
-        Me.txtDtIniPrestaz.Location = New System.Drawing.Point(158, 279)
+        Me.txtDtIniPrestaz.Location = New System.Drawing.Point(156, 268)
         Me.txtDtIniPrestaz.Mask = "00/00/0000"
         Me.txtDtIniPrestaz.MaskType = Telerik.WinControls.UI.MaskType.Standard
         Me.txtDtIniPrestaz.MinimumSize = New System.Drawing.Size(0, 24)
@@ -706,7 +1025,7 @@ Partial Class FrmContratto
         'RadLabel7
         '
         Me.RadLabel7.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel7.Location = New System.Drawing.Point(24, 289)
+        Me.RadLabel7.Location = New System.Drawing.Point(24, 278)
         Me.RadLabel7.Name = "RadLabel7"
         Me.RadLabel7.Size = New System.Drawing.Size(117, 21)
         Me.RadLabel7.TabIndex = 200
@@ -718,7 +1037,7 @@ Partial Class FrmContratto
         Me.txtDtFinDecor.AutoSize = False
         Me.txtDtFinDecor.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDtFinDecor.ForeColor = System.Drawing.Color.Black
-        Me.txtDtFinDecor.Location = New System.Drawing.Point(434, 231)
+        Me.txtDtFinDecor.Location = New System.Drawing.Point(432, 227)
         Me.txtDtFinDecor.Mask = "00/00/0000"
         Me.txtDtFinDecor.MaskType = Telerik.WinControls.UI.MaskType.Standard
         Me.txtDtFinDecor.MinimumSize = New System.Drawing.Size(0, 24)
@@ -739,7 +1058,7 @@ Partial Class FrmContratto
         'RadLabel6
         '
         Me.RadLabel6.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel6.Location = New System.Drawing.Point(299, 237)
+        Me.RadLabel6.Location = New System.Drawing.Point(297, 233)
         Me.RadLabel6.Name = "RadLabel6"
         Me.RadLabel6.Size = New System.Drawing.Size(102, 21)
         Me.RadLabel6.TabIndex = 198
@@ -749,7 +1068,7 @@ Partial Class FrmContratto
         'RadLabel4
         '
         Me.RadLabel4.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel4.Location = New System.Drawing.Point(24, 91)
+        Me.RadLabel4.Location = New System.Drawing.Point(430, 69)
         Me.RadLabel4.Name = "RadLabel4"
         Me.RadLabel4.Size = New System.Drawing.Size(99, 21)
         Me.RadLabel4.TabIndex = 176
@@ -760,7 +1079,7 @@ Partial Class FrmContratto
         '
         Me.txtDesGestore.AutoSize = False
         Me.txtDesGestore.ForeColor = System.Drawing.Color.Black
-        Me.txtDesGestore.Location = New System.Drawing.Point(268, 183)
+        Me.txtDesGestore.Location = New System.Drawing.Point(268, 188)
         Me.txtDesGestore.MaxLength = 6
         Me.txtDesGestore.Name = "txtDesGestore"
         Me.txtDesGestore.ReadOnly = True
@@ -775,7 +1094,7 @@ Partial Class FrmContratto
         '
         Me.txtCodGestore.AutoSize = False
         Me.txtCodGestore.ForeColor = System.Drawing.Color.Black
-        Me.txtCodGestore.Location = New System.Drawing.Point(158, 183)
+        Me.txtCodGestore.Location = New System.Drawing.Point(156, 188)
         Me.txtCodGestore.MaxLength = 6
         Me.txtCodGestore.Name = "txtCodGestore"
         Me.txtCodGestore.ReadOnly = True
@@ -788,7 +1107,7 @@ Partial Class FrmContratto
         'RadLabel5
         '
         Me.RadLabel5.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel5.Location = New System.Drawing.Point(24, 192)
+        Me.RadLabel5.Location = New System.Drawing.Point(24, 197)
         Me.RadLabel5.Name = "RadLabel5"
         Me.RadLabel5.Size = New System.Drawing.Size(107, 21)
         Me.RadLabel5.TabIndex = 193
@@ -800,7 +1119,7 @@ Partial Class FrmContratto
         Me.cmbTipoContratto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipoContratto.AutoSize = False
         Me.cmbTipoContratto.ForeColor = System.Drawing.Color.Black
-        Me.cmbTipoContratto.Location = New System.Drawing.Point(156, 80)
+        Me.cmbTipoContratto.Location = New System.Drawing.Point(551, 61)
         Me.cmbTipoContratto.Name = "cmbTipoContratto"
         Me.cmbTipoContratto.NullText = "Seleziona un valore"
         Me.cmbTipoContratto.Size = New System.Drawing.Size(244, 36)
@@ -812,7 +1131,7 @@ Partial Class FrmContratto
         '
         Me.txtDesCli.AutoSize = False
         Me.txtDesCli.ForeColor = System.Drawing.Color.Black
-        Me.txtDesCli.Location = New System.Drawing.Point(268, 131)
+        Me.txtDesCli.Location = New System.Drawing.Point(268, 148)
         Me.txtDesCli.MaxLength = 6
         Me.txtDesCli.Name = "txtDesCli"
         Me.txtDesCli.ReadOnly = True
@@ -827,7 +1146,7 @@ Partial Class FrmContratto
         '
         Me.txtCodCliente.AutoSize = False
         Me.txtCodCliente.ForeColor = System.Drawing.Color.Black
-        Me.txtCodCliente.Location = New System.Drawing.Point(156, 130)
+        Me.txtCodCliente.Location = New System.Drawing.Point(155, 147)
         Me.txtCodCliente.MaxLength = 6
         Me.txtCodCliente.Name = "txtCodCliente"
         Me.txtCodCliente.ReadOnly = True
@@ -840,7 +1159,7 @@ Partial Class FrmContratto
         'RadLabel2
         '
         Me.RadLabel2.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel2.Location = New System.Drawing.Point(24, 140)
+        Me.RadLabel2.Location = New System.Drawing.Point(24, 157)
         Me.RadLabel2.Name = "RadLabel2"
         Me.RadLabel2.Size = New System.Drawing.Size(52, 21)
         Me.RadLabel2.TabIndex = 189
@@ -850,7 +1169,7 @@ Partial Class FrmContratto
         'RadLabel1
         '
         Me.RadLabel1.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel1.Location = New System.Drawing.Point(24, 36)
+        Me.RadLabel1.Location = New System.Drawing.Point(24, 67)
         Me.RadLabel1.Name = "RadLabel1"
         Me.RadLabel1.Size = New System.Drawing.Size(115, 21)
         Me.RadLabel1.TabIndex = 173
@@ -860,19 +1179,31 @@ Partial Class FrmContratto
         'txtCodice
         '
         Me.txtCodice.AutoSize = False
+        Me.txtCodice.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.txtCodice.ForeColor = System.Drawing.Color.Black
-        Me.txtCodice.Location = New System.Drawing.Point(155, 30)
+        Me.txtCodice.Location = New System.Drawing.Point(155, 61)
         Me.txtCodice.MaxLength = 6
         Me.txtCodice.Name = "txtCodice"
+        '
+        '
+        '
+        Me.txtCodice.RootElement.CustomFontStyle = System.Drawing.FontStyle.Bold
         Me.txtCodice.Size = New System.Drawing.Size(100, 36)
         Me.txtCodice.TabIndex = 172
         Me.txtCodice.ThemeName = "Fluent"
         CType(Me.txtCodice.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        CType(Me.txtCodice.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).CustomFontStyle = System.Drawing.FontStyle.Bold
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).CustomFontStyle = System.Drawing.FontStyle.Bold
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.FillPrimitive).CustomFontStyle = System.Drawing.FontStyle.Bold
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(1), Telerik.WinControls.Primitives.FillPrimitive).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).CustomFontStyle = System.Drawing.FontStyle.Bold
+        CType(Me.txtCodice.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None
         '
         'RadLabel3
         '
         Me.RadLabel3.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel3.Location = New System.Drawing.Point(477, 38)
+        Me.RadLabel3.Location = New System.Drawing.Point(26, 30)
         Me.RadLabel3.Name = "RadLabel3"
         Me.RadLabel3.Size = New System.Drawing.Size(56, 21)
         Me.RadLabel3.TabIndex = 174
@@ -884,573 +1215,19 @@ Partial Class FrmContratto
         Me.cmbSocieta.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbSocieta.AutoSize = False
         Me.cmbSocieta.ForeColor = System.Drawing.Color.Black
-        Me.cmbSocieta.Location = New System.Drawing.Point(551, 30)
+        Me.cmbSocieta.Location = New System.Drawing.Point(155, 22)
         Me.cmbSocieta.Name = "cmbSocieta"
         Me.cmbSocieta.NullText = "Seleziona un valore"
-        Me.cmbSocieta.Size = New System.Drawing.Size(244, 36)
+        Me.cmbSocieta.Size = New System.Drawing.Size(640, 36)
         Me.cmbSocieta.TabIndex = 175
         Me.cmbSocieta.ThemeName = "Fluent"
         CType(Me.cmbSocieta.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        '
-        'cmbClienti
-        '
-        Me.cmbClienti.AutoSize = False
-        '
-        'cmbClienti.NestedRadGridView
-        '
-        Me.cmbClienti.EditorControl.BackColor = System.Drawing.SystemColors.Window
-        Me.cmbClienti.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbClienti.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmbClienti.EditorControl.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowAddNewRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowCellContextMenu = False
-        Me.cmbClienti.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cmbClienti.EditorControl.MasterTemplate.EnableGrouping = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbClienti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition11
-        Me.cmbClienti.EditorControl.Name = "NestedRadGridView"
-        Me.cmbClienti.EditorControl.ReadOnly = True
-        Me.cmbClienti.EditorControl.ShowGroupPanel = False
-        Me.cmbClienti.EditorControl.Size = New System.Drawing.Size(240, 150)
-        Me.cmbClienti.EditorControl.TabIndex = 0
-        Me.cmbClienti.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cmbClienti.ForeColor = System.Drawing.Color.Black
-        Me.cmbClienti.Location = New System.Drawing.Point(156, 131)
-        Me.cmbClienti.Name = "cmbClienti"
-        Me.cmbClienti.Size = New System.Drawing.Size(100, 35)
-        Me.cmbClienti.TabIndex = 223
-        Me.cmbClienti.TabStop = False
-        Me.cmbClienti.ThemeName = "Fluent"
-        '
-        'cmbGestore
-        '
-        Me.cmbGestore.AutoSize = False
-        '
-        'cmbGestore.NestedRadGridView
-        '
-        Me.cmbGestore.EditorControl.BackColor = System.Drawing.SystemColors.Window
-        Me.cmbGestore.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbGestore.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cmbGestore.EditorControl.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.cmbGestore.EditorControl.MasterTemplate.AllowAddNewRow = False
-        Me.cmbGestore.EditorControl.MasterTemplate.AllowCellContextMenu = False
-        Me.cmbGestore.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cmbGestore.EditorControl.MasterTemplate.EnableGrouping = False
-        Me.cmbGestore.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbGestore.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition12
-        Me.cmbGestore.EditorControl.Name = "NestedRadGridView"
-        Me.cmbGestore.EditorControl.ReadOnly = True
-        Me.cmbGestore.EditorControl.ShowGroupPanel = False
-        Me.cmbGestore.EditorControl.Size = New System.Drawing.Size(240, 150)
-        Me.cmbGestore.EditorControl.TabIndex = 0
-        Me.cmbGestore.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.cmbGestore.ForeColor = System.Drawing.Color.Black
-        Me.cmbGestore.Location = New System.Drawing.Point(159, 182)
-        Me.cmbGestore.Name = "cmbGestore"
-        Me.cmbGestore.Size = New System.Drawing.Size(100, 35)
-        Me.cmbGestore.TabIndex = 224
-        Me.cmbGestore.TabStop = False
-        Me.cmbGestore.ThemeName = "Fluent"
-        '
-        'rpPageServizi
-        '
-        Me.rpPageServizi.Controls.Add(Me.gridAsset)
-        Me.rpPageServizi.Controls.Add(Me.pnlDati)
-        Me.rpPageServizi.ItemSize = New System.Drawing.SizeF(59.0!, 34.0!)
-        Me.rpPageServizi.Location = New System.Drawing.Point(6, 40)
-        Me.rpPageServizi.Name = "rpPageServizi"
-        Me.rpPageServizi.Size = New System.Drawing.Size(1113, 655)
-        Me.rpPageServizi.Text = "Servizi"
-        '
-        'gridAsset
-        '
-        Me.gridAsset.BackColor = System.Drawing.Color.White
-        Me.gridAsset.Cursor = System.Windows.Forms.Cursors.Default
-        Me.gridAsset.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gridAsset.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.gridAsset.ForeColor = System.Drawing.Color.Black
-        Me.gridAsset.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.gridAsset.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.gridAsset.MasterTemplate.AllowAddNewRow = False
-        Me.gridAsset.MasterTemplate.AllowColumnChooser = False
-        Me.gridAsset.MasterTemplate.AllowDeleteRow = False
-        Me.gridAsset.MasterTemplate.AllowDragToGroup = False
-        Me.gridAsset.MasterTemplate.AllowRowResize = False
-        Me.gridAsset.MasterTemplate.ViewDefinition = TableViewDefinition9
-        Me.gridAsset.Name = "gridAsset"
-        Me.gridAsset.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.gridAsset.ShowGroupPanel = False
-        Me.gridAsset.Size = New System.Drawing.Size(1113, 392)
-        Me.gridAsset.TabIndex = 38
-        Me.gridAsset.ThemeName = "Fluent"
-        '
-        'pnlDati
-        '
-        Me.pnlDati.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlDati.Location = New System.Drawing.Point(0, 392)
-        Me.pnlDati.Name = "pnlDati"
-        Me.pnlDati.Padding = New System.Windows.Forms.Padding(0)
-        '
-        'pnlDati.PanelContainer
-        '
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel23)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadDropDownList11)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel24)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadDropDownList12)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadDropDownList10)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel20)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadMaskedEditBox5)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadButton2)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadButton3)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel19)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.cmbCategoria)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel21)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.RadLabel22)
-        Me.pnlDati.PanelContainer.Controls.Add(Me.cmbMacroCat)
-        Me.pnlDati.PanelContainer.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDati.PanelContainer.Size = New System.Drawing.Size(1113, 263)
-        Me.pnlDati.Size = New System.Drawing.Size(1113, 263)
-        Me.pnlDati.TabIndex = 37
-        Me.pnlDati.ThemeName = "MaterialTeal"
-        '
-        'RadLabel23
-        '
-        Me.RadLabel23.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel23.Location = New System.Drawing.Point(417, 118)
-        Me.RadLabel23.Name = "RadLabel23"
-        Me.RadLabel23.Size = New System.Drawing.Size(118, 21)
-        Me.RadLabel23.TabIndex = 223
-        Me.RadLabel23.Text = "Tipo fatturazione"
-        Me.RadLabel23.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList11
-        '
-        Me.RadDropDownList11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList11.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList11.Location = New System.Drawing.Point(551, 110)
-        Me.RadDropDownList11.Name = "RadDropDownList11"
-        Me.RadDropDownList11.NullText = "Seleziona un valore"
-        Me.RadDropDownList11.Size = New System.Drawing.Size(203, 36)
-        Me.RadDropDownList11.TabIndex = 224
-        Me.RadDropDownList11.ThemeName = "MaterialTeal"
-        '
-        'RadLabel24
-        '
-        Me.RadLabel24.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel24.Location = New System.Drawing.Point(66, 118)
-        Me.RadLabel24.Name = "RadLabel24"
-        Me.RadLabel24.Size = New System.Drawing.Size(105, 21)
-        Me.RadLabel24.TabIndex = 221
-        Me.RadLabel24.Text = "Frequenza fatt."
-        Me.RadLabel24.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList12
-        '
-        Me.RadDropDownList12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList12.Location = New System.Drawing.Point(197, 110)
-        Me.RadDropDownList12.Name = "RadDropDownList12"
-        Me.RadDropDownList12.NullText = "Seleziona un valore"
-        Me.RadDropDownList12.Size = New System.Drawing.Size(203, 36)
-        Me.RadDropDownList12.TabIndex = 222
-        Me.RadDropDownList12.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList10
-        '
-        Me.RadDropDownList10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList10.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList10.Location = New System.Drawing.Point(197, 24)
-        Me.RadDropDownList10.Name = "RadDropDownList10"
-        Me.RadDropDownList10.NullText = "Seleziona un valore"
-        Me.RadDropDownList10.Size = New System.Drawing.Size(560, 36)
-        Me.RadDropDownList10.TabIndex = 220
-        Me.RadDropDownList10.ThemeName = "MaterialTeal"
-        '
-        'RadLabel20
-        '
-        Me.RadLabel20.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel20.Location = New System.Drawing.Point(59, 73)
-        Me.RadLabel20.Name = "RadLabel20"
-        Me.RadLabel20.Size = New System.Drawing.Size(109, 21)
-        Me.RadLabel20.TabIndex = 218
-        Me.RadLabel20.Text = "Importo canone"
-        Me.RadLabel20.ThemeName = "MaterialTeal"
-        '
-        'RadMaskedEditBox5
-        '
-        Me.RadMaskedEditBox5.AutoSize = False
-        Me.RadMaskedEditBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadMaskedEditBox5.Location = New System.Drawing.Point(197, 64)
-        Me.RadMaskedEditBox5.Mask = "C"
-        Me.RadMaskedEditBox5.MaskType = Telerik.WinControls.UI.MaskType.Numeric
-        Me.RadMaskedEditBox5.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.RadMaskedEditBox5.Name = "RadMaskedEditBox5"
-        '
-        '
-        '
-        Me.RadMaskedEditBox5.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.RadMaskedEditBox5.Size = New System.Drawing.Size(104, 36)
-        Me.RadMaskedEditBox5.TabIndex = 219
-        Me.RadMaskedEditBox5.TabStop = False
-        Me.RadMaskedEditBox5.Text = "€ 0,00"
-        Me.RadMaskedEditBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.RadMaskedEditBox5.ThemeName = "MaterialTeal"
-        '
-        'RadButton2
-        '
-        Me.RadButton2.Location = New System.Drawing.Point(793, 60)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(83, 29)
-        Me.RadButton2.TabIndex = 180
-        Me.RadButton2.Text = "Annulla"
-        Me.RadButton2.ThemeName = "VisualStudio2012Light"
-        '
-        'RadButton3
-        '
-        Me.RadButton3.Location = New System.Drawing.Point(793, 24)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(83, 29)
-        Me.RadButton3.TabIndex = 179
-        Me.RadButton3.Text = "Salva"
-        Me.RadButton3.ThemeName = "VisualStudio2012Light"
-        '
-        'RadLabel19
-        '
-        Me.RadLabel19.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel19.Location = New System.Drawing.Point(59, 166)
-        Me.RadLabel19.Name = "RadLabel19"
-        Me.RadLabel19.Size = New System.Drawing.Size(87, 21)
-        Me.RadLabel19.TabIndex = 177
-        Me.RadLabel19.Text = "Codice rival."
-        Me.RadLabel19.ThemeName = "MaterialTeal"
-        '
-        'cmbCategoria
-        '
-        Me.cmbCategoria.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbCategoria.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cmbCategoria.Location = New System.Drawing.Point(197, 154)
-        Me.cmbCategoria.Name = "cmbCategoria"
-        Me.cmbCategoria.NullText = "Seleziona un valore"
-        Me.cmbCategoria.Size = New System.Drawing.Size(200, 36)
-        Me.cmbCategoria.TabIndex = 3
-        Me.cmbCategoria.ThemeName = "MaterialTeal"
-        '
-        'RadLabel21
-        '
-        Me.RadLabel21.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel21.Location = New System.Drawing.Point(59, 30)
-        Me.RadLabel21.Name = "RadLabel21"
-        Me.RadLabel21.Size = New System.Drawing.Size(107, 21)
-        Me.RadLabel21.TabIndex = 173
-        Me.RadLabel21.Text = "Codice Servizio"
-        Me.RadLabel21.ThemeName = "MaterialTeal"
-        '
-        'RadLabel22
-        '
-        Me.RadLabel22.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel22.Location = New System.Drawing.Point(321, 74)
-        Me.RadLabel22.Name = "RadLabel22"
-        Me.RadLabel22.Size = New System.Drawing.Size(74, 21)
-        Me.RadLabel22.TabIndex = 175
-        Me.RadLabel22.Text = "Codice Iva"
-        Me.RadLabel22.ThemeName = "MaterialTeal"
-        '
-        'cmbMacroCat
-        '
-        Me.cmbMacroCat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbMacroCat.ForeColor = System.Drawing.Color.SteelBlue
-        Me.cmbMacroCat.Location = New System.Drawing.Point(401, 66)
-        Me.cmbMacroCat.Name = "cmbMacroCat"
-        Me.cmbMacroCat.NullText = "Seleziona un valore"
-        Me.cmbMacroCat.Size = New System.Drawing.Size(104, 36)
-        Me.cmbMacroCat.TabIndex = 2
-        Me.cmbMacroCat.ThemeName = "MaterialTeal"
-        '
-        'rpPageImpianti
-        '
-        Me.rpPageImpianti.Controls.Add(Me.RadGridView1)
-        Me.rpPageImpianti.Controls.Add(Me.RadScrollablePanel1)
-        Me.rpPageImpianti.ItemSize = New System.Drawing.SizeF(71.0!, 34.0!)
-        Me.rpPageImpianti.Location = New System.Drawing.Point(6, 40)
-        Me.rpPageImpianti.Name = "rpPageImpianti"
-        Me.rpPageImpianti.Size = New System.Drawing.Size(1113, 655)
-        Me.rpPageImpianti.Text = "Impianti"
-        '
-        'RadGridView1
-        '
-        Me.RadGridView1.BackColor = System.Drawing.Color.White
-        Me.RadGridView1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.RadGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadGridView1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.RadGridView1.ForeColor = System.Drawing.Color.Black
-        Me.RadGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.RadGridView1.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.RadGridView1.MasterTemplate.AllowAddNewRow = False
-        Me.RadGridView1.MasterTemplate.AllowColumnChooser = False
-        Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
-        Me.RadGridView1.MasterTemplate.AllowDragToGroup = False
-        Me.RadGridView1.MasterTemplate.AllowRowResize = False
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition10
-        Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.RadGridView1.ShowGroupPanel = False
-        Me.RadGridView1.Size = New System.Drawing.Size(1113, 392)
-        Me.RadGridView1.TabIndex = 39
-        Me.RadGridView1.ThemeName = "Fluent"
-        '
-        'RadScrollablePanel1
-        '
-        Me.RadScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadScrollablePanel1.Location = New System.Drawing.Point(0, 392)
-        Me.RadScrollablePanel1.Name = "RadScrollablePanel1"
-        Me.RadScrollablePanel1.Padding = New System.Windows.Forms.Padding(0)
-        '
-        'RadScrollablePanel1.PanelContainer
-        '
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel28)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel26)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadDropDownList14)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButton5)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadDropDownList13)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBox3)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBox4)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel25)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadDropDownList15)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel27)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadMaskedEditBox6)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButton1)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButton4)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel29)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel30)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadDropDownList17)
-        Me.RadScrollablePanel1.PanelContainer.Location = New System.Drawing.Point(0, 0)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(1113, 263)
-        Me.RadScrollablePanel1.Size = New System.Drawing.Size(1113, 263)
-        Me.RadScrollablePanel1.TabIndex = 38
-        Me.RadScrollablePanel1.ThemeName = "MaterialTeal"
-        '
-        'RadLabel28
-        '
-        Me.RadLabel28.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel28.Location = New System.Drawing.Point(399, 168)
-        Me.RadLabel28.Name = "RadLabel28"
-        Me.RadLabel28.Size = New System.Drawing.Size(80, 21)
-        Me.RadLabel28.TabIndex = 177
-        Me.RadLabel28.Text = "Commessa"
-        Me.RadLabel28.ThemeName = "MaterialTeal"
-        '
-        'RadLabel26
-        '
-        Me.RadLabel26.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel26.Location = New System.Drawing.Point(397, 124)
-        Me.RadLabel26.Name = "RadLabel26"
-        Me.RadLabel26.Size = New System.Drawing.Size(127, 21)
-        Me.RadLabel26.TabIndex = 177
-        Me.RadLabel26.Text = "Società esecutrice"
-        Me.RadLabel26.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList14
-        '
-        Me.RadDropDownList14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList14.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList14.Location = New System.Drawing.Point(540, 160)
-        Me.RadDropDownList14.Name = "RadDropDownList14"
-        Me.RadDropDownList14.NullText = "Seleziona un valore"
-        Me.RadDropDownList14.Size = New System.Drawing.Size(215, 36)
-        Me.RadDropDownList14.TabIndex = 176
-        Me.RadDropDownList14.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList13
-        '
-        Me.RadDropDownList13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList13.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList13.Location = New System.Drawing.Point(540, 116)
-        Me.RadDropDownList13.Name = "RadDropDownList13"
-        Me.RadDropDownList13.NullText = "Seleziona un valore"
-        Me.RadDropDownList13.Size = New System.Drawing.Size(215, 36)
-        Me.RadDropDownList13.TabIndex = 176
-        Me.RadDropDownList13.ThemeName = "MaterialTeal"
-        '
-        'RadTextBox3
-        '
-        Me.RadTextBox3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadTextBox3.Location = New System.Drawing.Point(342, 24)
-        Me.RadTextBox3.MaxLength = 6
-        Me.RadTextBox3.Name = "RadTextBox3"
-        Me.RadTextBox3.ReadOnly = True
-        Me.RadTextBox3.Size = New System.Drawing.Size(416, 36)
-        Me.RadTextBox3.TabIndex = 223
-        Me.RadTextBox3.TabStop = False
-        Me.RadTextBox3.ThemeName = "MaterialTeal"
-        '
-        'RadTextBox4
-        '
-        Me.RadTextBox4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadTextBox4.Location = New System.Drawing.Point(196, 23)
-        Me.RadTextBox4.MaxLength = 6
-        Me.RadTextBox4.Name = "RadTextBox4"
-        Me.RadTextBox4.ReadOnly = True
-        Me.RadTextBox4.Size = New System.Drawing.Size(100, 36)
-        Me.RadTextBox4.TabIndex = 221
-        Me.RadTextBox4.ThemeName = "MaterialTeal"
-        '
-        'RadLabel25
-        '
-        Me.RadLabel25.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel25.Location = New System.Drawing.Point(62, 33)
-        Me.RadLabel25.Name = "RadLabel25"
-        Me.RadLabel25.Size = New System.Drawing.Size(64, 21)
-        Me.RadLabel25.TabIndex = 222
-        Me.RadLabel25.Text = "Impianto"
-        Me.RadLabel25.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList15
-        '
-        Me.RadDropDownList15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList15.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList15.Location = New System.Drawing.Point(197, 72)
-        Me.RadDropDownList15.Name = "RadDropDownList15"
-        Me.RadDropDownList15.NullText = "Seleziona un valore"
-        Me.RadDropDownList15.Size = New System.Drawing.Size(560, 36)
-        Me.RadDropDownList15.TabIndex = 220
-        Me.RadDropDownList15.ThemeName = "MaterialTeal"
-        '
-        'RadLabel27
-        '
-        Me.RadLabel27.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel27.Location = New System.Drawing.Point(59, 169)
-        Me.RadLabel27.Name = "RadLabel27"
-        Me.RadLabel27.Size = New System.Drawing.Size(109, 21)
-        Me.RadLabel27.TabIndex = 218
-        Me.RadLabel27.Text = "Importo canone"
-        Me.RadLabel27.ThemeName = "MaterialTeal"
-        '
-        'RadMaskedEditBox6
-        '
-        Me.RadMaskedEditBox6.AutoSize = False
-        Me.RadMaskedEditBox6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadMaskedEditBox6.Location = New System.Drawing.Point(197, 160)
-        Me.RadMaskedEditBox6.Mask = "C"
-        Me.RadMaskedEditBox6.MaskType = Telerik.WinControls.UI.MaskType.Numeric
-        Me.RadMaskedEditBox6.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.RadMaskedEditBox6.Name = "RadMaskedEditBox6"
-        '
-        '
-        '
-        Me.RadMaskedEditBox6.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.RadMaskedEditBox6.Size = New System.Drawing.Size(115, 36)
-        Me.RadMaskedEditBox6.TabIndex = 219
-        Me.RadMaskedEditBox6.TabStop = False
-        Me.RadMaskedEditBox6.Text = "€ 0,00"
-        Me.RadMaskedEditBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.RadMaskedEditBox6.ThemeName = "MaterialTeal"
-        '
-        'RadButton1
-        '
-        Me.RadButton1.Location = New System.Drawing.Point(786, 21)
-        Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(83, 29)
-        Me.RadButton1.TabIndex = 180
-        Me.RadButton1.Text = "Annulla"
-        Me.RadButton1.ThemeName = "VisualStudio2012Light"
-        '
-        'RadButton4
-        '
-        Me.RadButton4.Location = New System.Drawing.Point(786, 56)
-        Me.RadButton4.Name = "RadButton4"
-        Me.RadButton4.Size = New System.Drawing.Size(83, 29)
-        Me.RadButton4.TabIndex = 179
-        Me.RadButton4.Text = "Salva"
-        Me.RadButton4.ThemeName = "VisualStudio2012Light"
-        '
-        'RadLabel29
-        '
-        Me.RadLabel29.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel29.Location = New System.Drawing.Point(59, 78)
-        Me.RadLabel29.Name = "RadLabel29"
-        Me.RadLabel29.Size = New System.Drawing.Size(107, 21)
-        Me.RadLabel29.TabIndex = 173
-        Me.RadLabel29.Text = "Codice Servizio"
-        Me.RadLabel29.ThemeName = "MaterialTeal"
-        '
-        'RadLabel30
-        '
-        Me.RadLabel30.ForeColor = System.Drawing.Color.DimGray
-        Me.RadLabel30.Location = New System.Drawing.Point(62, 122)
-        Me.RadLabel30.Name = "RadLabel30"
-        Me.RadLabel30.Size = New System.Drawing.Size(50, 21)
-        Me.RadLabel30.TabIndex = 175
-        Me.RadLabel30.Text = "Centro"
-        Me.RadLabel30.ThemeName = "MaterialTeal"
-        '
-        'RadDropDownList17
-        '
-        Me.RadDropDownList17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownList17.ForeColor = System.Drawing.Color.SteelBlue
-        Me.RadDropDownList17.Location = New System.Drawing.Point(197, 114)
-        Me.RadDropDownList17.Name = "RadDropDownList17"
-        Me.RadDropDownList17.NullText = "Seleziona un valore"
-        Me.RadDropDownList17.Size = New System.Drawing.Size(117, 36)
-        Me.RadDropDownList17.TabIndex = 2
-        Me.RadDropDownList17.ThemeName = "MaterialTeal"
-        '
-        'rpPageRate
-        '
-        Me.rpPageRate.ItemSize = New System.Drawing.SizeF(46.0!, 34.0!)
-        Me.rpPageRate.Location = New System.Drawing.Point(6, 40)
-        Me.rpPageRate.Name = "rpPageRate"
-        Me.rpPageRate.Size = New System.Drawing.Size(1113, 655)
-        Me.rpPageRate.Text = "Rate"
-        '
-        'RadPanel1
-        '
-        Me.RadPanel1.Controls.Add(Me.cmdAnnulla)
-        Me.RadPanel1.Controls.Add(Me.cmdConferma)
-        Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadPanel1.Location = New System.Drawing.Point(0, 691)
-        Me.RadPanel1.Name = "RadPanel1"
-        Me.RadPanel1.Size = New System.Drawing.Size(1161, 47)
-        Me.RadPanel1.TabIndex = 188
-        Me.RadPanel1.ThemeName = "Fluent"
-        '
-        'cmdAnnulla
-        '
-        Me.cmdAnnulla.Location = New System.Drawing.Point(864, 9)
-        Me.cmdAnnulla.Name = "cmdAnnulla"
-        Me.cmdAnnulla.Size = New System.Drawing.Size(117, 29)
-        Me.cmdAnnulla.TabIndex = 14
-        Me.cmdAnnulla.Text = "Annulla"
-        Me.cmdAnnulla.ThemeName = "VisualStudio2012Light"
-        '
-        'cmdConferma
-        '
-        Me.cmdConferma.Location = New System.Drawing.Point(997, 9)
-        Me.cmdConferma.Name = "cmdConferma"
-        Me.cmdConferma.Size = New System.Drawing.Size(117, 29)
-        Me.cmdConferma.TabIndex = 13
-        Me.cmdConferma.Text = "Salva"
-        Me.cmdConferma.ThemeName = "VisualStudio2012Light"
-        '
-        't1
-        '
         '
         'cmdOkSearchCliGes
         '
         Me.cmdOkSearchCliGes.Image = CType(resources.GetObject("cmdOkSearchCliGes.Image"), System.Drawing.Image)
         Me.cmdOkSearchCliGes.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchCliGes.Location = New System.Drawing.Point(761, 184)
+        Me.cmdOkSearchCliGes.Location = New System.Drawing.Point(761, 189)
         Me.cmdOkSearchCliGes.Name = "cmdOkSearchCliGes"
         Me.cmdOkSearchCliGes.Size = New System.Drawing.Size(34, 34)
         Me.cmdOkSearchCliGes.TabIndex = 195
@@ -1461,42 +1238,278 @@ Partial Class FrmContratto
         '
         Me.cmdOkSearchCli.Image = CType(resources.GetObject("cmdOkSearchCli.Image"), System.Drawing.Image)
         Me.cmdOkSearchCli.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchCli.Location = New System.Drawing.Point(761, 132)
+        Me.cmdOkSearchCli.Location = New System.Drawing.Point(761, 149)
         Me.cmdOkSearchCli.Name = "cmdOkSearchCli"
         Me.cmdOkSearchCli.Size = New System.Drawing.Size(34, 34)
         Me.cmdOkSearchCli.TabIndex = 191
         Me.cmdOkSearchCli.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdOkSearchCli.ThemeName = "ThemeCmdRecubeYEL"
         '
-        'RadButton5
+        'rpPageServizi
         '
-        Me.RadButton5.Image = CType(resources.GetObject("RadButton5.Image"), System.Drawing.Image)
-        Me.RadButton5.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RadButton5.Location = New System.Drawing.Point(302, 28)
-        Me.RadButton5.Name = "RadButton5"
-        Me.RadButton5.Size = New System.Drawing.Size(25, 26)
-        Me.RadButton5.TabIndex = 224
-        Me.RadButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.RadButton5.ThemeName = "ThemeCmdRecubeYEL"
+        Me.rpPageServizi.Controls.Add(Me.gridServizi)
+        Me.rpPageServizi.Controls.Add(Me.cmdBar)
+        Me.rpPageServizi.Image = CType(resources.GetObject("rpPageServizi.Image"), System.Drawing.Image)
+        Me.rpPageServizi.ItemSize = New System.Drawing.SizeF(157.0!, 54.0!)
+        Me.rpPageServizi.Location = New System.Drawing.Point(163, 6)
+        Me.rpPageServizi.Name = "rpPageServizi"
+        Me.rpPageServizi.Size = New System.Drawing.Size(1193, 733)
+        Me.rpPageServizi.Text = "Servizi"
+        '
+        'gridServizi
+        '
+        Me.gridServizi.BackColor = System.Drawing.Color.White
+        Me.gridServizi.Cursor = System.Windows.Forms.Cursors.Default
+        Me.gridServizi.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gridServizi.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.gridServizi.ForeColor = System.Drawing.Color.Black
+        Me.gridServizi.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.gridServizi.Location = New System.Drawing.Point(0, 0)
+        '
+        '
+        '
+        Me.gridServizi.MasterTemplate.AllowAddNewRow = False
+        Me.gridServizi.MasterTemplate.AllowColumnChooser = False
+        Me.gridServizi.MasterTemplate.AllowDeleteRow = False
+        Me.gridServizi.MasterTemplate.AllowDragToGroup = False
+        Me.gridServizi.MasterTemplate.AllowRowResize = False
+        Me.gridServizi.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.gridServizi.Name = "gridServizi"
+        Me.gridServizi.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.gridServizi.ShowGroupPanel = False
+        Me.gridServizi.Size = New System.Drawing.Size(1193, 733)
+        Me.gridServizi.TabIndex = 38
+        Me.gridServizi.ThemeName = "Fluent"
+        '
+        'cmdBar
+        '
+        Me.cmdBar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.cmdBar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.cmdBar.Location = New System.Drawing.Point(0, 0)
+        Me.cmdBar.Name = "cmdBar"
+        Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
+        Me.cmdBar.Size = New System.Drawing.Size(1193, 0)
+        Me.cmdBar.TabIndex = 245
+        Me.cmdBar.ThemeName = "Windows8"
+        '
+        'CommandBarRowElement1
+        '
+        Me.CommandBarRowElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarRowElement1.MinSize = New System.Drawing.Size(25, 25)
+        Me.CommandBarRowElement1.Name = "CommandBarRowElement1"
+        Me.CommandBarRowElement1.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.CommandBarStripE1})
+        Me.CommandBarRowElement1.Text = ""
+        Me.CommandBarRowElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarRowElement1.UseCompatibleTextRendering = False
+        '
+        'CommandBarStripE1
+        '
+        Me.CommandBarStripE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarStripE1.DisplayName = "CommandBarStripElement1"
+        Me.CommandBarStripE1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInserisci})
+        Me.CommandBarStripE1.Name = "CommandBarStripE1"
+        Me.CommandBarStripE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarStripE1.UseCompatibleTextRendering = False
+        '
+        'cmdInserisci
+        '
+        Me.cmdInserisci.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdInserisci.DisplayName = "CommandBarButton1"
+        Me.cmdInserisci.DrawText = True
+        Me.cmdInserisci.Image = CType(resources.GetObject("cmdInserisci.Image"), System.Drawing.Image)
+        Me.cmdInserisci.Name = "cmdInserisci"
+        Me.cmdInserisci.Text = "Nuovo Servizio"
+        Me.cmdInserisci.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdInserisci.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdInserisci.UseCompatibleTextRendering = False
+        '
+        'rpPageImpianti
+        '
+        Me.rpPageImpianti.Controls.Add(Me.GridImpianti)
+        Me.rpPageImpianti.Image = CType(resources.GetObject("rpPageImpianti.Image"), System.Drawing.Image)
+        Me.rpPageImpianti.ItemSize = New System.Drawing.SizeF(157.0!, 54.0!)
+        Me.rpPageImpianti.Location = New System.Drawing.Point(163, 6)
+        Me.rpPageImpianti.Name = "rpPageImpianti"
+        Me.rpPageImpianti.Size = New System.Drawing.Size(1193, 733)
+        Me.rpPageImpianti.Text = "Impianti"
+        '
+        'GridImpianti
+        '
+        Me.GridImpianti.BackColor = System.Drawing.Color.White
+        Me.GridImpianti.Cursor = System.Windows.Forms.Cursors.Default
+        Me.GridImpianti.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridImpianti.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.GridImpianti.ForeColor = System.Drawing.Color.Black
+        Me.GridImpianti.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.GridImpianti.Location = New System.Drawing.Point(0, 0)
+        '
+        '
+        '
+        Me.GridImpianti.MasterTemplate.AllowAddNewRow = False
+        Me.GridImpianti.MasterTemplate.AllowColumnChooser = False
+        Me.GridImpianti.MasterTemplate.AllowDeleteRow = False
+        Me.GridImpianti.MasterTemplate.AllowDragToGroup = False
+        Me.GridImpianti.MasterTemplate.AllowRowResize = False
+        Me.GridImpianti.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.GridImpianti.Name = "GridImpianti"
+        Me.GridImpianti.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.GridImpianti.ShowGroupPanel = False
+        Me.GridImpianti.Size = New System.Drawing.Size(1193, 733)
+        Me.GridImpianti.TabIndex = 39
+        Me.GridImpianti.ThemeName = "Fluent"
+        '
+        'rpPageRate
+        '
+        Me.rpPageRate.Controls.Add(Me.gridRate)
+        Me.rpPageRate.Controls.Add(Me.RadScrollablePanel2)
+        Me.rpPageRate.Image = CType(resources.GetObject("rpPageRate.Image"), System.Drawing.Image)
+        Me.rpPageRate.ItemSize = New System.Drawing.SizeF(157.0!, 54.0!)
+        Me.rpPageRate.Location = New System.Drawing.Point(158, 6)
+        Me.rpPageRate.Name = "rpPageRate"
+        Me.rpPageRate.Size = New System.Drawing.Size(1198, 733)
+        Me.rpPageRate.Text = "Rate"
+        '
+        'gridRate
+        '
+        Me.gridRate.BackColor = System.Drawing.Color.White
+        Me.gridRate.Cursor = System.Windows.Forms.Cursors.Default
+        Me.gridRate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.gridRate.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.gridRate.ForeColor = System.Drawing.Color.Black
+        Me.gridRate.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.gridRate.Location = New System.Drawing.Point(0, 0)
+        '
+        '
+        '
+        Me.gridRate.MasterTemplate.AllowAddNewRow = False
+        Me.gridRate.MasterTemplate.AllowColumnChooser = False
+        Me.gridRate.MasterTemplate.AllowDeleteRow = False
+        Me.gridRate.MasterTemplate.AllowDragToGroup = False
+        Me.gridRate.MasterTemplate.AllowRowResize = False
+        Me.gridRate.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.gridRate.Name = "gridRate"
+        Me.gridRate.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.gridRate.ShowGroupPanel = False
+        Me.gridRate.Size = New System.Drawing.Size(1198, 500)
+        Me.gridRate.TabIndex = 40
+        Me.gridRate.ThemeName = "Fluent"
+        '
+        'RadScrollablePanel2
+        '
+        Me.RadScrollablePanel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RadScrollablePanel2.Location = New System.Drawing.Point(0, 500)
+        Me.RadScrollablePanel2.Name = "RadScrollablePanel2"
+        '
+        'RadScrollablePanel2.PanelContainer
+        '
+        Me.RadScrollablePanel2.PanelContainer.Size = New System.Drawing.Size(1196, 231)
+        Me.RadScrollablePanel2.Size = New System.Drawing.Size(1198, 233)
+        Me.RadScrollablePanel2.TabIndex = 39
+        Me.RadScrollablePanel2.ThemeName = "MaterialTeal"
+        '
+        'rpPageNote
+        '
+        Me.rpPageNote.Image = CType(resources.GetObject("rpPageNote.Image"), System.Drawing.Image)
+        Me.rpPageNote.ItemSize = New System.Drawing.SizeF(157.0!, 54.0!)
+        Me.rpPageNote.Location = New System.Drawing.Point(182, 6)
+        Me.rpPageNote.Name = "rpPageNote"
+        Me.rpPageNote.Size = New System.Drawing.Size(1174, 733)
+        Me.rpPageNote.Text = "Note Contratto"
+        '
+        'RadPanel1
+        '
+        Me.RadPanel1.Controls.Add(Me.cmdAnnulla)
+        Me.RadPanel1.Controls.Add(Me.cmdConferma)
+        Me.RadPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RadPanel1.Location = New System.Drawing.Point(0, 745)
+        Me.RadPanel1.Name = "RadPanel1"
+        Me.RadPanel1.Size = New System.Drawing.Size(1362, 47)
+        Me.RadPanel1.TabIndex = 188
+        Me.RadPanel1.ThemeName = "Fluent"
+        '
+        'cmdAnnulla
+        '
+        Me.cmdAnnulla.Location = New System.Drawing.Point(1082, 9)
+        Me.cmdAnnulla.Name = "cmdAnnulla"
+        Me.cmdAnnulla.Size = New System.Drawing.Size(117, 29)
+        Me.cmdAnnulla.TabIndex = 14
+        Me.cmdAnnulla.Text = "Annulla"
+        Me.cmdAnnulla.ThemeName = "VisualStudio2012Light"
+        '
+        'cmdConferma
+        '
+        Me.cmdConferma.Location = New System.Drawing.Point(1215, 9)
+        Me.cmdConferma.Name = "cmdConferma"
+        Me.cmdConferma.Size = New System.Drawing.Size(117, 29)
+        Me.cmdConferma.TabIndex = 13
+        Me.cmdConferma.Text = "Salva"
+        Me.cmdConferma.ThemeName = "VisualStudio2012Light"
+        '
+        't1
+        '
         '
         'FrmContratto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1161, 738)
-        Me.Controls.Add(Me.RadPanel1)
+        Me.ClientSize = New System.Drawing.Size(1362, 792)
         Me.Controls.Add(Me.RPcontainer)
+        Me.Controls.Add(Me.RadPanel1)
         Me.Name = "FrmContratto"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Scheda Contratto"
         Me.ThemeName = "MaterialBlueGrey"
         CType(Me.RPcontainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RPcontainer.ResumeLayout(False)
         Me.rpPageContratto.ResumeLayout(False)
         Me.rpPageContratto.PerformLayout()
+        CType(Me.txtMM, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtAA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbTipologiaCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox4.ResumeLayout(False)
+        Me.RadGroupBox4.PerformLayout()
+        CType(Me.txtCommessa, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkFattPostecipata, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkFatAnticipata, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDesIva, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtIva, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchIva, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbFreqFatt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbModPag, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbTipoFatt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmb9516, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox3.ResumeLayout(False)
+        Me.RadGroupBox3.PerformLayout()
+        CType(Me.chkRagrImpianti, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkRagrServizi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkRateAtipico, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkRinnovoTacito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkReperib, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtModelloCtr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox2.ResumeLayout(False)
+        Me.RadGroupBox2.PerformLayout()
+        CType(Me.chkTipico, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkAtipico, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtK3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.wb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDataConvalida, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDtIniDecor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1510,20 +1523,9 @@ Partial Class FrmContratto
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbPrestazioni, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbPianoManut, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmb9516, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbRivalut, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbModPag, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkRinnovoTacito, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbTipoFatt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkRagrServizi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbFreqFatt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkRagrImpianti, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDtFinPrestaz, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDtIniFatt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDtIniPrestaz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1541,62 +1543,25 @@ Partial Class FrmContratto
         CType(Me.txtCodice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbSocieta, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbClienti, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbGestore.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbGestore.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbGestore, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).EndInit()
         Me.rpPageServizi.ResumeLayout(False)
-        CType(Me.gridAsset.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gridAsset, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlDati.PanelContainer.ResumeLayout(False)
-        Me.pnlDati.PanelContainer.PerformLayout()
-        CType(Me.pnlDati, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlDati.ResumeLayout(False)
-        CType(Me.RadLabel23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbCategoria, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbMacroCat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.rpPageServizi.PerformLayout()
+        CType(Me.gridServizi.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridServizi, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.rpPageImpianti.ResumeLayout(False)
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
-        Me.RadScrollablePanel1.PanelContainer.PerformLayout()
-        CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadScrollablePanel1.ResumeLayout(False)
-        CType(Me.RadLabel28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadMaskedEditBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridImpianti.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridImpianti, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.rpPageRate.ResumeLayout(False)
+        CType(Me.gridRate.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridRate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadScrollablePanel2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadScrollablePanel2.ResumeLayout(False)
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdOkSearchCliGes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdOkSearchCli, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1628,7 +1593,7 @@ Partial Class FrmContratto
     Friend WithEvents txtDesCli As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents txtCodCliente As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents txtDtFinPrestaz As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents txtDtIniFatt As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents txtDtIniPrestaz As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
@@ -1661,45 +1626,45 @@ Partial Class FrmContratto
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents cmdAnnulla As Telerik.WinControls.UI.RadButton
     Friend WithEvents cmdConferma As Telerik.WinControls.UI.RadButton
-    Friend WithEvents pnlDati As Telerik.WinControls.UI.RadScrollablePanel
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadLabel19 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents cmbCategoria As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadLabel21 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel22 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents cmbMacroCat As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents gridAsset As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadLabel23 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownList11 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadLabel24 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownList12 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadDropDownList10 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadLabel20 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadMaskedEditBox5 As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
-    Friend WithEvents RadLabel28 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownList14 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadButton5 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadDropDownList13 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadTextBox4 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadLabel25 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownList15 As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadLabel27 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadMaskedEditBox6 As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadLabel29 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel30 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownList17 As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents gridServizi As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents GridImpianti As Telerik.WinControls.UI.RadGridView
     Friend WithEvents txtDataConvalida As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents wb As Telerik.WinControls.UI.RadWaitingBar
     Friend WithEvents DotsRingWaitingBarIndicatorElement2 As Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement
     Friend WithEvents t1 As Timer
-    Friend WithEvents cmbClienti As Telerik.WinControls.UI.RadMultiColumnComboBox
-    Friend WithEvents cmbGestore As Telerik.WinControls.UI.RadMultiColumnComboBox
+    Friend WithEvents chkFattPostecipata As Telerik.WinControls.UI.RadRadioButton
+    Friend WithEvents chkFatAnticipata As Telerik.WinControls.UI.RadRadioButton
+    Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtK3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadLabel31 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadButton6 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents chkAtipico As Telerik.WinControls.UI.RadRadioButton
+    Friend WithEvents chkTipico As Telerik.WinControls.UI.RadRadioButton
+    Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents chkRateAtipico As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents chkReperib As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadLabel32 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents txtModelloCtr As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RadGroupBox4 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents CrystalTheme1 As Telerik.WinControls.Themes.CrystalTheme
+    Friend WithEvents txtDesIva As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtIva As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadLabel33 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents cmdOkSearchIva As Telerik.WinControls.UI.RadButton
+    Friend WithEvents txtCommessa As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadLabel34 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadLabel35 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents cmbTipologiaCliente As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents gridRate As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents RadScrollablePanel2 As Telerik.WinControls.UI.RadScrollablePanel
+    Friend WithEvents rpPageNote As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents txtMM As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtAA As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadLabel36 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents cmdBar As Telerik.WinControls.UI.RadCommandBar
+    Friend WithEvents CommandBarRowElement1 As Telerik.WinControls.UI.CommandBarRowElement
+    Friend WithEvents CommandBarStripE1 As Telerik.WinControls.UI.CommandBarStripElement
+    Friend WithEvents cmdInserisci As Telerik.WinControls.UI.CommandBarButton
 End Class
 

@@ -58,7 +58,7 @@ Public Class FrmTecniciElenco
             wb.Visible = True
 
             Dim elementi As Threading.Tasks.Task(Of List(Of elencoTecnici))
-            elementi = ws.getElencoTecnici("", txtRicerca.Text)
+            elementi = ws.getElencoTecnici("", txtRicerca.Text, "")
             Await elementi
 
             carica_griglia_tecnici(elementi.Result)

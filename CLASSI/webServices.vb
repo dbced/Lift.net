@@ -797,7 +797,7 @@ Public Class webServices
         End Try
     End Function
 
-    Public Async Function getDocumentiImpianto(CodImp As String, Optional anno As String = "", Optional cliente As String = "") As Threading.Tasks.Task(Of List(Of elencoDocumenti))
+    Public Async Function getDocumentiImpianto(CodImp As String, Optional anno As String = "", Optional cliente As String = "", Optional idAccordo As String = "", Optional idcontratto As String = "") As Threading.Tasks.Task(Of List(Of elencoDocumenti))
         Dim elenco As New List(Of elencoDocumenti)
         Dim lista() As elencoDocumenti
         Try
@@ -815,6 +815,8 @@ Public Class webServices
             client.DefaultRequestHeaders.Add("parmCodImp", CodImp)
             client.DefaultRequestHeaders.Add("parmAnno", anno)
             client.DefaultRequestHeaders.Add("parmCliente", cliente)
+            client.DefaultRequestHeaders.Add("parmContratto", idcontratto)
+            client.DefaultRequestHeaders.Add("parmAccordo", idAccordo)
 
             Dim parmImp As parmGetManutenzioniDefault = New parmGetManutenzioniDefault
 
@@ -838,7 +840,7 @@ Public Class webServices
         End Try
     End Function
 
-    Public Async Function getElencoTecnici(codice As String, filtro As String) As Threading.Tasks.Task(Of List(Of elencoTecnici))
+    Public Async Function getElencoTecnici(codice As String, codEle As String, filtro As String) As Threading.Tasks.Task(Of List(Of elencoTecnici))
         Dim elenco As New List(Of elencoTecnici)
         Dim lista() As elencoTecnici
 
@@ -855,13 +857,53 @@ Public Class webServices
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
             client.DefaultRequestHeaders.Add("parmCodTab", codice)
-            client.DefaultRequestHeaders.Add("parmCodEle", filtro)
+            client.DefaultRequestHeaders.Add("parmCodEle", codEle)
+            client.DefaultRequestHeaders.Add("parmFiltro", filtro)
 
             Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
 
             If RestResponse.IsSuccessStatusCode Then
                 dati = Await RestResponse.Content.ReadAsStringAsync()
                 lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoTecnici())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+
+            Return elenco
+
+        Catch EX As Exception
+            Return elenco
+        End Try
+
+    End Function
+
+    Public Async Function getElencoAgenti(codice As String, filtro As String) As Threading.Tasks.Task(Of List(Of elencoAgenti))
+        Dim elenco As New List(Of elencoAgenti)
+        Dim lista() As elencoAgenti
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Anagrafiche/GetElencoAgentiList/GetElencoAgentiList"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("parmCodTab", codice)
+            client.DefaultRequestHeaders.Add("parmCodEle", filtro)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoAgenti())(dati)
                 For i As Integer = 0 To lista.Count - 1
                     elenco.Add(lista(i))
                 Next
@@ -986,6 +1028,304 @@ Public Class webServices
             Return elenco
 
         Catch EX As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getSchedaContratto(idContratto As String) As Threading.Tasks.Task(Of elencoListaContratti)
+        Dim contratto As elencoListaContratti
+
+        Try
+
+            Dim jsoncontratto As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/SchedaContratto/GetSchedaContratto"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+
+            Dim parmImp As String = idContratto
+
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim myContent = jss.Serialize(parmImp)
+            RestURL = RestURL & "?paramList=" & myContent
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                jsoncontratto = Await RestResponse.Content.ReadAsStringAsync()
+                contratto = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoListaContratti)(jsoncontratto)
+            Else
+                MsgBox(RestResponse.StatusCode & " " & RestResponse.Content.ToString, vbCritical)
+            End If
+
+            Return contratto
+
+        Catch EX As Exception
+            MsgBox(EX.Message, vbCritical)
+            Return contratto
+        End Try
+
+    End Function
+
+    Public Async Function getElencoImpiantiContratto(contratto As String) As Threading.Tasks.Task(Of List(Of elencoImpiantiServiziContratto))
+        Dim elenco As New List(Of elencoImpiantiServiziContratto)
+        Dim lista() As elencoImpiantiServiziContratto
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetImpiantiContratto/GetImpiantiContratto"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("contratto", contratto)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoImpiantiServiziContratto())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+
+            Return elenco
+
+        Catch EX As Exception
+            Return elenco
+        End Try
+
+    End Function
+
+    Public Async Function getElencoServiziContratto(contratto As String, codServizio As String) As Threading.Tasks.Task(Of List(Of elencoServiziContratto))
+        Dim elenco As New List(Of elencoServiziContratto)
+        Dim lista() As elencoServiziContratto
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetServiziContratto/GetServiziContratto"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("contratto", contratto)
+            client.DefaultRequestHeaders.Add("servizio", codServizio)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoServiziContratto())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+
+            Return elenco
+
+        Catch EX As Exception
+            Return elenco
+        End Try
+
+    End Function
+
+    Public Async Function getRateContratto(contratto As String) As Threading.Tasks.Task(Of List(Of elencoRateContratto))
+        Dim elenco As New List(Of elencoRateContratto)
+        Dim lista() As elencoRateContratto
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetRateContratto/GetRateContratto"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("contratto", contratto)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoRateContratto())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+            Return elenco
+
+        Catch EX As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getAccordo(id As String) As Threading.Tasks.Task(Of elencoAccordi)
+        Dim contratto As elencoAccordi
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetAccordo/GetAccordo"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("contratto", id)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                contratto = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoAccordi)(dati)
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+            Return contratto
+
+        Catch EX As Exception
+            contratto.RASCL = EX.Message
+            Return contratto
+        End Try
+    End Function
+
+    Public Async Function getListaContrattiApplicativi(idaccordo As String, id As String, tipo As String) As Threading.Tasks.Task(Of List(Of elencoListaContratti))
+        Dim elenco As New List(Of elencoListaContratti)
+        Dim lista() As elencoListaContratti
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetListaContrattiApplicativi/GetListaContrattiApplicativi"
+            Dim client As New Http.HttpClient
+
+            Dim cl As New elenco
+
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("contratto", id)
+            client.DefaultRequestHeaders.Add("tipo_contratto", tipo)
+            client.DefaultRequestHeaders.Add("accordo", idaccordo)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                lista = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoListaContratti())(dati)
+                For i As Integer = 0 To lista.Count - 1
+                    elenco.Add(lista(i))
+                Next
+            End If
+
+            'test = RestResponse.StatusCode.ToString
+            Return elenco
+
+        Catch EX As Exception
+
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getListaImpianti(listSoc As List(Of societa), listCentri As List(Of centri), Optional codImpianto As String = "", Optional codCli As String = "") As Threading.Tasks.Task(Of List(Of elenco))
+        Dim elenco As New List(Of elenco)
+        Dim listaImpianti() As elenco
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/impianti/ImpiantiListParms/GetImpianti2List"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+
+            Dim parmImp As parmImpianti = New parmImpianti
+
+            parmImp.parmSoc = listSoc
+            parmImp.parmCentro = listCentri
+            parmImp.parmCodCli = codCli
+            parmImp.parmCodImpianto = codImpianto
+
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim myContent = jss.Serialize(parmImp)
+            RestURL = RestURL & "?paramList=" & myContent
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                listaImpianti = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elenco())(dati)
+
+                For i As Integer = 0 To listaImpianti.Count - 1
+                    elenco.Add(listaImpianti(i))
+                Next
+            End If
+
+            Return elenco
+
+        Catch ex As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getElencoChiamate(parms As parmsRicChiamate) As Threading.Tasks.Task(Of List(Of elencoChiamate))
+        Dim elenco As New List(Of elencoChiamate)
+        Dim listaChiamate() As elencoChiamate
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Chiamate/GetElencoChiamate/GetElencoChiamate"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                listaChiamate = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoChiamate())(dati)
+
+                For i As Integer = 0 To listaChiamate.Count - 1
+                    elenco.Add(listaChiamate(i))
+                Next
+            End If
+
+            Return elenco
+
+        Catch ex As Exception
             Return elenco
         End Try
     End Function

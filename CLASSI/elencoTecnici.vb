@@ -5,6 +5,7 @@
     Dim r_ATQUA As String
     Dim r_ATCEN As String
     Dim r_DESQUA As String
+    Dim r_ATARGA As String
 
     Public Property ATRAG() As String
         Get
@@ -64,6 +65,16 @@
 
         Set(ByVal Value As String)
             r_DESQUA = Value
+        End Set
+    End Property
+
+    Public Property ATARGA() As String
+        Get
+            Return r_ATARGA
+        End Get
+
+        Set(ByVal Value As String)
+            r_ATARGA = Value
         End Set
     End Property
 

@@ -69,6 +69,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -92,6 +93,7 @@
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Material, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -155,15 +157,22 @@
     <Compile Include="CLASSI\CustomGanttViewElement.vb" />
     <Compile Include="CLASSI\CustomGanttViewGraphicalViewElement.vb" />
     <Compile Include="CLASSI\elenco.vb" />
+    <Compile Include="CLASSI\elencoAccordi.vb" />
+    <Compile Include="CLASSI\elencoAgenti.vb" />
     <Compile Include="CLASSI\elencoAmministratori.vb" />
     <Compile Include="CLASSI\elencoAssetsImpianto.vb" />
+    <Compile Include="CLASSI\elencoChiamate.vb" />
     <Compile Include="CLASSI\elencoChiusureVis.vb" />
     <Compile Include="CLASSI\elencoClienti.vb" />
     <Compile Include="CLASSI\elencoDocumenti.vb" />
+    <Compile Include="CLASSI\elencoImpiantiServiziContratto.vb" />
+    <Compile Include="CLASSI\elencoListaContratti.vb" />
     <Compile Include="CLASSI\elencoLogs.vb" />
     <Compile Include="CLASSI\elencoManutDefault.vb" />
     <Compile Include="CLASSI\elencoManutenzioni.vb" />
+    <Compile Include="CLASSI\elencoRateContratto.vb" />
     <Compile Include="CLASSI\elencoReperibilita.vb" />
+    <Compile Include="CLASSI\elencoServiziContratto.vb" />
     <Compile Include="CLASSI\elencoTasksVisita.vb" />
     <Compile Include="CLASSI\elencoTecnici.vb" />
     <Compile Include="CLASSI\parmComuni.vb" />
@@ -174,6 +183,8 @@
     <Compile Include="CLASSI\parmPostAssets.vb" />
     <Compile Include="CLASSI\parmPostParVisAsset.vb" />
     <Compile Include="CLASSI\parmRelTabelle.vb" />
+    <Compile Include="CLASSI\parmsRicChiamate.vb" />
+    <Compile Include="CLASSI\parmsRicContratti.vb" />
     <Compile Include="CLASSI\parmTabelle.vb" />
     <Compile Include="CLASSI\liftGanttViewDataItem.vb" />
     <Compile Include="CLASSI\statBuoniImpianto.vb" />
@@ -185,6 +196,18 @@
     <Compile Include="CLASSI\utility.vb" />
     <Compile Include="CLASSI\webServices.vb" />
     <Compile Include="CLASSI\wsEdoc.vb" />
+    <Compile Include="CLASSI\wsVisiRun.vb" />
+    <Compile Include="Connected Services\ws_visirun\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmAccordo.Designer.vb">
+      <DependentUpon>frmAccordo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmAccordo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmAmministratore.Designer.vb">
       <DependentUpon>frmAmministratore.vb</DependentUpon>
     </Compile>
@@ -195,6 +218,12 @@
       <DependentUpon>frmAmministratoriElenco.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmAmministratoriElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmChiamata.Designer.vb">
+      <DependentUpon>frmChiamata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmChiamata.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\frmChiusuraVisite.Designer.vb">
@@ -245,10 +274,22 @@
     <Compile Include="FORMS\frmImpiantoAssets.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMS\frmRicercaTabelle.Designer.vb">
+      <DependentUpon>frmRicercaTabelle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmRicercaTabelle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmSchedulerManBeta.Designer.vb">
       <DependentUpon>frmSchedulerManBeta.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmSchedulerManBeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmServizioContratto.Designer.vb">
+      <DependentUpon>frmServizioContratto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmServizioContratto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMS\frmTabelle.Designer.vb">
@@ -296,11 +337,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FORMS\frmAccordo.resx">
+      <DependentUpon>frmAccordo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmAmministratore.resx">
       <DependentUpon>frmAmministratore.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmAmministratoriElenco.resx">
       <DependentUpon>frmAmministratoriElenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmChiamata.resx">
+      <DependentUpon>frmChiamata.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmChiusuraVisite.resx">
       <DependentUpon>frmChiusuraVisite.vb</DependentUpon>
@@ -326,8 +373,14 @@
     <EmbeddedResource Include="FORMS\frmImpiantoAssets.resx">
       <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmRicercaTabelle.resx">
+      <DependentUpon>frmRicercaTabelle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmSchedulerManBeta.resx">
       <DependentUpon>frmSchedulerManBeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmServizioContratto.resx">
+      <DependentUpon>frmServizioContratto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmTabelle.resx">
       <DependentUpon>frmTabelle.vb</DependentUpon>
@@ -347,6 +400,775 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ws_visirun\item.wsdl" />
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addAuthenticationCodeOnVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addModuleToUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addPoiToUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addPoiV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleByAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleByAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleByAddressV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleByPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleByPoiV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addTaskToVehicleV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addVehicleToEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.addVehicleToUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.checkTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.confirmGetNewCallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.deleteOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.deletePlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.deleteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.deliverSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.gdspHeaderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getCurrentPositionForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getCurrentPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getCurrentPositionWithAddressForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getCurrentPositionWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getCurrentPositionWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDetailedDriverActivitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDetailedDriverInfringementsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDirectionSummaryForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDirectionSummaryForUserV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDirectionSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDirectionSummaryV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDriverByPinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDriverLoginsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getDriverTachographFilesListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getEventListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetCurrentPositionForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetCurrentPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetCurrentPositionWithAddressForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetCurrentPositionWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetCurrentPositionWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetKpiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetOdometerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getFleetSensorValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getIncomingDocumentContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getIncomingDocumentsByMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getIncomingDocumentsByOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getIncomingDocumentsByVehiclesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getKpiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getKpiSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getLastCellIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getMessageQueueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNearestVehiclesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewEventsV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetOperationsStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetOperationsStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetPlansStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetPlansStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetRawTachoDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewFleetRawTachoDataV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewIncomingDocumentsContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewIncomingDocumentsContentV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewInMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewInMessagesV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewOutMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewOutMessageStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewPlanStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewPlanStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewRawTachoDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewRawTachoDatasV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewRawTrackingDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getNewRawTrackingDatasV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getPartialRouteForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getPartialRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getPlanStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getPoiListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRawTachoDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRawTrackingDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteWithAddressForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getRouteWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getSensorValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getStopsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getSummaryForDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTachographDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTachographDriveTimesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTachographFileContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTagsByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTaskStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getTrackingReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleActivitySummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleOdometerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehiclePlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleRfidReadingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleServiceDeadlinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleSinglePlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.getVehicleTachographFilesListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.notifySMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removeModuleFromUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removePoiFromUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removePoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removeTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removeVehicleFromEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.removeVehicleFromUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.requestPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.resendPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.resendTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.resetAuthenticationCodesOnVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.sendMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.sendMessageToDeviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.sendMessageToServerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.sendMessageV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.sendPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.setCurrentDestinationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.setCustomCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.setTagsBlacklistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addAuthenticationCodeOnVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addPoiV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleByAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleByAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleByAddressV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleByPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleByPoiV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addTaskToVehicleV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_addVehicleToEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_checkTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_confirmGetNewCallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_deleteOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_deletePlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_deleteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getCurrentPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getCurrentPositionWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getCurrentPositionWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDetailedDriverActivitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDetailedDriverInfringementsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDirectionSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDirectionSummaryV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDriverByPinResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDriverLoginsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getDriverTachographFilesListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getEventListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetCurrentPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetCurrentPositionWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetCurrentPositionWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetKpiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetOdometerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getFleetSensorValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getIncomingDocumentContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getIncomingDocumentsByMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getIncomingDocumentsByOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getIncomingDocumentsByVehiclesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getKpiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getKpiSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getLastCellIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getMessageQueueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNearestVehiclesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewEventsV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetOperationsStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetOperationsStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetPlansStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetPlansStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetRawTachoDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewFleetRawTachoDataV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewIncomingDocumentsContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewIncomingDocumentsContentV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewInMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewInMessagesV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewOutMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewOutMessageStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewPlanStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewPlanStatusV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewRawTachoDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewRawTachoDatasV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewRawTrackingDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getNewRawTrackingDatasV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getPartialRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getPlanStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getPoiListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getPoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRawTachoDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRawTrackingDatasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRouteV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRouteWithAddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getRouteWithAddressV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getSensorValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getStopsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getSummaryForDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTachographDriversResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTachographDriveTimesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTachographFileContentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTagsByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTaskStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getTrackingReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleActivitySummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleOdometerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehiclePlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleRfidReadingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleServiceDeadlinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleSinglePlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_getVehicleTachographFilesListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_removePoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_removeTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_removeVehicleFromEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_requestPositionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_resendPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_resendTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_resetAuthenticationCodesOnVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_sendMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_sendMessageToDeviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_sendMessageToServerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_sendMessageV2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_sendPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_setCurrentDestinationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_setCustomCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_setTagsBlacklistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updateMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updateOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updatePlanHeaderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updatePoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updateTaskStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_updateVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.SI_uploadOutgoingDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updateMessageStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updateOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updatePlanHeaderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updatePoiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updateTaskStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.updateVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ws_visirun\LiftCore.ws_visirun.uploadOutgoingDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -452,6 +1274,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\010_x-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-group-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ws_visirun\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ws_visirun\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ws_visirun\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ws_visirun\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -66,7 +66,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://srvlift:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://localhost:44323/api/impianti/ImpiantiListParms/GetImpianti2List")>  _
         Public ReadOnly Property urlWSImpianti() As String
             Get
                 Return CType(Me("urlWSImpianti"),String)
@@ -75,7 +75,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://srvlift:44322/")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:44322/")>  _
         Public ReadOnly Property urlWS() As String
             Get
                 Return CType(Me("urlWS"),String)
@@ -112,6 +112,15 @@ Namespace My
             Set
                 Me("LibLift") = value
             End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://www.visirun.com/public/Server.php")>  _
+        Public ReadOnly Property urlWSVisirun() As String
+            Get
+                Return CType(Me("urlWSVisirun"),String)
+            End Get
         End Property
     End Class
 End Namespace

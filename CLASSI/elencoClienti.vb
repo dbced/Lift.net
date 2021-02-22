@@ -1,9 +1,11 @@
 ﻿Public Class elencoClienti
     Dim r_RASCL As String
+    Dim r_RASCL2 As String
     Dim r_CDFIS As String
     Dim r_CDCLI As String
     Dim r_CPAIV As String
     Dim r_INDCL As String
+    Dim r_LOCCL As String
 
     Public Property RASCL() As String
         Get
@@ -13,6 +15,17 @@
         Set(ByVal Value As String)
             r_RASCL = Value
         End Set
+    End Property
+
+    Public Property RASCL2() As String
+        Get
+            Return r_RASCL2
+        End Get
+
+        Set(ByVal Value As String)
+            r_RASCL2 = Value
+        End Set
+
     End Property
 
     Public Property CDFIS() As String
@@ -45,7 +58,6 @@
         End Set
     End Property
 
-
     Public Property INDCL() As String
         Get
             Return r_INDCL
@@ -53,6 +65,16 @@
 
         Set(ByVal Value As String)
             r_INDCL = Value
+        End Set
+    End Property
+
+    Public Property LOCCL() As String
+        Get
+            Return r_LOCCL
+        End Get
+
+        Set(ByVal Value As String)
+            r_LOCCL = Value
         End Set
     End Property
 

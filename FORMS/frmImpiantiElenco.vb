@@ -9,24 +9,37 @@ Imports Telerik.WinControls.UI
 Imports Telerik.WinControls
 
 Public Class FrmImpiantiElenco
+
+    Public AICIM As String
+    Public AICLI As String
+    Public AISTR As String
+    Public AIIND As String
+    Public AILOC As String
+    Public AICAP As String
+    Public AIAMM As String
+    Public AISPR As String
+
     Private gElencoCentri As String = ""
     Private user As String
     Private ruolo As String
     Private userAS As String
     Private ws As New webServices
+    Private modalForm As String
 
     Dim statoCaricaSoc As Boolean
     Dim statoCaricaCentri As Boolean
     Dim statoCaricaGriglia As Boolean
     Dim formInCaricamento As Boolean
 
-    Public Sub New(ByVal Menu As Telerik.WinControls.UI.RadForm, Optional ByVal ElencoCentri As String = "", Optional ByVal inUser As String = "", Optional ByVal inRuolo As String = "", Optional ByVal inUserAS As String = "")
+    Public Sub New(ByVal Menu As Telerik.WinControls.UI.RadForm, Optional ByVal ElencoCentri As String = "", Optional ByVal inUser As String = "", Optional ByVal inRuolo As String = "", Optional ByVal inUserAS As String = "", Optional modal As String = "")
         InitializeComponent()
         WireEvents()
         ruolo = inRuolo
         user = inUser
         userAS = inUserAS
         gElencoCentri = ElencoCentri
+        modalForm = modal
+
     End Sub
 
     Protected Sub WireEvents()
@@ -55,7 +68,6 @@ Public Class FrmImpiantiElenco
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
 
-
             'Dim JsonData As String = Json
             'Dim RestContent As New Http.StringContent(JsonData, Encoding.UTF8, "application/json")
 
@@ -77,9 +89,6 @@ Public Class FrmImpiantiElenco
                     listSoc.Add(elem)
                 End If
             Next
-
-            'listSoc.Add(itemS2)
-            'listSoc.Add(itemS3)
 
             parmImp.parmSoc = listSoc
             parmImp.parmCentro = listCentri
@@ -133,6 +142,10 @@ Public Class FrmImpiantiElenco
 
             t1.Enabled = True
             formInCaricamento = True
+
+            If modalForm = "RICERCA" Then
+                cmdBar.Visible = False
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical)
@@ -257,6 +270,11 @@ Public Class FrmImpiantiElenco
             colAICAP.DataType = GetType(String)
             colAICAP.FieldName = "AICAP"
 
+            Dim colAISPR As New GridViewTextBoxColumn
+            colAISPR.Name = "AISPR"
+            colAISPR.DataType = GetType(String)
+            colAISPR.FieldName = "AISPR"
+
             Dim colAIAMM As New GridViewTextBoxColumn
             colAIAMM.Name = "AIAMM"
             colAIAMM.DataType = GetType(String)
@@ -302,6 +320,7 @@ Public Class FrmImpiantiElenco
             grid.MasterTemplate.Columns.Add(colAISTR)
             grid.MasterTemplate.Columns.Add(colAIIND)
             grid.MasterTemplate.Columns.Add(colAILOC)
+            grid.MasterTemplate.Columns.Add(colAISPR)
             grid.MasterTemplate.Columns.Add(colAICAP)
 
 
@@ -341,6 +360,7 @@ Public Class FrmImpiantiElenco
             Me.grid.Columns("AISTR").HeaderText = "cod. Strada"
             Me.grid.Columns("AIIND").HeaderText = "Indirizzo"
             Me.grid.Columns("AILOC").HeaderText = "Località"
+            Me.grid.Columns("AISPR").HeaderText = "Prov"
             Me.grid.Columns("AICAP").HeaderText = "CAP"
             Me.grid.Columns("AIAMM").HeaderText = "Codice Amm."
 
@@ -352,6 +372,7 @@ Public Class FrmImpiantiElenco
             Me.grid.Columns("AISTR").TextAlignment = ContentAlignment.MiddleCenter
             Me.grid.Columns("AIAMM").TextAlignment = ContentAlignment.MiddleCenter
             Me.grid.Columns("AILOC").TextAlignment = ContentAlignment.MiddleCenter
+            Me.grid.Columns("AISPR").TextAlignment = ContentAlignment.MiddleCenter
 
             'Me.grid.Columns("mod").IsVisible = False
             'Me.grid.Columns("ALIQUOTA").IsVisible = False
@@ -371,6 +392,7 @@ Public Class FrmImpiantiElenco
             Me.grid.Columns("AIAMM").ReadOnly = True
             Me.grid.Columns("DESCLI").ReadOnly = True
             Me.grid.Columns("DESAMM").ReadOnly = True
+            Me.grid.Columns("AISPR").ReadOnly = True
 
 
             'Me.grid.Columns("DATADOC").FormatString = "{0:dd/MM/yyyy}"
@@ -398,6 +420,7 @@ Public Class FrmImpiantiElenco
             Me.grid.Columns("AILOC").Width = 150
             Me.grid.Columns("AICAP").Width = 60
             Me.grid.Columns("AIAMM").Width = 80
+            Me.grid.Columns("AISPR").Width = 60
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "RECUBE")
@@ -812,5 +835,32 @@ Public Class FrmImpiantiElenco
 
     Private Sub cmdFiltro_Click(sender As Object, e As EventArgs) Handles cmdFiltro.Click
         Me.carica_impianti()
+    End Sub
+
+
+    Private Sub grid_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles grid.CellDoubleClick
+        Try
+            If grid.Rows.Count = 0 Then Exit Sub
+
+            If e.Column.Name.ToUpper = "AICIM" AndAlso modalForm = "RICERCA" Then
+                Dim rowInfo As GridViewRowInfo = e.Row
+
+                AICIM = rowInfo.Cells("AICIM").Value.ToString
+                AICLI = rowInfo.Cells("AICLI").Value.ToString
+                AISTR = rowInfo.Cells("AISTR").Value.ToString
+                AIIND = rowInfo.Cells("AIIND").Value.ToString
+                AILOC = rowInfo.Cells("AILOC").Value.ToString
+                AICAP = rowInfo.Cells("AICAP").Value.ToString
+                AIAMM = rowInfo.Cells("AIAMM").Value.ToString
+                AISPR = rowInfo.Cells("AISPR").Value.ToString
+
+                Me.Close()
+                Me.Dispose()
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

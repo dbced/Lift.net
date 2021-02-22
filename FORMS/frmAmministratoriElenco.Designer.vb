@@ -75,7 +75,7 @@ Partial Class FrmAmministratoriElenco
         Me.cmdBar.Location = New System.Drawing.Point(0, 0)
         Me.cmdBar.Name = "cmdBar"
         Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBar.Size = New System.Drawing.Size(1270, 92)
+        Me.cmdBar.Size = New System.Drawing.Size(1268, 67)
         Me.cmdBar.TabIndex = 44
         Me.cmdBar.ThemeName = "Windows8"
         '
@@ -188,9 +188,9 @@ Partial Class FrmAmministratoriElenco
         Me.grpBox.Controls.Add(Me.Label1)
         Me.grpBox.Dock = System.Windows.Forms.DockStyle.Top
         Me.grpBox.HeaderText = ""
-        Me.grpBox.Location = New System.Drawing.Point(0, 92)
+        Me.grpBox.Location = New System.Drawing.Point(0, 67)
         Me.grpBox.Name = "grpBox"
-        Me.grpBox.Size = New System.Drawing.Size(1270, 125)
+        Me.grpBox.Size = New System.Drawing.Size(1268, 125)
         Me.grpBox.TabIndex = 98
         Me.grpBox.ThemeName = "MaterialTeal"
         '
@@ -273,7 +273,7 @@ Partial Class FrmAmministratoriElenco
         Me.RadLabel2.ForeColor = System.Drawing.Color.Black
         Me.RadLabel2.Location = New System.Drawing.Point(2, 18)
         Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(1266, 24)
+        Me.RadLabel2.Size = New System.Drawing.Size(1264, 24)
         Me.RadLabel2.TabIndex = 171
         Me.RadLabel2.Text = "Filtri"
         '
@@ -301,13 +301,13 @@ Partial Class FrmAmministratoriElenco
         'grid
         '
         Me.grid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grid.Location = New System.Drawing.Point(0, 217)
+        Me.grid.Location = New System.Drawing.Point(0, 192)
         '
         '
         '
         Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grid.Name = "grid"
-        Me.grid.Size = New System.Drawing.Size(1270, 262)
+        Me.grid.Size = New System.Drawing.Size(1268, 285)
         Me.grid.TabIndex = 99
         Me.grid.ThemeName = "Fluent"
         '
@@ -342,7 +342,7 @@ Partial Class FrmAmministratoriElenco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1270, 479)
+        Me.ClientSize = New System.Drawing.Size(1268, 477)
         Me.Controls.Add(Me.wb)
         Me.Controls.Add(Me.grid)
         Me.Controls.Add(Me.grpBox)

@@ -41,6 +41,8 @@ Partial Class FrmChiusuraVisite
         Me.wbG = New Telerik.WinControls.UI.RadWaitingBar()
         Me.DotsRingWaitingBarIndicatorElement1 = New Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement()
         Me.Office2013LightTheme1 = New Telerik.WinControls.Themes.Office2013LightTheme()
+        Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
+        Me.cmbSquadre = New Telerik.WinControls.UI.RadDropDownList()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,6 +51,8 @@ Partial Class FrmChiusuraVisite
         CType(Me.grid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.wbG, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -118,7 +122,7 @@ Partial Class FrmChiusuraVisite
         '
         Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grid.Name = "grid"
-        Me.grid.Size = New System.Drawing.Size(765, 435)
+        Me.grid.Size = New System.Drawing.Size(1160, 435)
         Me.grid.TabIndex = 224
         Me.grid.ThemeName = "Office2013Light"
         '
@@ -149,11 +153,39 @@ Partial Class FrmChiusuraVisite
         Me.DotsRingWaitingBarIndicatorElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.DotsRingWaitingBarIndicatorElement1.UseCompatibleTextRendering = False
         '
+        'RadLabel7
+        '
+        Me.RadLabel7.ForeColor = System.Drawing.Color.DimGray
+        Me.RadLabel7.Location = New System.Drawing.Point(403, 19)
+        Me.RadLabel7.Name = "RadLabel7"
+        Me.RadLabel7.Size = New System.Drawing.Size(111, 21)
+        Me.RadLabel7.TabIndex = 227
+        Me.RadLabel7.Text = "Squadra Tecnici"
+        Me.RadLabel7.ThemeName = "MaterialTeal"
+        '
+        'cmbSquadre
+        '
+        Me.cmbSquadre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSquadre.AutoSize = False
+        Me.cmbSquadre.Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        Me.cmbSquadre.ForeColor = System.Drawing.Color.Black
+        Me.cmbSquadre.Location = New System.Drawing.Point(519, 12)
+        Me.cmbSquadre.Name = "cmbSquadre"
+        Me.cmbSquadre.NullText = "Seleziona un valore"
+        Me.cmbSquadre.Size = New System.Drawing.Size(266, 36)
+        Me.cmbSquadre.TabIndex = 226
+        Me.cmbSquadre.ThemeName = "Fluent"
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2), Telerik.WinControls.UI.StackLayoutElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).NullText = "Seleziona un valore"
+        CType(Me.cmbSquadre.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 11.25!)
+        '
         'FrmChiusuraVisite
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 587)
+        Me.ClientSize = New System.Drawing.Size(1205, 585)
+        Me.Controls.Add(Me.RadLabel7)
+        Me.Controls.Add(Me.cmbSquadre)
         Me.Controls.Add(Me.wbG)
         Me.Controls.Add(Me.grid)
         Me.Controls.Add(Me.cmdOkSearchImp)
@@ -179,6 +211,8 @@ Partial Class FrmChiusuraVisite
         CType(Me.grid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.wbG, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbSquadre, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -201,5 +235,7 @@ Partial Class FrmChiusuraVisite
     Friend WithEvents wbG As Telerik.WinControls.UI.RadWaitingBar
     Friend WithEvents DotsRingWaitingBarIndicatorElement1 As Telerik.WinControls.UI.DotsRingWaitingBarIndicatorElement
     Friend WithEvents Office2013LightTheme1 As Telerik.WinControls.Themes.Office2013LightTheme
+    Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents cmbSquadre As Telerik.WinControls.UI.RadDropDownList
 End Class
 

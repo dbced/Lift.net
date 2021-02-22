@@ -24,7 +24,7 @@ Partial Class FrmGestVisitaBeta
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGestVisitaBeta))
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.FluentDarkTheme1 = New Telerik.WinControls.Themes.FluentDarkTheme()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
         Me.VisualStudio2012DarkTheme1 = New Telerik.WinControls.Themes.VisualStudio2012DarkTheme()
@@ -466,7 +466,7 @@ Partial Class FrmGestVisitaBeta
         Me.cmbImpianti.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cmbImpianti.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cmbImpianti.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cmbImpianti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.cmbImpianti.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.cmbImpianti.EditorControl.Name = "NestedRadGridView"
         Me.cmbImpianti.EditorControl.ReadOnly = True
         Me.cmbImpianti.EditorControl.ShowGroupPanel = False
@@ -511,7 +511,7 @@ Partial Class FrmGestVisitaBeta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(460, 615)
+        Me.ClientSize = New System.Drawing.Size(458, 613)
         Me.Controls.Add(Me.lblChiusa)
         Me.Controls.Add(Me.txtDescr)
         Me.Controls.Add(Me.cmbImpianti)

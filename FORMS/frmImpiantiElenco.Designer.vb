@@ -85,7 +85,7 @@ Partial Class FrmImpiantiElenco
         '
         Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grid.Name = "grid"
-        Me.grid.Size = New System.Drawing.Size(1291, 405)
+        Me.grid.Size = New System.Drawing.Size(1289, 403)
         Me.grid.TabIndex = 98
         Me.grid.ThemeName = "Fluent"
         '
@@ -214,7 +214,7 @@ Partial Class FrmImpiantiElenco
         Me.cmdBar.Location = New System.Drawing.Point(0, 0)
         Me.cmdBar.Name = "cmdBar"
         Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBar.Size = New System.Drawing.Size(1291, 67)
+        Me.cmdBar.Size = New System.Drawing.Size(1289, 67)
         Me.cmdBar.TabIndex = 43
         Me.cmdBar.ThemeName = "Windows8"
         '
@@ -248,7 +248,7 @@ Partial Class FrmImpiantiElenco
         Me.RadLabel2.ForeColor = System.Drawing.Color.Black
         Me.RadLabel2.Location = New System.Drawing.Point(2, 18)
         Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(1287, 24)
+        Me.RadLabel2.Size = New System.Drawing.Size(1285, 24)
         Me.RadLabel2.TabIndex = 171
         Me.RadLabel2.Text = "Filtri"
         '
@@ -281,7 +281,7 @@ Partial Class FrmImpiantiElenco
         Me.grpBox.HeaderText = ""
         Me.grpBox.Location = New System.Drawing.Point(0, 67)
         Me.grpBox.Name = "grpBox"
-        Me.grpBox.Size = New System.Drawing.Size(1291, 125)
+        Me.grpBox.Size = New System.Drawing.Size(1289, 125)
         Me.grpBox.TabIndex = 97
         Me.grpBox.ThemeName = "MaterialTeal"
         '
@@ -384,7 +384,7 @@ Partial Class FrmImpiantiElenco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1291, 597)
+        Me.ClientSize = New System.Drawing.Size(1289, 595)
         Me.Controls.Add(Me.grid)
         Me.Controls.Add(Me.grpBox)
         Me.Controls.Add(Me.cmdBar)
