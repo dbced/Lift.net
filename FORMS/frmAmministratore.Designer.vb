@@ -22,17 +22,17 @@ Partial Class FrmAmministratore
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAmministratore))
-        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn15 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn16 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAmministratore))
         Me.Office2013DarkTheme1 = New Telerik.WinControls.Themes.Office2013DarkTheme()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.MaterialTealTheme1 = New Telerik.WinControls.Themes.MaterialTealTheme()
@@ -57,7 +57,6 @@ Partial Class FrmAmministratore
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.txtIndirizzo = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmdOkSearchLoc = New Telerik.WinControls.UI.RadButton()
         Me.RadMaskedEditBox1 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
@@ -75,11 +74,12 @@ Partial Class FrmAmministratore
         Me.RadTextBox5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadPageViewPage2 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.gridEmail = New Telerik.WinControls.UI.RadGridView()
+        Me.cmdBarAssets = New Telerik.WinControls.UI.RadCommandBar()
+        Me.cmdBarDettE1 = New Telerik.WinControls.UI.CommandBarRowElement()
+        Me.cmdBarStripDettE1 = New Telerik.WinControls.UI.CommandBarStripElement()
         Me.pnlEmail = New Telerik.WinControls.UI.RadPanel()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmdAnnPianA = New Telerik.WinControls.UI.RadButton()
-        Me.cmdSalvaPianA = New Telerik.WinControls.UI.RadButton()
         Me.txtEmail = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.chkFatt = New Telerik.WinControls.UI.RadCheckBox()
         Me.cmbTpEmail = New Telerik.WinControls.UI.RadDropDownList()
@@ -99,18 +99,18 @@ Partial Class FrmAmministratore
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel17 = New Telerik.WinControls.UI.RadLabel()
-        Me.cmdBarAssets = New Telerik.WinControls.UI.RadCommandBar()
-        Me.cmdBarDettE1 = New Telerik.WinControls.UI.CommandBarRowElement()
-        Me.cmdBarStripDettE1 = New Telerik.WinControls.UI.CommandBarStripElement()
-        Me.cmdInsDett = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdModDett = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdEliminaRiga = New Telerik.WinControls.UI.CommandBarButton()
         Me.RadDropDownList4 = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
         Me.RadDropDownList5 = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
         Me.cmdAnnulla = New Telerik.WinControls.UI.RadButton()
         Me.cmdConferma = New Telerik.WinControls.UI.RadButton()
+        Me.cmdInsDett = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdModDett = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdEliminaRiga = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdAnnPianA = New Telerik.WinControls.UI.RadButton()
+        Me.cmdSalvaPianA = New Telerik.WinControls.UI.RadButton()
+        Me.cmdOkSearchLoc = New Telerik.WinControls.UI.RadButton()
         CType(Me.cmbTipoInv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAmministratore, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCodice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +126,6 @@ Partial Class FrmAmministratore
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIndirizzo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdOkSearchLoc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadMaskedEditBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,12 +145,11 @@ Partial Class FrmAmministratore
         Me.RadPageViewPage2.SuspendLayout()
         CType(Me.gridEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridEmail.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdBarAssets, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pnlEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlEmail.SuspendLayout()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdAnnPianA, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdSalvaPianA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkFatt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbTpEmail, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,13 +169,15 @@ Partial Class FrmAmministratore
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmdBarAssets, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownList4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropDownList5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdAnnPianA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdSalvaPianA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdOkSearchLoc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -391,17 +391,6 @@ Partial Class FrmAmministratore
         Me.RadLabel14.Text = "Località"
         Me.RadLabel14.ThemeName = "MaterialTeal"
         '
-        'cmdOkSearchLoc
-        '
-        Me.cmdOkSearchLoc.Image = CType(resources.GetObject("cmdOkSearchLoc.Image"), System.Drawing.Image)
-        Me.cmdOkSearchLoc.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdOkSearchLoc.Location = New System.Drawing.Point(583, 214)
-        Me.cmdOkSearchLoc.Name = "cmdOkSearchLoc"
-        Me.cmdOkSearchLoc.Size = New System.Drawing.Size(26, 26)
-        Me.cmdOkSearchLoc.TabIndex = 198
-        Me.cmdOkSearchLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdOkSearchLoc.ThemeName = "ThemeCmdRecubeYEL"
-        '
         'RadMaskedEditBox1
         '
         Me.RadMaskedEditBox1.AutoSize = False
@@ -457,10 +446,10 @@ Partial Class FrmAmministratore
         Me.RadPageViewPage1.Controls.Add(Me.RadLabel8)
         Me.RadPageViewPage1.Controls.Add(Me.RadDropDownList3)
         Me.RadPageViewPage1.Controls.Add(Me.RadTextBox5)
-        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(111.0!, 33.0!)
-        Me.RadPageViewPage1.Location = New System.Drawing.Point(6, 39)
+        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(109.0!, 29.0!)
+        Me.RadPageViewPage1.Location = New System.Drawing.Point(6, 35)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(984, 246)
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(984, 250)
         Me.RadPageViewPage1.Text = "Dati Referente"
         '
         'RadLabel18
@@ -605,7 +594,7 @@ Partial Class FrmAmministratore
         Me.RadPageViewPage2.Controls.Add(Me.gridEmail)
         Me.RadPageViewPage2.Controls.Add(Me.cmdBarAssets)
         Me.RadPageViewPage2.Controls.Add(Me.pnlEmail)
-        Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(107.0!, 33.0!)
+        Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(105.0!, 29.0!)
         Me.RadPageViewPage2.Location = New System.Drawing.Point(6, 39)
         Me.RadPageViewPage2.Name = "RadPageViewPage2"
         Me.RadPageViewPage2.Size = New System.Drawing.Size(984, 246)
@@ -619,7 +608,7 @@ Partial Class FrmAmministratore
         Me.gridEmail.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.gridEmail.ForeColor = System.Drawing.SystemColors.ControlText
         Me.gridEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.gridEmail.Location = New System.Drawing.Point(0, 30)
+        Me.gridEmail.Location = New System.Drawing.Point(0, 55)
         '
         '
         '
@@ -631,70 +620,102 @@ Partial Class FrmAmministratore
         Me.gridEmail.MasterTemplate.AllowRowResize = False
         Me.gridEmail.MasterTemplate.AutoGenerateColumns = False
         Me.gridEmail.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn13.AllowGroup = False
-        GridViewTextBoxColumn13.EnableExpressionEditor = False
-        GridViewTextBoxColumn13.FieldName = "EINECL"
-        GridViewTextBoxColumn13.HeaderText = "Indirzzo Email"
-        GridViewTextBoxColumn13.IsAutoGenerated = True
-        GridViewTextBoxColumn13.Name = "EINECL"
-        GridViewTextBoxColumn13.ReadOnly = True
-        GridViewTextBoxColumn13.VisibleInColumnChooser = False
-        GridViewTextBoxColumn13.Width = 486
-        GridViewTextBoxColumn14.AllowGroup = False
-        GridViewTextBoxColumn14.EnableExpressionEditor = False
-        GridViewTextBoxColumn14.FieldName = "ETPEMAI"
-        GridViewTextBoxColumn14.HeaderText = "Tipo Email"
-        GridViewTextBoxColumn14.MaxWidth = 92
-        GridViewTextBoxColumn14.MinWidth = 92
-        GridViewTextBoxColumn14.Name = "ETPEMAI"
-        GridViewTextBoxColumn14.ReadOnly = True
-        GridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn14.Width = 92
-        GridViewTextBoxColumn15.EnableExpressionEditor = False
-        GridViewTextBoxColumn15.FieldName = "EFLGPEC"
-        GridViewTextBoxColumn15.HeaderText = "PEC"
-        GridViewTextBoxColumn15.MaxWidth = 50
-        GridViewTextBoxColumn15.MinWidth = 50
-        GridViewTextBoxColumn15.Name = "EFLGPEC"
-        GridViewTextBoxColumn15.ReadOnly = True
-        GridViewTextBoxColumn15.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn16.EnableExpressionEditor = False
-        GridViewTextBoxColumn16.FieldName = "EFLFATT"
-        GridViewTextBoxColumn16.HeaderText = "FATT."
-        GridViewTextBoxColumn16.MaxWidth = 50
-        GridViewTextBoxColumn16.MinWidth = 50
-        GridViewTextBoxColumn16.Name = "EFLFATT"
-        GridViewTextBoxColumn16.ReadOnly = True
-        GridViewTextBoxColumn16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn16.VisibleInColumnChooser = False
-        GridViewTextBoxColumn17.AllowGroup = False
-        GridViewTextBoxColumn17.EnableExpressionEditor = False
-        GridViewTextBoxColumn17.FieldName = "EFLPREF"
-        GridViewTextBoxColumn17.HeaderText = "PREF."
-        GridViewTextBoxColumn17.MinWidth = 50
-        GridViewTextBoxColumn17.Name = "EFLPREF"
-        GridViewTextBoxColumn17.ReadOnly = True
-        GridViewTextBoxColumn17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn17.VisibleInColumnChooser = False
-        GridViewTextBoxColumn17.Width = 240
-        GridViewTextBoxColumn18.AllowGroup = False
-        GridViewTextBoxColumn18.EnableExpressionEditor = False
-        GridViewTextBoxColumn18.HeaderText = "Ann."
-        GridViewTextBoxColumn18.MaxWidth = 36
-        GridViewTextBoxColumn18.MinWidth = 36
-        GridViewTextBoxColumn18.Name = "EFLANN"
-        GridViewTextBoxColumn18.ReadOnly = True
-        GridViewTextBoxColumn18.VisibleInColumnChooser = False
-        GridViewTextBoxColumn18.Width = 36
-        Me.gridEmail.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
+        GridViewTextBoxColumn1.AllowGroup = False
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.FieldName = "EINECL"
+        GridViewTextBoxColumn1.HeaderText = "Indirzzo Email"
+        GridViewTextBoxColumn1.IsAutoGenerated = True
+        GridViewTextBoxColumn1.Name = "EINECL"
+        GridViewTextBoxColumn1.ReadOnly = True
+        GridViewTextBoxColumn1.VisibleInColumnChooser = False
+        GridViewTextBoxColumn1.Width = 490
+        GridViewTextBoxColumn2.AllowGroup = False
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.FieldName = "ETPEMAI"
+        GridViewTextBoxColumn2.HeaderText = "Tipo Email"
+        GridViewTextBoxColumn2.MaxWidth = 92
+        GridViewTextBoxColumn2.MinWidth = 92
+        GridViewTextBoxColumn2.Name = "ETPEMAI"
+        GridViewTextBoxColumn2.ReadOnly = True
+        GridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn2.Width = 92
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.FieldName = "EFLGPEC"
+        GridViewTextBoxColumn3.HeaderText = "PEC"
+        GridViewTextBoxColumn3.MaxWidth = 50
+        GridViewTextBoxColumn3.MinWidth = 50
+        GridViewTextBoxColumn3.Name = "EFLGPEC"
+        GridViewTextBoxColumn3.ReadOnly = True
+        GridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn4.EnableExpressionEditor = False
+        GridViewTextBoxColumn4.FieldName = "EFLFATT"
+        GridViewTextBoxColumn4.HeaderText = "FATT."
+        GridViewTextBoxColumn4.MaxWidth = 50
+        GridViewTextBoxColumn4.MinWidth = 50
+        GridViewTextBoxColumn4.Name = "EFLFATT"
+        GridViewTextBoxColumn4.ReadOnly = True
+        GridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn4.VisibleInColumnChooser = False
+        GridViewTextBoxColumn5.AllowGroup = False
+        GridViewTextBoxColumn5.EnableExpressionEditor = False
+        GridViewTextBoxColumn5.FieldName = "EFLPREF"
+        GridViewTextBoxColumn5.HeaderText = "PREF."
+        GridViewTextBoxColumn5.MinWidth = 50
+        GridViewTextBoxColumn5.Name = "EFLPREF"
+        GridViewTextBoxColumn5.ReadOnly = True
+        GridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn5.VisibleInColumnChooser = False
+        GridViewTextBoxColumn5.Width = 244
+        GridViewTextBoxColumn6.AllowGroup = False
+        GridViewTextBoxColumn6.EnableExpressionEditor = False
+        GridViewTextBoxColumn6.HeaderText = "Ann."
+        GridViewTextBoxColumn6.MaxWidth = 36
+        GridViewTextBoxColumn6.MinWidth = 36
+        GridViewTextBoxColumn6.Name = "EFLANN"
+        GridViewTextBoxColumn6.ReadOnly = True
+        GridViewTextBoxColumn6.VisibleInColumnChooser = False
+        GridViewTextBoxColumn6.Width = 36
+        Me.gridEmail.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6})
         Me.gridEmail.MasterTemplate.EnableGrouping = False
-        Me.gridEmail.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.gridEmail.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.gridEmail.Name = "gridEmail"
         Me.gridEmail.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.gridEmail.Size = New System.Drawing.Size(984, 103)
+        Me.gridEmail.Size = New System.Drawing.Size(984, 78)
         Me.gridEmail.TabIndex = 87
         Me.gridEmail.TabStop = False
         Me.gridEmail.ThemeName = "Fluent"
+        '
+        'cmdBarAssets
+        '
+        Me.cmdBarAssets.Dock = System.Windows.Forms.DockStyle.Top
+        Me.cmdBarAssets.Location = New System.Drawing.Point(0, 0)
+        Me.cmdBarAssets.Name = "cmdBarAssets"
+        Me.cmdBarAssets.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.cmdBarDettE1})
+        Me.cmdBarAssets.Size = New System.Drawing.Size(984, 55)
+        Me.cmdBarAssets.TabIndex = 202
+        Me.cmdBarAssets.TabStop = False
+        Me.cmdBarAssets.ThemeName = "VisualStudio2012Light"
+        CType(Me.cmdBarAssets.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarElement).BorderInnerColor4 = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
+        CType(Me.cmdBarAssets.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(249, Byte), Integer))
+        '
+        'cmdBarDettE1
+        '
+        Me.cmdBarDettE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBarDettE1.MinSize = New System.Drawing.Size(25, 25)
+        Me.cmdBarDettE1.Name = "cmdBarDettE1"
+        Me.cmdBarDettE1.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.cmdBarStripDettE1})
+        Me.cmdBarDettE1.Text = ""
+        Me.cmdBarDettE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBarDettE1.UseCompatibleTextRendering = False
+        '
+        'cmdBarStripDettE1
+        '
+        Me.cmdBarStripDettE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBarStripDettE1.DisplayName = "CommandBarStripElement1"
+        Me.cmdBarStripDettE1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInsDett, Me.cmdModDett, Me.cmdEliminaRiga})
+        Me.cmdBarStripDettE1.Name = "cmdBarStripDettE1"
+        Me.cmdBarStripDettE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBarStripDettE1.UseCompatibleTextRendering = False
         '
         'pnlEmail
         '
@@ -734,26 +755,6 @@ Partial Class FrmAmministratore
         Me.RadLabel10.TabIndex = 195
         Me.RadLabel10.Text = "Email"
         Me.RadLabel10.ThemeName = "MaterialTeal"
-        '
-        'cmdAnnPianA
-        '
-        Me.cmdAnnPianA.Image = CType(resources.GetObject("cmdAnnPianA.Image"), System.Drawing.Image)
-        Me.cmdAnnPianA.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdAnnPianA.Location = New System.Drawing.Point(891, 56)
-        Me.cmdAnnPianA.Name = "cmdAnnPianA"
-        Me.cmdAnnPianA.Size = New System.Drawing.Size(32, 29)
-        Me.cmdAnnPianA.TabIndex = 182
-        Me.cmdAnnPianA.ThemeName = "VisualStudio2012Light"
-        '
-        'cmdSalvaPianA
-        '
-        Me.cmdSalvaPianA.Image = CType(resources.GetObject("cmdSalvaPianA.Image"), System.Drawing.Image)
-        Me.cmdSalvaPianA.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cmdSalvaPianA.Location = New System.Drawing.Point(932, 56)
-        Me.cmdSalvaPianA.Name = "cmdSalvaPianA"
-        Me.cmdSalvaPianA.Size = New System.Drawing.Size(32, 29)
-        Me.cmdSalvaPianA.TabIndex = 181
-        Me.cmdSalvaPianA.ThemeName = "VisualStudio2012Light"
         '
         'txtEmail
         '
@@ -975,77 +976,6 @@ Partial Class FrmAmministratore
         Me.RadLabel17.Text = "Fax"
         Me.RadLabel17.ThemeName = "MaterialTeal"
         '
-        'cmdBarAssets
-        '
-        Me.cmdBarAssets.Dock = System.Windows.Forms.DockStyle.Top
-        Me.cmdBarAssets.Location = New System.Drawing.Point(0, 0)
-        Me.cmdBarAssets.Name = "cmdBarAssets"
-        Me.cmdBarAssets.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.cmdBarDettE1})
-        Me.cmdBarAssets.Size = New System.Drawing.Size(984, 30)
-        Me.cmdBarAssets.TabIndex = 202
-        Me.cmdBarAssets.TabStop = False
-        Me.cmdBarAssets.ThemeName = "VisualStudio2012Light"
-        CType(Me.cmdBarAssets.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarElement).BorderInnerColor4 = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(5, Byte), Integer))
-        CType(Me.cmdBarAssets.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarElement).BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(249, Byte), Integer))
-        '
-        'cmdBarDettE1
-        '
-        Me.cmdBarDettE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBarDettE1.MinSize = New System.Drawing.Size(25, 25)
-        Me.cmdBarDettE1.Name = "cmdBarDettE1"
-        Me.cmdBarDettE1.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.cmdBarStripDettE1})
-        Me.cmdBarDettE1.Text = ""
-        Me.cmdBarDettE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBarDettE1.UseCompatibleTextRendering = False
-        '
-        'cmdBarStripDettE1
-        '
-        Me.cmdBarStripDettE1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBarStripDettE1.DisplayName = "CommandBarStripElement1"
-        Me.cmdBarStripDettE1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInsDett, Me.cmdModDett, Me.cmdEliminaRiga})
-        Me.cmdBarStripDettE1.Name = "cmdBarStripDettE1"
-        Me.cmdBarStripDettE1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBarStripDettE1.UseCompatibleTextRendering = False
-        '
-        'cmdInsDett
-        '
-        Me.cmdInsDett.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdInsDett.DisplayName = "CommandBarButton1"
-        Me.cmdInsDett.DrawText = True
-        Me.cmdInsDett.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdInsDett.Image = CType(resources.GetObject("cmdInsDett.Image"), System.Drawing.Image)
-        Me.cmdInsDett.Name = "cmdInsDett"
-        Me.cmdInsDett.Text = "Inserisci"
-        Me.cmdInsDett.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdInsDett.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdInsDett.UseCompatibleTextRendering = False
-        '
-        'cmdModDett
-        '
-        Me.cmdModDett.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdModDett.DisplayName = "CommandBarButton2"
-        Me.cmdModDett.DrawText = True
-        Me.cmdModDett.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdModDett.Image = CType(resources.GetObject("cmdModDett.Image"), System.Drawing.Image)
-        Me.cmdModDett.Name = "cmdModDett"
-        Me.cmdModDett.Text = "Modifica"
-        Me.cmdModDett.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdModDett.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdModDett.UseCompatibleTextRendering = False
-        '
-        'cmdEliminaRiga
-        '
-        Me.cmdEliminaRiga.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdEliminaRiga.DisplayName = "CommandBarButton3"
-        Me.cmdEliminaRiga.DrawText = True
-        Me.cmdEliminaRiga.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdEliminaRiga.Image = CType(resources.GetObject("cmdEliminaRiga.Image"), System.Drawing.Image)
-        Me.cmdEliminaRiga.Name = "cmdEliminaRiga"
-        Me.cmdEliminaRiga.Text = "Elimina"
-        Me.cmdEliminaRiga.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdEliminaRiga.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdEliminaRiga.UseCompatibleTextRendering = False
-        '
         'RadDropDownList4
         '
         Me.RadDropDownList4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -1113,6 +1043,76 @@ Partial Class FrmAmministratore
         Me.cmdConferma.TabIndex = 213
         Me.cmdConferma.Text = "Salva"
         Me.cmdConferma.ThemeName = "VisualStudio2012Light"
+        '
+        'cmdInsDett
+        '
+        Me.cmdInsDett.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdInsDett.DisplayName = "CommandBarButton1"
+        Me.cmdInsDett.DrawText = True
+        Me.cmdInsDett.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdInsDett.Image = CType(resources.GetObject("cmdInsDett.Image"), System.Drawing.Image)
+        Me.cmdInsDett.Name = "cmdInsDett"
+        Me.cmdInsDett.Text = "Inserisci"
+        Me.cmdInsDett.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdInsDett.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdInsDett.UseCompatibleTextRendering = False
+        '
+        'cmdModDett
+        '
+        Me.cmdModDett.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdModDett.DisplayName = "CommandBarButton2"
+        Me.cmdModDett.DrawText = True
+        Me.cmdModDett.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdModDett.Image = CType(resources.GetObject("cmdModDett.Image"), System.Drawing.Image)
+        Me.cmdModDett.Name = "cmdModDett"
+        Me.cmdModDett.Text = "Modifica"
+        Me.cmdModDett.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdModDett.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdModDett.UseCompatibleTextRendering = False
+        '
+        'cmdEliminaRiga
+        '
+        Me.cmdEliminaRiga.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdEliminaRiga.DisplayName = "CommandBarButton3"
+        Me.cmdEliminaRiga.DrawText = True
+        Me.cmdEliminaRiga.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdEliminaRiga.Image = CType(resources.GetObject("cmdEliminaRiga.Image"), System.Drawing.Image)
+        Me.cmdEliminaRiga.Name = "cmdEliminaRiga"
+        Me.cmdEliminaRiga.Text = "Elimina"
+        Me.cmdEliminaRiga.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdEliminaRiga.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdEliminaRiga.UseCompatibleTextRendering = False
+        '
+        'cmdAnnPianA
+        '
+        Me.cmdAnnPianA.Image = CType(resources.GetObject("cmdAnnPianA.Image"), System.Drawing.Image)
+        Me.cmdAnnPianA.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdAnnPianA.Location = New System.Drawing.Point(891, 56)
+        Me.cmdAnnPianA.Name = "cmdAnnPianA"
+        Me.cmdAnnPianA.Size = New System.Drawing.Size(32, 29)
+        Me.cmdAnnPianA.TabIndex = 182
+        Me.cmdAnnPianA.ThemeName = "VisualStudio2012Light"
+        '
+        'cmdSalvaPianA
+        '
+        Me.cmdSalvaPianA.Image = CType(resources.GetObject("cmdSalvaPianA.Image"), System.Drawing.Image)
+        Me.cmdSalvaPianA.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdSalvaPianA.Location = New System.Drawing.Point(932, 56)
+        Me.cmdSalvaPianA.Name = "cmdSalvaPianA"
+        Me.cmdSalvaPianA.Size = New System.Drawing.Size(32, 29)
+        Me.cmdSalvaPianA.TabIndex = 181
+        Me.cmdSalvaPianA.ThemeName = "VisualStudio2012Light"
+        '
+        'cmdOkSearchLoc
+        '
+        Me.cmdOkSearchLoc.Image = CType(resources.GetObject("cmdOkSearchLoc.Image"), System.Drawing.Image)
+        Me.cmdOkSearchLoc.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cmdOkSearchLoc.Location = New System.Drawing.Point(583, 214)
+        Me.cmdOkSearchLoc.Name = "cmdOkSearchLoc"
+        Me.cmdOkSearchLoc.Size = New System.Drawing.Size(26, 26)
+        Me.cmdOkSearchLoc.TabIndex = 198
+        Me.cmdOkSearchLoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdOkSearchLoc.ThemeName = "ThemeCmdRecubeYEL"
         '
         'FrmAmministratore
         '
@@ -1183,7 +1183,6 @@ Partial Class FrmAmministratore
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIndirizzo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdOkSearchLoc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadMaskedEditBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1205,13 +1204,12 @@ Partial Class FrmAmministratore
         Me.RadPageViewPage2.PerformLayout()
         CType(Me.gridEmail.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridEmail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdBarAssets, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pnlEmail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlEmail.ResumeLayout(False)
         Me.pnlEmail.PerformLayout()
         CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdAnnPianA, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdSalvaPianA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkFatt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbTpEmail, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1231,13 +1229,15 @@ Partial Class FrmAmministratore
         CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmdBarAssets, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownList4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropDownList5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdAnnulla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdConferma, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdAnnPianA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdSalvaPianA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdOkSearchLoc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

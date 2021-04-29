@@ -12,6 +12,7 @@ Imports System.ComponentModel
 Imports Telerik.WinControls.UI.Map.Bing
 Imports Telerik.WinControls.UI.Map
 Imports System.Net.Http
+Imports System.Threading.Tasks
 
 Public Class webServices
     Public Async Function getDatiTabellaComuniIT(codTab As String, Optional codElem As String = "") As Threading.Tasks.Task(Of parmComuni())
@@ -1256,9 +1257,9 @@ Public Class webServices
         End Try
     End Function
 
-    Public Async Function getListaImpianti(listSoc As List(Of societa), listCentri As List(Of centri), Optional codImpianto As String = "", Optional codCli As String = "") As Threading.Tasks.Task(Of List(Of elenco))
-        Dim elenco As New List(Of elenco)
-        Dim listaImpianti() As elenco
+    Public Async Function getListaImpianti(listSoc As List(Of societa), listCentri As List(Of centri), Optional codImpianto As String = "", Optional codCli As String = "") As Threading.Tasks.Task(Of List(Of elencoImpianti))
+        Dim elenco As New List(Of elencoImpianti)
+        Dim listaImpianti() As elencoImpianti
 
         Try
             Dim dati As String
@@ -1285,7 +1286,7 @@ Public Class webServices
             If RestResponse.IsSuccessStatusCode Then
                 dati = Await RestResponse.Content.ReadAsStringAsync()
 
-                listaImpianti = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elenco())(dati)
+                listaImpianti = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoImpianti())(dati)
 
                 For i As Integer = 0 To listaImpianti.Count - 1
                     elenco.Add(listaImpianti(i))
@@ -1443,4 +1444,92 @@ Public Class webServices
         End Try
     End Function
 
+    Public Async Function getElencoOfferte(parms As parmsOfferte) As Threading.Tasks.Task(Of List(Of Offerta))
+        Dim elenco As New List(Of Offerta)
+        Dim offerta() As Offerta
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/GetOfferteListParms/GetOfferteListParms"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                offerta = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Offerta())(dati)
+
+                For i As Integer = 0 To offerta.Count - 1
+                    elenco.Add(offerta(i))
+                Next
+            End If
+            Return elenco
+        Catch ex As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getOffertaDettagliata(parms As parmsOfferte) As Threading.Tasks.Task(Of Offerta)
+        Dim offer As New Offerta
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/getOffertaDettagliata/getOffertaDettagliata"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                offer = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Offerta)(dati)
+            End If
+            Return offer
+        Catch ex As Exception
+            offer.Err = New Errore(ex)
+            offer.Err.Tipo = Errore.TipoErrore.Comunicazione
+            offer.Err.Modulo = Errore.ModuloErrore.Client
+            Return offer
+        End Try
+    End Function
+
+    Public Async Function getDashOfferta(parms As parmsOfferte) As Task(Of List(Of Integer))
+        Dim dash As List(Of Integer)
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/getDashOfferta/getDashOfferta"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                dash = Newtonsoft.Json.JsonConvert.DeserializeObject(Of List(Of Integer))(dati)
+            End If
+            Return dash
+        Catch ex As Exception
+            Return New List(Of Integer)({0, 0, 0, 0})
+        End Try
+    End Function
 End Class

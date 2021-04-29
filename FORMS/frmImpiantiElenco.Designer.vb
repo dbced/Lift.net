@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmImpiantiElenco
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmImpiantiElenco
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
@@ -79,13 +79,13 @@ Partial Class FrmImpiantiElenco
         '
         Me.grid.Controls.Add(Me.wb)
         Me.grid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grid.Location = New System.Drawing.Point(0, 192)
+        Me.grid.Location = New System.Drawing.Point(0, 217)
         '
         '
         '
         Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grid.Name = "grid"
-        Me.grid.Size = New System.Drawing.Size(1289, 403)
+        Me.grid.Size = New System.Drawing.Size(1271, 378)
         Me.grid.TabIndex = 98
         Me.grid.ThemeName = "Fluent"
         '
@@ -214,7 +214,7 @@ Partial Class FrmImpiantiElenco
         Me.cmdBar.Location = New System.Drawing.Point(0, 0)
         Me.cmdBar.Name = "cmdBar"
         Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBar.Size = New System.Drawing.Size(1289, 67)
+        Me.cmdBar.Size = New System.Drawing.Size(1271, 92)
         Me.cmdBar.TabIndex = 43
         Me.cmdBar.ThemeName = "Windows8"
         '
@@ -248,7 +248,7 @@ Partial Class FrmImpiantiElenco
         Me.RadLabel2.ForeColor = System.Drawing.Color.Black
         Me.RadLabel2.Location = New System.Drawing.Point(2, 18)
         Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(1285, 24)
+        Me.RadLabel2.Size = New System.Drawing.Size(1267, 24)
         Me.RadLabel2.TabIndex = 171
         Me.RadLabel2.Text = "Filtri"
         '
@@ -279,9 +279,9 @@ Partial Class FrmImpiantiElenco
         Me.grpBox.Controls.Add(Me.Label1)
         Me.grpBox.Dock = System.Windows.Forms.DockStyle.Top
         Me.grpBox.HeaderText = ""
-        Me.grpBox.Location = New System.Drawing.Point(0, 67)
+        Me.grpBox.Location = New System.Drawing.Point(0, 92)
         Me.grpBox.Name = "grpBox"
-        Me.grpBox.Size = New System.Drawing.Size(1289, 125)
+        Me.grpBox.Size = New System.Drawing.Size(1271, 125)
         Me.grpBox.TabIndex = 97
         Me.grpBox.ThemeName = "MaterialTeal"
         '
@@ -384,7 +384,7 @@ Partial Class FrmImpiantiElenco
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1289, 595)
+        Me.ClientSize = New System.Drawing.Size(1271, 595)
         Me.Controls.Add(Me.grid)
         Me.Controls.Add(Me.grpBox)
         Me.Controls.Add(Me.cmdBar)

@@ -118,14 +118,133 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16_warning_y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RiquadroApri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RiquadroApri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ASS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-chiamata-in-uscita-24_ASS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="camera_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camera_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_32_Comunicazione___Alternato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Comunicazione - Alternato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocAggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocAggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Mail____" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Mail - @.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconXls" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XLS-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_RiquadroChiudi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_RiquadroChiudi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Promemoria___Aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promemoria - Aggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Azienda___Dipartimento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Azienda - Dipartimento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocOpzioni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocOpzioni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocBarcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocBarcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocStat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocStat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Modifica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modifica.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option___Ordinamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option - Ordinamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Scambio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Scambio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocSalva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocSalva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Utenti___Idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Utenti - Idea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Lista___Controllo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Lista - Controllo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diagramma_di_Venn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diagramma di Venn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Allegato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Allegato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocAttesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocAttesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocSalva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocSalva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_document_edit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Obiettivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Obiettivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Lavori_in_Option___corso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Lavori in Option - corso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocElimina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocElimina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Mappe___Località" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Mappe - Località.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocNotizie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocNotizie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_VideoConferenza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_VideoConferenza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Archivio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Archivio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aggiorna___Eccezione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aggiorna - Eccezione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fattura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Utenti___Sviluppo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Utenti - Sviluppo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocAggiorna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocAggiorna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocAttesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocAttesa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Riavvio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Riavvio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cell_no" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-android-30 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +261,476 @@
   <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\010_x-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fattura___Cassa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura - Cassa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_RiquadroApri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_RiquadroApri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Diagramma_di_Venn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Diagramma di Venn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocScanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocScanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Promemoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Promemoria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Cerca___dettaglio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Cerca - dettaglio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="file_group_line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file-group-line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocBlocca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocBlocca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Promemoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Promemoria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Calendario___Pagamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Calendario - Pagamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Azienda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Azienda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Promemoria___Aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Promemoria - Aggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Scambio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Scambio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fun___Stormtrooper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fun - Stormtrooper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocModifica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocModifica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocPreferito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocPreferito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocAnnulla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocAnnulla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Firma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Firma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Chiudi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Chiudi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option___Ingranaggio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option - Ingranaggio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mail____" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mail - @.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocLink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocLink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option___Manutenzione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option - Manutenzione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option___Strumenti_di_amministrazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option - Strumenti di amministrazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Azienda___Dipartimento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Azienda - Dipartimento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Allegato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Allegato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocOrdine_d_acquisto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocOrdine d'acquisto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camera_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Azienda___Organizzazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Azienda - Organizzazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Uscita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Uscita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocQrCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocQrCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fattura___Cartella" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura - Cartella.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Servizio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Servizio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocPdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocPdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option___Ordinamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option - Ordinamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura___Cassa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura - Cassa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aggiungi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocModifica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocModifica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocBarcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocBarcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Stampante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Stampante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Diagramma_di_Venn_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Diagramma di Venn RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VideoConferenza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VideoConferenza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_document_plus-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Commento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Commento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option_Privacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option Privacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option_Privacy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option Privacy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Garanzia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Garanzia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocFiltro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocFiltro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Commento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Commento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Utenti___Sviluppo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Utenti - Sviluppo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Azienda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Azienda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aggiorna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aggiorna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendario___Settimana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendario - Settimana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocProcesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocProcesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura___Monete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura - Monete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_warning_y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Contratto_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contratto_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option___Ingranaggio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option - Ingranaggio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rimuovi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rimuovi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocBlocca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocBlocca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocProcesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocProcesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Su" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Su.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mail___New_Message" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mail - New Message.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocAggiorna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocAggiorna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_document_delete-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fattura___Ricevuta_Cassa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura - Ricevuta Cassa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Comunicazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Comunicazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocCollega" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocCollega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Azienda___Organizzazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Azienda - Organizzazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Riavvio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Riavvio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Mail___New_Message" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Mail - New Message.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_Option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option___Manutenzione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option - Manutenzione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocImmagine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocImmagine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Mail___Aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Mail - Aggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocDuplica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocDuplica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lavori_in_Option___corso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lavori in Option - corso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Comunicazione___Alternato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Comunicazione - Alternato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocCollega" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocCollega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fiamma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fiamma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Cestino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Cestino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fattura___Ricevuta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura - Ricevuta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lista___Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lista - Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocImmagine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocImmagine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura___Ricevuta_Cassa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura - Ricevuta Cassa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocQrCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocQrCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocOpzioni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocOpzioni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocFiltro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocFiltro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Utenti___Idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Utenti - Idea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diagramma_di_Venn_RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Diagramma di Venn RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Lista___Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Lista - Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocAggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocAggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocExcel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Uscita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Uscita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cestino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cestino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendario___Pagamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendario - Pagamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocNotizie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocNotizie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Servizio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Servizio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocCheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocCheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Garanzia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Garanzia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocPdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocPdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocOrdine_d_acquisto___Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocOrdine d'acquisto - Stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura___Cartella" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura - Cartella.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Grafico___Economico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Grafico - Economico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spegni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spegni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Fattura___Ricevuta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Fattura - Ricevuta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cerca___dettaglio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerca - dettaglio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mail___Aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mail - Aggiungi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocPreferito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocPreferito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Firma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Firma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16_comment2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocScaduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocScaduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Aggiorna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Aggiorna.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Comunicazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Comunicazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Aggiorna___Eccezione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Aggiorna - Eccezione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Archivio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Archivio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocScanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocScanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fattura___Monete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fattura - Monete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Calendario___Settimana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Calendario - Settimana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocCerca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocCerca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RiquadroChiudi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RiquadroChiudi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stampante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stampante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Option___Ingranaggi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Option - Ingranaggi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocOrdine_d_acquisto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocOrdine d'acquisto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocElimina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocElimina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lista___Controllo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lista - Controllo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fiamma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fiamma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocCheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocCheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocScaduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocScaduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Giu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Giu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mail___Rubrica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mail - Rubrica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grafico___Economico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grafico - Economico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Obiettivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Obiettivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocAnnulla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocAnnulla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mappe___Località" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mappe - Località.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocCerca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocCerca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Mail___Rubrica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Mail - Rubrica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocOrdine_d_acquisto___Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DocOrdine d'acquisto - Stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocStat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocStat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fun___Stormtrooper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fun - Stormtrooper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocLink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocLink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chiudi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chiudi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option___Strumenti_di_amministrazione" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option - Strumenti di amministrazione.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_Spegni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_Spegni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32_DocDuplica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32_DocDuplica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Option___Ingranaggi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Option - Ingranaggi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Offerta_Annullata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-documento-80(7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Offerta_Bloccata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-documento-80(6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Offerta_Accettata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-documento-80(5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Offerta_Al_vaglio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-documento-80(3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LAV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-lavoratore-uomo-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

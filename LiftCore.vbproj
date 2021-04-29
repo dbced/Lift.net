@@ -49,9 +49,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EDOC.Service.Wrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Librerie\EDOC.Service.Wrapper\EDOC.Service.Wrapper.dll</HintPath>
+    <Reference Include="EDOC.Service.Wrapper">
+      <HintPath>..\..\..\..\..\Sviluppo\ReCubeSVN\library\EDOC.Service.Wrapper.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -95,6 +94,7 @@
     <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -132,8 +132,8 @@
       <HintPath>lib\RCWF\2019.3.917.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TelerikData, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikExport, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikData, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikExport, Version=2019.3.917.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +150,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLASSI\Classi_dati\Agente.vb" />
+    <Compile Include="CLASSI\Classi_dati\Fornitore.vb" />
+    <Compile Include="CLASSI\Classi_dati\Offerta.vb" />
+    <Compile Include="CLASSI\Classi_dati\OffertaDett.vb" />
+    <Compile Include="CLASSI\Classi_Funzioni\Errore.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmsFornitore.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmsOfferte.vb" />
     <Compile Include="CLASSI\clMain.vb" />
     <Compile Include="CLASSI\CustomGanttView.vb">
       <SubType>Component</SubType>
@@ -165,6 +172,7 @@
     <Compile Include="CLASSI\elencoChiusureVis.vb" />
     <Compile Include="CLASSI\elencoClienti.vb" />
     <Compile Include="CLASSI\elencoDocumenti.vb" />
+    <Compile Include="CLASSI\elencoImpianti.vb" />
     <Compile Include="CLASSI\elencoImpiantiServiziContratto.vb" />
     <Compile Include="CLASSI\elencoListaContratti.vb" />
     <Compile Include="CLASSI\elencoLogs.vb" />
@@ -175,17 +183,17 @@
     <Compile Include="CLASSI\elencoServiziContratto.vb" />
     <Compile Include="CLASSI\elencoTasksVisita.vb" />
     <Compile Include="CLASSI\elencoTecnici.vb" />
-    <Compile Include="CLASSI\parmComuni.vb" />
-    <Compile Include="CLASSI\parmGetLogs.vb" />
-    <Compile Include="CLASSI\parmGetManutenzioniDefault.vb" />
-    <Compile Include="CLASSI\parmGetSchedaImpianto.vb" />
-    <Compile Include="CLASSI\parmImpianti.vb" />
-    <Compile Include="CLASSI\parmPostAssets.vb" />
-    <Compile Include="CLASSI\parmPostParVisAsset.vb" />
-    <Compile Include="CLASSI\parmRelTabelle.vb" />
-    <Compile Include="CLASSI\parmsRicChiamate.vb" />
-    <Compile Include="CLASSI\parmsRicContratti.vb" />
-    <Compile Include="CLASSI\parmTabelle.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmComuni.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmGetLogs.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmGetManutenzioniDefault.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmGetSchedaImpianto.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmImpianti.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmPostAssets.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmPostParVisAsset.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmRelTabelle.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmsRicChiamate.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmsRicContratti.vb" />
+    <Compile Include="CLASSI\Classi_parms\parmTabelle.vb" />
     <Compile Include="CLASSI\liftGanttViewDataItem.vb" />
     <Compile Include="CLASSI\statBuoniImpianto.vb" />
     <Compile Include="CLASSI\statCanoniImpianto.vb" />
@@ -274,6 +282,18 @@
     <Compile Include="FORMS\frmImpiantoAssets.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMS\frmOfferta.Designer.vb">
+      <DependentUpon>frmOfferta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmOfferta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\frmOffertaElenco.Designer.vb">
+      <DependentUpon>frmOffertaElenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\frmOffertaElenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMS\frmRicercaTabelle.Designer.vb">
       <DependentUpon>frmRicercaTabelle.vb</DependentUpon>
     </Compile>
@@ -308,6 +328,12 @@
       <DependentUpon>frmTecnico.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMS\frmTecnico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\testform.Designer.vb">
+      <DependentUpon>testform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\testform.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -372,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmImpiantoAssets.resx">
       <DependentUpon>frmImpiantoAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmOfferta.resx">
+      <DependentUpon>frmOfferta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\frmOffertaElenco.resx">
+      <DependentUpon>frmOffertaElenco.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmRicercaTabelle.resx">
       <DependentUpon>frmRicercaTabelle.vb</DependentUpon>
@@ -1292,6 +1324,723 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XLS-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_document_delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_document_edit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_document_plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocModifica1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Allegato1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiudi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAttesa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBlocca1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCerca1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocDuplica1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocElimina1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocExcel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocLink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-group-line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Allegato11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivio11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiudi11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAttesa11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBlocca11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCerca11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocDuplica11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocElimina11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocExcel11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocLink11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivio12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiudi12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAttesa12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBlocca12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCerca12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocDuplica12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocElimina12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocExcel12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocLink12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Allegato111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivio111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiudi111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAttesa111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBlocca111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCerca111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocDuplica111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocElimina111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocExcel111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocLink111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aggiorna - Eccezione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aggiorna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Allegato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azienda - Dipartimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azienda - Organizzazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario - Pagamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario - Settimana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerca - dettaglio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cestino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chiudi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Commento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comunicazione - Alternato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comunicazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagramma di Venn RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagramma di Venn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAggiorna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAnnulla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocAttesa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBarcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocBlocca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCerca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocCollega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocDuplica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocElimina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocExcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocFiltro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocImmagine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocModifica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocNotizie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocOpzioni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocOrdine d%27acquisto - Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocOrdine d%27acquisto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocPdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocPreferito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocProcesso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocQrCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocSalva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocScaduto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocScanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocStat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura - Cartella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura - Cassa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura - Monete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura - Ricevuta Cassa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura - Ricevuta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fattura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiamma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fun - Stormtrooper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garanzia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grafico - Economico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lavori in Option - corso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista - Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lista - Controllo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail - %40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail - Aggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail - New Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail - Rubrica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mappe - Località.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obiettivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option - Ingranaggi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option - Ingranaggio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option - Manutenzione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option - Ordinamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option - Strumenti di amministrazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option Privacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promemoria - Aggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promemoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riavvio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RiquadroApri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RiquadroChiudi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scambio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Servizio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spegni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stampante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uscita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utenti - Idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utenti - Sviluppo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VideoConferenza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Aggiorna - Eccezione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Aggiorna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Allegato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Archivio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Azienda - Dipartimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Azienda - Organizzazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Azienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Calendario - Pagamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Calendario - Settimana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Cerca - dettaglio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Cestino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Chiudi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Commento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Comunicazione - Alternato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Comunicazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Diagramma di Venn RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Diagramma di Venn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocAggiorna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocAggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocAnnulla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocAttesa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocBarcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocBlocca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocCerca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocCheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocCollega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocDuplica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocElimina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocExcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocFiltro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocImmagine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocModifica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocNotizie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocOpzioni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocOrdine d%27acquisto - Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocOrdine d%27acquisto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocPdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocPreferito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocProcesso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocQrCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocSalva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocScaduto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocScanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_DocStat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura - Cartella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura - Cassa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura - Monete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura - Ricevuta Cassa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura - Ricevuta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fattura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fiamma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Firma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Fun - Stormtrooper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Garanzia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Grafico - Economico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Lavori in Option - corso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Lista - Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Lista - Controllo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Mail - %40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Mail - Aggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Mail - New Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Mail - Rubrica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Mappe - Località.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Obiettivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option - Ingranaggi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option - Ingranaggio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option - Manutenzione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option - Ordinamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option - Strumenti di amministrazione.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option Privacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Promemoria - Aggiungi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Promemoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Riavvio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_RiquadroApri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_RiquadroChiudi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Scambio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Servizio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Spegni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Stampante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Uscita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Utenti - Idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_Utenti - Sviluppo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_VideoConferenza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contratto_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aggiungi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modifica.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rimuovi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Su.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documento-80%287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documento-80%286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documento-80%285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documento-80%283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-lavoratore-uomo-24.png" />
