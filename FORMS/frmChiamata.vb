@@ -86,8 +86,6 @@ Public Class FrmChiamate
             cmdSearchSoc.ThemeName = "buttonDFT"
             cmdSearchCli.ThemeName = "buttonDFT"
             cmdSearchTec.ThemeName = "buttonDFT"
-
-
             cmdFiltro.ThemeName = "buttonDFT"
 
 
@@ -1273,15 +1271,15 @@ Public Class FrmChiamate
             Next
 
 
-                'For Each node As XmlNode In nodes
-                '    targa = node.SelectSingleNode("vehicleName").InnerText
-                '    lat = node.SelectSingleNode("lat").InnerText
-                '    lng = node.SelectSingleNode("lon").InnerText
-                '    elementi.Result.Find(Function(c As elencoTecnici) c.ATARGA = targa)
-                'Next
+            'For Each node As XmlNode In nodes
+            '    targa = node.SelectSingleNode("vehicleName").InnerText
+            '    lat = node.SelectSingleNode("lat").InnerText
+            '    lng = node.SelectSingleNode("lon").InnerText
+            '    elementi.Result.Find(Function(c As elencoTecnici) c.ATARGA = targa)
+            'Next
 
 
-                For i = 0 To elementi.Result.Count - 1
+            For i = 0 To elementi.Result.Count - 1
                 'elementi.Result.Find(Function(c As elencoTecnici) c.ATARGA = targa)
 
 
@@ -1639,4 +1637,6 @@ Public Class FrmChiamate
 
         End Try
     End Sub
+
+
 End Class

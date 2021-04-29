@@ -699,13 +699,9 @@ Public Class FrmImpiantiElenco
 
     Private Sub grid_FilterPopupRequired(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.FilterPopupRequiredEventArgs) Handles grid.FilterPopupRequired
         Try
-
-
             Telerik.WinControls.RadMessageBox.SetThemeName("Office2013Light")
-
             Dim popup As RadListFilterPopup = TryCast(e.FilterPopup, RadListFilterPopup)
             If popup IsNot Nothing Then
-
 
                 If e.Column.Name.ToUpper = "CHECK" OrElse e.Column.Name.ToUpper = "MOD" Then
                     popup.AutoSize = False

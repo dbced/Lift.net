@@ -7,6 +7,9 @@
     Dim r_INDCL As String
     Dim r_LOCCL As String
 
+    Public Overrides Function ToString() As String
+        Return Me.r_CDCLI
+    End Function
     Public Property RASCL() As String
         Get
             Return r_RASCL

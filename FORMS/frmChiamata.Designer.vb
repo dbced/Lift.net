@@ -24,9 +24,9 @@ Partial Class FrmChiamate
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChiamate))
         Dim ListViewDetailColumn1 As Telerik.WinControls.UI.ListViewDetailColumn = New Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Mese apertura")
         Dim ListViewDataItemGroup1 As Telerik.WinControls.UI.ListViewDataItemGroup = New Telerik.WinControls.UI.ListViewDataItemGroup("ListViewGroup 1")
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChiamate))
         Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
@@ -39,17 +39,6 @@ Partial Class FrmChiamate
         Me.t1 = New System.Windows.Forms.Timer(Me.components)
         Me.CrystalTheme1 = New Telerik.WinControls.Themes.CrystalTheme()
         Me.dockGen = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.ToolWinMap = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.map = New Telerik.WinControls.UI.RadMap()
-        Me.RadCommandBar1 = New Telerik.WinControls.UI.RadCommandBar()
-        Me.CommandBarRowElement2 = New Telerik.WinControls.UI.CommandBarRowElement()
-        Me.CommandBarStripElement1 = New Telerik.WinControls.UI.CommandBarStripElement()
-        Me.cmdBcaricaTecnici = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdBCaricaLimit = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdBFocusTec = New Telerik.WinControls.UI.CommandBarButton()
-        Me.cmdBFocusImp = New Telerik.WinControls.UI.CommandBarButton()
-        Me.DocumentContainer2 = New Telerik.WinControls.UI.Docking.DocumentContainer()
-        Me.DocumentTabStrip4 = New Telerik.WinControls.UI.Docking.DocumentTabStrip()
         Me.DocWinElenco = New Telerik.WinControls.UI.Docking.DocumentWindow()
         Me.grid = New Telerik.WinControls.UI.RadGridView()
         Me.wb = New Telerik.WinControls.UI.RadWaitingBar()
@@ -60,6 +49,8 @@ Partial Class FrmChiamate
         Me.cmdInserisci = New Telerik.WinControls.UI.CommandBarButton()
         Me.cmdModChiam = New Telerik.WinControls.UI.CommandBarButton()
         Me.cmdDelChiam = New Telerik.WinControls.UI.CommandBarButton()
+        Me.DocumentContainer2 = New Telerik.WinControls.UI.Docking.DocumentContainer()
+        Me.DocumentTabStrip4 = New Telerik.WinControls.UI.Docking.DocumentTabStrip()
         Me.DocWinRicerca = New Telerik.WinControls.UI.Docking.DocumentWindow()
         Me.listTipoAppalto = New Telerik.WinControls.UI.RadCheckedListBox()
         Me.RadLabel18 = New Telerik.WinControls.UI.RadLabel()
@@ -97,6 +88,15 @@ Partial Class FrmChiamate
         Me.cmdSearchCli = New Telerik.WinControls.UI.RadButton()
         Me.cmdFiltro = New Telerik.WinControls.UI.RadButton()
         Me.DocumentTabStrip1 = New Telerik.WinControls.UI.Docking.DocumentTabStrip()
+        Me.ToolWinMap = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.map = New Telerik.WinControls.UI.RadMap()
+        Me.RadCommandBar1 = New Telerik.WinControls.UI.RadCommandBar()
+        Me.CommandBarRowElement2 = New Telerik.WinControls.UI.CommandBarRowElement()
+        Me.CommandBarStripElement1 = New Telerik.WinControls.UI.CommandBarStripElement()
+        Me.cmdBcaricaTecnici = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdBCaricaLimit = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdBFocusTec = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdBFocusImp = New Telerik.WinControls.UI.CommandBarButton()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolWinSchedaTec = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.cmdAnnulla = New Telerik.WinControls.UI.RadButton()
@@ -143,19 +143,16 @@ Partial Class FrmChiamate
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.dockGen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dockGen.SuspendLayout()
-        Me.ToolWinMap.SuspendLayout()
-        CType(Me.map, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DocumentContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DocumentContainer2.SuspendLayout()
-        CType(Me.DocumentTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DocumentTabStrip4.SuspendLayout()
         Me.DocWinElenco.SuspendLayout()
         CType(Me.grid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grid.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grid.SuspendLayout()
         CType(Me.wb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DocumentContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DocumentContainer2.SuspendLayout()
+        CType(Me.DocumentTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DocumentTabStrip4.SuspendLayout()
         Me.DocWinRicerca.SuspendLayout()
         CType(Me.listTipoAppalto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,6 +187,9 @@ Partial Class FrmChiamate
         CType(Me.cmdFiltro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DocumentTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DocumentTabStrip1.SuspendLayout()
+        Me.ToolWinMap.SuspendLayout()
+        CType(Me.map, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip1.SuspendLayout()
         Me.ToolWinSchedaTec.SuspendLayout()
@@ -250,7 +250,7 @@ Partial Class FrmChiamate
         '
         'dockGen
         '
-        Me.dockGen.ActiveWindow = Me.DocWinElenco
+        Me.dockGen.ActiveWindow = Me.DocWinRicerca
         Me.dockGen.CausesValidation = False
         Me.dockGen.Controls.Add(Me.DocumentContainer2)
         Me.dockGen.Controls.Add(Me.ToolTabStrip1)
@@ -270,166 +270,6 @@ Partial Class FrmChiamate
         Me.dockGen.TabIndex = 194
         Me.dockGen.TabStop = False
         Me.dockGen.ThemeName = "Fluent"
-        '
-        'ToolWinMap
-        '
-        Me.ToolWinMap.Caption = Nothing
-        Me.ToolWinMap.Controls.Add(Me.map)
-        Me.ToolWinMap.Controls.Add(Me.RadCommandBar1)
-        Me.ToolWinMap.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
-        Me.ToolWinMap.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinMap.Image = CType(resources.GetObject("ToolWinMap.Image"), System.Drawing.Image)
-        Me.ToolWinMap.Location = New System.Drawing.Point(5, 41)
-        Me.ToolWinMap.Name = "ToolWinMap"
-        Me.ToolWinMap.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Floating
-        Me.ToolWinMap.Size = New System.Drawing.Size(457, 374)
-        Me.ToolWinMap.Text = "MAPPA"
-        Me.ToolWinMap.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
-        '
-        'map
-        '
-        Me.map.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.map.Location = New System.Drawing.Point(62, 0)
-        Me.map.Name = "map"
-        Me.map.ShowLegend = False
-        Me.map.ShowMiniMap = False
-        Me.map.ShowScaleIndicator = False
-        Me.map.ShowSearchBar = False
-        Me.map.Size = New System.Drawing.Size(395, 374)
-        Me.map.TabIndex = 1
-        Me.map.ThemeName = "Fluent"
-        '
-        'RadCommandBar1
-        '
-        Me.RadCommandBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.RadCommandBar1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RadCommandBar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadCommandBar1.Location = New System.Drawing.Point(0, 0)
-        Me.RadCommandBar1.Name = "RadCommandBar1"
-        Me.RadCommandBar1.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.RadCommandBar1.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement2})
-        Me.RadCommandBar1.Size = New System.Drawing.Size(62, 374)
-        Me.RadCommandBar1.TabIndex = 246
-        Me.RadCommandBar1.ThemeName = "Crystal"
-        '
-        'CommandBarRowElement2
-        '
-        Me.CommandBarRowElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarRowElement2.MinSize = New System.Drawing.Size(25, 25)
-        Me.CommandBarRowElement2.Name = "CommandBarRowElement1"
-        Me.CommandBarRowElement2.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.CommandBarStripElement1})
-        Me.CommandBarRowElement2.Text = ""
-        Me.CommandBarRowElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarRowElement2.UseCompatibleTextRendering = False
-        '
-        'CommandBarStripElement1
-        '
-        Me.CommandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarStripElement1.DisplayName = "CommandBarStripElement1"
-        Me.CommandBarStripElement1.GradientAngle = 630.0!
-        '
-        '
-        '
-        Me.CommandBarStripElement1.Grip.AngleTransform = 90.0!
-        Me.CommandBarStripElement1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdBcaricaTecnici, Me.cmdBCaricaLimit, Me.cmdBFocusTec, Me.cmdBFocusImp})
-        Me.CommandBarStripElement1.Name = "CommandBarStripE1"
-        '
-        '
-        '
-        Me.CommandBarStripElement1.OverflowButton.AngleTransform = 90.0!
-        Me.CommandBarStripElement1.StretchHorizontally = False
-        Me.CommandBarStripElement1.StretchVertically = False
-        Me.CommandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.CommandBarStripElement1.UseCompatibleTextRendering = False
-        CType(Me.CommandBarStripElement1.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarGrip).AngleTransform = 90.0!
-        CType(Me.CommandBarStripElement1.GetChildAt(2), Telerik.WinControls.UI.RadCommandBarOverflowButton).AngleTransform = 90.0!
-        '
-        'cmdBcaricaTecnici
-        '
-        Me.cmdBcaricaTecnici.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBcaricaTecnici.DisplayName = "CommandBarButton1"
-        Me.cmdBcaricaTecnici.DrawText = False
-        Me.cmdBcaricaTecnici.Image = CType(resources.GetObject("cmdBcaricaTecnici.Image"), System.Drawing.Image)
-        Me.cmdBcaricaTecnici.Name = "cmdBcaricaTecnici"
-        Me.cmdBcaricaTecnici.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.cmdBcaricaTecnici.Text = "Inserisci"
-        Me.cmdBcaricaTecnici.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdBcaricaTecnici.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBcaricaTecnici.ToolTipText = "Carica tecnici sulla mappa"
-        Me.cmdBcaricaTecnici.UseCompatibleTextRendering = False
-        '
-        'cmdBCaricaLimit
-        '
-        Me.cmdBCaricaLimit.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBCaricaLimit.DisplayName = "CommandBarButton2"
-        Me.cmdBCaricaLimit.DrawText = False
-        Me.cmdBCaricaLimit.Image = CType(resources.GetObject("cmdBCaricaLimit.Image"), System.Drawing.Image)
-        Me.cmdBCaricaLimit.Name = "cmdBCaricaLimit"
-        Me.cmdBCaricaLimit.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.cmdBCaricaLimit.Text = "Modifica"
-        Me.cmdBCaricaLimit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdBCaricaLimit.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBCaricaLimit.ToolTipText = "Carica tecnici nel raggio di 10 km"
-        Me.cmdBCaricaLimit.UseCompatibleTextRendering = False
-        '
-        'cmdBFocusTec
-        '
-        Me.cmdBFocusTec.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBFocusTec.DisplayName = "CommandBarButton1"
-        Me.cmdBFocusTec.DrawText = False
-        Me.cmdBFocusTec.Image = CType(resources.GetObject("cmdBFocusTec.Image"), System.Drawing.Image)
-        Me.cmdBFocusTec.Name = "cmdBFocusTec"
-        Me.cmdBFocusTec.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.cmdBFocusTec.Text = "Elimina"
-        Me.cmdBFocusTec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdBFocusTec.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.cmdBFocusTec.ToolTipText = "diminuisci"
-        Me.cmdBFocusTec.UseCompatibleTextRendering = False
-        '
-        'cmdBFocusImp
-        '
-        Me.cmdBFocusImp.DisplayName = "CommandBarButton1"
-        Me.cmdBFocusImp.Image = CType(resources.GetObject("cmdBFocusImp.Image"), System.Drawing.Image)
-        Me.cmdBFocusImp.Name = "cmdBFocusImp"
-        Me.cmdBFocusImp.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.cmdBFocusImp.Text = "CommandBarButton1"
-        '
-        'DocumentContainer2
-        '
-        Me.DocumentContainer2.CausesValidation = False
-        Me.DocumentContainer2.Controls.Add(Me.DocumentTabStrip4)
-        Me.DocumentContainer2.Controls.Add(Me.DocumentTabStrip1)
-        Me.DocumentContainer2.Name = "DocumentContainer2"
-        '
-        '
-        '
-        Me.DocumentContainer2.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.DocumentContainer2.SizeInfo.AbsoluteSize = New System.Drawing.Size(546, 422)
-        Me.DocumentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
-        Me.DocumentContainer2.SizeInfo.SplitterCorrection = New System.Drawing.Size(-552, -847)
-        Me.DocumentContainer2.SplitterWidth = 8
-        Me.DocumentContainer2.ThemeName = "Fluent"
-        '
-        'DocumentTabStrip4
-        '
-        Me.DocumentTabStrip4.CanUpdateChildIndex = True
-        Me.DocumentTabStrip4.CausesValidation = False
-        Me.DocumentTabStrip4.Controls.Add(Me.DocWinElenco)
-        Me.DocumentTabStrip4.Controls.Add(Me.DocWinRicerca)
-        Me.DocumentTabStrip4.Location = New System.Drawing.Point(0, 0)
-        Me.DocumentTabStrip4.Name = "DocumentTabStrip4"
-        '
-        '
-        '
-        Me.DocumentTabStrip4.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.DocumentTabStrip4.SelectedIndex = 0
-        Me.DocumentTabStrip4.Size = New System.Drawing.Size(888, 422)
-        Me.DocumentTabStrip4.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 374)
-        Me.DocumentTabStrip4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.1543847!, 0!)
-        Me.DocumentTabStrip4.SizeInfo.SplitterCorrection = New System.Drawing.Size(203, 174)
-        Me.DocumentTabStrip4.TabIndex = 2
-        Me.DocumentTabStrip4.TabStop = False
-        Me.DocumentTabStrip4.ThemeName = "Fluent"
         '
         'DocWinElenco
         '
@@ -453,7 +293,7 @@ Partial Class FrmChiamate
         Me.grid.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.grid.ForeColor = System.Drawing.Color.Black
         Me.grid.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.grid.Location = New System.Drawing.Point(0, 55)
+        Me.grid.Location = New System.Drawing.Point(0, 30)
         '
         '
         '
@@ -466,7 +306,7 @@ Partial Class FrmChiamate
         Me.grid.Name = "grid"
         Me.grid.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.grid.ShowGroupPanel = False
-        Me.grid.Size = New System.Drawing.Size(876, 319)
+        Me.grid.Size = New System.Drawing.Size(876, 344)
         Me.grid.TabIndex = 0
         Me.grid.ThemeName = "Office2013Dark"
         '
@@ -506,7 +346,7 @@ Partial Class FrmChiamate
         Me.cmdBar.Location = New System.Drawing.Point(0, 0)
         Me.cmdBar.Name = "cmdBar"
         Me.cmdBar.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement1})
-        Me.cmdBar.Size = New System.Drawing.Size(876, 55)
+        Me.cmdBar.Size = New System.Drawing.Size(876, 30)
         Me.cmdBar.TabIndex = 245
         Me.cmdBar.ThemeName = "Windows8"
         '
@@ -558,6 +398,43 @@ Partial Class FrmChiamate
         Me.cmdDelChiam.Name = "cmdDelChiam"
         Me.cmdDelChiam.Text = "Elimina"
         Me.cmdDelChiam.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        '
+        'DocumentContainer2
+        '
+        Me.DocumentContainer2.CausesValidation = False
+        Me.DocumentContainer2.Controls.Add(Me.DocumentTabStrip4)
+        Me.DocumentContainer2.Controls.Add(Me.DocumentTabStrip1)
+        Me.DocumentContainer2.Name = "DocumentContainer2"
+        '
+        '
+        '
+        Me.DocumentContainer2.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.DocumentContainer2.SizeInfo.AbsoluteSize = New System.Drawing.Size(546, 422)
+        Me.DocumentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
+        Me.DocumentContainer2.SizeInfo.SplitterCorrection = New System.Drawing.Size(-552, -847)
+        Me.DocumentContainer2.SplitterWidth = 8
+        Me.DocumentContainer2.ThemeName = "Fluent"
+        '
+        'DocumentTabStrip4
+        '
+        Me.DocumentTabStrip4.CanUpdateChildIndex = True
+        Me.DocumentTabStrip4.CausesValidation = False
+        Me.DocumentTabStrip4.Controls.Add(Me.DocWinElenco)
+        Me.DocumentTabStrip4.Controls.Add(Me.DocWinRicerca)
+        Me.DocumentTabStrip4.Location = New System.Drawing.Point(0, 0)
+        Me.DocumentTabStrip4.Name = "DocumentTabStrip4"
+        '
+        '
+        '
+        Me.DocumentTabStrip4.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.DocumentTabStrip4.SelectedIndex = 1
+        Me.DocumentTabStrip4.Size = New System.Drawing.Size(888, 422)
+        Me.DocumentTabStrip4.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 374)
+        Me.DocumentTabStrip4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.1543847!, 0!)
+        Me.DocumentTabStrip4.SizeInfo.SplitterCorrection = New System.Drawing.Size(203, 174)
+        Me.DocumentTabStrip4.TabIndex = 2
+        Me.DocumentTabStrip4.TabStop = False
+        Me.DocumentTabStrip4.ThemeName = "Fluent"
         '
         'DocWinRicerca
         '
@@ -1050,6 +927,129 @@ Partial Class FrmChiamate
         Me.DocumentTabStrip1.TabIndex = 1
         Me.DocumentTabStrip1.TabStop = False
         Me.DocumentTabStrip1.ThemeName = "Fluent"
+        '
+        'ToolWinMap
+        '
+        Me.ToolWinMap.Caption = Nothing
+        Me.ToolWinMap.Controls.Add(Me.map)
+        Me.ToolWinMap.Controls.Add(Me.RadCommandBar1)
+        Me.ToolWinMap.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
+        Me.ToolWinMap.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ToolWinMap.Image = CType(resources.GetObject("ToolWinMap.Image"), System.Drawing.Image)
+        Me.ToolWinMap.Location = New System.Drawing.Point(5, 41)
+        Me.ToolWinMap.Name = "ToolWinMap"
+        Me.ToolWinMap.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Floating
+        Me.ToolWinMap.Size = New System.Drawing.Size(457, 374)
+        Me.ToolWinMap.Text = "MAPPA"
+        Me.ToolWinMap.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
+        '
+        'map
+        '
+        Me.map.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.map.Location = New System.Drawing.Point(36, 0)
+        Me.map.Name = "map"
+        Me.map.ShowLegend = False
+        Me.map.ShowMiniMap = False
+        Me.map.ShowScaleIndicator = False
+        Me.map.ShowSearchBar = False
+        Me.map.Size = New System.Drawing.Size(421, 374)
+        Me.map.TabIndex = 1
+        Me.map.ThemeName = "Fluent"
+        '
+        'RadCommandBar1
+        '
+        Me.RadCommandBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.RadCommandBar1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RadCommandBar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RadCommandBar1.Location = New System.Drawing.Point(0, 0)
+        Me.RadCommandBar1.Name = "RadCommandBar1"
+        Me.RadCommandBar1.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.RadCommandBar1.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement2})
+        Me.RadCommandBar1.Size = New System.Drawing.Size(36, 374)
+        Me.RadCommandBar1.TabIndex = 246
+        Me.RadCommandBar1.ThemeName = "Crystal"
+        '
+        'CommandBarRowElement2
+        '
+        Me.CommandBarRowElement2.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarRowElement2.MinSize = New System.Drawing.Size(25, 25)
+        Me.CommandBarRowElement2.Name = "CommandBarRowElement1"
+        Me.CommandBarRowElement2.Strips.AddRange(New Telerik.WinControls.UI.CommandBarStripElement() {Me.CommandBarStripElement1})
+        Me.CommandBarRowElement2.Text = ""
+        Me.CommandBarRowElement2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarRowElement2.UseCompatibleTextRendering = False
+        '
+        'CommandBarStripElement1
+        '
+        Me.CommandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarStripElement1.DisplayName = "CommandBarStripElement1"
+        Me.CommandBarStripElement1.GradientAngle = 1170.0!
+        '
+        '
+        '
+        Me.CommandBarStripElement1.Grip.AngleTransform = 90.0!
+        Me.CommandBarStripElement1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdBcaricaTecnici, Me.cmdBCaricaLimit, Me.cmdBFocusTec, Me.cmdBFocusImp})
+        Me.CommandBarStripElement1.Name = "CommandBarStripE1"
+        '
+        '
+        '
+        Me.CommandBarStripElement1.OverflowButton.AngleTransform = 90.0!
+        Me.CommandBarStripElement1.StretchHorizontally = False
+        Me.CommandBarStripElement1.StretchVertically = False
+        Me.CommandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.CommandBarStripElement1.UseCompatibleTextRendering = False
+        CType(Me.CommandBarStripElement1.GetChildAt(0), Telerik.WinControls.UI.RadCommandBarGrip).AngleTransform = 90.0!
+        CType(Me.CommandBarStripElement1.GetChildAt(2), Telerik.WinControls.UI.RadCommandBarOverflowButton).AngleTransform = 90.0!
+        '
+        'cmdBcaricaTecnici
+        '
+        Me.cmdBcaricaTecnici.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBcaricaTecnici.DisplayName = "CommandBarButton1"
+        Me.cmdBcaricaTecnici.DrawText = False
+        Me.cmdBcaricaTecnici.Image = CType(resources.GetObject("cmdBcaricaTecnici.Image"), System.Drawing.Image)
+        Me.cmdBcaricaTecnici.Name = "cmdBcaricaTecnici"
+        Me.cmdBcaricaTecnici.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.cmdBcaricaTecnici.Text = "Inserisci"
+        Me.cmdBcaricaTecnici.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdBcaricaTecnici.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBcaricaTecnici.ToolTipText = "Carica tecnici sulla mappa"
+        Me.cmdBcaricaTecnici.UseCompatibleTextRendering = False
+        '
+        'cmdBCaricaLimit
+        '
+        Me.cmdBCaricaLimit.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBCaricaLimit.DisplayName = "CommandBarButton2"
+        Me.cmdBCaricaLimit.DrawText = False
+        Me.cmdBCaricaLimit.Image = CType(resources.GetObject("cmdBCaricaLimit.Image"), System.Drawing.Image)
+        Me.cmdBCaricaLimit.Name = "cmdBCaricaLimit"
+        Me.cmdBCaricaLimit.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.cmdBCaricaLimit.Text = "Modifica"
+        Me.cmdBCaricaLimit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdBCaricaLimit.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBCaricaLimit.ToolTipText = "Carica tecnici nel raggio di 10 km"
+        Me.cmdBCaricaLimit.UseCompatibleTextRendering = False
+        '
+        'cmdBFocusTec
+        '
+        Me.cmdBFocusTec.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBFocusTec.DisplayName = "CommandBarButton1"
+        Me.cmdBFocusTec.DrawText = False
+        Me.cmdBFocusTec.Image = CType(resources.GetObject("cmdBFocusTec.Image"), System.Drawing.Image)
+        Me.cmdBFocusTec.Name = "cmdBFocusTec"
+        Me.cmdBFocusTec.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.cmdBFocusTec.Text = "Elimina"
+        Me.cmdBFocusTec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdBFocusTec.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.cmdBFocusTec.ToolTipText = "diminuisci"
+        Me.cmdBFocusTec.UseCompatibleTextRendering = False
+        '
+        'cmdBFocusImp
+        '
+        Me.cmdBFocusImp.DisplayName = "CommandBarButton1"
+        Me.cmdBFocusImp.Image = CType(resources.GetObject("cmdBFocusImp.Image"), System.Drawing.Image)
+        Me.cmdBFocusImp.Name = "cmdBFocusImp"
+        Me.cmdBFocusImp.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.cmdBFocusImp.Text = "CommandBarButton1"
         '
         'ToolTabStrip1
         '
@@ -1714,14 +1714,6 @@ Partial Class FrmChiamate
         Me.ThemeName = "MaterialBlueGrey"
         CType(Me.dockGen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dockGen.ResumeLayout(False)
-        Me.ToolWinMap.ResumeLayout(False)
-        Me.ToolWinMap.PerformLayout()
-        CType(Me.map, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DocumentContainer2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DocumentContainer2.ResumeLayout(False)
-        CType(Me.DocumentTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DocumentTabStrip4.ResumeLayout(False)
         Me.DocWinElenco.ResumeLayout(False)
         Me.DocWinElenco.PerformLayout()
         CType(Me.grid.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1730,6 +1722,10 @@ Partial Class FrmChiamate
         Me.grid.PerformLayout()
         CType(Me.wb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DocumentContainer2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DocumentContainer2.ResumeLayout(False)
+        CType(Me.DocumentTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DocumentTabStrip4.ResumeLayout(False)
         Me.DocWinRicerca.ResumeLayout(False)
         Me.DocWinRicerca.PerformLayout()
         CType(Me.listTipoAppalto, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1765,6 +1761,10 @@ Partial Class FrmChiamate
         CType(Me.cmdFiltro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DocumentTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DocumentTabStrip1.ResumeLayout(False)
+        Me.ToolWinMap.ResumeLayout(False)
+        Me.ToolWinMap.PerformLayout()
+        CType(Me.map, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCommandBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolTabStrip1.ResumeLayout(False)
         Me.ToolWinSchedaTec.ResumeLayout(False)

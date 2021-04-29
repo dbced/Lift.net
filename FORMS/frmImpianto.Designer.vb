@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmImpianto
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmImpianto
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
@@ -28,6 +28,7 @@ Partial Class FrmImpianto
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmImpianto))
         Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim ListViewDetailColumn1 As Telerik.WinControls.UI.ListViewDetailColumn = New Telerik.WinControls.UI.ListViewDetailColumn("Column 0", "Mese apertura")
         Dim ListViewDataItemGroup1 As Telerik.WinControls.UI.ListViewDataItemGroup = New Telerik.WinControls.UI.ListViewDataItemGroup("ListViewGroup 1")
         Dim ListViewDataItem1 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Gennaio")
@@ -42,7 +43,6 @@ Partial Class FrmImpianto
         Dim ListViewDataItem10 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Ottobre")
         Dim ListViewDataItem11 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Novembre")
         Dim ListViewDataItem12 As Telerik.WinControls.UI.ListViewDataItem = New Telerik.WinControls.UI.ListViewDataItem("Dicembre")
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim CartesianArea1 As Telerik.WinControls.UI.CartesianArea = New Telerik.WinControls.UI.CartesianArea()
         Dim TableViewDefinition7 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
@@ -164,6 +164,10 @@ Partial Class FrmImpianto
         Me.rpPageScadenze = New Telerik.WinControls.UI.RadPageViewPage()
         Me.dockVisite = New Telerik.WinControls.UI.Docking.RadDock()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
+        Me.ToolWinTasks = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.GridTask = New Telerik.WinControls.UI.RadGridView()
+        Me.RadSplitContainer4 = New Telerik.WinControls.UI.RadSplitContainer()
+        Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolWinTipiVis = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.txtEsecMin = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel40 = New Telerik.WinControls.UI.RadLabel()
@@ -185,10 +189,6 @@ Partial Class FrmImpianto
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.txtVisFrequenza = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.gridTpVis = New Telerik.WinControls.UI.RadGridView()
-        Me.RadSplitContainer4 = New Telerik.WinControls.UI.RadSplitContainer()
-        Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.ToolWinTasks = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.GridTask = New Telerik.WinControls.UI.RadGridView()
         Me.ToolTabStrip9 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolWinGrafico = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.chartVis = New Telerik.WinControls.UI.RadChartView()
@@ -370,6 +370,13 @@ Partial Class FrmImpianto
         Me.dockVisite.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DocumentContainer1.SuspendLayout()
+        Me.ToolWinTasks.SuspendLayout()
+        CType(Me.GridTask, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridTask.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadSplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadSplitContainer4.SuspendLayout()
+        CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolTabStrip4.SuspendLayout()
         Me.ToolWinTipiVis.SuspendLayout()
         CType(Me.txtEsecMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel40, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -392,13 +399,6 @@ Partial Class FrmImpianto
         CType(Me.txtVisFrequenza, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridTpVis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridTpVis.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadSplitContainer4.SuspendLayout()
-        CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolTabStrip4.SuspendLayout()
-        Me.ToolWinTasks.SuspendLayout()
-        CType(Me.GridTask, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridTask.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip9.SuspendLayout()
         Me.ToolWinGrafico.SuspendLayout()
@@ -548,10 +548,10 @@ Partial Class FrmImpianto
         '
         Me.rpPageGen.Controls.Add(Me.dockGen)
         Me.rpPageGen.Image = CType(resources.GetObject("rpPageGen.Image"), System.Drawing.Image)
-        Me.rpPageGen.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
-        Me.rpPageGen.Location = New System.Drawing.Point(55, 49)
+        Me.rpPageGen.ItemSize = New System.Drawing.SizeF(275.0!, 40.0!)
+        Me.rpPageGen.Location = New System.Drawing.Point(276, 49)
         Me.rpPageGen.Name = "rpPageGen"
-        Me.rpPageGen.Size = New System.Drawing.Size(1618, 789)
+        Me.rpPageGen.Size = New System.Drawing.Size(1397, 789)
         Me.rpPageGen.Text = "GESTIONE ANAGRAFICA IMPIANTO"
         '
         'dockGen
@@ -570,7 +570,7 @@ Partial Class FrmImpianto
         '
         '
         Me.dockGen.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.dockGen.Size = New System.Drawing.Size(1618, 789)
+        Me.dockGen.Size = New System.Drawing.Size(1397, 789)
         Me.dockGen.SplitterWidth = 8
         Me.dockGen.TabIndex = 193
         Me.dockGen.TabStop = False
@@ -640,7 +640,7 @@ Partial Class FrmImpianto
         Me.DocWinImpianto.Location = New System.Drawing.Point(5, 35)
         Me.DocWinImpianto.Name = "DocWinImpianto"
         Me.DocWinImpianto.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
-        Me.DocWinImpianto.Size = New System.Drawing.Size(1061, 747)
+        Me.DocWinImpianto.Size = New System.Drawing.Size(840, 747)
         Me.DocWinImpianto.Text = "Dati Generali Impianto"
         '
         'cmbInfo
@@ -788,8 +788,8 @@ Partial Class FrmImpianto
         Me.pageDett.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pageDett.Location = New System.Drawing.Point(0, 546)
         Me.pageDett.Name = "pageDett"
-        Me.pageDett.SelectedPage = Me.RadPageViewPage1
-        Me.pageDett.Size = New System.Drawing.Size(1061, 201)
+        Me.pageDett.SelectedPage = Me.RadPageViewPage3
+        Me.pageDett.Size = New System.Drawing.Size(840, 201)
         Me.pageDett.TabIndex = 198
         Me.pageDett.ThemeName = "Fluent"
         '
@@ -906,7 +906,7 @@ Partial Class FrmImpianto
         Me.RadPageViewPage2.ItemSize = New System.Drawing.SizeF(92.0!, 34.0!)
         Me.RadPageViewPage2.Location = New System.Drawing.Point(6, 40)
         Me.RadPageViewPage2.Name = "RadPageViewPage2"
-        Me.RadPageViewPage2.Size = New System.Drawing.Size(1051, 155)
+        Me.RadPageViewPage2.Size = New System.Drawing.Size(1049, 155)
         Me.RadPageViewPage2.Text = "Reperibilità"
         '
         'cmbReperib
@@ -1000,7 +1000,7 @@ Partial Class FrmImpianto
         Me.RadPageViewPage3.ItemSize = New System.Drawing.SizeF(103.0!, 34.0!)
         Me.RadPageViewPage3.Location = New System.Drawing.Point(6, 40)
         Me.RadPageViewPage3.Name = "RadPageViewPage3"
-        Me.RadPageViewPage3.Size = New System.Drawing.Size(1051, 155)
+        Me.RadPageViewPage3.Size = New System.Drawing.Size(828, 155)
         Me.RadPageViewPage3.Text = "Telesoccorso"
         '
         'txtTelesoccorso
@@ -1750,7 +1750,7 @@ Partial Class FrmImpianto
         '
         Me.DocumentTabStrip2.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.DocumentTabStrip2.SelectedIndex = 0
-        Me.DocumentTabStrip2.Size = New System.Drawing.Size(1073, 789)
+        Me.DocumentTabStrip2.Size = New System.Drawing.Size(852, 789)
         Me.DocumentTabStrip2.TabIndex = 0
         Me.DocumentTabStrip2.TabStop = False
         Me.DocumentTabStrip2.ThemeName = "Fluent"
@@ -1761,7 +1761,7 @@ Partial Class FrmImpianto
         Me.RadSplitContainer1.Controls.Add(Me.ToolTabStrip7)
         Me.RadSplitContainer1.Controls.Add(Me.ToolTabStrip8)
         Me.RadSplitContainer1.IsCleanUpTarget = True
-        Me.RadSplitContainer1.Location = New System.Drawing.Point(1081, 0)
+        Me.RadSplitContainer1.Location = New System.Drawing.Point(860, 0)
         Me.RadSplitContainer1.Name = "RadSplitContainer1"
         Me.RadSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadSplitContainer1.Padding = New System.Windows.Forms.Padding(5)
@@ -1881,7 +1881,7 @@ Partial Class FrmImpianto
         '
         Me.rpPageScadenze.Controls.Add(Me.dockVisite)
         Me.rpPageScadenze.Image = CType(resources.GetObject("rpPageScadenze.Image"), System.Drawing.Image)
-        Me.rpPageScadenze.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
+        Me.rpPageScadenze.ItemSize = New System.Drawing.SizeF(275.0!, 40.0!)
         Me.rpPageScadenze.Location = New System.Drawing.Point(55, 49)
         Me.rpPageScadenze.Name = "rpPageScadenze"
         Me.rpPageScadenze.Size = New System.Drawing.Size(1618, 789)
@@ -1889,7 +1889,7 @@ Partial Class FrmImpianto
         '
         'dockVisite
         '
-        Me.dockVisite.ActiveWindow = Me.ToolWinTipiVis
+        Me.dockVisite.ActiveWindow = Me.ToolWinTasks
         Me.dockVisite.CausesValidation = False
         Me.dockVisite.Controls.Add(Me.RadSplitContainer4)
         Me.dockVisite.Controls.Add(Me.DocumentContainer1)
@@ -1926,6 +1926,87 @@ Partial Class FrmImpianto
         Me.DocumentContainer1.SplitterWidth = 8
         Me.DocumentContainer1.TabIndex = 2
         Me.DocumentContainer1.ThemeName = "Fluent"
+        '
+        'ToolWinTasks
+        '
+        Me.ToolWinTasks.Caption = Nothing
+        Me.ToolWinTasks.Controls.Add(Me.GridTask)
+        Me.ToolWinTasks.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
+        Me.ToolWinTasks.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ToolWinTasks.Location = New System.Drawing.Point(4, 34)
+        Me.ToolWinTasks.Name = "ToolWinTasks"
+        Me.ToolWinTasks.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWinTasks.Size = New System.Drawing.Size(957, 279)
+        Me.ToolWinTasks.Text = "TASKS VISITA"
+        Me.ToolWinTasks.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
+        '
+        'GridTask
+        '
+        Me.GridTask.BackColor = System.Drawing.Color.White
+        Me.GridTask.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridTask.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.GridTask.ForeColor = System.Drawing.Color.Black
+        Me.GridTask.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.GridTask.Location = New System.Drawing.Point(0, 0)
+        '
+        '
+        '
+        Me.GridTask.MasterTemplate.AllowAddNewRow = False
+        Me.GridTask.MasterTemplate.AllowColumnChooser = False
+        Me.GridTask.MasterTemplate.AllowDeleteRow = False
+        Me.GridTask.MasterTemplate.AllowDragToGroup = False
+        Me.GridTask.MasterTemplate.AllowRowResize = False
+        Me.GridTask.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        Me.GridTask.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.GridTask.Name = "GridTask"
+        Me.GridTask.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.GridTask.ShowGroupPanel = False
+        Me.GridTask.Size = New System.Drawing.Size(957, 279)
+        Me.GridTask.TabIndex = 189
+        Me.GridTask.ThemeName = "Fluent"
+        '
+        'RadSplitContainer4
+        '
+        Me.RadSplitContainer4.CausesValidation = False
+        Me.RadSplitContainer4.Controls.Add(Me.ToolTabStrip4)
+        Me.RadSplitContainer4.Controls.Add(Me.ToolTabStrip9)
+        Me.RadSplitContainer4.IsCleanUpTarget = True
+        Me.RadSplitContainer4.Location = New System.Drawing.Point(0, 0)
+        Me.RadSplitContainer4.Name = "RadSplitContainer4"
+        Me.RadSplitContainer4.Padding = New System.Windows.Forms.Padding(5)
+        '
+        '
+        '
+        Me.RadSplitContainer4.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.RadSplitContainer4.Size = New System.Drawing.Size(1618, 340)
+        Me.RadSplitContainer4.SizeInfo.AbsoluteSize = New System.Drawing.Size(342, 340)
+        Me.RadSplitContainer4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0006242096!, 0!)
+        Me.RadSplitContainer4.SizeInfo.SplitterCorrection = New System.Drawing.Size(141, 140)
+        Me.RadSplitContainer4.SplitterWidth = 8
+        Me.RadSplitContainer4.TabIndex = 6
+        Me.RadSplitContainer4.TabStop = False
+        Me.RadSplitContainer4.ThemeName = "Fluent"
+        '
+        'ToolTabStrip4
+        '
+        Me.ToolTabStrip4.CanUpdateChildIndex = True
+        Me.ToolTabStrip4.CausesValidation = False
+        Me.ToolTabStrip4.Controls.Add(Me.ToolWinTipiVis)
+        Me.ToolTabStrip4.Controls.Add(Me.ToolWinTasks)
+        Me.ToolTabStrip4.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip4.Name = "ToolTabStrip4"
+        '
+        '
+        '
+        Me.ToolTabStrip4.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip4.SelectedIndex = 1
+        Me.ToolTabStrip4.Size = New System.Drawing.Size(965, 340)
+        Me.ToolTabStrip4.SizeInfo.AbsoluteSize = New System.Drawing.Size(342, 281)
+        Me.ToolTabStrip4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.09925556!, 0!)
+        Me.ToolTabStrip4.SizeInfo.SplitterCorrection = New System.Drawing.Size(302, 81)
+        Me.ToolTabStrip4.TabIndex = 6
+        Me.ToolTabStrip4.TabStop = False
+        Me.ToolTabStrip4.ThemeName = "Fluent"
         '
         'ToolWinTipiVis
         '
@@ -2233,94 +2314,13 @@ Partial Class FrmImpianto
         Me.gridTpVis.MasterTemplate.AllowDeleteRow = False
         Me.gridTpVis.MasterTemplate.AllowDragToGroup = False
         Me.gridTpVis.MasterTemplate.AllowRowResize = False
-        Me.gridTpVis.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.gridTpVis.MasterTemplate.ViewDefinition = TableViewDefinition6
         Me.gridTpVis.Name = "gridTpVis"
         Me.gridTpVis.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.gridTpVis.ShowGroupPanel = False
         Me.gridTpVis.Size = New System.Drawing.Size(469, 279)
         Me.gridTpVis.TabIndex = 188
         Me.gridTpVis.ThemeName = "Fluent"
-        '
-        'RadSplitContainer4
-        '
-        Me.RadSplitContainer4.CausesValidation = False
-        Me.RadSplitContainer4.Controls.Add(Me.ToolTabStrip4)
-        Me.RadSplitContainer4.Controls.Add(Me.ToolTabStrip9)
-        Me.RadSplitContainer4.IsCleanUpTarget = True
-        Me.RadSplitContainer4.Location = New System.Drawing.Point(0, 0)
-        Me.RadSplitContainer4.Name = "RadSplitContainer4"
-        Me.RadSplitContainer4.Padding = New System.Windows.Forms.Padding(5)
-        '
-        '
-        '
-        Me.RadSplitContainer4.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainer4.Size = New System.Drawing.Size(1618, 340)
-        Me.RadSplitContainer4.SizeInfo.AbsoluteSize = New System.Drawing.Size(342, 340)
-        Me.RadSplitContainer4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.0006242096!, 0!)
-        Me.RadSplitContainer4.SizeInfo.SplitterCorrection = New System.Drawing.Size(141, 140)
-        Me.RadSplitContainer4.SplitterWidth = 8
-        Me.RadSplitContainer4.TabIndex = 6
-        Me.RadSplitContainer4.TabStop = False
-        Me.RadSplitContainer4.ThemeName = "Fluent"
-        '
-        'ToolTabStrip4
-        '
-        Me.ToolTabStrip4.CanUpdateChildIndex = True
-        Me.ToolTabStrip4.CausesValidation = False
-        Me.ToolTabStrip4.Controls.Add(Me.ToolWinTipiVis)
-        Me.ToolTabStrip4.Controls.Add(Me.ToolWinTasks)
-        Me.ToolTabStrip4.Location = New System.Drawing.Point(0, 0)
-        Me.ToolTabStrip4.Name = "ToolTabStrip4"
-        '
-        '
-        '
-        Me.ToolTabStrip4.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip4.SelectedIndex = 0
-        Me.ToolTabStrip4.Size = New System.Drawing.Size(965, 340)
-        Me.ToolTabStrip4.SizeInfo.AbsoluteSize = New System.Drawing.Size(342, 281)
-        Me.ToolTabStrip4.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.09925556!, 0!)
-        Me.ToolTabStrip4.SizeInfo.SplitterCorrection = New System.Drawing.Size(302, 81)
-        Me.ToolTabStrip4.TabIndex = 6
-        Me.ToolTabStrip4.TabStop = False
-        Me.ToolTabStrip4.ThemeName = "Fluent"
-        '
-        'ToolWinTasks
-        '
-        Me.ToolWinTasks.Caption = Nothing
-        Me.ToolWinTasks.Controls.Add(Me.GridTask)
-        Me.ToolWinTasks.DocumentButtons = Telerik.WinControls.UI.Docking.DocumentStripButtons.None
-        Me.ToolWinTasks.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.ToolWinTasks.Location = New System.Drawing.Point(4, 34)
-        Me.ToolWinTasks.Name = "ToolWinTasks"
-        Me.ToolWinTasks.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWinTasks.Size = New System.Drawing.Size(957, 279)
-        Me.ToolWinTasks.Text = "TASKS VISITA"
-        Me.ToolWinTasks.ToolCaptionButtons = Telerik.WinControls.UI.Docking.ToolStripCaptionButtons.None
-        '
-        'GridTask
-        '
-        Me.GridTask.BackColor = System.Drawing.Color.White
-        Me.GridTask.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridTask.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.GridTask.ForeColor = System.Drawing.Color.Black
-        Me.GridTask.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.GridTask.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.GridTask.MasterTemplate.AllowAddNewRow = False
-        Me.GridTask.MasterTemplate.AllowColumnChooser = False
-        Me.GridTask.MasterTemplate.AllowDeleteRow = False
-        Me.GridTask.MasterTemplate.AllowDragToGroup = False
-        Me.GridTask.MasterTemplate.AllowRowResize = False
-        Me.GridTask.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        Me.GridTask.MasterTemplate.ViewDefinition = TableViewDefinition6
-        Me.GridTask.Name = "GridTask"
-        Me.GridTask.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GridTask.ShowGroupPanel = False
-        Me.GridTask.Size = New System.Drawing.Size(957, 279)
-        Me.GridTask.TabIndex = 189
-        Me.GridTask.ThemeName = "Fluent"
         '
         'ToolTabStrip9
         '
@@ -2369,7 +2369,7 @@ Partial Class FrmImpianto
         '
         Me.rpPageAssets.Controls.Add(Me.dockAssets)
         Me.rpPageAssets.Image = CType(resources.GetObject("rpPageAssets.Image"), System.Drawing.Image)
-        Me.rpPageAssets.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
+        Me.rpPageAssets.ItemSize = New System.Drawing.SizeF(275.0!, 40.0!)
         Me.rpPageAssets.Location = New System.Drawing.Point(55, 49)
         Me.rpPageAssets.Name = "rpPageAssets"
         Me.rpPageAssets.Size = New System.Drawing.Size(1618, 789)
@@ -2717,7 +2717,7 @@ Partial Class FrmImpianto
         '
         Me.rpPageDoc.Controls.Add(Me.SplitContainerDoc)
         Me.rpPageDoc.Image = CType(resources.GetObject("rpPageDoc.Image"), System.Drawing.Image)
-        Me.rpPageDoc.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
+        Me.rpPageDoc.ItemSize = New System.Drawing.SizeF(275.0!, 40.0!)
         Me.rpPageDoc.Location = New System.Drawing.Point(55, 49)
         Me.rpPageDoc.Name = "rpPageDoc"
         Me.rpPageDoc.Size = New System.Drawing.Size(1618, 789)
@@ -2931,7 +2931,7 @@ Partial Class FrmImpianto
         'rpPageMappa
         '
         Me.rpPageMappa.Image = CType(resources.GetObject("rpPageMappa.Image"), System.Drawing.Image)
-        Me.rpPageMappa.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
+        Me.rpPageMappa.ItemSize = New System.Drawing.SizeF(275.0!, 40.0!)
         Me.rpPageMappa.Location = New System.Drawing.Point(55, 49)
         Me.rpPageMappa.Name = "rpPageMappa"
         Me.rpPageMappa.Size = New System.Drawing.Size(1618, 789)
@@ -3469,6 +3469,13 @@ Partial Class FrmImpianto
         Me.dockVisite.ResumeLayout(False)
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DocumentContainer1.ResumeLayout(False)
+        Me.ToolWinTasks.ResumeLayout(False)
+        CType(Me.GridTask.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridTask, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadSplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadSplitContainer4.ResumeLayout(False)
+        CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolTabStrip4.ResumeLayout(False)
         Me.ToolWinTipiVis.ResumeLayout(False)
         Me.ToolWinTipiVis.PerformLayout()
         CType(Me.txtEsecMin, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3492,13 +3499,6 @@ Partial Class FrmImpianto
         CType(Me.txtVisFrequenza, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridTpVis.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridTpVis, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadSplitContainer4.ResumeLayout(False)
-        CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolTabStrip4.ResumeLayout(False)
-        Me.ToolWinTasks.ResumeLayout(False)
-        CType(Me.GridTask.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridTask, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolTabStrip9.ResumeLayout(False)
         Me.ToolWinGrafico.ResumeLayout(False)
