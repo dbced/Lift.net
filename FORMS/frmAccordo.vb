@@ -1281,9 +1281,9 @@ Public Class FrmAccordo
             Dim sStatusCode As String = postResponse.StatusCode.ToString
 
             If sStatusCode <> "OK" Then
-                Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio non effettuato. " & vbCrLf & "Causa: " & postResponse.ToString, "Anagrafica impianti", MessageBoxButtons.OK, RadMessageIcon.Info)
+                Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio non effettuato. " & vbCrLf & "Causa: " & postResponse.ToString, "Accordi", MessageBoxButtons.OK, RadMessageIcon.Info)
             Else
-                Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio effettuato", "Anagrafica impianti", MessageBoxButtons.OK, RadMessageIcon.Info)
+                Telerik.WinControls.RadMessageBox.Show(Me, "Salvataggio effettuato", "Accordi", MessageBoxButtons.OK, RadMessageIcon.Info)
                 'idAccordo = sStatusCode
                 If postResponse.IsSuccessStatusCode Then
                     Dim S As String = Await postResponse.Content.ReadAsStringAsync()

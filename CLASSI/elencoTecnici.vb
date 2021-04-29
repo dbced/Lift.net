@@ -2,6 +2,7 @@
     Dim r_ATRAG As String
     Dim r_ATCOD As String
     Dim r_ATIME As String
+    Dim r_ATINV As String
     Dim r_ATQUA As String
     Dim r_ATCEN As String
     Dim r_DESQUA As String
@@ -75,6 +76,16 @@
 
         Set(ByVal Value As String)
             r_ATARGA = Value
+        End Set
+    End Property
+
+    Public Property ATINV() As String
+        Get
+            Return r_ATINV
+        End Get
+
+        Set(ByVal Value As String)
+            r_ATINV = Value
         End Set
     End Property
 

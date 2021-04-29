@@ -31,6 +31,10 @@
     Dim r_ATRAG As String
     Dim r_AICAP As String
     Dim r_A7FLIMPFER As String
+    Dim r_A7DTINI As Date
+    Dim r_A7DTFIN As Date
+    Dim r_A7IMEI As String
+    Dim r_A7INTER As String
 
     Public Property A7SOCMDB() As String
         Get
@@ -354,5 +358,44 @@
         End Set
     End Property
 
+    Public Property A7DTINI() As Date
+        Get
+            Return r_A7DTINI
+        End Get
+
+        Set(ByVal Value As Date)
+            r_A7DTINI = Value
+        End Set
+    End Property
+
+    Public Property A7DTFIN() As Date
+        Get
+            Return r_A7DTFIN
+        End Get
+
+        Set(ByVal Value As Date)
+            r_A7DTFIN = Value
+        End Set
+    End Property
+
+    Public Property A7IMEI() As String
+        Get
+            Return r_A7IMEI
+        End Get
+
+        Set(ByVal Value As String)
+            r_A7IMEI = Value
+        End Set
+    End Property
+
+    Public Property A7INTER() As String
+        Get
+            Return r_A7INTER
+        End Get
+
+        Set(ByVal Value As String)
+            r_A7INTER = Value
+        End Set
+    End Property
 
 End Class

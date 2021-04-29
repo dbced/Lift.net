@@ -1293,5 +1293,41 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lavoratore-uomo-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assistente-24_SEG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lavoratore-uomo-24_CHI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lavoratore-uomo-24_SOF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lavoratore-uomo-24_SOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chiamata-in-uscita-24_ASS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-iphone-x-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-iphone-x-24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-iphone-x-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-android-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-android-30 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-android-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

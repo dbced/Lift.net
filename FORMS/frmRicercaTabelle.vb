@@ -76,7 +76,7 @@ Public Class FrmRicercaTabelle
 
             Else
                 Dim elementi As Threading.Tasks.Task(Of parmTabelle())
-                elementi = ws.getDatiTabella(codiceTabella)
+                elementi = ws.getDatiTabella(codiceTabella, txtDescr.Text, parmFiltro)
                 Await elementi
                 CodElem = "CODELEM"
                 DesElem = "DESELEM"

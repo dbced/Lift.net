@@ -18,6 +18,9 @@ Public Class FrmImpiantiElenco
     Public AICAP As String
     Public AIAMM As String
     Public AISPR As String
+    Public AICCI As String
+    Public AISOC As String
+    Public AICEN As String
 
     Private gElencoCentri As String = ""
     Private user As String
@@ -55,6 +58,7 @@ Public Class FrmImpiantiElenco
         Try
             Dim test As String
             Dim RestURL As String = My.Settings.urlWS & "api/impianti/ImpiantiListParms/GetImpianti2List"
+
             Dim client As New Http.HttpClient
 
             Dim cl As New elenco
@@ -305,6 +309,10 @@ Public Class FrmImpiantiElenco
             colDESTIM.DataType = GetType(String)
             colDESTIM.FieldName = "DESTIM"
 
+            Dim colAICCI As New GridViewTextBoxColumn
+            colAICCI.Name = "AICCI"
+            colAICCI.DataType = GetType(String)
+            colAICCI.FieldName = "AICCI"
 
             'grid.MasterTemplate.Columns.Add(commandColumn)
             'grid.MasterTemplate.Columns.Add(checkBoxColumn)
@@ -322,6 +330,7 @@ Public Class FrmImpiantiElenco
             grid.MasterTemplate.Columns.Add(colAILOC)
             grid.MasterTemplate.Columns.Add(colAISPR)
             grid.MasterTemplate.Columns.Add(colAICAP)
+            grid.MasterTemplate.Columns.Add(colAICCI)
 
 
             'AddHandler grid.CommandCellClick, AddressOf grid_CommandCellClick
@@ -378,7 +387,7 @@ Public Class FrmImpiantiElenco
             'Me.grid.Columns("ALIQUOTA").IsVisible = False
             'Me.grid.Columns("IMPONIBILE").IsVisible = False
             'Me.grid.Columns("IMPOSTA").IsVisible = False
-            'Me.grid.Columns("TOTALE").IsVisible = False
+            Me.grid.Columns("AICCI").IsVisible = False
 
             Me.grid.Columns("CODSOC").ReadOnly = True
             Me.grid.Columns("DESTIM").ReadOnly = True
@@ -853,6 +862,9 @@ Public Class FrmImpiantiElenco
                 AICAP = rowInfo.Cells("AICAP").Value.ToString
                 AIAMM = rowInfo.Cells("AIAMM").Value.ToString
                 AISPR = rowInfo.Cells("AISPR").Value.ToString
+                AICCI = rowInfo.Cells("AICCI").Value.ToString
+                AISOC = rowInfo.Cells("CODSOC").Value.ToString
+                AICEN = rowInfo.Cells("CODCEN").Value.ToString
 
                 Me.Close()
                 Me.Dispose()
@@ -860,7 +872,7 @@ Public Class FrmImpiantiElenco
             End If
 
         Catch ex As Exception
-
+            MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
 End Class

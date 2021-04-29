@@ -756,7 +756,7 @@ Public Class webServices
     End Function
 
 
-    Public Async Function getStatChiamateImpianto(CodImp As String, Optional anno As String = "") As Threading.Tasks.Task(Of List(Of statChiamateImpianto))
+    Public Async Function getStatChiamateImpianto(CodImp As String, Optional anno As String = "", Optional Stati As String = "", Optional Centri As String = "") As Threading.Tasks.Task(Of List(Of statChiamateImpianto))
         Dim elenco As New List(Of statChiamateImpianto)
         Dim lista() As statChiamateImpianto
         Try
@@ -775,6 +775,9 @@ Public Class webServices
                 client.DefaultRequestHeaders.Add("parmAnno", anno)
             End If
 
+            client.DefaultRequestHeaders.Add("parmStati", Stati)
+            client.DefaultRequestHeaders.Add("parmCentri", Centri)
+
             Dim parmImp As parmGetManutenzioniDefault = New parmGetManutenzioniDefault
 
             Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
@@ -788,6 +791,7 @@ Public Class webServices
                 For i As Integer = 0 To lista.Count - 1
                     elenco.Add(lista(i))
                 Next
+
             End If
 
             Return elenco
@@ -1329,4 +1333,114 @@ Public Class webServices
             Return elenco
         End Try
     End Function
+
+    Public Async Function getElencoChiamateMyFleet(IdChiamata As String, centro As String, soc As String, tipoIntervento As String, indAcq As String) As Threading.Tasks.Task(Of List(Of elencoChiamate))
+        Dim elenco As New List(Of elencoChiamate)
+        Dim listaChiamate() As elencoChiamate
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Chiamate/GetElencoChiamateMyFleet/GetElencoChiamateMyFleet"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            client.DefaultRequestHeaders.Add("idChiamata", IdChiamata)
+            client.DefaultRequestHeaders.Add("centro", centro)
+            client.DefaultRequestHeaders.Add("soc", soc)
+            client.DefaultRequestHeaders.Add("intervento", tipoIntervento)
+            client.DefaultRequestHeaders.Add("indacq", indAcq)
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                listaChiamate = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoChiamate())(dati)
+
+                For i As Integer = 0 To listaChiamate.Count - 1
+                    elenco.Add(listaChiamate(i))
+                Next
+            End If
+
+            Return elenco
+
+        Catch ex As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getElencoChiamateTecnicoMyFleet(IdTecnico As String) As Threading.Tasks.Task(Of List(Of elencoChiamate))
+        Dim elenco As New List(Of elencoChiamate)
+        Dim listaChiamate() As elencoChiamate
+
+        Try
+            Dim dati As String
+            '{"cod_tec":"9988","from":"2020-01-01","to":"2021-03-03","status":"chi,ass"}
+
+            Dim RestURL As String = "http://git.gruppodelbo.it/api/v1/lift/Av81!udwYSZ0F7GHiozTAPPER_DEADLOCK_PARAD0X/get_chiamate/"
+            'Dim Parms As String = String.Format("{""cod_tec:"" ""{0}"" ","from":"" ""{1}"",""to"":""{2}"",""status"":""{3}""}", "A000", "2020-01-01", "2020-12-31", "chi,ass")
+
+
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                listaChiamate = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elencoChiamate())(dati)
+
+                For i As Integer = 0 To listaChiamate.Count - 1
+                    elenco.Add(listaChiamate(i))
+                Next
+            End If
+
+            Return elenco
+
+        Catch ex As Exception
+            Return elenco
+        End Try
+    End Function
+
+    Public Async Function getElencoOfferte(parms As elencoAssetsImpianto) As Threading.Tasks.Task(Of List(Of elenco))
+        Dim elenco As New List(Of elenco)
+        Dim offerta() As elenco
+
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/GetOfferteListParms/GetOfferteListParms"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            RestURL = RestURL & "?paramList=" & sParms
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+
+                offerta = Newtonsoft.Json.JsonConvert.DeserializeObject(Of elenco())(dati)
+
+                For i As Integer = 0 To offerta.Count - 1
+                    elenco.Add(offerta(i))
+                Next
+            End If
+            Return elenco
+        Catch ex As Exception
+            Return elenco
+        End Try
+    End Function
+
 End Class

@@ -40,6 +40,8 @@ Public Class FrmContrattiElenco
 
     Private Async Sub carica_contratti()
         Try
+            Dim parms As New elencoAssetsImpianto
+
             Dim stringResponse As String
             Dim RestURL As String = My.Settings.urlWS & "api/Contratti/GetElencoContrattiList/GetElencoContrattiList"
             Dim client As New Http.HttpClient
