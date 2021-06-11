@@ -300,14 +300,6 @@ Public Class FrmOffertaElenco
             Me.grid.Columns("B1RISORSA").HeaderText = "Risorsa"
             Me.grid.Columns("Subappaltatore").HeaderText = "Subappaltatore"
 
-
-            'Me.grid.Columns("A7SOCMDB").TextAlignment = ContentAlignment.MiddleCenter
-            'Me.grid.Columns("A7CENMDB").TextAlignment = ContentAlignment.MiddleCenter
-            'Me.grid.Columns("A7IDCHIA").TextAlignment = ContentAlignment.MiddleLeft
-            'Me.grid.Columns("A7CODIMP").TextAlignment = ContentAlignment.MiddleCenter
-            'Me.grid.Columns("A7CODTEC").TextAlignment = ContentAlignment.MiddleCenter
-            'Me.grid.Columns("A7STATOC").TextAlignment = ContentAlignment.MiddleCenter
-
             For Each col In Me.grid.Columns
                 col.ReadOnly = True
                 col.IsVisible = False

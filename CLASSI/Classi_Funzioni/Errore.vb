@@ -8,6 +8,7 @@
         Comunicazione = 1
         Database = 2
         Malloc = 3
+        Paradosso = 4
     End Enum
     Public Property Codice As String
     Public Property Tipo As TipoErrore

@@ -13,6 +13,7 @@ Imports Telerik.WinControls.UI.Map.Bing
 Imports Telerik.WinControls.UI.Map
 Imports System.Net.Http
 Imports System.Threading.Tasks
+Imports System.IO
 
 Public Class webServices
     Public Async Function getDatiTabellaComuniIT(codTab As String, Optional codElem As String = "") As Threading.Tasks.Task(Of parmComuni())
@@ -1400,8 +1401,8 @@ Public Class webServices
             Dim dati As String
             Dim RestURL As String = My.Settings.urlWS & "api/Offerte/getDashOfferta/getDashOfferta"
             Dim client As New Http.HttpClient
-            Dim cl As New elenco
-            Dim paramList As ArrayList = New ArrayList()
+            'Dim cl As New elenco
+            'Dim paramList As ArrayList = New ArrayList()
 
             client.DefaultRequestHeaders.Accept.Clear()
             client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
@@ -1417,6 +1418,32 @@ Public Class webServices
             Return dash
         Catch ex As Exception
             Return New List(Of Integer)({0, 0, 0, 0})
+        End Try
+    End Function
+
+    Public Async Function getPrevOfferta(Off As Offerta) As Task(Of File)
+        Dim pdf As File
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/getPrevOfferta/getPrevOfferta"
+            Dim client As New Http.HttpClient
+            'Dim cl As New elenco
+            'Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(Off)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                pdf = Newtonsoft.Json.JsonConvert.DeserializeObject(Of File)(dati)
+            End If
+            Return pdf
+        Catch ex As Exception
+            Return pdf
         End Try
     End Function
 End Class

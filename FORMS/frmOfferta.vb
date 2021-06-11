@@ -1,4 +1,5 @@
-﻿Imports Telerik.WinControls
+﻿Imports System.IO
+Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 
 Public Class FrmOfferta
@@ -84,23 +85,11 @@ Public Class FrmOfferta
                         txtPercFin.Value = .B1PERCFIN
                 End Select
 
-
-                For Each riga As OffertaDett In .Dettaglio
-                    Dim row As New GridViewDataRowInfo(grdVoci.MasterView)
-                    row.Cells("F1ORD").Value = riga.F1ORD
-                    row.Cells("F1VOCSINT").Value = riga.F1VOCSINT
-                    row.Cells("F1CODVOCE").Value = riga.F1CODVOCE
-                    row.Cells("F1SOTTOVOC").Value = riga.F1SOTTOVOC
-                    row.Cells("F1DESCRBRV").Value = riga.F1DESCRBRV
-                    row.Cells("F1UNMIS").Value = riga.F1UNMIS
-                    row.Cells("F1QTA").Value = riga.F1QTA
-                    row.Cells("F1COSTOMAT").Value = riga.F1COSTOMAT
-                    row.Cells("F1VARIAZ").Value = riga.F1VARIAZ
-                    row.Cells("F1CODIVA").Value = riga.F1CODIVA
-                    grdVoci.Rows.Add(row)
-                Next
+                grdVoci.DataSource = .Dettaglio
+                grdVociGrafiche.DataSource = .Dettaglio
                 If .Dettaglio.Count > 0 Then
                     grdVoci.CurrentRow = grdVoci.Rows.First
+                    grdVociGrafiche.CurrentRow = grdVociGrafiche.Rows.First
                 End If
             End With
         End If
@@ -120,6 +109,8 @@ Public Class FrmOfferta
         If Offerta.Err Is Nothing Then
             RichiediCodici()
             Me.VisualizzaOfferta()
+            grdVociGrafiche.Refresh()
+
         Else
             MessageBox.Show($"Dettaglio Errore: {vbCrLf}Messaggio: {Offerta.Err.Messaggio} {vbCrLf}StackTrace: {Offerta.Err.Stack}", "Errore Offerta")
             Me.Close()
@@ -281,6 +272,34 @@ Public Class FrmOfferta
         Else
             MsgBox("Inserire un valore corretto")
             el.Focus()
+        End If
+    End Sub
+
+    Private Sub EliminaVoce_Click(sender As Object, e As EventArgs) Handles EliminaVoce.Click
+        'Offerta.Dettaglio.Remove()
+
+
+        'grdVoci.Rows.
+    End Sub
+
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
+
+    End Sub
+
+    Private Async Sub AnteprimaOfferta(par)
+        Dim pdf As Threading.Tasks.Task(Of File)
+        pdf = ws.getPrevOfferta(Offerta)
+        Await pdf
+        Dim x As File = pdf.Result
+        If Offerta.Err Is Nothing Then
+            'Mostra File
+        Else
+            MessageBox.Show($"Dettaglio Errore: {vbCrLf}Messaggio: {Offerta.Err.Messaggio} {vbCrLf}StackTrace: {Offerta.Err.Stack}", "Errore Offerta")
+            Me.Close()
         End If
     End Sub
 End Class
