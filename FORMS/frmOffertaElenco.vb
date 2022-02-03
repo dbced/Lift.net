@@ -120,7 +120,15 @@ Public Class FrmOffertaElenco
 
     Private Async Sub carica_combo_soc()
         Try
-            Dim filtro As String = ""
+            Dim filtro As New String("'")
+            If cmbCentro.CheckedItems.Count = 0 Then
+                filtro = gElencoCentri
+            Else
+                For Each x As RadListDataItem In cmbCentro.CheckedItems
+                    filtro += x.Text + "','"
+                Next
+                filtro = filtro.Substring(0, filtro.Length - 2)
+            End If
 
 
             Dim elementi As Threading.Tasks.Task(Of parmTabelle())
@@ -524,7 +532,7 @@ Public Class FrmOffertaElenco
                 parm.parmProgOff = e.Row.Cells("B1PROGR").Value
                 Dim frmi As New FrmOfferta(parm) '(FRM, "*", "ADMIN", "ADMI", "SISINFOMA")
                 frmi.StartPosition = FormStartPosition.CenterScreen
-                frmi.Menu.Pages(0).Text = $"Offerta {e.Row.Cells("B1PROGR").Value}/{e.Row.Cells("B1AAOFF").Value}"
+                frmi.listaOpzioni.Pages(0).Text = $"Offerta {e.Row.Cells("B1PROGR").Value}/{e.Row.Cells("B1AAOFF").Value}"
                 frmi.Show()
 
                 'Dim par As New parmsOfferte
@@ -842,6 +850,7 @@ Public Class FrmOffertaElenco
     End Sub
 
     Private Sub cmbCentro_ItemCheckedChanged(sender As Object, e As EventArgs) Handles cmbCentro.ItemCheckedChanged
+        Me.carica_combo_soc()
         Aggiorna_dash()
     End Sub
 

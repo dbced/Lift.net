@@ -1,6 +1,9 @@
 ﻿Imports System.IO
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.PdfViewer
+Imports Telerik.WinControls.Data
+Imports System.ComponentModel
 
 Public Class FrmOfferta
     Private Centro As String
@@ -9,7 +12,7 @@ Public Class FrmOfferta
     Private Id As Integer
     Private Progressivo As Integer
     Private Codimp As String
-
+    Private Diz As Dizionario
     Private ws As New webServices
     Private Offerta As Offerta
 
@@ -21,10 +24,8 @@ Public Class FrmOfferta
         Id = parms.parmIdOfferta
         Me.CaricaDati()
         Me.RichiediOfferta(parms)
-        'Me.RichiediCodici()
-
-        ' WireEvents()
     End Sub
+
     Private Sub VisualizzaOfferta()
         If Offerta IsNot Nothing Then
             With Offerta
@@ -84,7 +85,6 @@ Public Class FrmOfferta
                         ckFinanz.Checked = True
                         txtPercFin.Value = .B1PERCFIN
                 End Select
-
                 grdVoci.DataSource = .Dettaglio
                 grdVociGrafiche.DataSource = .Dettaglio
                 If .Dettaglio.Count > 0 Then
@@ -95,9 +95,20 @@ Public Class FrmOfferta
         End If
     End Sub
 
+    Private Async Sub CaricaDizionario(cod As String)
+        Dim dizzy As Threading.Tasks.Task(Of Dizionario)
+        Dim par As New parmsDizionario
+        par.parmCodDiz = cod
+        dizzy = ws.getDizionario(par)
+        Await dizzy
+        If Not IsNothing(dizzy.Result) Then
+            Diz = dizzy.Result
+        End If
+    End Sub
+
     Private Sub SelezionaValoreCombo(combo As RadDropDownList, valore As String)
         For Each el As RadListDataItem In combo.Items
-
+            'TODO
         Next
     End Sub
 
@@ -107,10 +118,11 @@ Public Class FrmOfferta
         Await off
         Offerta = off.Result
         If Offerta.Err Is Nothing Then
+            Me.CaricaDizionario(Offerta.B1CODDIZ)
             RichiediCodici()
             Me.VisualizzaOfferta()
-            grdVociGrafiche.Refresh()
-
+            'grdVociGrafiche.Refresh()
+            'menu
         Else
             MessageBox.Show($"Dettaglio Errore: {vbCrLf}Messaggio: {Offerta.Err.Messaggio} {vbCrLf}StackTrace: {Offerta.Err.Stack}", "Errore Offerta")
             Me.Close()
@@ -119,6 +131,26 @@ Public Class FrmOfferta
 
     Private Sub CaricaDati()
         CaricaCombo("PAG", cmbModPagamento)
+        CaricaComboFont()
+    End Sub
+
+    Private Sub CaricaComboFont()
+        Me.cmbSizeFont.Items.Add("08")
+        Me.cmbSizeFont.Items.Add("09")
+        Me.cmbSizeFont.Items.Add("10")
+        Me.cmbSizeFont.Items.Add("11")
+        Me.cmbSizeFont.Items.Add("12")
+        Me.cmbSizeFont.Items.Add("14")
+        Me.cmbSizeFont.Items.Add("16")
+        Me.cmbSizeFont.Items.Add("18")
+        Me.cmbSizeFont.Items.Add("20")
+        Me.cmbSizeFont.Items.Add("22")
+        Me.cmbSizeFont.Items.Add("24")
+        Me.cmbSizeFont.Items.Add("26")
+        Me.cmbSizeFont.Items.Add("28")
+        Me.cmbSizeFont.Items.Add("38")
+        Me.cmbSizeFont.Items.Add("48")
+        Me.cmbSizeFont.Items.Add("72")
     End Sub
 
     Private Async Sub CaricaCombo(tab As String, combo As RadDropDownList, Optional codice As String = "", Optional filtro As String = "")
@@ -162,12 +194,22 @@ Public Class FrmOfferta
 
     Private Sub grdVoci_CurrentRowChanged(sender As Object, e As CurrentRowChangedEventArgs) Handles grdVoci.CurrentRowChanged
         Dim dettaglio As New OffertaDett
-        If e.CurrentRow.Index >= 0 Then
+        If TypeOf e.CurrentRow Is GridViewDataRowInfo AndAlso e.CurrentRow.Index >= 0 Then
             For Each dett In Offerta.Dettaglio
                 If dett.F1ORD = e.CurrentRow.Cells("F1ORD").Value Then
                     dettaglio = dett
                 End If
             Next
+            If e.CurrentRow.Index = 0 Then
+                cmdVoceUp.Enabled = False
+                cmdVoceDown.Enabled = True
+            ElseIf (e.CurrentRow.Index + 1) = grdVoci.Rows.Count Then
+                cmdVoceDown.Enabled = False
+                cmdVoceUp.Enabled = True
+            Else
+                cmdVoceDown.Enabled = True
+                cmdVoceUp.Enabled = True
+            End If
             MostraDettaglio(dettaglio)
         Else
             MostraDettaglio()
@@ -221,20 +263,20 @@ Public Class FrmOfferta
     Private Sub tsTipoMaggiorazione_ValueChanged(sender As Object, e As EventArgs) Handles tsTipoMaggiorazione.ValueChanged
         If tsTipoMaggiorazione.Value Then
             Dim x As Integer = txmValoreMaggiorazione.Value * 100
-            txmValoreMaggiorazione.Mask = "c2"
+            txmValoreMaggiorazione.Mask = "C2"
             txmValoreMaggiorazione.Value = x
         Else
             Dim x As Integer = txmValoreMaggiorazione.Value / 100
-            txmValoreMaggiorazione.Mask = "p0"
+            txmValoreMaggiorazione.Mask = "P0"
             txmValoreMaggiorazione.Value = x
         End If
     End Sub
 
     Private Sub tsTipoVariazione_ValueChanged(sender As Object, e As EventArgs) Handles tsTipoVariazione.ValueChanged
         If tsTipoVariazione.Value Then
-            txmValoreVariazione.Mask = "c2"
+            txmValoreVariazione.Mask = "C2"
         Else
-            txmValoreVariazione.Mask = "p0"
+            txmValoreVariazione.Mask = "P0"
         End If
     End Sub
 
@@ -276,10 +318,15 @@ Public Class FrmOfferta
     End Sub
 
     Private Sub EliminaVoce_Click(sender As Object, e As EventArgs) Handles EliminaVoce.Click
-        'Offerta.Dettaglio.Remove()
-
-
-        'grdVoci.Rows.
+        cmdAnnullaVoce.Visible = False
+        cmdConfermaVoce.Visible = False
+        If TypeOf grdVoci.CurrentRow Is GridViewDataRowInfo AndAlso grdVoci.CurrentRow.Index >= 0 Then
+            Dim offdet As OffertaDett = grdVoci.SelectedRows.First.DataBoundItem
+            If Not IsNothing(offdet.Operazione) Then
+                offdet.Operazione = "D"
+                MsgBox("Voce Eliminata")
+            End If
+        End If
     End Sub
 
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
@@ -290,16 +337,167 @@ Public Class FrmOfferta
 
     End Sub
 
-    Private Async Sub AnteprimaOfferta(par)
-        Dim pdf As Threading.Tasks.Task(Of File)
+    Private Async Sub AnteprimaOfferta()
+        Dim pdf As Threading.Tasks.Task(Of String)
         pdf = ws.getPrevOfferta(Offerta)
         Await pdf
-        Dim x As File = pdf.Result
+        Dim x As String = pdf.Result
+        Dim tempfile As String = Path.GetTempPath + "OffPreview.pdf"
         If Offerta.Err Is Nothing Then
-            'Mostra File
+            Dim tool As New utility
+            tool.DecodeFile64_chilkat(x, tempfile)
+            Try
+                Dim view As New frmPDFPreview(tempfile)
+                view.ShowDialog()
+            Catch e As Exception
+                Debug.Print(e.Message)
+            End Try
         Else
             MessageBox.Show($"Dettaglio Errore: {vbCrLf}Messaggio: {Offerta.Err.Messaggio} {vbCrLf}StackTrace: {Offerta.Err.Stack}", "Errore Offerta")
             Me.Close()
         End If
+    End Sub
+
+    Private Sub cmdShowPreview_Click(sender As Object, e As EventArgs) Handles cmdShowPreview.Click
+        AnteprimaOfferta()
+    End Sub
+
+    Private Sub cmdAnnullaVoce_Click(sender As Object, e As EventArgs) Handles cmdAnnullaVoce.Click
+        Dim dettaglio As New OffertaDett
+        If grdVoci.CurrentRow.Index >= 0 Then
+            For Each dett In Offerta.Dettaglio
+                If dett.F1IDRIGA = grdVoci.CurrentRow.Cells("F1IDRIGA").Value Then
+                    dettaglio = dett
+                End If
+            Next
+            MostraDettaglio(dettaglio)
+        Else
+            MostraDettaglio()
+        End If
+    End Sub
+
+    Private Sub cmdConfermaVoce_Click(sender As Object, e As EventArgs) Handles cmdConfermaVoce.Click
+        Dim offdet As OffertaDett = grdVoci.SelectedRows.First.DataBoundItem
+        offdet.Operazione = "U"
+        SalvaDettaglio(offdet)
+        grdVoci.MasterTemplate.Refresh()
+    End Sub
+
+    Public Sub SalvaDettaglio(dett As OffertaDett)
+        With dett
+            .F1DESCRBRV = txtDescrizioneBreve.Text
+            .F1DESCR = txtDescrizioneCompleta.Text
+            If tsTipoMaggiorazione.Value Then
+                .F1TPMAGG = "I"
+                .F1MAGGIOR = txmValoreMaggiorazione.Value
+            Else
+                .F1TPMAGG = "P"
+                .F1MAGGIOR = txmValoreMaggiorazione.Value * 100
+            End If
+            .F1FLSTQTA = tsStampaQuantita.Value
+            .F1QTA = txtQuantita.Text
+            .F1UNMIS = txtUnitaMisura.Text
+
+            If tsSegnoVariazione.Value Then
+                .F1VARSGN = "+"
+            Else
+                .F1VARSGN = "-"
+            End If
+
+            If tsTipoVariazione.Value Then
+                .F1VARTIPO = "I"
+            Else
+                .F1VARTIPO = "P"
+            End If
+
+            .F1VARIAZ = txmValoreVariazione.Value
+            .F1NRORE = txtOre.Text
+            .F1COSTOMAT = txtCostoMat.Value
+            .F1CODIVA = txtCodIvaVoce.Text
+            .F1IMPVOC = txmImponibileVoce.Value
+            .F1CODIVA = txtCodIvaVoce.Text
+            'richiediTabella("IVA", .F1CODIVA, txtIvaVoce)
+        End With
+    End Sub
+
+    Private Sub txtCodIvaVoce_Validated(sender As Object, e As EventArgs) Handles txtCodIvaVoce.Validated
+        richiediTabella("IVA", txtCodIvaVoce.Text, txtIvaVoce)
+    End Sub
+
+    Private Sub cmdInserisciVoce_Click(sender As Object, e As EventArgs) Handles cmdInserisciVoce.Click
+        Dim sin, voc, sott As String
+        Dim x As New FrmDizionario(Diz)
+        x.StartPosition = FormStartPosition.CenterScreen
+        x.ShowDialog()
+        sin = x.txtSin.Text
+        voc = x.txtVoc.Text
+        sott = x.txtSot.Text
+        x.Dispose()
+    End Sub
+
+    Private Sub cmdCaricaTabelleIva_Click(sender As Object, e As EventArgs) Handles cmdCaricaTabelleIva.Click
+        Try
+            Dim frm As New FrmRicercaTabelle("IVA")
+            frm.CodiceOut = ""
+            frm.DescrOut = ""
+            frm.ShowDialog()
+            txtCodIva.Text = frm.CodiceOut
+            txtIva.Text = frm.DescrOut
+        Catch ex As Exception
+            txtCodIva.Text = ""
+            txtIva.Text = ""
+        End Try
+    End Sub
+
+    Private Sub cmdModificaVoce_Click(sender As Object, e As EventArgs) Handles cmdModificaVoce.Click
+        cmdAnnullaVoce.Visible = True
+        cmdConfermaVoce.Visible = True
+        Dim offdet As OffertaDett = grdVoci.SelectedRows.First.DataBoundItem
+        If offdet.Operazione = "D" Then
+            MsgBox("Voce Eliminata")
+        End If
+    End Sub
+
+    Private Sub grdVoci_ViewRowFormatting(sender As Object, e As RowFormattingEventArgs) Handles grdVoci.ViewRowFormatting
+
+        If TypeOf e.RowElement.RowInfo Is GridViewDataRowInfo AndAlso e.RowElement.RowInfo.Index >= 0 Then
+            Select Case e.RowElement.RowInfo.Cells("Operazione").Value
+                Case "U"
+                    e.RowElement.BackColor = Color.LightYellow
+                    e.RowElement.Font = New Font(e.RowElement.Font, Font.Style.Regular)
+                Case "D"
+                    e.RowElement.BackColor = Color.White
+                    e.RowElement.Font = New Font(e.RowElement.Font, Font.Style.Strikeout)
+                Case Else
+                    e.RowElement.BackColor = Color.White
+                    e.RowElement.Font = New Font(e.RowElement.Font, Font.Style.Regular)
+            End Select
+        End If
+    End Sub
+
+    Private Sub cmdVoceUp_Click(sender As Object, e As EventArgs) Handles cmdVoceUp.Click
+        Dim dett, det_prec As OffertaDett
+        dett = grdVoci.CurrentRow.DataBoundItem
+        det_prec = grdVoci.Rows(grdVoci.CurrentRow.Index - 1).DataBoundItem
+        Dim temp As Integer
+        temp = dett.F1ORD
+        dett.F1ORD = det_prec.F1ORD
+        det_prec.F1ORD = dett.F1ORD
+        dett.Operazione = "U"
+        det_prec.Operazione = "U"
+        grdVoci.MasterTemplate.Refresh()
+    End Sub
+
+    Private Sub cmdVoceDown_Click(sender As Object, e As EventArgs) Handles cmdVoceDown.Click
+        Dim dett, det_suc As OffertaDett
+        dett = grdVoci.CurrentRow.DataBoundItem
+        det_suc = grdVoci.Rows(grdVoci.CurrentRow.Index + 1).DataBoundItem
+        Dim temp As Integer
+        temp = dett.F1ORD
+        dett.F1ORD = det_suc.F1ORD
+        det_suc.F1ORD = dett.F1ORD
+        dett.Operazione = "U"
+        det_suc.Operazione = "U"
+        grdVoci.MasterTemplate.Refresh()
     End Sub
 End Class

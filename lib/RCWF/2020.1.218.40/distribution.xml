@@ -3,7 +3,6 @@
   <Version>2020.1.218.40</Version>
   <Trial>false</Trial>
   <Dependencies>
-    <Project>d3ddd0f6-036b-4d14-832b-ddef8a491ed7</Project>
     <Project>a4094a66-c5b0-402e-a8b6-007601fbe4ce</Project>
   </Dependencies>
 </Distribution>

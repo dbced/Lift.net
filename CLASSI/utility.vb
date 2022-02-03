@@ -66,4 +66,50 @@ Public Class utility
 
     End Function
 
+    Public Function EncodeFile64(ByVal srcFile As String, Optional ByVal destfile As String = "") As String
+        Dim srcBT As Byte()
+        Dim dest As String
+
+        Dim sr As New System.IO.FileStream(srcFile, System.IO.FileMode.Open)
+
+        ReDim srcBT(sr.Length)
+
+        sr.Read(srcBT, 0, sr.Length)
+
+        sr.Close()
+
+        dest = System.Convert.ToBase64String(srcBT)
+
+        If destfile <> "" Then
+            Dim sw As New System.IO.StreamWriter(destfile, False)
+            sw.Write(dest)
+            sw.Close()
+        End If
+
+        EncodeFile64 = dest
+
+    End Function
+
+    Public Function DecodeFile64_chilkat(ByVal srcFile As String, ByVal destFile As String) As String
+        Try
+            Dim pdfData2 As New Chilkat.BinData
+            Dim crypt As New Chilkat.Global
+            Dim success As Boolean = crypt.UnlockBundle("REDELB.CB4122020_MrstKzF4778M")
+            If (success <> True) Then
+                Return "ERRORE LICENZA"
+                Exit Function
+            End If
+
+            pdfData2.AppendEncoded(srcFile, "base64")
+            success = pdfData2.WriteFile(destFile)
+
+            If (success <> True) Then
+                Return "ERRORE CONVERSIONE FILE"
+                Exit Function
+            End If
+            'Dim success As Boolean = crypt.UnlockComponent("REDELB.CB4122020_MrstKzF4778M")
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+    End Function
 End Class

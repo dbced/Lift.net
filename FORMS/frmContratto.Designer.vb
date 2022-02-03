@@ -351,6 +351,7 @@ Partial Class FrmContratto
         '
         Me.cmbTipologiaCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipologiaCliente.AutoSize = False
+        Me.cmbTipologiaCliente.DropDownAnimationEnabled = True
         Me.cmbTipologiaCliente.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbTipologiaCliente.ForeColor = System.Drawing.Color.Black
         Me.cmbTipologiaCliente.Location = New System.Drawing.Point(155, 507)
@@ -485,6 +486,7 @@ Partial Class FrmContratto
         '
         Me.cmbFreqFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbFreqFatt.AutoSize = False
+        Me.cmbFreqFatt.DropDownAnimationEnabled = True
         Me.cmbFreqFatt.ForeColor = System.Drawing.Color.Black
         Me.cmbFreqFatt.Location = New System.Drawing.Point(136, 35)
         Me.cmbFreqFatt.Name = "cmbFreqFatt"
@@ -508,6 +510,7 @@ Partial Class FrmContratto
         '
         Me.cmbModPag.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbModPag.AutoSize = False
+        Me.cmbModPag.DropDownAnimationEnabled = True
         Me.cmbModPag.ForeColor = System.Drawing.Color.Black
         Me.cmbModPag.Location = New System.Drawing.Point(136, 74)
         Me.cmbModPag.Name = "cmbModPag"
@@ -531,6 +534,7 @@ Partial Class FrmContratto
         '
         Me.cmbTipoFatt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipoFatt.AutoSize = False
+        Me.cmbTipoFatt.DropDownAnimationEnabled = True
         Me.cmbTipoFatt.ForeColor = System.Drawing.Color.Black
         Me.cmbTipoFatt.Location = New System.Drawing.Point(516, 33)
         Me.cmbTipoFatt.Name = "cmbTipoFatt"
@@ -554,6 +558,7 @@ Partial Class FrmContratto
         '
         Me.cmb9516.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmb9516.AutoSize = False
+        Me.cmb9516.DropDownAnimationEnabled = True
         Me.cmb9516.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmb9516.ForeColor = System.Drawing.Color.Black
         Me.cmb9516.Location = New System.Drawing.Point(516, 74)
@@ -844,6 +849,7 @@ Partial Class FrmContratto
         '
         Me.cmbAgente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbAgente.AutoSize = False
+        Me.cmbAgente.DropDownAnimationEnabled = True
         Me.cmbAgente.ForeColor = System.Drawing.Color.Black
         Me.cmbAgente.Location = New System.Drawing.Point(860, 321)
         Me.cmbAgente.Name = "cmbAgente"
@@ -880,10 +886,10 @@ Partial Class FrmContratto
         Me.txtCanone.Size = New System.Drawing.Size(202, 36)
         Me.txtCanone.TabIndex = 217
         Me.txtCanone.TabStop = False
-        Me.txtCanone.Text = "€ 0,00"
+        Me.txtCanone.Text = "0,00 €"
         Me.txtCanone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtCanone.ThemeName = "Fluent"
-        CType(Me.txtCanone.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Text = "€ 0,00"
+        CType(Me.txtCanone.GetChildAt(0), Telerik.WinControls.UI.RadMaskedEditBoxElement).Text = "0,00 €"
         CType(Me.txtCanone.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Font = New System.Drawing.Font("Segoe UI", 12.0!)
         '
         'chkConvalida
@@ -920,6 +926,7 @@ Partial Class FrmContratto
         '
         Me.cmbPrestazioni.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbPrestazioni.AutoSize = False
+        Me.cmbPrestazioni.DropDownAnimationEnabled = True
         Me.cmbPrestazioni.ForeColor = System.Drawing.Color.Black
         Me.cmbPrestazioni.Location = New System.Drawing.Point(155, 624)
         Me.cmbPrestazioni.Name = "cmbPrestazioni"
@@ -933,6 +940,7 @@ Partial Class FrmContratto
         '
         Me.cmbPianoManut.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbPianoManut.AutoSize = False
+        Me.cmbPianoManut.DropDownAnimationEnabled = True
         Me.cmbPianoManut.ForeColor = System.Drawing.Color.Black
         Me.cmbPianoManut.Location = New System.Drawing.Point(155, 585)
         Me.cmbPianoManut.Name = "cmbPianoManut"
@@ -956,6 +964,7 @@ Partial Class FrmContratto
         '
         Me.cmbRivalut.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbRivalut.AutoSize = False
+        Me.cmbRivalut.DropDownAnimationEnabled = True
         Me.cmbRivalut.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.cmbRivalut.ForeColor = System.Drawing.Color.Black
         Me.cmbRivalut.Location = New System.Drawing.Point(155, 547)
@@ -1118,6 +1127,7 @@ Partial Class FrmContratto
         '
         Me.cmbTipoContratto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipoContratto.AutoSize = False
+        Me.cmbTipoContratto.DropDownAnimationEnabled = True
         Me.cmbTipoContratto.ForeColor = System.Drawing.Color.Black
         Me.cmbTipoContratto.Location = New System.Drawing.Point(551, 61)
         Me.cmbTipoContratto.Name = "cmbTipoContratto"
@@ -1214,6 +1224,7 @@ Partial Class FrmContratto
         '
         Me.cmbSocieta.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbSocieta.AutoSize = False
+        Me.cmbSocieta.DropDownAnimationEnabled = True
         Me.cmbSocieta.ForeColor = System.Drawing.Color.Black
         Me.cmbSocieta.Location = New System.Drawing.Point(155, 22)
         Me.cmbSocieta.Name = "cmbSocieta"

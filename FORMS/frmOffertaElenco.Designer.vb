@@ -24,7 +24,7 @@ Partial Class FrmOffertaElenco
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOffertaElenco))
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.cmdBar = New Telerik.WinControls.UI.RadCommandBar()
         Me.cmdRowBar = New Telerik.WinControls.UI.CommandBarRowElement()
         Me.CommandBarStripElement1 = New Telerik.WinControls.UI.CommandBarStripElement()
@@ -274,6 +274,7 @@ Partial Class FrmOffertaElenco
         'cmbStato
         '
         Me.cmbStato.AutoSize = False
+        Me.cmbStato.DropDownAnimationEnabled = True
         Me.cmbStato.Location = New System.Drawing.Point(624, 37)
         Me.cmbStato.Name = "cmbStato"
         Me.cmbStato.Size = New System.Drawing.Size(112, 28)
@@ -316,6 +317,7 @@ Partial Class FrmOffertaElenco
         'cmbCentro
         '
         Me.cmbCentro.AutoSize = False
+        Me.cmbCentro.DropDownAnimationEnabled = True
         Me.cmbCentro.Location = New System.Drawing.Point(416, 37)
         Me.cmbCentro.Name = "cmbCentro"
         Me.cmbCentro.Size = New System.Drawing.Size(74, 28)
@@ -347,6 +349,7 @@ Partial Class FrmOffertaElenco
         'cmbSoc
         '
         Me.cmbSoc.AutoSize = False
+        Me.cmbSoc.DropDownAnimationEnabled = True
         Me.cmbSoc.Location = New System.Drawing.Point(71, 36)
         Me.cmbSoc.Name = "cmbSoc"
         Me.cmbSoc.Size = New System.Drawing.Size(224, 28)
@@ -395,7 +398,7 @@ Partial Class FrmOffertaElenco
         '
         '
         '
-        Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.grid.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grid.Name = "grid"
         Me.grid.Size = New System.Drawing.Size(1538, 447)
         Me.grid.TabIndex = 2

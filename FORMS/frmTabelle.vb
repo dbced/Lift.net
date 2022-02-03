@@ -221,7 +221,7 @@ Public Class FrmTabelle
 
     Private Async Sub salva_dati()
         Try
-            Dim test As String
+            'Dim test As String
 
             Dim client As New Http.HttpClient
 

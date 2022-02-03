@@ -1973,7 +1973,7 @@ Public Class FrmImpianto
         Telerik.WinControls.RadMessageBox.SetThemeName("MaterialBlueGrey")
 
         Try
-            Dim test As String
+            'Dim test As String
             Dim client As New Http.HttpClient
 
             wb.AssociatedControl = Me
@@ -2071,7 +2071,7 @@ Public Class FrmImpianto
 
     Private Async Sub saveAssetImpianto(codImp As String, codAsset As String, nrAssets As Integer, azione As String)
         Try
-            Dim test As String
+            'Dim test As String
             Dim client As New Http.HttpClient
 
             Dim cl As New elenco

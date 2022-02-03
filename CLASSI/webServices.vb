@@ -214,7 +214,7 @@ Public Class webServices
         Dim varses() As parmTabelle
 
         Try
-            Dim test As String
+            Dim response As String
             Dim RestURL As String = My.Settings.urlWS & "api/tabelle/GetValoriTabelleList/GetValoriTabelle"
 
             'Dim authtHandler As HttpClientHandler = New HttpClientHandler() With {.Credentials = CredentialCache.DefaultNetworkCredentials}
@@ -239,11 +239,11 @@ Public Class webServices
             Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
 
             If RestResponse.IsSuccessStatusCode Then
-                test = Await RestResponse.Content.ReadAsStringAsync()
-                varses = Newtonsoft.Json.JsonConvert.DeserializeObject(Of parmTabelle())(test)
+                response = Await RestResponse.Content.ReadAsStringAsync()
+                varses = Newtonsoft.Json.JsonConvert.DeserializeObject(Of parmTabelle())(response)
             End If
 
-            test = RestResponse.StatusCode.ToString
+            response = RestResponse.StatusCode.ToString
             Return varses
 
         Catch EX As Exception
@@ -1421,8 +1421,8 @@ Public Class webServices
         End Try
     End Function
 
-    Public Async Function getPrevOfferta(Off As Offerta) As Task(Of File)
-        Dim pdf As File
+    Public Async Function getPrevOfferta(Off As Offerta) As Task(Of String)
+        Dim pdf As String
         Try
             Dim dati As String
             Dim RestURL As String = My.Settings.urlWS & "api/Offerte/getPrevOfferta/getPrevOfferta"
@@ -1439,11 +1439,71 @@ Public Class webServices
 
             If RestResponse.IsSuccessStatusCode Then
                 dati = Await RestResponse.Content.ReadAsStringAsync()
-                pdf = Newtonsoft.Json.JsonConvert.DeserializeObject(Of File)(dati)
+                pdf = Newtonsoft.Json.JsonConvert.DeserializeObject(Of String)(dati)
             End If
             Return pdf
         Catch ex As Exception
             Return pdf
+        End Try
+    End Function
+
+    Public Async Function setOfferta(off As Offerta) As Threading.Tasks.Task(Of Offerta)
+        Dim offerta As New Offerta
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Offerte/setOfferta/setOfferta"
+            Dim client As New Http.HttpClient
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(off)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                offerta = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Offerta)(dati)
+            Else
+                offerta = Nothing
+            End If
+            Return offerta
+        Catch ex As Exception
+            offerta.Err = New Errore(ex)
+            offerta.Err.Tipo = Errore.TipoErrore.Comunicazione
+            offerta.Err.Modulo = Errore.ModuloErrore.Client
+            Return offerta
+        End Try
+
+    End Function
+
+    Public Async Function getDizionario(parms As parmsDizionario) As Threading.Tasks.Task(Of Dizionario)
+        Dim diz As New Dizionario
+        Try
+            Dim dati As String
+            Dim RestURL As String = My.Settings.urlWS & "api/Dizionario/GetDizionario/GetDizionario"
+            Dim client As New Http.HttpClient
+            Dim cl As New elenco
+            Dim paramList As ArrayList = New ArrayList()
+
+            client.DefaultRequestHeaders.Accept.Clear()
+            client.DefaultRequestHeaders.Add("ApiKey", "12345678ABCD")
+            Dim jss As JavaScriptSerializer = New JavaScriptSerializer()
+            Dim sParms = jss.Serialize(parms)
+            client.DefaultRequestHeaders.Add("parmEntry", sParms)
+            Dim RestResponse As Http.HttpResponseMessage = Await client.GetAsync(RestURL)
+
+            If RestResponse.IsSuccessStatusCode Then
+                dati = Await RestResponse.Content.ReadAsStringAsync()
+                diz = Newtonsoft.Json.JsonConvert.DeserializeObject(Of Dizionario)(dati)
+            End If
+            Return diz
+        Catch ex As Exception
+            diz.Err = New Errore(ex)
+            diz.Err.Tipo = Errore.TipoErrore.Comunicazione
+            diz.Err.Modulo = Errore.ModuloErrore.Client
+            Return diz
         End Try
     End Function
 End Class

@@ -23,25 +23,29 @@ Partial Class FrmOfferta
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOfferta))
-        Dim GridViewDecimalColumn17 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn25 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn26 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn27 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn28 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn29 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn18 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn19 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewDecimalColumn20 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn30 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn21 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewDecimalColumn15 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn23 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn24 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewDecimalColumn16 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewDecimalColumn1 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn2 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn3 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewDecimalColumn4 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn5 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GroupDescriptor1 As Telerik.WinControls.Data.GroupDescriptor = New Telerik.WinControls.Data.GroupDescriptor()
+        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
+        Dim GridViewSummaryItem1 As Telerik.WinControls.UI.GridViewSummaryItem = New Telerik.WinControls.UI.GridViewSummaryItem()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewDecimalColumn6 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewDecimalColumn7 As Telerik.WinControls.UI.GridViewDecimalColumn = New Telerik.WinControls.UI.GridViewDecimalColumn()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.MaterialBlueGreyTheme1 = New Telerik.WinControls.Themes.MaterialBlueGreyTheme()
         Me.panelOfferta = New Telerik.WinControls.UI.RadPanel()
         Me.lbData = New Telerik.WinControls.UI.RadLabel()
@@ -49,12 +53,13 @@ Partial Class FrmOfferta
         Me.lbNumero = New Telerik.WinControls.UI.RadLabel()
         Me.lbStato = New Telerik.WinControls.UI.RadLabel()
         Me.lbId = New Telerik.WinControls.UI.RadLabel()
-        Me.Menu = New Telerik.WinControls.UI.RadPageView()
+        Me.listaOpzioni = New Telerik.WinControls.UI.RadPageView()
         Me.PageMenuOfferta = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.grpDetVoce = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadButton7 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
+        Me.cmdAnnullaVoce = New Telerik.WinControls.UI.RadButton()
+        Me.cmdConfermaVoce = New Telerik.WinControls.UI.RadButton()
         Me.txmImponibileVoce = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
         Me.grpVariazione = New Telerik.WinControls.UI.RadGroupBox()
@@ -90,8 +95,8 @@ Partial Class FrmOfferta
         Me.cmdModificaVoce = New Telerik.WinControls.UI.CommandBarButton()
         Me.EliminaVoce = New Telerik.WinControls.UI.CommandBarButton()
         Me.CommandBarLabel1 = New Telerik.WinControls.UI.CommandBarLabel()
-        Me.CommandBarButton4 = New Telerik.WinControls.UI.CommandBarButton()
-        Me.CommandBarButton5 = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdVoceUp = New Telerik.WinControls.UI.CommandBarButton()
+        Me.cmdVoceDown = New Telerik.WinControls.UI.CommandBarButton()
         Me.GrpBonus = New Telerik.WinControls.UI.RadGroupBox()
         Me.txtPercFin = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.txtPercOneri = New Telerik.WinControls.UI.RadMaskedEditBox()
@@ -158,12 +163,12 @@ Partial Class FrmOfferta
         Me.cmdClose = New Telerik.WinControls.UI.RadButton()
         Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadButton15 = New Telerik.WinControls.UI.RadButton()
+        Me.loadFromGallery = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox5 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel33 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
         Me.RadColorBox1 = New Telerik.WinControls.UI.RadColorBox()
-        Me.RadToggleSwitch1 = New Telerik.WinControls.UI.RadToggleSwitch()
+        Me.ImageBordDraw = New Telerik.WinControls.UI.RadToggleSwitch()
         Me.RadGroupBox4 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButton10 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton11 = New Telerik.WinControls.UI.RadRadioButton()
@@ -172,29 +177,29 @@ Partial Class FrmOfferta
         Me.RadRadioButton4 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton5 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton6 = New Telerik.WinControls.UI.RadRadioButton()
-        Me.RadButton8 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton9 = New Telerik.WinControls.UI.RadButton()
+        Me.loadImage = New Telerik.WinControls.UI.RadButton()
+        Me.setDefault = New Telerik.WinControls.UI.RadButton()
         Me.image = New System.Windows.Forms.PictureBox()
         Me.grpTesto = New Telerik.WinControls.UI.RadGroupBox()
+        Me.cmbSizeFont = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadGroupBox8 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel32 = New Telerik.WinControls.UI.RadLabel()
         Me.RadColorBox2 = New Telerik.WinControls.UI.RadColorBox()
         Me.RadToggleSwitch2 = New Telerik.WinControls.UI.RadToggleSwitch()
-        Me.RadGroupBox7 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.grpTextEffect = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButton14 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton15 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton16 = New Telerik.WinControls.UI.RadRadioButton()
-        Me.RadButton13 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton14 = New Telerik.WinControls.UI.RadButton()
+        Me.shoPrevText = New Telerik.WinControls.UI.RadButton()
+        Me.SaveText = New Telerik.WinControls.UI.RadButton()
         Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadFontDropDownList1 = New Telerik.WinControls.UI.RadFontDropDownList()
-        Me.RadGroupBox6 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.grpTextAlign = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButton8 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton9 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton12 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton13 = New Telerik.WinControls.UI.RadRadioButton()
-        Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.grpTextStyle = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButton3 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton2 = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButton1 = New Telerik.WinControls.UI.RadRadioButton()
@@ -228,14 +233,15 @@ Partial Class FrmOfferta
         CType(Me.lbNumero, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lbStato, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lbId, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Menu.SuspendLayout()
+        CType(Me.listaOpzioni, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.listaOpzioni.SuspendLayout()
         Me.PageMenuOfferta.SuspendLayout()
+        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpDetVoce, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpDetVoce.SuspendLayout()
-        CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdAnnullaVoce, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmdConfermaVoce, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txmImponibileVoce, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpVariazione, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -338,15 +344,16 @@ Partial Class FrmOfferta
         CType(Me.cmdSave, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmdClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCollapsiblePanel1.SuspendLayout()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
-        CType(Me.RadButton15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.loadFromGallery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox5.SuspendLayout()
         CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadColorBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadToggleSwitch1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImageBordDraw, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox4.SuspendLayout()
         CType(Me.RadRadioButton10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -357,34 +364,34 @@ Partial Class FrmOfferta
         CType(Me.RadRadioButton4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.loadImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.setDefault, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.image, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpTesto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTesto.SuspendLayout()
+        CType(Me.cmbSizeFont, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox8.SuspendLayout()
         CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadColorBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadToggleSwitch2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox7.SuspendLayout()
+        CType(Me.grpTextEffect, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpTextEffect.SuspendLayout()
         CType(Me.RadRadioButton14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.shoPrevText, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SaveText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadFontDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox6.SuspendLayout()
+        CType(Me.grpTextAlign, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpTextAlign.SuspendLayout()
         CType(Me.RadRadioButton8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox2.SuspendLayout()
+        CType(Me.grpTextStyle, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpTextStyle.SuspendLayout()
         CType(Me.RadRadioButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButton1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -474,26 +481,28 @@ Partial Class FrmOfferta
         Me.lbId.Text = "Id : 123456789"
         Me.lbId.ThemeName = "MaterialBlueGrey"
         '
-        'Menu
+        'listaOpzioni
         '
-        Me.Menu.Controls.Add(Me.PageMenuOfferta)
-        Me.Menu.Controls.Add(Me.PageMenuDettaglio)
-        Me.Menu.DefaultPage = Me.PageMenuOfferta
-        Me.Menu.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Menu.Location = New System.Drawing.Point(0, 41)
-        Me.Menu.Name = "Menu"
-        Me.Menu.SelectedPage = Me.PageMenuDettaglio
-        Me.Menu.Size = New System.Drawing.Size(1908, 912)
-        Me.Menu.TabIndex = 3
-        Me.Menu.ThemeName = "MaterialBlueGrey"
-        Me.Menu.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
-        CType(Me.Menu.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).HeaderHeight = 48
-        CType(Me.Menu.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).ExpandedPaneWidth = 200
-        CType(Me.Menu.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).CollapsedPaneWidth = 48
-        CType(Me.Menu.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near
+        Me.listaOpzioni.Controls.Add(Me.PageMenuOfferta)
+        Me.listaOpzioni.Controls.Add(Me.PageMenuDettaglio)
+        Me.listaOpzioni.DefaultPage = Me.PageMenuOfferta
+        Me.listaOpzioni.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.listaOpzioni.Location = New System.Drawing.Point(0, 41)
+        Me.listaOpzioni.Name = "listaOpzioni"
+        Me.listaOpzioni.SelectedPage = Me.PageMenuOfferta
+        Me.listaOpzioni.Size = New System.Drawing.Size(1908, 912)
+        Me.listaOpzioni.TabIndex = 3
+        Me.listaOpzioni.ThemeName = "MaterialBlueGrey"
+        Me.listaOpzioni.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
+        CType(Me.listaOpzioni.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Compact
+        CType(Me.listaOpzioni.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).HeaderHeight = 48
+        CType(Me.listaOpzioni.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).ExpandedPaneWidth = 200
+        CType(Me.listaOpzioni.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).CollapsedPaneWidth = 53
+        CType(Me.listaOpzioni.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Near
         '
         'PageMenuOfferta
         '
+        Me.PageMenuOfferta.Controls.Add(Me.RadButton4)
         Me.PageMenuOfferta.Controls.Add(Me.RadButton1)
         Me.PageMenuOfferta.Controls.Add(Me.grpDetVoce)
         Me.PageMenuOfferta.Controls.Add(Me.grpVoci)
@@ -503,12 +512,20 @@ Partial Class FrmOfferta
         Me.PageMenuOfferta.Description = Nothing
         Me.PageMenuOfferta.Image = Global.LiftCore.My.Resources.Resources._32_DocNotizie
         Me.PageMenuOfferta.ItemSize = New System.Drawing.SizeF(54.0!, 54.0!)
-        Me.PageMenuOfferta.Location = New System.Drawing.Point(55, 49)
+        Me.PageMenuOfferta.Location = New System.Drawing.Point(54, 49)
         Me.PageMenuOfferta.Name = "PageMenuOfferta"
-        Me.PageMenuOfferta.Size = New System.Drawing.Size(1852, 862)
+        Me.PageMenuOfferta.Size = New System.Drawing.Size(1853, 862)
         Me.PageMenuOfferta.Text = "Dati Tecnici"
         Me.PageMenuOfferta.Title = "Offerta"
         Me.PageMenuOfferta.ToolTipText = "Dati Offerta"
+        '
+        'RadButton4
+        '
+        Me.RadButton4.Location = New System.Drawing.Point(1362, 827)
+        Me.RadButton4.Name = "RadButton4"
+        Me.RadButton4.Size = New System.Drawing.Size(110, 24)
+        Me.RadButton4.TabIndex = 278
+        Me.RadButton4.Text = "RadButton4"
         '
         'RadButton1
         '
@@ -522,8 +539,8 @@ Partial Class FrmOfferta
         'grpDetVoce
         '
         Me.grpDetVoce.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.grpDetVoce.Controls.Add(Me.RadButton7)
-        Me.grpDetVoce.Controls.Add(Me.RadButton4)
+        Me.grpDetVoce.Controls.Add(Me.cmdAnnullaVoce)
+        Me.grpDetVoce.Controls.Add(Me.cmdConfermaVoce)
         Me.grpDetVoce.Controls.Add(Me.txmImponibileVoce)
         Me.grpDetVoce.Controls.Add(Me.RadLabel22)
         Me.grpDetVoce.Controls.Add(Me.grpVariazione)
@@ -558,23 +575,25 @@ Partial Class FrmOfferta
         CType(Me.grpDetVoce.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto", 12.0!)
         CType(Me.grpDetVoce.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RadButton7
+        'cmdAnnullaVoce
         '
-        Me.RadButton7.Location = New System.Drawing.Point(608, 353)
-        Me.RadButton7.Name = "RadButton7"
-        Me.RadButton7.Size = New System.Drawing.Size(108, 36)
-        Me.RadButton7.TabIndex = 277
-        Me.RadButton7.Text = "Annulla"
-        Me.RadButton7.ThemeName = "MaterialBlueGrey"
+        Me.cmdAnnullaVoce.Location = New System.Drawing.Point(608, 353)
+        Me.cmdAnnullaVoce.Name = "cmdAnnullaVoce"
+        Me.cmdAnnullaVoce.Size = New System.Drawing.Size(108, 36)
+        Me.cmdAnnullaVoce.TabIndex = 277
+        Me.cmdAnnullaVoce.Text = "Annulla"
+        Me.cmdAnnullaVoce.ThemeName = "MaterialBlueGrey"
+        Me.cmdAnnullaVoce.Visible = False
         '
-        'RadButton4
+        'cmdConfermaVoce
         '
-        Me.RadButton4.Location = New System.Drawing.Point(722, 352)
-        Me.RadButton4.Name = "RadButton4"
-        Me.RadButton4.Size = New System.Drawing.Size(108, 36)
-        Me.RadButton4.TabIndex = 276
-        Me.RadButton4.Text = "Conferma"
-        Me.RadButton4.ThemeName = "MaterialBlueGrey"
+        Me.cmdConfermaVoce.Location = New System.Drawing.Point(722, 352)
+        Me.cmdConfermaVoce.Name = "cmdConfermaVoce"
+        Me.cmdConfermaVoce.Size = New System.Drawing.Size(108, 36)
+        Me.cmdConfermaVoce.TabIndex = 276
+        Me.cmdConfermaVoce.Text = "Conferma"
+        Me.cmdConfermaVoce.ThemeName = "MaterialBlueGrey"
+        Me.cmdConfermaVoce.Visible = False
         '
         'txmImponibileVoce
         '
@@ -881,7 +900,6 @@ Partial Class FrmOfferta
         Me.txtCodIvaVoce.Location = New System.Drawing.Point(104, 352)
         Me.txtCodIvaVoce.MaxLength = 6
         Me.txtCodIvaVoce.Name = "txtCodIvaVoce"
-        Me.txtCodIvaVoce.ReadOnly = True
         Me.txtCodIvaVoce.Size = New System.Drawing.Size(71, 36)
         Me.txtCodIvaVoce.TabIndex = 268
         Me.txtCodIvaVoce.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -955,7 +973,7 @@ Partial Class FrmOfferta
         Me.txtDescrizioneCompleta.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.txtDescrizioneCompleta.ForeColor = System.Drawing.Color.Black
         Me.txtDescrizioneCompleta.Location = New System.Drawing.Point(94, 62)
-        Me.txtDescrizioneCompleta.MaxLength = 6
+        Me.txtDescrizioneCompleta.MaxLength = 0
         Me.txtDescrizioneCompleta.Multiline = True
         Me.txtDescrizioneCompleta.Name = "txtDescrizioneCompleta"
         Me.txtDescrizioneCompleta.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -989,7 +1007,7 @@ Partial Class FrmOfferta
         Me.txtDescrizioneBreve.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.txtDescrizioneBreve.ForeColor = System.Drawing.Color.Black
         Me.txtDescrizioneBreve.Location = New System.Drawing.Point(316, 15)
-        Me.txtDescrizioneBreve.MaxLength = 6
+        Me.txtDescrizioneBreve.MaxLength = 0
         Me.txtDescrizioneBreve.Name = "txtDescrizioneBreve"
         Me.txtDescrizioneBreve.Size = New System.Drawing.Size(512, 36)
         Me.txtDescrizioneBreve.TabIndex = 252
@@ -1058,130 +1076,151 @@ Partial Class FrmOfferta
         Me.grdVoci.MasterTemplate.AllowDragToGroup = False
         Me.grdVoci.MasterTemplate.AllowEditRow = False
         Me.grdVoci.MasterTemplate.AllowRowResize = False
+        Me.grdVoci.MasterTemplate.AutoExpandGroups = True
         Me.grdVoci.MasterTemplate.AutoGenerateColumns = False
         Me.grdVoci.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewDecimalColumn17.AllowGroup = False
-        GridViewDecimalColumn17.AllowResize = False
-        GridViewDecimalColumn17.AllowSort = False
-        GridViewDecimalColumn17.EnableExpressionEditor = False
-        GridViewDecimalColumn17.FieldName = "F1ORD"
-        GridViewDecimalColumn17.HeaderText = "Ordine"
-        GridViewDecimalColumn17.IsVisible = False
-        GridViewDecimalColumn17.Name = "F1ORD"
-        GridViewDecimalColumn17.VisibleInColumnChooser = False
-        GridViewDecimalColumn17.Width = 60
-        GridViewTextBoxColumn25.AllowGroup = False
-        GridViewTextBoxColumn25.AllowResize = False
-        GridViewTextBoxColumn25.AllowSort = False
-        GridViewTextBoxColumn25.EnableExpressionEditor = False
-        GridViewTextBoxColumn25.FieldName = "F1VOCSINT"
-        GridViewTextBoxColumn25.HeaderText = "Codice Sintetico"
-        GridViewTextBoxColumn25.Name = "F1VOCSINT"
-        GridViewTextBoxColumn25.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn25.VisibleInColumnChooser = False
-        GridViewTextBoxColumn25.Width = 65
-        GridViewTextBoxColumn25.WrapText = True
-        GridViewTextBoxColumn26.AllowGroup = False
-        GridViewTextBoxColumn26.AllowResize = False
-        GridViewTextBoxColumn26.AllowSort = False
-        GridViewTextBoxColumn26.EnableExpressionEditor = False
-        GridViewTextBoxColumn26.FieldName = "F1CODVOCE"
-        GridViewTextBoxColumn26.HeaderText = "Codice Voce"
-        GridViewTextBoxColumn26.Name = "F1CODVOCE"
-        GridViewTextBoxColumn26.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn26.VisibleInColumnChooser = False
-        GridViewTextBoxColumn26.Width = 65
-        GridViewTextBoxColumn26.WrapText = True
-        GridViewTextBoxColumn27.AllowGroup = False
-        GridViewTextBoxColumn27.AllowResize = False
-        GridViewTextBoxColumn27.AllowSort = False
-        GridViewTextBoxColumn27.EnableExpressionEditor = False
-        GridViewTextBoxColumn27.FieldName = "F1SOTTOVOC"
-        GridViewTextBoxColumn27.HeaderText = "Codice Sottovoce"
-        GridViewTextBoxColumn27.Name = "F1SOTTOVOC"
-        GridViewTextBoxColumn27.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn27.VisibleInColumnChooser = False
-        GridViewTextBoxColumn27.Width = 65
-        GridViewTextBoxColumn27.WrapText = True
-        GridViewTextBoxColumn28.AllowGroup = False
-        GridViewTextBoxColumn28.AllowSort = False
-        GridViewTextBoxColumn28.EnableExpressionEditor = False
-        GridViewTextBoxColumn28.FieldName = "F1DESCRBRV"
-        GridViewTextBoxColumn28.HeaderText = "Descrizione"
-        GridViewTextBoxColumn28.Name = "F1DESCRBRV"
-        GridViewTextBoxColumn28.VisibleInColumnChooser = False
-        GridViewTextBoxColumn28.Width = 337
-        GridViewTextBoxColumn29.AllowGroup = False
-        GridViewTextBoxColumn29.AllowResize = False
-        GridViewTextBoxColumn29.AllowSort = False
-        GridViewTextBoxColumn29.EnableExpressionEditor = False
-        GridViewTextBoxColumn29.FieldName = "F1UNMIS"
-        GridViewTextBoxColumn29.HeaderText = "Unità di Misura"
-        GridViewTextBoxColumn29.Name = "F1UNMIS"
-        GridViewTextBoxColumn29.VisibleInColumnChooser = False
-        GridViewTextBoxColumn29.Width = 65
-        GridViewTextBoxColumn29.WrapText = True
-        GridViewDecimalColumn18.AllowGroup = False
-        GridViewDecimalColumn18.AllowResize = False
-        GridViewDecimalColumn18.AllowSort = False
-        GridViewDecimalColumn18.EnableExpressionEditor = False
-        GridViewDecimalColumn18.FieldName = "F1QTA"
-        GridViewDecimalColumn18.HeaderText = "Quantità"
-        GridViewDecimalColumn18.Name = "F1QTA"
-        GridViewDecimalColumn18.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewDecimalColumn18.VisibleInColumnChooser = False
-        GridViewDecimalColumn18.Width = 65
-        GridViewDecimalColumn19.AllowGroup = False
-        GridViewDecimalColumn19.AllowResize = False
-        GridViewDecimalColumn19.AllowSort = False
-        GridViewDecimalColumn19.EnableExpressionEditor = False
-        GridViewDecimalColumn19.FieldName = "F1COSTOMAT"
-        GridViewDecimalColumn19.FormatString = "{0:C2}"
-        GridViewDecimalColumn19.HeaderText = "Costo Unitario"
-        GridViewDecimalColumn19.Name = "F1COSTOMAT"
-        GridViewDecimalColumn19.ReadOnly = True
-        GridViewDecimalColumn19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewDecimalColumn19.VisibleInColumnChooser = False
-        GridViewDecimalColumn19.Width = 65
-        GridViewDecimalColumn19.WrapText = True
-        GridViewDecimalColumn20.AllowGroup = False
-        GridViewDecimalColumn20.AllowResize = False
-        GridViewDecimalColumn20.AllowSort = False
-        GridViewDecimalColumn20.EnableExpressionEditor = False
-        GridViewDecimalColumn20.FieldName = "F1VARIAZ"
-        GridViewDecimalColumn20.FormatString = "{0:C2}"
-        GridViewDecimalColumn20.HeaderText = "Variazione"
-        GridViewDecimalColumn20.Name = "F1VARIAZ"
-        GridViewDecimalColumn20.ReadOnly = True
-        GridViewDecimalColumn20.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewDecimalColumn20.VisibleInColumnChooser = False
-        GridViewDecimalColumn20.Width = 75
-        GridViewDecimalColumn20.WrapText = True
-        GridViewTextBoxColumn30.AllowGroup = False
-        GridViewTextBoxColumn30.AllowResize = False
-        GridViewTextBoxColumn30.AllowSort = False
-        GridViewTextBoxColumn30.EnableExpressionEditor = False
-        GridViewTextBoxColumn30.FieldName = "F1CODIVA"
-        GridViewTextBoxColumn30.HeaderText = "I.V.A."
-        GridViewTextBoxColumn30.Name = "F1CODIVA"
-        GridViewTextBoxColumn30.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn30.VisibleInColumnChooser = False
-        GridViewTextBoxColumn30.Width = 47
-        GridViewDecimalColumn21.EnableExpressionEditor = False
-        GridViewDecimalColumn21.FieldName = "F1IDRIGA"
-        GridViewDecimalColumn21.HeaderText = "F1IDRIGA"
-        GridViewDecimalColumn21.IsVisible = False
-        GridViewDecimalColumn21.Name = "F1IDRIGA"
-        GridViewDecimalColumn21.Width = 33
-        Me.grdVoci.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn17, GridViewTextBoxColumn25, GridViewTextBoxColumn26, GridViewTextBoxColumn27, GridViewTextBoxColumn28, GridViewTextBoxColumn29, GridViewDecimalColumn18, GridViewDecimalColumn19, GridViewDecimalColumn20, GridViewTextBoxColumn30, GridViewDecimalColumn21})
-        Me.grdVoci.MasterTemplate.EnableGrouping = False
+        GridViewDecimalColumn1.AllowGroup = False
+        GridViewDecimalColumn1.AllowResize = False
+        GridViewDecimalColumn1.AllowSort = False
+        GridViewDecimalColumn1.EnableExpressionEditor = False
+        GridViewDecimalColumn1.FieldName = "F1ORD"
+        GridViewDecimalColumn1.HeaderText = "Ordine"
+        GridViewDecimalColumn1.IsVisible = False
+        GridViewDecimalColumn1.Name = "F1ORD"
+        GridViewDecimalColumn1.VisibleInColumnChooser = False
+        GridViewDecimalColumn1.Width = 60
+        GridViewTextBoxColumn1.AllowGroup = False
+        GridViewTextBoxColumn1.AllowResize = False
+        GridViewTextBoxColumn1.AllowSort = False
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.FieldName = "F1VOCSINT"
+        GridViewTextBoxColumn1.HeaderText = "Codice Sintetico"
+        GridViewTextBoxColumn1.Name = "F1VOCSINT"
+        GridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn1.VisibleInColumnChooser = False
+        GridViewTextBoxColumn1.Width = 65
+        GridViewTextBoxColumn1.WrapText = True
+        GridViewTextBoxColumn2.AllowGroup = False
+        GridViewTextBoxColumn2.AllowResize = False
+        GridViewTextBoxColumn2.AllowSort = False
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.FieldName = "F1CODVOCE"
+        GridViewTextBoxColumn2.HeaderText = "Codice Voce"
+        GridViewTextBoxColumn2.Name = "F1CODVOCE"
+        GridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn2.VisibleInColumnChooser = False
+        GridViewTextBoxColumn2.Width = 65
+        GridViewTextBoxColumn2.WrapText = True
+        GridViewTextBoxColumn3.AllowGroup = False
+        GridViewTextBoxColumn3.AllowResize = False
+        GridViewTextBoxColumn3.AllowSort = False
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.FieldName = "F1SOTTOVOC"
+        GridViewTextBoxColumn3.HeaderText = "Codice Sottovoce"
+        GridViewTextBoxColumn3.Name = "F1SOTTOVOC"
+        GridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn3.VisibleInColumnChooser = False
+        GridViewTextBoxColumn3.Width = 65
+        GridViewTextBoxColumn3.WrapText = True
+        GridViewTextBoxColumn4.AllowGroup = False
+        GridViewTextBoxColumn4.AllowSort = False
+        GridViewTextBoxColumn4.EnableExpressionEditor = False
+        GridViewTextBoxColumn4.FieldName = "F1DESCRBRV"
+        GridViewTextBoxColumn4.HeaderText = "Descrizione"
+        GridViewTextBoxColumn4.Name = "F1DESCRBRV"
+        GridViewTextBoxColumn4.VisibleInColumnChooser = False
+        GridViewTextBoxColumn4.Width = 451
+        GridViewTextBoxColumn5.AllowGroup = False
+        GridViewTextBoxColumn5.AllowResize = False
+        GridViewTextBoxColumn5.AllowSort = False
+        GridViewTextBoxColumn5.EnableExpressionEditor = False
+        GridViewTextBoxColumn5.FieldName = "F1UNMIS"
+        GridViewTextBoxColumn5.HeaderText = "Unità di Misura"
+        GridViewTextBoxColumn5.IsVisible = False
+        GridViewTextBoxColumn5.Name = "F1UNMIS"
+        GridViewTextBoxColumn5.VisibleInColumnChooser = False
+        GridViewTextBoxColumn5.Width = 65
+        GridViewTextBoxColumn5.WrapText = True
+        GridViewDecimalColumn2.AllowGroup = False
+        GridViewDecimalColumn2.AllowResize = False
+        GridViewDecimalColumn2.AllowSort = False
+        GridViewDecimalColumn2.EnableExpressionEditor = False
+        GridViewDecimalColumn2.FieldName = "F1QTA"
+        GridViewDecimalColumn2.HeaderText = "Quantità"
+        GridViewDecimalColumn2.Name = "F1QTA"
+        GridViewDecimalColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewDecimalColumn2.VisibleInColumnChooser = False
+        GridViewDecimalColumn2.Width = 65
+        GridViewDecimalColumn3.AllowGroup = False
+        GridViewDecimalColumn3.AllowResize = False
+        GridViewDecimalColumn3.AllowSort = False
+        GridViewDecimalColumn3.EnableExpressionEditor = False
+        GridViewDecimalColumn3.FieldName = "F1COSTOMAT"
+        GridViewDecimalColumn3.FormatString = "{0:C2}"
+        GridViewDecimalColumn3.HeaderText = "Costo Unitario"
+        GridViewDecimalColumn3.IsVisible = False
+        GridViewDecimalColumn3.Name = "F1COSTOMAT"
+        GridViewDecimalColumn3.ReadOnly = True
+        GridViewDecimalColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewDecimalColumn3.VisibleInColumnChooser = False
+        GridViewDecimalColumn3.Width = 65
+        GridViewDecimalColumn3.WrapText = True
+        GridViewDecimalColumn4.AllowFiltering = False
+        GridViewDecimalColumn4.AllowGroup = False
+        GridViewDecimalColumn4.AllowResize = False
+        GridViewDecimalColumn4.AllowSearching = False
+        GridViewDecimalColumn4.AllowSort = False
+        GridViewDecimalColumn4.EnableExpressionEditor = False
+        GridViewDecimalColumn4.FieldName = "F1TOTRIGA"
+        GridViewDecimalColumn4.FormatString = "{0:C2}"
+        GridViewDecimalColumn4.HeaderText = "Subtotale"
+        GridViewDecimalColumn4.Name = "F1TOTRIGA"
+        GridViewDecimalColumn4.ReadOnly = True
+        GridViewDecimalColumn4.ThousandsSeparator = True
+        GridViewDecimalColumn4.VisibleInColumnChooser = False
+        GridViewDecimalColumn4.Width = 90
+        GridViewDecimalColumn4.WrapText = True
+        GridViewTextBoxColumn6.AllowResize = False
+        GridViewTextBoxColumn6.AllowSort = False
+        GridViewTextBoxColumn6.EnableExpressionEditor = False
+        GridViewTextBoxColumn6.FieldName = "F1CODIVA"
+        GridViewTextBoxColumn6.HeaderText = "I.V.A."
+        GridViewTextBoxColumn6.Name = "F1CODIVA"
+        GridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn6.VisibleInColumnChooser = False
+        GridViewDecimalColumn5.EnableExpressionEditor = False
+        GridViewDecimalColumn5.FieldName = "F1IDRIGA"
+        GridViewDecimalColumn5.HeaderText = "F1IDRIGA"
+        GridViewDecimalColumn5.IsVisible = False
+        GridViewDecimalColumn5.Name = "F1IDRIGA"
+        GridViewDecimalColumn5.Width = 33
+        GridViewTextBoxColumn7.AllowGroup = False
+        GridViewTextBoxColumn7.AllowResize = False
+        GridViewTextBoxColumn7.AllowSort = False
+        GridViewTextBoxColumn7.EnableExpressionEditor = False
+        GridViewTextBoxColumn7.FieldName = "Operazione"
+        GridViewTextBoxColumn7.HeaderText = "Operazione"
+        GridViewTextBoxColumn7.IsVisible = False
+        GridViewTextBoxColumn7.Name = "Operazione"
+        GridViewTextBoxColumn7.VisibleInColumnChooser = False
+        GridViewTextBoxColumn7.Width = 36
+        Me.grdVoci.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn1, GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewDecimalColumn2, GridViewDecimalColumn3, GridViewDecimalColumn4, GridViewTextBoxColumn6, GridViewDecimalColumn5, GridViewTextBoxColumn7})
         Me.grdVoci.MasterTemplate.EnableSorting = False
+        SortDescriptor1.PropertyName = "F1CODIVA"
+        GroupDescriptor1.GroupNames.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
+        Me.grdVoci.MasterTemplate.GroupDescriptors.AddRange(New Telerik.WinControls.Data.GroupDescriptor() {GroupDescriptor1})
         Me.grdVoci.MasterTemplate.ShowFilteringRow = False
         Me.grdVoci.MasterTemplate.ShowRowHeaderColumn = False
-        Me.grdVoci.MasterTemplate.ViewDefinition = TableViewDefinition6
+        GridViewSummaryItem1.Aggregate = Telerik.WinControls.UI.GridAggregateFunction.Sum
+        GridViewSummaryItem1.AggregateExpression = Nothing
+        GridViewSummaryItem1.FormatString = "Totale: {0:C2}"
+        GridViewSummaryItem1.Name = "F1TOTRIGC"
+        Me.grdVoci.MasterTemplate.SummaryRowsBottom.Add(New Telerik.WinControls.UI.GridViewSummaryRowItem(New Telerik.WinControls.UI.GridViewSummaryItem() {GridViewSummaryItem1}))
+        Me.grdVoci.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grdVoci.Name = "grdVoci"
         Me.grdVoci.ReadOnly = True
         Me.grdVoci.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.grdVoci.ShowGroupPanel = False
         Me.grdVoci.Size = New System.Drawing.Size(849, 253)
         Me.grdVoci.TabIndex = 1
         Me.grdVoci.ThemeName = "MaterialBlueGrey"
@@ -1210,7 +1249,7 @@ Partial Class FrmOfferta
         Me.CommandBarStripElement1.DrawText = True
         Me.CommandBarStripElement1.EnableDragging = False
         Me.CommandBarStripElement1.Font = New System.Drawing.Font("Roboto Medium", 12.0!)
-        Me.CommandBarStripElement1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInserisciVoce, Me.cmdModificaVoce, Me.EliminaVoce, Me.CommandBarLabel1, Me.CommandBarButton4, Me.CommandBarButton5})
+        Me.CommandBarStripElement1.Items.AddRange(New Telerik.WinControls.UI.RadCommandBarBaseItem() {Me.cmdInserisciVoce, Me.cmdModificaVoce, Me.EliminaVoce, Me.CommandBarLabel1, Me.cmdVoceUp, Me.cmdVoceDown})
         Me.CommandBarStripElement1.Name = "CommandBarStripElement1"
         '
         '
@@ -1256,25 +1295,25 @@ Partial Class FrmOfferta
         Me.CommandBarLabel1.Name = "CommandBarLabel1"
         Me.CommandBarLabel1.Text = "                                                   "
         '
-        'CommandBarButton4
+        'cmdVoceUp
         '
-        Me.CommandBarButton4.Alignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.CommandBarButton4.DisplayName = "CommandBarButton4"
-        Me.CommandBarButton4.DrawText = True
-        Me.CommandBarButton4.Image = Global.LiftCore.My.Resources.Resources.Su
-        Me.CommandBarButton4.Name = "CommandBarButton4"
-        Me.CommandBarButton4.Text = "Sposta su"
-        Me.CommandBarButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdVoceUp.Alignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdVoceUp.DisplayName = "CommandBarButton4"
+        Me.cmdVoceUp.DrawText = True
+        Me.cmdVoceUp.Image = Global.LiftCore.My.Resources.Resources.Su
+        Me.cmdVoceUp.Name = "cmdVoceUp"
+        Me.cmdVoceUp.Text = "Sposta su"
+        Me.cmdVoceUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
-        'CommandBarButton5
+        'cmdVoceDown
         '
-        Me.CommandBarButton5.Alignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.CommandBarButton5.DisplayName = "CommandBarButton5"
-        Me.CommandBarButton5.DrawText = True
-        Me.CommandBarButton5.Image = Global.LiftCore.My.Resources.Resources.Giu
-        Me.CommandBarButton5.Name = "CommandBarButton5"
-        Me.CommandBarButton5.Text = "Sposta giu"
-        Me.CommandBarButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdVoceDown.Alignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdVoceDown.DisplayName = "CommandBarButton5"
+        Me.cmdVoceDown.DrawText = True
+        Me.cmdVoceDown.Image = Global.LiftCore.My.Resources.Resources.Giu
+        Me.cmdVoceDown.Name = "cmdVoceDown"
+        Me.cmdVoceDown.Text = "Sposta giu"
+        Me.cmdVoceDown.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'GrpBonus
         '
@@ -1692,9 +1731,10 @@ Partial Class FrmOfferta
         '
         Me.cmbDizionario.AutoSize = False
         Me.cmbDizionario.DefaultItemsCountInDropDown = 3
+        Me.cmbDizionario.DropDownAnimationEnabled = True
         Me.cmbDizionario.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         Me.cmbDizionario.EnableGestures = False
-        Me.cmbDizionario.Font = New System.Drawing.Font("Roboto Medium", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbDizionario.Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbDizionario.Location = New System.Drawing.Point(614, 222)
         Me.cmbDizionario.Name = "cmbDizionario"
         Me.cmbDizionario.Padding = New System.Windows.Forms.Padding(3)
@@ -1753,9 +1793,10 @@ Partial Class FrmOfferta
         Me.cmbModPagamento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cmbModPagamento.AutoSize = False
         Me.cmbModPagamento.DefaultItemsCountInDropDown = 10
+        Me.cmbModPagamento.DropDownAnimationEnabled = True
         Me.cmbModPagamento.DropDownSizingMode = Telerik.WinControls.UI.SizingMode.UpDown
         Me.cmbModPagamento.EnableGestures = False
-        Me.cmbModPagamento.Font = New System.Drawing.Font("Roboto Medium", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbModPagamento.Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbModPagamento.Location = New System.Drawing.Point(138, 159)
         Me.cmbModPagamento.Name = "cmbModPagamento"
         Me.cmbModPagamento.Padding = New System.Windows.Forms.Padding(3)
@@ -1912,10 +1953,10 @@ Partial Class FrmOfferta
         Me.txtIva.AutoSize = False
         Me.txtIva.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.txtIva.ForeColor = System.Drawing.Color.Black
-        Me.txtIva.Location = New System.Drawing.Point(799, 100)
+        Me.txtIva.Location = New System.Drawing.Point(760, 100)
         Me.txtIva.MaxLength = 35
         Me.txtIva.Name = "txtIva"
-        Me.txtIva.Size = New System.Drawing.Size(74, 36)
+        Me.txtIva.Size = New System.Drawing.Size(113, 36)
         Me.txtIva.TabIndex = 239
         Me.txtIva.ThemeName = "Fluent"
         CType(Me.txtIva.GetChildAt(0), Telerik.WinControls.UI.RadTextBoxElement).Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -1925,7 +1966,7 @@ Partial Class FrmOfferta
         Me.txtCodIva.AutoSize = False
         Me.txtCodIva.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.txtCodIva.ForeColor = System.Drawing.Color.Black
-        Me.txtCodIva.Location = New System.Drawing.Point(725, 101)
+        Me.txtCodIva.Location = New System.Drawing.Point(686, 100)
         Me.txtCodIva.MaxLength = 6
         Me.txtCodIva.Name = "txtCodIva"
         Me.txtCodIva.ReadOnly = True
@@ -1940,7 +1981,7 @@ Partial Class FrmOfferta
         'RadLabel9
         '
         Me.RadLabel9.Font = New System.Drawing.Font("Roboto Medium", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadLabel9.Location = New System.Drawing.Point(659, 108)
+        Me.RadLabel9.Location = New System.Drawing.Point(620, 107)
         Me.RadLabel9.Name = "RadLabel9"
         Me.RadLabel9.Size = New System.Drawing.Size(60, 21)
         Me.RadLabel9.TabIndex = 237
@@ -2209,8 +2250,7 @@ Partial Class FrmOfferta
         '
         'RadCollapsiblePanel1.PanelContainer
         '
-        Me.RadCollapsiblePanel1.PanelContainer.Location = New System.Drawing.Point(0, 0)
-        Me.RadCollapsiblePanel1.PanelContainer.Size = New System.Drawing.Size(0, 0)
+        Me.RadCollapsiblePanel1.PanelContainer.Size = New System.Drawing.Size(-2, -2)
         Me.RadCollapsiblePanel1.Size = New System.Drawing.Size(23, 862)
         Me.RadCollapsiblePanel1.TabIndex = 263
         Me.RadCollapsiblePanel1.ThemeName = "MaterialBlueGrey"
@@ -2218,12 +2258,12 @@ Partial Class FrmOfferta
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox1.Controls.Add(Me.RadButton15)
+        Me.RadGroupBox1.Controls.Add(Me.loadFromGallery)
         Me.RadGroupBox1.Controls.Add(Me.RadGroupBox5)
         Me.RadGroupBox1.Controls.Add(Me.RadGroupBox4)
         Me.RadGroupBox1.Controls.Add(Me.RadGroupBox3)
-        Me.RadGroupBox1.Controls.Add(Me.RadButton8)
-        Me.RadGroupBox1.Controls.Add(Me.RadButton9)
+        Me.RadGroupBox1.Controls.Add(Me.loadImage)
+        Me.RadGroupBox1.Controls.Add(Me.setDefault)
         Me.RadGroupBox1.Controls.Add(Me.image)
         Me.RadGroupBox1.HeaderImage = Global.LiftCore.My.Resources.Resources.Option___Ordinamento
         Me.RadGroupBox1.HeaderText = "Opzioni Grafiche"
@@ -2235,14 +2275,14 @@ Partial Class FrmOfferta
         Me.RadGroupBox1.Text = "Opzioni Grafiche"
         Me.RadGroupBox1.ThemeName = "MaterialBlueGrey"
         '
-        'RadButton15
+        'loadFromGallery
         '
-        Me.RadButton15.Location = New System.Drawing.Point(168, 81)
-        Me.RadButton15.Name = "RadButton15"
-        Me.RadButton15.Size = New System.Drawing.Size(117, 47)
-        Me.RadButton15.TabIndex = 282
-        Me.RadButton15.Text = "Carica" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " da Galleria"
-        Me.RadButton15.ThemeName = "MaterialBlueGrey"
+        Me.loadFromGallery.Location = New System.Drawing.Point(168, 81)
+        Me.loadFromGallery.Name = "loadFromGallery"
+        Me.loadFromGallery.Size = New System.Drawing.Size(117, 47)
+        Me.loadFromGallery.TabIndex = 282
+        Me.loadFromGallery.Text = "Carica" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " da Galleria"
+        Me.loadFromGallery.ThemeName = "MaterialBlueGrey"
         '
         'RadGroupBox5
         '
@@ -2250,7 +2290,7 @@ Partial Class FrmOfferta
         Me.RadGroupBox5.Controls.Add(Me.RadLabel33)
         Me.RadGroupBox5.Controls.Add(Me.RadLabel30)
         Me.RadGroupBox5.Controls.Add(Me.RadColorBox1)
-        Me.RadGroupBox5.Controls.Add(Me.RadToggleSwitch1)
+        Me.RadGroupBox5.Controls.Add(Me.ImageBordDraw)
         Me.RadGroupBox5.HeaderMargin = New System.Windows.Forms.Padding(1)
         Me.RadGroupBox5.HeaderText = "Bordo Immagine"
         Me.RadGroupBox5.Location = New System.Drawing.Point(233, 144)
@@ -2295,28 +2335,27 @@ Partial Class FrmOfferta
         Me.RadColorBox1.ThemeName = "Fluent"
         Me.RadColorBox1.Value = System.Drawing.Color.Black
         '
-        'RadToggleSwitch1
+        'ImageBordDraw
         '
-        Me.RadToggleSwitch1.ForeColor = System.Drawing.Color.White
-        Me.RadToggleSwitch1.Location = New System.Drawing.Point(115, 28)
-        Me.RadToggleSwitch1.Name = "RadToggleSwitch1"
-        Me.RadToggleSwitch1.OffText = "No"
-        Me.RadToggleSwitch1.OnText = "Si"
-        Me.RadToggleSwitch1.Size = New System.Drawing.Size(50, 25)
-        Me.RadToggleSwitch1.TabIndex = 254
-        Me.RadToggleSwitch1.ThemeName = "MaterialBlueGrey"
-        Me.RadToggleSwitch1.Value = False
-        CType(Me.RadToggleSwitch1.GetChildAt(0), Telerik.WinControls.UI.RadToggleSwitchElement).ThumbOffset = 0
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).ClipText = True
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextWrap = True
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).Text = "Si"
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).EnableHighlight = True
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).ForeColor = System.Drawing.Color.White
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).ClipText = True
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).TextWrap = True
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).Text = "No"
-        CType(Me.RadToggleSwitch1.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).ForeColor = System.Drawing.Color.Black
+        Me.ImageBordDraw.ForeColor = System.Drawing.Color.White
+        Me.ImageBordDraw.Location = New System.Drawing.Point(115, 28)
+        Me.ImageBordDraw.Name = "ImageBordDraw"
+        Me.ImageBordDraw.OffText = "No"
+        Me.ImageBordDraw.OnText = "Si"
+        Me.ImageBordDraw.Size = New System.Drawing.Size(50, 25)
+        Me.ImageBordDraw.TabIndex = 254
+        Me.ImageBordDraw.ThemeName = "MaterialTeal"
+        Me.ImageBordDraw.Value = False
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).ClipText = True
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextWrap = True
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).Text = "Si"
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).EnableHighlight = True
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).ForeColor = System.Drawing.Color.White
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).ClipText = True
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).TextWrap = True
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).Text = "No"
+        CType(Me.ImageBordDraw.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).ForeColor = System.Drawing.Color.Black
         '
         'RadGroupBox4
         '
@@ -2414,26 +2453,27 @@ Partial Class FrmOfferta
         Me.RadRadioButton6.Text = "Singolo"
         Me.RadRadioButton6.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
-        'RadButton8
+        'loadImage
         '
-        Me.RadButton8.Location = New System.Drawing.Point(306, 81)
-        Me.RadButton8.Name = "RadButton8"
-        Me.RadButton8.Size = New System.Drawing.Size(117, 47)
-        Me.RadButton8.TabIndex = 278
-        Me.RadButton8.Text = "Imposta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "predefinita" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RadButton8.ThemeName = "MaterialBlueGrey"
+        Me.loadImage.Location = New System.Drawing.Point(30, 81)
+        Me.loadImage.Name = "loadImage"
+        Me.loadImage.Size = New System.Drawing.Size(117, 47)
+        Me.loadImage.TabIndex = 277
+        Me.loadImage.Text = "Carica " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "immagine"
+        Me.loadImage.ThemeName = "MaterialBlueGrey"
         '
-        'RadButton9
+        'setDefault
         '
-        Me.RadButton9.Location = New System.Drawing.Point(30, 81)
-        Me.RadButton9.Name = "RadButton9"
-        Me.RadButton9.Size = New System.Drawing.Size(117, 47)
-        Me.RadButton9.TabIndex = 277
-        Me.RadButton9.Text = "Carica " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "immagine"
-        Me.RadButton9.ThemeName = "MaterialBlueGrey"
+        Me.setDefault.Location = New System.Drawing.Point(306, 81)
+        Me.setDefault.Name = "setDefault"
+        Me.setDefault.Size = New System.Drawing.Size(117, 47)
+        Me.setDefault.TabIndex = 278
+        Me.setDefault.Text = "Imposta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "predefinita" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.setDefault.ThemeName = "MaterialBlueGrey"
         '
         'image
         '
+        Me.image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.image.Location = New System.Drawing.Point(446, 21)
         Me.image.Name = "image"
         Me.image.Padding = New System.Windows.Forms.Padding(3)
@@ -2444,14 +2484,14 @@ Partial Class FrmOfferta
         'grpTesto
         '
         Me.grpTesto.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.grpTesto.Controls.Add(Me.cmbSizeFont)
         Me.grpTesto.Controls.Add(Me.RadGroupBox8)
-        Me.grpTesto.Controls.Add(Me.RadGroupBox7)
-        Me.grpTesto.Controls.Add(Me.RadButton13)
-        Me.grpTesto.Controls.Add(Me.RadButton14)
+        Me.grpTesto.Controls.Add(Me.grpTextEffect)
+        Me.grpTesto.Controls.Add(Me.shoPrevText)
+        Me.grpTesto.Controls.Add(Me.SaveText)
         Me.grpTesto.Controls.Add(Me.RadLabel31)
-        Me.grpTesto.Controls.Add(Me.RadFontDropDownList1)
-        Me.grpTesto.Controls.Add(Me.RadGroupBox6)
-        Me.grpTesto.Controls.Add(Me.RadGroupBox2)
+        Me.grpTesto.Controls.Add(Me.grpTextAlign)
+        Me.grpTesto.Controls.Add(Me.grpTextStyle)
         Me.grpTesto.Controls.Add(Me.RadLabel29)
         Me.grpTesto.Controls.Add(Me.cmbFont)
         Me.grpTesto.HeaderImage = Global.LiftCore.My.Resources.Resources.Option___Manutenzione
@@ -2463,6 +2503,29 @@ Partial Class FrmOfferta
         Me.grpTesto.TabIndex = 265
         Me.grpTesto.Text = "Opzioni Testo"
         Me.grpTesto.ThemeName = "MaterialBlueGrey"
+        '
+        'cmbSizeFont
+        '
+        Me.cmbSizeFont.AutoSize = False
+        Me.cmbSizeFont.DefaultItemsCountInDropDown = 3
+        Me.cmbSizeFont.DropDownAnimationEnabled = True
+        Me.cmbSizeFont.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.cmbSizeFont.EnableGestures = False
+        Me.cmbSizeFont.Font = New System.Drawing.Font("Roboto Medium", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbSizeFont.Location = New System.Drawing.Point(233, 154)
+        Me.cmbSizeFont.Name = "cmbSizeFont"
+        Me.cmbSizeFont.Padding = New System.Windows.Forms.Padding(3)
+        Me.cmbSizeFont.SelectNextOnDoubleClick = True
+        Me.cmbSizeFont.Size = New System.Drawing.Size(85, 36)
+        Me.cmbSizeFont.TabIndex = 288
+        Me.cmbSizeFont.Text = "12"
+        Me.cmbSizeFont.ThemeName = "Fluent"
+        CType(Me.cmbSizeFont.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        CType(Me.cmbSizeFont.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).Padding = New System.Windows.Forms.Padding(3)
+        CType(Me.cmbSizeFont.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadDropDownTextBoxElement).Text = "12"
+        CType(Me.cmbSizeFont.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadDropDownTextBoxElement).Alignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.cmbSizeFont.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadDropDownTextBoxElement).Visibility = Telerik.WinControls.ElementVisibility.Hidden
+        CType(Me.cmbSizeFont.GetChildAt(0).GetChildAt(2).GetChildAt(0).GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.RadTextBoxItem).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RadGroupBox8
         '
@@ -2531,7 +2594,6 @@ Partial Class FrmOfferta
         Me.RadToggleSwitch2.TabIndex = 254
         Me.RadToggleSwitch2.ThemeName = "MaterialBlueGrey"
         Me.RadToggleSwitch2.Value = False
-        CType(Me.RadToggleSwitch2.GetChildAt(0), Telerik.WinControls.UI.RadToggleSwitchElement).ThumbOffset = 0
         CType(Me.RadToggleSwitch2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadToggleSwitch2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).ClipText = True
         CType(Me.RadToggleSwitch2.GetChildAt(0).GetChildAt(0), Telerik.WinControls.UI.ToggleSwitchPartElement).TextWrap = True
@@ -2543,25 +2605,25 @@ Partial Class FrmOfferta
         CType(Me.RadToggleSwitch2.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).Text = "No"
         CType(Me.RadToggleSwitch2.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.ToggleSwitchPartElement).ForeColor = System.Drawing.Color.Black
         '
-        'RadGroupBox7
+        'grpTextEffect
         '
-        Me.RadGroupBox7.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox7.Controls.Add(Me.RadRadioButton14)
-        Me.RadGroupBox7.Controls.Add(Me.RadRadioButton15)
-        Me.RadGroupBox7.Controls.Add(Me.RadRadioButton16)
-        Me.RadGroupBox7.HeaderMargin = New System.Windows.Forms.Padding(1)
-        Me.RadGroupBox7.HeaderText = "Effetti"
-        Me.RadGroupBox7.Location = New System.Drawing.Point(363, 257)
-        Me.RadGroupBox7.Name = "RadGroupBox7"
-        Me.RadGroupBox7.Size = New System.Drawing.Size(393, 63)
-        Me.RadGroupBox7.TabIndex = 285
-        Me.RadGroupBox7.Text = "Effetti"
-        Me.RadGroupBox7.ThemeName = "MaterialBlueGrey"
-        CType(Me.RadGroupBox7.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
-        CType(Me.RadGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Effetti"
-        CType(Me.RadGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
-        CType(Me.RadGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
-        CType(Me.RadGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.grpTextEffect.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.grpTextEffect.Controls.Add(Me.RadRadioButton14)
+        Me.grpTextEffect.Controls.Add(Me.RadRadioButton15)
+        Me.grpTextEffect.Controls.Add(Me.RadRadioButton16)
+        Me.grpTextEffect.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.grpTextEffect.HeaderText = "Effetti"
+        Me.grpTextEffect.Location = New System.Drawing.Point(363, 257)
+        Me.grpTextEffect.Name = "grpTextEffect"
+        Me.grpTextEffect.Size = New System.Drawing.Size(393, 63)
+        Me.grpTextEffect.TabIndex = 285
+        Me.grpTextEffect.Text = "Effetti"
+        Me.grpTextEffect.ThemeName = "MaterialBlueGrey"
+        CType(Me.grpTextEffect.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
+        CType(Me.grpTextEffect.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Effetti"
+        CType(Me.grpTextEffect.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
+        CType(Me.grpTextEffect.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
+        CType(Me.grpTextEffect.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RadRadioButton14
         '
@@ -2591,23 +2653,23 @@ Partial Class FrmOfferta
         Me.RadRadioButton16.Text = "Normale"
         Me.RadRadioButton16.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
-        'RadButton13
+        'shoPrevText
         '
-        Me.RadButton13.Location = New System.Drawing.Point(534, 338)
-        Me.RadButton13.Name = "RadButton13"
-        Me.RadButton13.Size = New System.Drawing.Size(108, 44)
-        Me.RadButton13.TabIndex = 284
-        Me.RadButton13.Text = "Mostra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Anteprima"
-        Me.RadButton13.ThemeName = "MaterialBlueGrey"
+        Me.shoPrevText.Location = New System.Drawing.Point(534, 338)
+        Me.shoPrevText.Name = "shoPrevText"
+        Me.shoPrevText.Size = New System.Drawing.Size(108, 44)
+        Me.shoPrevText.TabIndex = 284
+        Me.shoPrevText.Text = "Mostra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Anteprima"
+        Me.shoPrevText.ThemeName = "MaterialBlueGrey"
         '
-        'RadButton14
+        'SaveText
         '
-        Me.RadButton14.Location = New System.Drawing.Point(648, 338)
-        Me.RadButton14.Name = "RadButton14"
-        Me.RadButton14.Size = New System.Drawing.Size(108, 44)
-        Me.RadButton14.TabIndex = 283
-        Me.RadButton14.Text = "Salva"
-        Me.RadButton14.ThemeName = "MaterialBlueGrey"
+        Me.SaveText.Location = New System.Drawing.Point(648, 338)
+        Me.SaveText.Name = "SaveText"
+        Me.SaveText.Size = New System.Drawing.Size(108, 44)
+        Me.SaveText.TabIndex = 283
+        Me.SaveText.Text = "Salva"
+        Me.SaveText.ThemeName = "MaterialBlueGrey"
         '
         'RadLabel31
         '
@@ -2619,36 +2681,26 @@ Partial Class FrmOfferta
         Me.RadLabel31.Text = "Dimensione Carattere"
         Me.RadLabel31.ThemeName = "MaterialBlueGrey"
         '
-        'RadFontDropDownList1
+        'grpTextAlign
         '
-        Me.RadFontDropDownList1.Location = New System.Drawing.Point(210, 155)
-        Me.RadFontDropDownList1.Name = "RadFontDropDownList1"
-        Me.RadFontDropDownList1.SelectOnHover = False
-        Me.RadFontDropDownList1.ShowTextBox = False
-        Me.RadFontDropDownList1.Size = New System.Drawing.Size(105, 36)
-        Me.RadFontDropDownList1.TabIndex = 281
-        Me.RadFontDropDownList1.ThemeName = "MaterialBlueGrey"
-        '
-        'RadGroupBox6
-        '
-        Me.RadGroupBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox6.Controls.Add(Me.RadRadioButton8)
-        Me.RadGroupBox6.Controls.Add(Me.RadRadioButton9)
-        Me.RadGroupBox6.Controls.Add(Me.RadRadioButton12)
-        Me.RadGroupBox6.Controls.Add(Me.RadRadioButton13)
-        Me.RadGroupBox6.HeaderMargin = New System.Windows.Forms.Padding(1)
-        Me.RadGroupBox6.HeaderText = "Allineamento Testo"
-        Me.RadGroupBox6.Location = New System.Drawing.Point(363, 85)
-        Me.RadGroupBox6.Name = "RadGroupBox6"
-        Me.RadGroupBox6.Size = New System.Drawing.Size(393, 71)
-        Me.RadGroupBox6.TabIndex = 280
-        Me.RadGroupBox6.Text = "Allineamento Testo"
-        Me.RadGroupBox6.ThemeName = "MaterialBlueGrey"
-        CType(Me.RadGroupBox6.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
-        CType(Me.RadGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Allineamento Testo"
-        CType(Me.RadGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
-        CType(Me.RadGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
-        CType(Me.RadGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.grpTextAlign.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.grpTextAlign.Controls.Add(Me.RadRadioButton8)
+        Me.grpTextAlign.Controls.Add(Me.RadRadioButton9)
+        Me.grpTextAlign.Controls.Add(Me.RadRadioButton12)
+        Me.grpTextAlign.Controls.Add(Me.RadRadioButton13)
+        Me.grpTextAlign.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.grpTextAlign.HeaderText = "Allineamento Testo"
+        Me.grpTextAlign.Location = New System.Drawing.Point(363, 85)
+        Me.grpTextAlign.Name = "grpTextAlign"
+        Me.grpTextAlign.Size = New System.Drawing.Size(393, 71)
+        Me.grpTextAlign.TabIndex = 280
+        Me.grpTextAlign.Text = "Allineamento Testo"
+        Me.grpTextAlign.ThemeName = "MaterialBlueGrey"
+        CType(Me.grpTextAlign.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
+        CType(Me.grpTextAlign.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Allineamento Testo"
+        CType(Me.grpTextAlign.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
+        CType(Me.grpTextAlign.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
+        CType(Me.grpTextAlign.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RadRadioButton8
         '
@@ -2687,25 +2739,25 @@ Partial Class FrmOfferta
         Me.RadRadioButton13.Text = "Sinistra"
         Me.RadRadioButton13.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
-        'RadGroupBox2
+        'grpTextStyle
         '
-        Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox2.Controls.Add(Me.RadRadioButton3)
-        Me.RadGroupBox2.Controls.Add(Me.RadRadioButton2)
-        Me.RadGroupBox2.Controls.Add(Me.RadRadioButton1)
-        Me.RadGroupBox2.HeaderMargin = New System.Windows.Forms.Padding(1)
-        Me.RadGroupBox2.HeaderText = "Stile Testo"
-        Me.RadGroupBox2.Location = New System.Drawing.Point(363, 177)
-        Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(393, 63)
-        Me.RadGroupBox2.TabIndex = 274
-        Me.RadGroupBox2.Text = "Stile Testo"
-        Me.RadGroupBox2.ThemeName = "MaterialBlueGrey"
-        CType(Me.RadGroupBox2.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
-        CType(Me.RadGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Stile Testo"
-        CType(Me.RadGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
-        CType(Me.RadGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
-        CType(Me.RadGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        Me.grpTextStyle.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.grpTextStyle.Controls.Add(Me.RadRadioButton3)
+        Me.grpTextStyle.Controls.Add(Me.RadRadioButton2)
+        Me.grpTextStyle.Controls.Add(Me.RadRadioButton1)
+        Me.grpTextStyle.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.grpTextStyle.HeaderText = "Stile Testo"
+        Me.grpTextStyle.Location = New System.Drawing.Point(363, 177)
+        Me.grpTextStyle.Name = "grpTextStyle"
+        Me.grpTextStyle.Size = New System.Drawing.Size(393, 63)
+        Me.grpTextStyle.TabIndex = 274
+        Me.grpTextStyle.Text = "Stile Testo"
+        Me.grpTextStyle.ThemeName = "MaterialBlueGrey"
+        CType(Me.grpTextStyle.GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.GroupBoxHeader).Margin = New System.Windows.Forms.Padding(1)
+        CType(Me.grpTextStyle.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Text = "Stile Testo"
+        CType(Me.grpTextStyle.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).LineLimit = False
+        CType(Me.grpTextStyle.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Font = New System.Drawing.Font("Roboto Medium", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(1, Byte), True)
+        CType(Me.grpTextStyle.GetChildAt(0).GetChildAt(1).GetChildAt(2).GetChildAt(1), Telerik.WinControls.Primitives.TextPrimitive).Alignment = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RadRadioButton3
         '
@@ -2747,13 +2799,15 @@ Partial Class FrmOfferta
         '
         'cmbFont
         '
+        Me.cmbFont.Font = New System.Drawing.Font("Roboto Medium", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbFont.Location = New System.Drawing.Point(103, 85)
         Me.cmbFont.Name = "cmbFont"
+        Me.cmbFont.Padding = New System.Windows.Forms.Padding(3)
         Me.cmbFont.SelectOnHover = False
         Me.cmbFont.ShowTextBox = False
-        Me.cmbFont.Size = New System.Drawing.Size(215, 36)
+        Me.cmbFont.Size = New System.Drawing.Size(215, 30)
         Me.cmbFont.TabIndex = 0
-        Me.cmbFont.ThemeName = "MaterialBlueGrey"
+        Me.cmbFont.ThemeName = "Fluent"
         '
         'grpNote
         '
@@ -2915,7 +2969,7 @@ Partial Class FrmOfferta
         Me.grdVociGrafiche.Font = New System.Drawing.Font("Roboto Medium", 9.0!)
         Me.grdVociGrafiche.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.grdVociGrafiche.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.grdVociGrafiche.Location = New System.Drawing.Point(2, 69)
+        Me.grdVociGrafiche.Location = New System.Drawing.Point(2, 117)
         '
         '
         '
@@ -2930,69 +2984,69 @@ Partial Class FrmOfferta
         Me.grdVociGrafiche.MasterTemplate.AllowRowResize = False
         Me.grdVociGrafiche.MasterTemplate.AutoGenerateColumns = False
         Me.grdVociGrafiche.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewDecimalColumn15.AllowGroup = False
-        GridViewDecimalColumn15.AllowResize = False
-        GridViewDecimalColumn15.AllowSort = False
-        GridViewDecimalColumn15.EnableExpressionEditor = False
-        GridViewDecimalColumn15.FieldName = "F1ORD"
-        GridViewDecimalColumn15.HeaderText = "Ordine"
-        GridViewDecimalColumn15.IsVisible = False
-        GridViewDecimalColumn15.Name = "F1ORD"
-        GridViewDecimalColumn15.VisibleInColumnChooser = False
-        GridViewDecimalColumn15.Width = 60
-        GridViewTextBoxColumn21.AllowGroup = False
-        GridViewTextBoxColumn21.AllowResize = False
-        GridViewTextBoxColumn21.AllowSort = False
-        GridViewTextBoxColumn21.EnableExpressionEditor = False
-        GridViewTextBoxColumn21.FieldName = "F1VOCSINT"
-        GridViewTextBoxColumn21.HeaderText = "Codice Sintetico"
-        GridViewTextBoxColumn21.Name = "F1VOCSINT"
-        GridViewTextBoxColumn21.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn21.VisibleInColumnChooser = False
-        GridViewTextBoxColumn21.Width = 65
-        GridViewTextBoxColumn21.WrapText = True
-        GridViewTextBoxColumn22.AllowGroup = False
-        GridViewTextBoxColumn22.AllowResize = False
-        GridViewTextBoxColumn22.AllowSort = False
-        GridViewTextBoxColumn22.EnableExpressionEditor = False
-        GridViewTextBoxColumn22.FieldName = "F1CODVOCE"
-        GridViewTextBoxColumn22.HeaderText = "Codice Voce"
-        GridViewTextBoxColumn22.Name = "F1CODVOCE"
-        GridViewTextBoxColumn22.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn22.VisibleInColumnChooser = False
-        GridViewTextBoxColumn22.Width = 65
-        GridViewTextBoxColumn22.WrapText = True
-        GridViewTextBoxColumn23.AllowGroup = False
-        GridViewTextBoxColumn23.AllowResize = False
-        GridViewTextBoxColumn23.AllowSort = False
-        GridViewTextBoxColumn23.EnableExpressionEditor = False
-        GridViewTextBoxColumn23.FieldName = "F1SOTTOVOC"
-        GridViewTextBoxColumn23.HeaderText = "Codice Sottovoce"
-        GridViewTextBoxColumn23.Name = "F1SOTTOVOC"
-        GridViewTextBoxColumn23.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        GridViewTextBoxColumn23.VisibleInColumnChooser = False
-        GridViewTextBoxColumn23.Width = 65
-        GridViewTextBoxColumn23.WrapText = True
-        GridViewTextBoxColumn24.AllowGroup = False
-        GridViewTextBoxColumn24.AllowSort = False
-        GridViewTextBoxColumn24.EnableExpressionEditor = False
-        GridViewTextBoxColumn24.FieldName = "F1DESCRBRV"
-        GridViewTextBoxColumn24.HeaderText = "Descrizione"
-        GridViewTextBoxColumn24.Name = "F1DESCRBRV"
-        GridViewTextBoxColumn24.VisibleInColumnChooser = False
-        GridViewTextBoxColumn24.Width = 786
-        GridViewDecimalColumn16.EnableExpressionEditor = False
-        GridViewDecimalColumn16.FieldName = "F1IDRIGA"
-        GridViewDecimalColumn16.HeaderText = "F1IDRIGA"
-        GridViewDecimalColumn16.IsVisible = False
-        GridViewDecimalColumn16.Name = "F1IDRIGA"
-        GridViewDecimalColumn16.Width = 33
-        Me.grdVociGrafiche.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn15, GridViewTextBoxColumn21, GridViewTextBoxColumn22, GridViewTextBoxColumn23, GridViewTextBoxColumn24, GridViewDecimalColumn16})
+        GridViewDecimalColumn6.AllowGroup = False
+        GridViewDecimalColumn6.AllowResize = False
+        GridViewDecimalColumn6.AllowSort = False
+        GridViewDecimalColumn6.EnableExpressionEditor = False
+        GridViewDecimalColumn6.FieldName = "F1ORD"
+        GridViewDecimalColumn6.HeaderText = "Ordine"
+        GridViewDecimalColumn6.IsVisible = False
+        GridViewDecimalColumn6.Name = "F1ORD"
+        GridViewDecimalColumn6.VisibleInColumnChooser = False
+        GridViewDecimalColumn6.Width = 60
+        GridViewTextBoxColumn8.AllowGroup = False
+        GridViewTextBoxColumn8.AllowResize = False
+        GridViewTextBoxColumn8.AllowSort = False
+        GridViewTextBoxColumn8.EnableExpressionEditor = False
+        GridViewTextBoxColumn8.FieldName = "F1VOCSINT"
+        GridViewTextBoxColumn8.HeaderText = "Codice Sintetico"
+        GridViewTextBoxColumn8.Name = "F1VOCSINT"
+        GridViewTextBoxColumn8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn8.VisibleInColumnChooser = False
+        GridViewTextBoxColumn8.Width = 65
+        GridViewTextBoxColumn8.WrapText = True
+        GridViewTextBoxColumn9.AllowGroup = False
+        GridViewTextBoxColumn9.AllowResize = False
+        GridViewTextBoxColumn9.AllowSort = False
+        GridViewTextBoxColumn9.EnableExpressionEditor = False
+        GridViewTextBoxColumn9.FieldName = "F1CODVOCE"
+        GridViewTextBoxColumn9.HeaderText = "Codice Voce"
+        GridViewTextBoxColumn9.Name = "F1CODVOCE"
+        GridViewTextBoxColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn9.VisibleInColumnChooser = False
+        GridViewTextBoxColumn9.Width = 65
+        GridViewTextBoxColumn9.WrapText = True
+        GridViewTextBoxColumn10.AllowGroup = False
+        GridViewTextBoxColumn10.AllowResize = False
+        GridViewTextBoxColumn10.AllowSort = False
+        GridViewTextBoxColumn10.EnableExpressionEditor = False
+        GridViewTextBoxColumn10.FieldName = "F1SOTTOVOC"
+        GridViewTextBoxColumn10.HeaderText = "Codice Sottovoce"
+        GridViewTextBoxColumn10.Name = "F1SOTTOVOC"
+        GridViewTextBoxColumn10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        GridViewTextBoxColumn10.VisibleInColumnChooser = False
+        GridViewTextBoxColumn10.Width = 65
+        GridViewTextBoxColumn10.WrapText = True
+        GridViewTextBoxColumn11.AllowGroup = False
+        GridViewTextBoxColumn11.AllowSort = False
+        GridViewTextBoxColumn11.EnableExpressionEditor = False
+        GridViewTextBoxColumn11.FieldName = "F1DESCRBRV"
+        GridViewTextBoxColumn11.HeaderText = "Descrizione"
+        GridViewTextBoxColumn11.Name = "F1DESCRBRV"
+        GridViewTextBoxColumn11.VisibleInColumnChooser = False
+        GridViewTextBoxColumn11.Width = 786
+        GridViewDecimalColumn7.EnableExpressionEditor = False
+        GridViewDecimalColumn7.FieldName = "F1IDRIGA"
+        GridViewDecimalColumn7.HeaderText = "F1IDRIGA"
+        GridViewDecimalColumn7.IsVisible = False
+        GridViewDecimalColumn7.Name = "F1IDRIGA"
+        GridViewDecimalColumn7.Width = 33
+        Me.grdVociGrafiche.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewDecimalColumn6, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewDecimalColumn7})
         Me.grdVociGrafiche.MasterTemplate.EnableGrouping = False
         Me.grdVociGrafiche.MasterTemplate.EnableSorting = False
         Me.grdVociGrafiche.MasterTemplate.ShowFilteringRow = False
         Me.grdVociGrafiche.MasterTemplate.ShowRowHeaderColumn = False
-        Me.grdVociGrafiche.MasterTemplate.ViewDefinition = TableViewDefinition5
+        Me.grdVociGrafiche.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.grdVociGrafiche.Name = "grdVociGrafiche"
         Me.grdVociGrafiche.ReadOnly = True
         Me.grdVociGrafiche.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -3003,10 +3057,10 @@ Partial Class FrmOfferta
         'RadCommandBar2
         '
         Me.RadCommandBar2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RadCommandBar2.Location = New System.Drawing.Point(2, 349)
+        Me.RadCommandBar2.Location = New System.Drawing.Point(2, 397)
         Me.RadCommandBar2.Name = "RadCommandBar2"
         Me.RadCommandBar2.Rows.AddRange(New Telerik.WinControls.UI.CommandBarRowElement() {Me.CommandBarRowElement2})
-        Me.RadCommandBar2.Size = New System.Drawing.Size(981, 48)
+        Me.RadCommandBar2.Size = New System.Drawing.Size(981, 0)
         Me.RadCommandBar2.TabIndex = 0
         Me.RadCommandBar2.ThemeName = "MaterialBlueGrey"
         '
@@ -3120,7 +3174,7 @@ Partial Class FrmOfferta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1908, 953)
-        Me.Controls.Add(Me.Menu)
+        Me.Controls.Add(Me.listaOpzioni)
         Me.Controls.Add(Me.panelOfferta)
         Me.Name = "FrmOfferta"
         '
@@ -3137,15 +3191,16 @@ Partial Class FrmOfferta
         CType(Me.lbNumero, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lbStato, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lbId, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Menu, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Menu.ResumeLayout(False)
+        CType(Me.listaOpzioni, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.listaOpzioni.ResumeLayout(False)
         Me.PageMenuOfferta.ResumeLayout(False)
+        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grpDetVoce, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpDetVoce.ResumeLayout(False)
         Me.grpDetVoce.PerformLayout()
-        CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdAnnullaVoce, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmdConfermaVoce, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txmImponibileVoce, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grpVariazione, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3253,16 +3308,17 @@ Partial Class FrmOfferta
         CType(Me.cmdSave, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmdClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCollapsiblePanel1.ResumeLayout(False)
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
-        CType(Me.RadButton15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.loadFromGallery, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox5.ResumeLayout(False)
         Me.RadGroupBox5.PerformLayout()
         CType(Me.RadLabel33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadColorBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadToggleSwitch1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImageBordDraw, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox4.ResumeLayout(False)
         Me.RadGroupBox4.PerformLayout()
@@ -3275,12 +3331,13 @@ Partial Class FrmOfferta
         CType(Me.RadRadioButton4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.loadImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.setDefault, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.image, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grpTesto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTesto.ResumeLayout(False)
         Me.grpTesto.PerformLayout()
+        CType(Me.cmbSizeFont, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox8.ResumeLayout(False)
         Me.RadGroupBox8.PerformLayout()
@@ -3288,26 +3345,25 @@ Partial Class FrmOfferta
         CType(Me.RadLabel32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadColorBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadToggleSwitch2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox7.ResumeLayout(False)
-        Me.RadGroupBox7.PerformLayout()
+        CType(Me.grpTextEffect, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpTextEffect.ResumeLayout(False)
+        Me.grpTextEffect.PerformLayout()
         CType(Me.RadRadioButton14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.shoPrevText, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SaveText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadFontDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox6.ResumeLayout(False)
-        Me.RadGroupBox6.PerformLayout()
+        CType(Me.grpTextAlign, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpTextAlign.ResumeLayout(False)
+        Me.grpTextAlign.PerformLayout()
         CType(Me.RadRadioButton8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox2.ResumeLayout(False)
-        Me.RadGroupBox2.PerformLayout()
+        CType(Me.grpTextStyle, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpTextStyle.ResumeLayout(False)
+        Me.grpTextStyle.PerformLayout()
         CType(Me.RadRadioButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButton1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3342,7 +3398,6 @@ Partial Class FrmOfferta
     Friend WithEvents lbNumero As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lbStato As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lbId As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents Menu As Telerik.WinControls.UI.RadPageView
     Friend WithEvents PageMenuOfferta As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents PageMenuDettaglio As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents GrpBonus As Telerik.WinControls.UI.RadGroupBox
@@ -3411,8 +3466,8 @@ Partial Class FrmOfferta
     Friend WithEvents cmdInserisciVoce As Telerik.WinControls.UI.CommandBarButton
     Friend WithEvents cmdModificaVoce As Telerik.WinControls.UI.CommandBarButton
     Friend WithEvents EliminaVoce As Telerik.WinControls.UI.CommandBarButton
-    Friend WithEvents CommandBarButton4 As Telerik.WinControls.UI.CommandBarButton
-    Friend WithEvents CommandBarButton5 As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents cmdVoceUp As Telerik.WinControls.UI.CommandBarButton
+    Friend WithEvents cmdVoceDown As Telerik.WinControls.UI.CommandBarButton
     Friend WithEvents CommandBarLabel1 As Telerik.WinControls.UI.CommandBarLabel
     Friend WithEvents grdVoci As Telerik.WinControls.UI.RadGridView
     Friend WithEvents grpDetVoce As Telerik.WinControls.UI.RadGroupBox
@@ -3440,8 +3495,8 @@ Partial Class FrmOfferta
     Friend WithEvents txmValoreVariazione As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents tsTipoVariazione As Telerik.WinControls.UI.RadToggleSwitch
     Friend WithEvents txtCostoMat As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadButton7 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents cmdAnnullaVoce As Telerik.WinControls.UI.RadButton
+    Friend WithEvents cmdConfermaVoce As Telerik.WinControls.UI.RadButton
     Friend WithEvents txmImponibileVoce As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel22 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents FluentTheme1 As Telerik.WinControls.Themes.FluentTheme
@@ -3470,7 +3525,7 @@ Partial Class FrmOfferta
     Friend WithEvents RadTextBox2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents grpTextStyle As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadRadioButton3 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton2 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton1 As Telerik.WinControls.UI.RadRadioButton
@@ -3489,30 +3544,32 @@ Partial Class FrmOfferta
     Friend WithEvents RadRadioButton4 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton5 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton6 As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents RadButton8 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton9 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents setDefault As Telerik.WinControls.UI.RadButton
+    Friend WithEvents loadImage As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadLabel30 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadColorBox1 As Telerik.WinControls.UI.RadColorBox
-    Friend WithEvents RadToggleSwitch1 As Telerik.WinControls.UI.RadToggleSwitch
+    Friend WithEvents ImageBordDraw As Telerik.WinControls.UI.RadToggleSwitch
     Friend WithEvents RadLabel31 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadFontDropDownList1 As Telerik.WinControls.UI.RadFontDropDownList
-    Friend WithEvents RadGroupBox6 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents grpTextAlign As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadRadioButton8 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton9 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton12 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton13 As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents RadGroupBox7 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents grpTextEffect As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadRadioButton14 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton15 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButton16 As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents RadButton13 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton14 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents shoPrevText As Telerik.WinControls.UI.RadButton
+    Friend WithEvents SaveText As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadLabel33 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBox8 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadLabel32 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadColorBox2 As Telerik.WinControls.UI.RadColorBox
     Friend WithEvents RadToggleSwitch2 As Telerik.WinControls.UI.RadToggleSwitch
     Friend WithEvents RadLabel34 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadButton15 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents loadFromGallery As Telerik.WinControls.UI.RadButton
+    Friend WithEvents cmbSizeFont As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
+    Public WithEvents listaOpzioni As Telerik.WinControls.UI.RadPageView
 End Class
 
